@@ -12,8 +12,6 @@ format:
 editor: visual
 ---
 
-
-
 ## Big Data
 
 ![Four Components of Big Data](images/ibm.png){fig-alt="Main components of data as volume, velocity, variety, and veracity" fig-align="center"}
@@ -169,13 +167,13 @@ By the end of the course, you'll be able to:
 ::: incremental
 **Activities & Assignments**
 
-- In class activities --> finish at home and turn in as assignments
-- Opportunity to practicing basic skills and dig deeper
+-   In class activities --\> finish at home and turn in as assignments
+-   Opportunity to practicing basic skills and dig deeper
 
 **Tidy Tuesday**
 
-- Regular visualization practice on new, real data
-- Opportunity to engage with wider data science community
+-   Regular visualization practice on new, real data
+-   Opportunity to engage with wider data science community
 :::
 
 ## Course Components
@@ -183,25 +181,24 @@ By the end of the course, you'll be able to:
 ::: incremental
 **Midterm Assessment**
 
-- In-class assessment of basic visualization and wrangling skills
-- Important checkpoint before advanced tools + projects
+-   In-class assessment of basic visualization and wrangling skills
+-   Important checkpoint before advanced tools + projects
 
 **Final Project & Presentation**
 
-- Group data science project
-- Opportunity to showcase skills and learn new things on a real data set
+-   Group data science project
+-   Opportunity to showcase skills and learn new things on a real data set
 :::
-
 
 ## Communication
 
 ::: incremental
 **Slack**: class-wide messaging platform for *content-related questions*
 
-  - General channel: class-wide announcements 
-  - Content-specific class-wide channels: data-viz, troubleshooting, etc.
-  - Section-specific channels: community-building
-  - Study-group channel (*optional*): class-wide channel to seek classmates to work together outside of class
+-   General channel: class-wide announcements
+-   Content-specific class-wide channels: data-viz, troubleshooting, etc.
+-   Section-specific channels: community-building
+-   Study-group channel (*optional*): class-wide channel to seek classmates to work together outside of class
 
 **Email or DM in Slack:** for anything *personal in nature* (e.g. illness, feeling overwhelmed, feedback, etc.)
 :::
@@ -209,13 +206,13 @@ By the end of the course, you'll be able to:
 ## Environment You Deserve
 
 ::: incremental
-- **Respect:** *regard the feelings, wishes, experiences, and traditions of others as individuals*
+-   **Respect:** *regard the feelings, wishes, experiences, and traditions of others as individuals*
 
-- **Empathy:** *try to sense and understand others' emotions and feelings*
+-   **Empathy:** *try to sense and understand others' emotions and feelings*
 
-- **Start with Curiosity:** *don't assume, ask a question*
+-   **Start with Curiosity:** *don't assume, ask a question*
 
-- **Supportive Community:** *you are not learning in isolation but rather, in a community ready to help and assist each other*
+-   **Supportive Community:** *you are not learning in isolation but rather, in a community ready to help and assist each other*
 :::
 
 ## Let's Get Started
