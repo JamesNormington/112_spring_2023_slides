@@ -1,0 +1,223 @@
+---
+title: "Introduction to Data Science"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+
+
+## Big Data
+
+![Four Components of Big Data](images/ibm.png){fig-alt="Main components of data as volume, velocity, variety, and veracity" fig-align="center"}
+
+## Data Science in Liberal Arts
+
+The liberal arts setting provides an opportunity to synthesize ***lenses for data*** developed in the social and hard sciences, humanities, and fine arts
+
+-   Data Science applies these lenses to extract knowledge from data within a particular domain of inquiry such as
+    -   educational policy making,
+    -   ecological modeling,
+    -   journalism,
+    -   computational linguistics, etc.
+
+## Skills
+
+[![Data Science skills mapped to Job Titles](https://www.udacity.com/blog/wp-content/uploads/2014/11/Data-Science-Skills-Udacity-Matrix.png.webp){fig-align="center"}](https://www.udacity.com/blog/2014/11/data-science-job-skills.html)
+
+## Data Science Jobs
+
+-   Government agencies (e.g., NSA, CIA)
+-   Science institutions (e.g., NASA, NIH)
+-   Companies/divisions specializing in data analysis (e.g., IBM)
+-   Retail companies that have huge amounts of data and analyze it to drive business decisions (e.g., Amazon, Netflix, Target, Etsy)
+-   Other sectors: journalism, healthcare, biotech/genomics, NGOs, finance, insurance, gaming and hospitality, energy/utilities, manufacturing, pharmaceuticals
+
+## Data Science Projects
+
+::: columns
+::: {.column width="50%"}
+[![Data Journalism](https://fivethirtyeight.com/wp-content/uploads/2015/10/uber-seasonalchange-22.png?w=2048)](https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/)
+:::
+
+::: {.column width="50%"}
+[![Public Policy](images/dsfg.png)](https://dspg-young-scholars-program.github.io/dspg20CharlottesvilleEMSEquity/findings/presentation_notes/)
+:::
+:::
+
+## More Examples
+
+![Data Science Projects](images/examples.png){width="1738"}
+
+## Who I am
+
+<br><br>
+
+### Prof. Brianna Heggeseth
+
+[bcheggeseth.github.io/](https://bcheggeseth.github.io/)
+
+## Where I've Been
+
+```{r}
+#| echo: false
+library(dplyr)
+places <- tibble(
+  place = c('Minot', 
+            'St. Olaf College',
+            'UC Berkeley',
+            'Williams College',
+            "Macalester College"),
+  lat = c(48.23451328100744,
+        44.46226590286501,
+        37.87229723036468,
+        42.71282121400364,
+        44.93817295014158),
+  long = c(-101.2947375688704,
+        -93.18303031829093,
+        -122.25784252845078,
+        -73.20309658727034,
+        -93.16907037369458)
+)
+library(leaflet)
+leaflet(data = places) %>% # base plot
+  addProviderTiles(providers$Stamen.Watercolor) %>%
+  addCircles(
+    lng = ~long,
+    lat = ~lat,
+    label = ~place,
+    weight = 10,
+    opacity = 1,
+    color = gplots::col2hex("darkgreen")
+  ) %>%
+    addPolylines(
+    lng = ~long,
+    lat = ~lat,
+    color = gplots::col2hex("darkgreen")
+  )
+```
+
+## Course Details
+
+[Syllabus](https://docs.google.com/presentation/d/1B_ontyO8GhUwwaKb4WRG8g-xM1B2avlgvm3d92_fBfw/edit)
+
+-   Learning Goals
+-   Community of Learners
+-   Course Components
+-   Communication
+-   Environment You Deserve
+
+## Learning Goals
+
+**Overall Learning Goal**
+
+Gain *confidence* in carrying out the entire data science pipeline,
+
+-   from research question formulation,
+-   to data collection/scraping,
+-   to wrangling,
+-   to modeling,
+-   to visualization,
+-   to presentation and communication
+
+## Learning Goals
+
+By the end of the course, you'll be able to:
+
+::: incremental
+-   Appreciate the role of data science in a wide range of disciplines
+-   Identify, collect, and wrangle data from multiple sources
+-   Conduct basic exploratory statistical analyses
+-   Find code online and adapt it to your given task
+-   Using iterative refinement and teamwork, take a data science project from concept to reality
+-   Communicate your results so that they're reproducible and accessible for a broad audience
+:::
+
+## Community of Learners
+
+::: incremental
+**Target Audience.**
+
+-   No matter your statistics and coding background (no experience to expert) or major and interests, this course is for YOU!
+
+**Learn by doing.**
+
+-   Learning by doing entails getting stuck, making mistakes, asking questions, and getting feedback.
+:::
+
+## Community of Learners
+
+::: incremental
+**Collaboration.**
+
+-   Working effectively in a group setting is an essential life skill that requires practice and demonstrably improves your learning
+
+**Community building.**
+
+-   People learn best in community, when they feel safe, seen, and cared about.
+:::
+
+## Course Components
+
+::: incremental
+**Activities & Assignments**
+
+- In class activities --> finish at home and turn in as assignments
+- Opportunity to practicing basic skills and dig deeper
+
+**Tidy Tuesday**
+
+- Regular visualization practice on new, real data
+- Opportunity to engage with wider data science community
+:::
+
+## Course Components
+
+::: incremental
+**Midterm Assessment**
+
+- In-class assessment of basic visualization and wrangling skills
+- Important checkpoint before advanced tools + projects
+
+**Final Project & Presentation**
+
+- Group data science project
+- Opportunity to showcase skills and learn new things on a real data set
+:::
+
+
+## Communication
+
+::: incremental
+**Slack**: class-wide messaging platform for *content-related questions*
+
+  - General channel: class-wide announcements 
+  - Content-specific class-wide channels: data-viz, troubleshooting, etc.
+  - Section-specific channels: community-building
+  - Study-group channel (*optional*): class-wide channel to seek classmates to work together outside of class
+
+**Email or DM in Slack:** for anything *personal in nature* (e.g. illness, feeling overwhelmed, feedback, etc.)
+:::
+
+## Environment You Deserve
+
+::: incremental
+- **Respect:** *regard the feelings, wishes, experiences, and traditions of others as individuals*
+
+- **Empathy:** *try to sense and understand others' emotions and feelings*
+
+- **Start with Curiosity:** *don't assume, ask a question*
+
+- **Supportive Community:** *you are not learning in isolation but rather, in a community ready to help and assist each other*
+:::
+
+## Let's Get Started
+
+Go to [bcheggeseth.github.io/112_fall_2022](https://bcheggeseth.github.io/112_fall_2022)
