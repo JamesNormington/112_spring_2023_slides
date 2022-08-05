@@ -1,0 +1,240 @@
+---
+title: "Introduction to Data Visualization"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+    scrollable: true
+editor: visual
+---
+
+```{r}
+#| include: false
+#| label: 02_setup
+
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+library(tidyverse)
+library(ggplot2)
+```
+
+## Learning Goals
+
+-   Understand the Grammar of Graphics
+-   Use `ggplot2` to create basic layers of graphics
+-   Understand the different basic univariate visualizations for categorical and quantitative variables
+
+## Benefits of Visualizations
+
+-   Visualizations help us understand what we're working with:
+-   What are the scales of our variables?
+-   Are there any outliers, i.e. unusual cases? - What are the patterns among our variables?
+-   This understanding will inform our next steps: What method of analysis / model is appropriate?
+-   Once our analysis is complete, visualizations are a powerful way to communicate our findings and tell a story.
+
+## Glyphs
+
+In its original sense, in archaeology, a glyph is a carved symbol.
+
+### Data Glyph {.unnumbered}
+
+A data glyph is also a mark, e.g.
+
+The features of a data glyph encodes the value of variables.
+
+-   Some are very simple, e.g. a dot
+-   Some combine different elements, e.g. a point range
+-   Some are complicated, e.g. a dotplot
+
+## Components of Graphics {.smaller}
+
+```{r}
+#| echo: false
+#| message: false
+
+set.seed(102)
+require(NHANES)
+n <- 75
+Tmp <-
+  NHANES %>%
+  mutate(
+    smoker = case_when(
+      Smoke100 == "No" ~ "never",
+      SmokeNow == "No" ~ "former",
+      SmokeNow == "Yes" ~ "current",
+    ),
+    sbp = BPSysAve,
+    dbp = BPDiaAve,
+    sex = Gender
+  ) %>%
+  select(sbp, dbp, sex, smoker) %>%
+  sample_n(n) %>%
+  filter(complete.cases(.)) %>%
+  data.frame()
+```
+
+::: columns
+::: {.column width="40%"}
+-   **frame**: The position scale describing how data are mapped to x and y
+
+-   **glyph**: The basic graphical unit that represents one case (also know as a *mark* and *symbol*).
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-margin: true
+#| fig-cap: "Blood pressure readings from a random subset of the NHANES data set."
+ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8) + xlab("Systolic BP") + ylab("Diastolic BP") + scale_color_manual(values = c("#F8766D", "#00BFC4", "#00BA38"))
+```
+:::
+:::
+
+## Components of Graphics {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   **aesthetic**: a visual property of a glyph such as position, size, shape, color, etc.
+
+    -   may be **mapped** based on data values: `smoker -> color`
+    -   may be **set** to particular non-data related values: `color is black`
+
+-   **facet**: a subplot that shows one subset of the data
+
+    -   rather than represent `sex` by shape, we could split into two subplots
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-margin: true
+#| fig-cap: "Blood pressure readings from a random subset of the NHANES data set."
+ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8) + xlab("Systolic BP") + ylab("Diastolic BP") + scale_color_manual(values = c("#F8766D", "#00BFC4", "#00BA38"))
+```
+:::
+:::
+
+
+## Components of Graphics {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   **scale**: A mapping that translates data values into aesthetics.
+
+    -   example: never-\> <font color="#F8766D">pink</font>; former-\> <font color="#00BFC4">aqua</font>; current-\> <font color="#00BA38">green</font>
+
+-   **guide**: An indication for the human viewer of the scale. This allows the viewer to translate aesthetics back into data values.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-margin: true
+#| fig-cap: "Blood pressure readings from a random subset of the NHANES data set."
+ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8) + xlab("Systolic BP") + ylab("Diastolic BP") + scale_color_manual(values = c("#F8766D", "#00BFC4", "#00BA38"))
+```
+:::
+:::
+
+## Eye Training for the Layered Grammar of Graphics
+
+
+Each group will be assigned one NY Times graphics to look; list at [course website](https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html).
+
+*If you haven't already, follow the [instructions](https://www.macalester.edu/library/nyt/) to gain access (paid by Macalester MCGS) to content at NYTimes.com.*
+
+## Exercise: Basic questions to ask of a data graphic
+
+For your assigned graphic, discuss the following seven questions with your partner(s):
+
+1.  What variables constitute the frame?
+2.  What glyphs are used?
+3.  What are the aesthetics for those glyphs?
+4.  Which variable is mapped to each aesthetic?
+5.  Which variable, if any, is used for faceting?
+6.  Which scales are displayed with a guide?
+7.  What raw data would be required for this plot, and what form should it be in?
+
+
+### Glyph-Ready Data {.unnumbered}
+
+Glyph-ready data has this form:
+
+-   There is one row for each glyph to be drawn.
+-   The variables in that row are mapped to aesthetics of the glyph (including position).
+
+
+## Data Visualization Workflow + `ggplot` {.unnumbered}
+
+## Layers -- Building up Complex Plots {.unnumbered}
+
+Using the `ggplot2` package, we can create graphics by building up layers, each of which may have its own data, glyphs, aesthetic mapping, etc.
+
+## Base Layer
+
+The first layer just identifies the data set. It sets up a blank canvas, but does not actually plot anything:
+
+```{r}
+ggplot(data = Tmp)
+```
+
+## Geometry Layer
+
+Next, we add a geometry layer to identify the mapping of data to aesthetics for each of the glyphs:
+
+```{r}
+#| code-line-numbers: "2"
+ggplot(data = Tmp) +
+  geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8)
+```
+
+
+## Guide Layer
+
+Next, we can add some axes labels as guides:
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(data = Tmp) +
+  geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8) +
+  xlab("Systolic BP") + ylab("Diastolic BP")
+```
+
+## Scale Layer
+
+We can change the scale of the color used for smoker status:
+
+```{r}
+#| code-line-numbers: "4"
+ggplot(data = Tmp) +
+  geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8) +
+  xlab("Systolic BP") + ylab("Diastolic BP") +
+  scale_color_manual(values = c("#F8766D", "#00BFC4", "#00BA38"))
+```
+
+## Facet Layer
+
+If instead we wanted to facet into columns based on smoker status, we could add another layer for that:
+
+```{r}
+#| code-line-numbers: "5"
+ggplot(data = Tmp) +
+  geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8) +
+  xlab("Systolic BP") + ylab("Diastolic BP") +
+  scale_color_manual(values = c("#F8766D", "#00BFC4", "#00BA38")) +
+  facet_grid(. ~ smoker)
+```
+
+## Getting Started 
+
+There's no end to the number and type of visualizations you *could* make.
+
+-   **Ask the data questions.** 
+-   **Start with the basics and work incrementally.** 
+-   **Focus.** Pick out a focused yet comprehensive set of visualizations. 
+Now you continue on with the activity; work with each other and support one another.
