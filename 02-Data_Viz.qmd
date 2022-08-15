@@ -106,7 +106,6 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 -   **facet**: a subplot that shows one subset of the data
 
     -   rather than represent `sex` by shape, we could split into two subplots
-
 :::
 
 ::: {.column width="60%"}
@@ -118,7 +117,6 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 ```
 :::
 :::
-
 
 ## Components of Graphics {.smaller}
 
@@ -143,7 +141,6 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 
 ## Eye Training for the Layered Grammar of Graphics
 
-
 Each group will be assigned one NY Times graphics to look; list at [course website](https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html).
 
 *If you haven't already, follow the [instructions](https://www.macalester.edu/library/nyt/) to gain access (paid by Macalester MCGS) to content at NYTimes.com.*
@@ -160,14 +157,12 @@ For your assigned graphic, discuss the following seven questions with your partn
 6.  Which scales are displayed with a guide?
 7.  What raw data would be required for this plot, and what form should it be in?
 
-
 ### Glyph-Ready Data {.unnumbered}
 
 Glyph-ready data has this form:
 
 -   There is one row for each glyph to be drawn.
 -   The variables in that row are mapped to aesthetics of the glyph (including position).
-
 
 ## Data Visualization Workflow + `ggplot` {.unnumbered}
 
@@ -192,7 +187,6 @@ Next, we add a geometry layer to identify the mapping of data to aesthetics for 
 ggplot(data = Tmp) +
   geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, color = smoker), size = 5, alpha = .8)
 ```
-
 
 ## Guide Layer
 
@@ -230,11 +224,10 @@ ggplot(data = Tmp) +
   facet_grid(. ~ smoker)
 ```
 
-## Getting Started 
+## Getting Started
 
 There's no end to the number and type of visualizations you *could* make.
 
--   **Ask the data questions.** 
--   **Start with the basics and work incrementally.** 
--   **Focus.** Pick out a focused yet comprehensive set of visualizations. 
-Now you continue on with the activity; work with each other and support one another.
+-   **Ask the data questions.**
+-   **Start with the basics and work incrementally.**
+-   **Focus.** Pick out a focused yet comprehensive set of visualizations. Now you continue on with the activity; work with each other and support one another.
