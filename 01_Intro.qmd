@@ -125,6 +125,19 @@ Gain *confidence* in carrying out the entire data science pipeline,
 -   to visualization,
 -   to presentation and communication
 
+
+
+## Learning Goals
+
+**Overall Learning Goal**
+
+Gain *confidence* in carrying out the entire data science pipeline,
+
+[![](images/lego.png){width="550"}](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories)
+
+
+
+
 ## Learning Goals
 
 By the end of the course, you'll be able to:
@@ -190,14 +203,14 @@ By the end of the course, you'll be able to:
 -   Opportunity to showcase skills and learn new things on a real data set
 :::
 
-## Communication
+## Communication {.smaller}
 
 ::: incremental
-**Slack**: class-wide messaging platform for *content-related questions*
+**Slack Channels**: class-wide messaging platform for *content-related questions*
 
 -   General channel: class-wide announcements
 -   Content-specific class-wide channels: data-viz, troubleshooting, etc.
--   Section-specific channels: community-building
+-   Section-specific channels: section-1, section-2, fyc-community
 -   Study-group channel (*optional*): class-wide channel to seek classmates to work together outside of class
 
 **Email or DM in Slack:** for anything *personal in nature* (e.g. illness, feeling overwhelmed, feedback, etc.)
