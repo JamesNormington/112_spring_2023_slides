@@ -125,8 +125,6 @@ Gain *confidence* in carrying out the entire data science pipeline,
 -   to visualization,
 -   to presentation and communication
 
-
-
 ## Learning Goals
 
 **Overall Learning Goal**
@@ -134,9 +132,6 @@ Gain *confidence* in carrying out the entire data science pipeline,
 Gain *confidence* in carrying out the entire data science pipeline,
 
 [![](images/lego.png){width="550"}](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories)
-
-
-
 
 ## Learning Goals
 
@@ -214,6 +209,18 @@ By the end of the course, you'll be able to:
 -   Study-group channel (*optional*): class-wide channel to seek classmates to work together outside of class
 
 **Email or DM in Slack:** for anything *personal in nature* (e.g. illness, feeling overwhelmed, feedback, etc.)
+:::
+
+## Environment You Deserve {.smaller}
+
+Macalester College values diversity and inclusion.
+
+::: incremental
+- We are committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming. 
+
+- To help support these goals, we expect you to follow the [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub). 
+
+- These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive. 
 :::
 
 ## Environment You Deserve
