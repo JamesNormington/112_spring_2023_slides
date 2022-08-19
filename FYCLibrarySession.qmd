@@ -6,6 +6,8 @@ bibliography: references.bib
 csl: apa.csl
 ---
 
+Link to qmd is [here](FYCLibrarySession.qmd).
+
 ## Summary
 
 A recent study was the first to quantify the diversity of artists at U.S. art museums [@heggeseth2019]. 
