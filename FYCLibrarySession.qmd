@@ -1,0 +1,22 @@
+---
+title: "Library Session: Example"
+author: "Brianna Heggeseth"
+format: html
+bibliography: references.bib
+csl: apa.csl
+---
+
+## Summary
+
+A recent study was the first to quantify the diversity of artists at U.S. art museums [@heggeseth2019]. 
+
+@heggeseth2013 studied mixture models for clustering longitudinal data and offered an alternative solution when trying to cluster by growth pattern.
+
+Together these studies [@heggeseth2013; @heggeseth2019] were interesting!
+
+For more information, see [link here](https://quarto.org/docs/authoring/footnotes-and-citations.html).
+
+## References
+
+::: {#refs}
+:::
