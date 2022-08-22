@@ -82,20 +82,47 @@ div.csl-indent {
 
 <section id="relevant-files" class="level2">
 <h2 class="anchored" data-anchor-id="relevant-files">Relevant Files</h2>
-<p>Download the following:</p>
+<p>Download the following (right-click &gt; Save File):</p>
 <ul>
 <li><a href="FYCLibrarySession.qmd">FYCLibrarySession.qmd</a></li>
 <li><a href="references.bib">references.bib</a></li>
 <li><a href="apa.csl">apa.csl</a></li>
 <li><a href="nature.csl">nature.csl</a></li>
 </ul>
+<p>Put all of the files in one folder. Open the qmd and the bib files in RStudio.</p>
+<p>See below for an example of how to cite articles using information in the bib file. Compare the code in qmd file to the rendered example online.</p>
 </section>
-<section id="article-summary" class="level2">
-<h2 class="anchored" data-anchor-id="article-summary">Article Summary</h2>
+<section id="example-article-summary" class="level2">
+<h2 class="anchored" data-anchor-id="example-article-summary">Example Article Summary</h2>
 <p>A recent study was the first to quantify the diversity of artists at U.S. art museums <span class="citation" data-cites="heggeseth2019">(<a href="#ref-heggeseth2019" role="doc-biblioref">Topaz et al., 2019</a>)</span>.</p>
 <p><span class="citation" data-cites="heggeseth2013">Heggeseth &amp; Jewell (<a href="#ref-heggeseth2013" role="doc-biblioref">2013</a>)</span> studied mixture models for clustering longitudinal data and offered an alternative solution when trying to cluster by growth pattern.</p>
 <p>Together these studies <span class="citation" data-cites="heggeseth2013 heggeseth2019">(<a href="#ref-heggeseth2013" role="doc-biblioref">Heggeseth &amp; Jewell, 2013</a>; <a href="#ref-heggeseth2019" role="doc-biblioref">Topaz et al., 2019</a>)</span> were really interesting!</p>
-<p>For more information about doing references in Rmd or Quarto, see <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">link here</a>.</p>
+</section>
+<section id="more-details" class="level2">
+<h2 class="anchored" data-anchor-id="more-details">More Details</h2>
+<p>At the top of the qmd file, you’ll see <code>bibliography: references.bib</code> and <code>csl: apa.csl</code>.</p>
+<section id="bibtex" class="level3">
+<h3 class="anchored" data-anchor-id="bibtex">Bibtex</h3>
+<p>The file name <code>references.bib</code> refers to the <a href="http://www.bibtex.org/">Bibtex</a> file that I created to include all relevant “data” about references I used in a piece of writing (the summary above).</p>
+<p>Open the file <code>references.bib</code>. Note the general structure of the file. It is made up of a variety of entries. Each entry in the file refers to a single reference and starts with the type of publication after the <code>@</code> symbol (e.g., <code>@article</code>, <code>@book</code>, <code>@inproceedings</code>) and ends with <code>}</code>.</p>
+<p>An entry consists of:</p>
+<ul>
+<li>type of publication (word after <code>@</code>)</li>
+<li>citation key (first word after <code>{</code>)</li>
+<li>number of tags which define characteristics of the reference (e.g.&nbsp;title, author, journal, year, etc.) separated by commas</li>
+</ul>
+</section>
+<section id="csl-files" class="level3">
+<h3 class="anchored" data-anchor-id="csl-files">CSL Files</h3>
+<p>The file name <code>apa.csl</code> refers to a citation style language file for the APA citation style. There are many citation styles (see <a href="https://libguides.macalester.edu/citation">Library Guide</a>). All of these styles are different ways of organizing, formatting, and visualizing the data about a reference.</p>
+<p>It is incredibly hard to keep track of all of the styles (e.g.&nbsp;where do I put commas vs.&nbsp;periods?!). If you store the data about references in a standard format using a tool such as a Bibtex file or <a href="https://libguides.macalester.edu/c.php?g=525380&amp;p=6908726">Zotero</a>, then you can use CSL files to do the styling for you.</p>
+<p>Try changing <code>apa.csl</code> to <code>nature.csl</code> in the top of the qmd file and press Render. This will change the citation and bibliography style to the style used in the journal Nature. Notice similarities and differences.</p>
+<p>There is an open source repository of many CSL files available at <a href="https://github.com/citation-style-language/documentation">https://github.com/citation-style-language/documentation</a></p>
+</section>
+<section id="more-information-about-citations-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="more-information-about-citations-in-rstudio">More information about citations in RStudio</h3>
+<p>For more information about doing references and citations in Rmd or Quarto, see <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">link here</a>.</p>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
