@@ -1,0 +1,225 @@
+---
+title: "Multivariate Visualizations"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Learning Goals {.unnumbered}
+
+-   Understand how we can use additional aesthetics such as color and size to incorporate a third (or more variables) to a bivariate plot
+-   Develop comfort with interpreting heat maps and star plots, which allow you to look for patterns in variation in many variables.
+
+## Adding More Aesthetic Attributes {.unnumbered}
+
+## Data: Exploring SAT Scores {.smaller}
+
+Though far from a perfect assessment of academic preparedness, SAT scores have historically been used as one measurement of a state's education system.
+
+```{r}
+library(tidyverse)
+education <- read.csv("https://www.macalester.edu/~ajohns24/data/sat.csv")
+```
+
+```{r, echo=FALSE}
+knitr::kable(
+  education[1:6, ],
+  caption = "The first few rows of the SAT data."
+)
+```
+
+## Univariate Density {.smaller}
+
+To examine the variability in average SAT scores from state to state, let's start with a univariate density plot:
+
+```{r, fig.width=6,fig.height=3}
+ggplot(education, aes(x = sat)) +
+  geom_density(fill = "blue", alpha = .5)
+```
+
+## Bivariate Scatterplot {.smaller}
+
+What degree do per pupil spending (`expend`) and teacher `salary` *explain* this variability?
+
+```{r}
+#| layout-ncol: 2
+  
+ggplot(education, aes(y = sat, x = salary)) +
+  geom_point() +
+  geom_smooth(se = FALSE, method = "lm") + theme_classic()
+
+ggplot(education, aes(y = sat, x = expend)) +
+  geom_point() +
+  geom_smooth(se = FALSE, method = "lm") + theme_classic()
+```
+
+Is there anything that surprises you in the above plots? What are the relationship trends?
+
+## Exercise: Three Variables {.smaller}
+
+Make a single scatterplot visualization that demonstrates the relationship between `sat`, `salary`, and `expend`.
+
+*Hints:*
+
+*1. Try using the color or size aesthetics to incorporate the expenditure data.*
+
+*2. Include some model smooths with `geom_smooth()` to help highlight the trends.*
+
+. . .
+
+```{r}
+#| echo: true
+  
+ggplot(education, aes(y = sat, x = salary, color = expend)) +
+  geom_point() +
+  geom_smooth(se = FALSE, method = "lm") + theme_classic()
+```
+
+. . .
+
+```{r}
+#| echo: true
+  
+ggplot(education, aes(y = sat, x = salary, size = expend)) +
+  geom_point() +
+  geom_smooth(se = FALSE, method = "lm") + theme_classic()
+```
+
+## Exercise: Fraction who take SAT {.smaller .scrollable}
+
+The `fracCat` variable in the `education` data categorizes the fraction of the state's students that take the SAT into `low` (below 15%), `medium` (15-45%), and `high` (at least 45%).
+
+a.  Make a univariate visualization of the `fracCat` variable to better understand how many states fall into each category.
+
+. . .
+
+```{r}
+#| echo: true
+  
+ggplot(education, aes(x = fracCat)) +
+  geom_bar() + theme_classic()
+```
+
+## Exercise: Fraction who take SAT {.smaller .scrollable}
+
+b.  Make a bivariate visualization that demonstrates the relationship between `fracCat` and `sat`. What story does your graphic tell?
+
+. . .
+
+```{r}
+#| echo: true
+  
+ggplot(education, aes(x = fracCat, y = sat)) +
+  geom_boxplot() + theme_classic()
+```
+
+## Exercise: Fraction who take SAT {.smaller .scrollable}
+
+c.  Make a trivariate visualization that demonstrates the relationship between `fracCat`, `sat`, and `expend`. Incorporate `fracCat` as the color of each point, and use a single call to `geom_smooth` to add three trendlines (one for each `fracCat`). What story does your graphic tell?
+
+. . .
+
+```{r}
+#| echo: true
+  
+ggplot(education, aes(color = fracCat, y = sat, x = expend)) +
+  geom_point() + geom_smooth(se = FALSE, method = 'lm') + theme_classic()
+```
+
+## Exercise: Fraction who take SAT {.smaller}
+
+d.  Putting all of this together, explain this example of **Simpson's Paradox**. That is, why does it appear that SAT scores decrease as spending increases even though the opposite is true?
+
+Discuss!
+
+## Other Multivariate Visualization Techniques {.unnumbered}
+
+## Heat maps {.smaller .scrollable}
+
+Note that each variable (column) is scaled to indicate states (rows) with high values (yellow) to low values (purple/blue).
+
+```{r, fig.width=10, fig.height=20, cache=TRUE}
+ed <- as.data.frame(education) # convert from tibble to data frame
+
+# convert to a matrix with State names as the row names
+row.names(ed) <- ed$State 
+ed <- ed[, 2:8]
+ed_mat <- data.matrix(ed)
+
+gplots::heatmap.2(ed_mat,
+  Rowv = NA, Colv = NA, scale = "column",
+  keysize = 0.7, density.info = "none",
+  col = hcl.colors(256), margins = c(10, 20),
+  colsep = c(1:7), rowsep = (1:50), sepwidth = c(0.05, 0.05),
+  sepcolor = "white", cexRow = 2, cexCol = 2, trace = "none",
+  dendrogram = "none"
+)
+```
+
+What do you notice? What insight do you gain about the variation across U.S. states?
+
+## Heat maps with Row Cluster {.smaller .scrollable}
+
+Include *dendrograms* helps to identify interesting clusters.
+
+```{r, fig.width=10, fig.height=20, cache=TRUE}
+gplots::heatmap.2(ed_mat,
+  Colv = NA, scale = "column", keysize = .7,
+  density.info = "none", col = hcl.colors(256),
+  margins = c(10, 20),
+  colsep = c(1:7), rowsep = (1:50), sepwidth = c(0.05, 0.05),
+  sepcolor = "white", cexRow = 2, cexCol = 2, trace = "none",
+  dendrogram = "row"
+)
+```
+
+What do you notice? What new insight do you gain about the variation across U.S. states, now that states are grouped and ordered to represent similarity?
+
+## Heat maps with Column Cluster {.smaller .scrollable}
+
+We can also construct a heat map which identifies interesting clusters of columns (variables).
+
+```{r, fig.width=10, fig.height=20, cache=TRUE}
+gplots::heatmap.2(ed_mat,
+  Rowv = NA, scale = "column", keysize = .7,
+  density.info = "none", col = hcl.colors(256),
+  margins = c(10, 20),
+  colsep = c(1:7), rowsep = (1:50), sepwidth = c(0.05, 0.05),
+  sepcolor = "white", cexRow = 2, cexCol = 2, trace = "none",
+  dendrogram = "column"
+)
+```
+
+What do you notice? What new insight do you gain about the variation across U.S. states, now that variables are grouped and ordered to represent similarity?
+
+## Star plots {.unnumbered .scrollable}
+
+Star plot visualizations indicate the relative scale of each variable for each state.
+
+```{r, fig.width=15, fig.height=18, cache=TRUE}
+stars(ed_mat,
+  flip.labels = FALSE,
+  key.loc = c(15, 1.5), cex = 1.5
+)
+```
+
+What do you notice? What new insight do you gain about the variation across U.S. states with the star plots?
+
+## Star plots {.unnumbered .scrollable}
+
+Star plot visualizations indicate the relative scale of each variable for each state.
+
+```{r, fig.width=15, fig.height=18, cache=TRUE}
+stars(ed_mat,
+  flip.labels = FALSE,
+  key.loc = c(15, 1.5), cex = 1.5, draw.segments = TRUE
+)
+```
+

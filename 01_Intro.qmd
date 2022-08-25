@@ -131,7 +131,15 @@ Gain *confidence* in carrying out the entire data science pipeline,
 
 Gain *confidence* in carrying out the entire data science pipeline,
 
-[![](images/lego.png){width="550"}](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories)
+[![](images/lego.png){fig-alt="One visual representation of the pipeline with legos. The first step is data collection with a pile of legos. The second step is a data preparation with the legos separated by color. The third step is data visualization with legos separated and organized by color and type so you can more easily understand what’s happening. The fourth step is data analysis in which legos are put together into some creation such as roof, lawn, etc. Lastly, the final step is data storytelling in which someone is playing with a lego house." width="550"}](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories)
+
+## Learning Goals
+
+**Overall Learning Goal**
+
+Gain *confidence* in carrying out the entire data science pipeline,
+
+![Art by Allison Horst](images/tidydata_5.jpg){fig-alt="Cute fuzzy monsters putting rectangular data tables onto a conveyor belt. Along the conveyor belt line are different automated “stations” that update the data, reading “WRANGLE”, “VISUALIZE”, and “MODEL”. A monster at the end of the conveyor belt is carrying away a table that reads “Complete analysis.”" width="650"}
 
 ## Learning Goals
 
@@ -140,7 +148,7 @@ By the end of the course, you'll be able to:
 ::: incremental
 -   Appreciate the role of data science in a wide range of disciplines
 -   Identify, collect, and wrangle data from multiple sources
--   Conduct basic exploratory statistical analyses
+-   Visualize a variety of types of data
 -   Find code online and adapt it to your given task
 -   Using iterative refinement and teamwork, take a data science project from concept to reality
 -   Communicate your results so that they're reproducible and accessible for a broad audience
@@ -175,12 +183,13 @@ By the end of the course, you'll be able to:
 ::: incremental
 **Activities & Assignments**
 
--   In class activities --\> finish at home and turn in as assignments
+-   In class activities --\> finish after class and turn in as assignments
 -   Opportunity to practicing basic skills and dig deeper
 
-**Tidy Tuesday**
+**Tidy Tuesday & Iterative Viz**
 
 -   Regular visualization practice on new, real data
+-   Opportunities to iterative based on feedback
 -   Opportunity to engage with wider data science community
 :::
 
@@ -216,11 +225,11 @@ By the end of the course, you'll be able to:
 Macalester College values diversity and inclusion.
 
 ::: incremental
-- We are committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming. 
+-   We are committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming.
 
-- To help support these goals, we expect you to follow the [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub). 
+-   To help support these goals, we expect you to follow the [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub).
 
-- These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive. 
+-   These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive.
 :::
 
 ## Environment You Deserve
@@ -230,7 +239,7 @@ Macalester College values diversity and inclusion.
 
 -   **Empathy:** *try to sense and understand others' emotions and feelings*
 
--   **Start with Curiosity:** *don't assume, ask a question*
+-   **Start with Curiosity:** *don't assume; instead, ask a question*
 
 -   **Supportive Community:** *you are not learning in isolation but rather, in a community ready to help and assist each other*
 :::

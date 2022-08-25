@@ -16,7 +16,7 @@ editor: visual
 
 As we gather, introduce yourself (you choose what you share) to others at your table.
 
-<br> 
+<br>
 
 Here are some suggestions:
 
@@ -30,7 +30,6 @@ Here are some suggestions:
 
 ## Who am I
 
-
 ### Prof. Brianna Heggeseth
 
 \[bree-AH-na\] \[HEG-eh-seth\]
@@ -39,7 +38,9 @@ Here are some suggestions:
 
 [bcheggeseth.github.io/](https://bcheggeseth.github.io/)
 
-## Where I've Been
+## Who am I
+
+### Where I've Been
 
 ```{r}
 #| echo: false
@@ -79,67 +80,77 @@ leaflet(data = places) %>% # base plot
   )
 ```
 
+## Who am I
+
+### Erin Franke
+
 ## Introductions
 
 Now, take a turn introducing another person in the class.
 
 <br><br>
 
-We'll come back to the "questions about Mac"... 
+We'll come back to the "questions about Mac"...
 
 ## Role of FYC
 
 In addition to learning about Data Science, this class serves as an
 
-- Introduction to the Library
-- Introduction to Academic Life at Mac
-- Residential learning community
-- Academic peer support group
-
+-   Introduction to the Library
+-   Introduction to Academic Life at Mac
+-   Residential learning community
+-   Academic peer support group
 
 ## My Role: Academic Coach
 
-
 [![](images/coach.png){width="550"}](https://www.freeiconspng.com/img/9713)
-
 
 ## My Role: Academic Coach {.smaller}
 
-I serve as your primary [Academic Advisor](https://www.macalester.edu/academicprograms/academicadvising/) this year. 
+I serve as your primary [Academic Advisor](https://www.macalester.edu/academicprograms/academicadvising/) this year.
 
-<br> 
-My hope is to:
+<br> My hope is to:
 
-- Help you navigate Macalester 
-    - [Policies and procedures](https://www.macalester.edu/academicprograms/academicpolicies/) 
-    - [Student resources](https://www.macalester.edu/current-students/)
-    - [Academic requirements](https://www.macalester.edu/academicprograms/first-semester-course-selection/graduation-requirements/)
-- Support you as you transition to a collegiate learning environment
-- Provide guidance along the way
+-   Help you navigate Macalester
+    -   [Policies and procedures](https://www.macalester.edu/academicprograms/academicpolicies/)
+    -   [Student resources](https://www.macalester.edu/current-students/)
+    -   [Academic requirements](https://www.macalester.edu/academicprograms/first-semester-course-selection/graduation-requirements/)
+-   Support you as you transition to a collegiate learning environment
+-   Provide guidance along the way
 
 <br>
 
-You take the lead in determining your college experience.  
+You take the lead in determining your college experience.
 
 ## Advising Meetings {.smaller}
 
-- If you haven't already, [schedule a 1-on-1 meeting with me](https://calendar.google.com/calendar/selfsched?sstoken=UUJTeUhZMGlwVDFTfGRlZmF1bHR8YTBlOWRlN2UxYzAzYjNjNTc2N2U0ZTkzZWM1NWViNDM). We'll talk about:
-  - Fall courses
-  - Personal/professional goals
-  - Make sure you have resources to set you up for success
+-   If you haven't already, [schedule a 1-on-1 meeting with me](https://calendar.google.com/calendar/selfsched?sstoken=UUJTeUhZMGlwVDFTfGRlZmF1bHR8YTBlOWRlN2UxYzAzYjNjNTc2N2U0ZTkzZWM1NWViNDM). We'll talk about:
+    -   Fall courses
+    -   Personal/professional goals
+    -   Make sure you have resources to set you up for success
+-   [Advising Meeting Notes Document](https://docs.google.com/document/d/1lTrnoLeqsoVrwMGk8bxy4-biGP2N66j-h3juUcTys0o/edit?usp=sharing)
+    -   Living document (shared only between you and me)
+    -   Structured to have you reflect before meeting me
+    -   Great place to add questions/concerns (\@ me in comment and I'll be notified)
 
 
-- [Advising Meeting Notes Document](https://docs.google.com/document/d/1lTrnoLeqsoVrwMGk8bxy4-biGP2N66j-h3juUcTys0o/edit?usp=sharing)
-  - Living document (shared only between you and me)
-  - Structured to have you reflect before meeting me
-  - Great place to add questions/concerns (@ me in comment and I'll be notified)
+## Pause: Grading
+
+What comes to mind when I say "grading"?
+
+. . .
+
+What is the difference between grades and learning?
+
+. . .
+
+What is the role of grades for your learning?
 
 
 
 ## Questions about Mac
 
 What are you wondering about right now?
-
 
 ## My Course Details
 
@@ -151,7 +162,6 @@ What are you wondering about right now?
 -   Communication
 -   Environment You Deserve
 
-
 ## Let's Do a Preview!
 
-Go to [https://moodle.macalester.edu/](https://moodle.macalester.edu/). Log in.
+Go to <https://moodle.macalester.edu/>. Log in.
