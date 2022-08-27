@@ -82,7 +82,7 @@ leaflet(data = places) %>% # base plot
 
 ## Who am I
 
-### Erin Franke
+### Preceptor: Erin Franke
 
 ## Introductions
 
