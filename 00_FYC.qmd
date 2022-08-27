@@ -20,9 +20,9 @@ As we gather, introduce yourself (you choose what you share) to others at your t
 
 Here are some suggestions:
 
--   Your preferred name (pronunciation tips)
--   Aspects of who you are and have been (e.g. pronouns, geographical identity, cultural identity)
--   Aspects of who you'd like to be (e.g. personal/professional/academic goals)
+-   Your preferred name (+ pronunciation tips)
+-   Aspects of who you are and have been (*e.g. pronouns, geographical identity, cultural identity*)
+-   Aspects of who you'd like to be (*e.g. personal/professional/academic goals*)
 -   Questions that you have about Macalester
 -   How you are feeling about everything (!?!)
 
@@ -134,17 +134,21 @@ You take the lead in determining your college experience.
     -   Great place to add questions/concerns (\@ me in comment and I'll be notified)
 
 
-## Pause: Grading
+## Reflect: Grades
 
-What comes to mind when I say "grading"?
+What comes to mind when you think of "grades"?
+
+<br><br>
 
 . . .
 
 What is the difference between grades and learning?
 
+<br><br>
+
 . . .
 
-What is the role of grades for your learning?
+What is the role of grades in your learning?
 
 
 
