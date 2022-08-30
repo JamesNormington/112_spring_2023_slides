@@ -125,6 +125,11 @@ leaflet(data = places) %>% # base plot
   )
 ```
 
+## Introductions
+
+Now, take a turn introducing another person in the class.
+
+
 ## Course Details
 
 [Syllabus](https://docs.google.com/presentation/d/1B_ontyO8GhUwwaKb4WRG8g-xM1B2avlgvm3d92_fBfw/edit)
