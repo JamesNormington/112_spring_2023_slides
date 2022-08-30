@@ -12,6 +12,21 @@ format:
 editor: visual
 ---
 
+## Introductions {.smaller}
+
+As we gather, introduce yourself (*you choose what you share*) to others at your table.
+
+<br>
+
+Here are some suggestions:
+
+-   Your preferred name (+ pronunciation tips)
+-   Aspects of who you are and have been (*e.g. pronouns, geographical identity, cultural identity, hobbies/passions*)
+-   Aspects of who you'd like to be (*e.g. personal/professional/academic goals*)
+-   How you are feeling about new semester (!?!)
+
+*Be prepared to introduce one other person to the larger class*
+
 ## Big Data
 
 ![Four Components of Big Data](images/ibm.png){fig-alt="Main components of data as volume, velocity, variety, and veracity" fig-align="center"}
@@ -20,23 +35,27 @@ editor: visual
 
 The liberal arts setting provides an opportunity to synthesize ***lenses for data*** developed in the social and hard sciences, humanities, and fine arts
 
--   Data Science applies these lenses to extract knowledge from data within a particular domain of inquiry such as
+. . .
+
+-   Data Science applies these lenses to **extract knowledge from data** within a particular domain of inquiry and contexts such as
     -   educational policy making,
     -   ecological modeling,
     -   journalism,
     -   computational linguistics, etc.
 
-## Skills
+## Data Science Skills
 
 [![Data Science skills mapped to Job Titles](https://www.udacity.com/blog/wp-content/uploads/2014/11/Data-Science-Skills-Udacity-Matrix.png.webp){fig-align="center"}](https://www.udacity.com/blog/2014/11/data-science-job-skills.html)
 
 ## Data Science Jobs
 
+::: {.incremental}
 -   Government agencies (e.g., NSA, CIA)
 -   Science institutions (e.g., NASA, NIH)
 -   Companies/divisions specializing in data analysis (e.g., IBM)
 -   Retail companies that have huge amounts of data and analyze it to drive business decisions (e.g., Amazon, Netflix, Target, Etsy)
 -   Other sectors: journalism, healthcare, biotech/genomics, NGOs, finance, insurance, gaming and hospitality, energy/utilities, manufacturing, pharmaceuticals
+:::
 
 ## Data Science Projects
 
@@ -56,13 +75,17 @@ The liberal arts setting provides an opportunity to synthesize ***lenses for dat
 
 ## Who I am
 
-<br><br>
-
 ### Prof. Brianna Heggeseth
+
+\[bree-AH-na\] \[HEG-eh-seth\]
+
+![](images/kids.jpeg){width="300"}
 
 [bcheggeseth.github.io/](https://bcheggeseth.github.io/)
 
-## Where I've Been
+## Who am I
+
+### Where I've Been
 
 ```{r}
 #| echo: false
@@ -175,7 +198,7 @@ By the end of the course, you'll be able to:
 
 **Community building.**
 
--   People learn best in community, when they feel safe, seen, and cared about.
+-   People learn best in community when they feel safe, seen, and cared about.
 :::
 
 ## Course Components
@@ -183,13 +206,13 @@ By the end of the course, you'll be able to:
 ::: incremental
 **Activities & Assignments**
 
--   In class activities --\> finish after class and turn in as assignments
--   Opportunity to practicing basic skills and dig deeper
+-   In class activities (Notes + exercises) --\> finish after class and turn in as assignments
+-   Opportunity to practice skills and dig deeper
 
 **Tidy Tuesday & Iterative Viz**
 
 -   Regular visualization practice on new, real data
--   Opportunities to iterative based on feedback
+-   Opportunities to iterate based on feedback
 -   Opportunity to engage with wider data science community
 :::
 
@@ -225,9 +248,9 @@ By the end of the course, you'll be able to:
 Macalester College values diversity and inclusion.
 
 ::: incremental
--   We are committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming.
+-   I am committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming.
 
--   To help support these goals, we expect you to follow the [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub).
+-   To help support these goals, I expect you to follow the [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub).
 
 -   These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive.
 :::
@@ -246,8 +269,11 @@ Macalester College values diversity and inclusion.
 
 ## Let's Get Started
 
-Go to [bcheggeseth.github.io/112_fall_2022](https://bcheggeseth.github.io/112_fall_2022)
+Go to [bcheggeseth.github.io/112_fall_2022/course-schedule.html](https://bcheggeseth.github.io/112_fall_2022/course-schedule.html)
 
 ## After Class
 
+Continue working through the activity:
 
+-   Try each line of code (copy and paste) in the console and then check solutions on activity online
+-   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=20496))
