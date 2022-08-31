@@ -73,7 +73,7 @@ The liberal arts setting provides an opportunity to synthesize ***lenses for dat
 
 ![Data Science Projects](images/examples.png){width="1738"}
 
-## Who I am
+## Who am I
 
 ### Prof. Brianna Heggeseth
 
@@ -278,7 +278,9 @@ Go to [bcheggeseth.github.io/112_fall_2022/course-schedule.html](https://bchegge
 
 ## After Class
 
+- Fill out [Information Gathering Survey](https://docs.google.com/forms/d/e/1FAIpQLSfCr7FNzTPLEwYIAI0gPLvXAH5zoAq2gfrph3JqhJjo3ryTIg/viewform) on Moodle under Surveys by Friday
+
 Continue working through the activity:
 
 -   Try each line of code (copy and paste) in the console and then check solutions on activity online
--   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=20496))
+-   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=20496)) by next Tuesday evening
