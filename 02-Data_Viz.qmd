@@ -32,19 +32,28 @@ library(ggplot2)
 
 Visualizations help us understand what we're working with:
 
+::: incremental
 -   What are the scales of our variables?
 -   Are there any outliers, i.e. unusual cases?
 -   What are the patterns among our variables?
+:::
+
+. . .
 
 This understanding will inform our next steps:
 
-- What method of analysis / model is appropriate?
+-   What method of analysis / model is appropriate?
 
+. . .
+
+<br>
 Once our analysis is complete, visualizations are a powerful way to communicate our findings and tell a story.
 
 ## Glyphs
 
 In its original sense, in archaeology, a glyph is a carved symbol.
+
+. . . 
 
 ### Data Glyph {.unnumbered}
 
@@ -85,9 +94,12 @@ Tmp <-
 
 ::: columns
 ::: {.column width="40%"}
+
+::: incremental
 -   **frame**: The position scale describing how data are mapped to x and y
 
 -   **glyph**: The basic graphical unit that represents one case (also know as a *mark* and *symbol*).
+:::
 :::
 
 ::: {.column width="60%"}
@@ -104,6 +116,8 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 
 ::: columns
 ::: {.column width="40%"}
+
+::: incremental
 -   **aesthetic**: a visual property of a glyph such as position, size, shape, color, etc.
 
     -   may be **mapped** based on data values: `smoker -> color`
@@ -112,6 +126,8 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 -   **facet**: a subplot that shows one subset of the data
 
     -   rather than represent `sex` by shape, we could split into two subplots
+    
+:::
 :::
 
 ::: {.column width="60%"}
@@ -128,11 +144,14 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 
 ::: columns
 ::: {.column width="40%"}
+
+::: incremental
 -   **scale**: A mapping that translates data values into aesthetics.
 
     -   example: never-\> <font color="#F8766D">pink</font>; former-\> <font color="#00BFC4">aqua</font>; current-\> <font color="#00BA38">green</font>
 
 -   **guide**: An indication for the human viewer of the scale. This allows the viewer to translate aesthetics back into data values.
+:::
 :::
 
 ::: {.column width="60%"}
@@ -147,8 +166,9 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 
 ## Eye Training for the Layered Grammar of Graphics
 
-Each group will be assigned one NY Times graphics to look; list at [course website](https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html).
+Each group will be assigned one NY Times graphics to look; list at the [course website](https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html).
 
+<br> 
 *If you haven't already, follow the [instructions](https://www.macalester.edu/library/nyt/) to gain access (paid by Macalester MCGS) to content at NYTimes.com.*
 
 ## Exercise: Basic questions to ask of a data graphic
@@ -236,12 +256,11 @@ There's no end to the number and type of visualizations you *could* make.
 
 -   **Ask the data questions.**
 -   **Start with the basics and work incrementally.**
--   **Focus.** Pick out a focused yet comprehensive set of visualizations. 
-
+-   **Focus.** Pick out a focused yet comprehensive set of visualizations.
 
 ## Rest of Class
 
-Continue on with the activity working through in the [template Rmd](https://bcheggeseth.github.io/112_fall_2022/template_rmd/02-Intro_Data_Viz.Rmd). 
+Continue on with the activity working through in the [template Rmd](https://bcheggeseth.github.io/112_fall_2022/template_rmd/02-Intro_Data_Viz_Assign.Rmd).
 
 Work with each other and support one another.
 
@@ -249,10 +268,10 @@ Get immediate feedback with the Solutions online.
 
 ## After Class
 
-Continue to work through the activity in the template Rmd file. 
+Continue to work through the activity in the Rmd file.
 
-You'll submit a knitted html file of that template file for Assignment 2 (due next Tuesday).
+<br>
 
-- We'll give feedback on Exercises 2.11-2.15.
+You'll submit a knitted html file of that template Rmd file for Assignment 2 (due next Tuesday).
 
-
+-   We'll give feedback on Exercises 2.11-2.15.
