@@ -30,11 +30,17 @@ library(ggplot2)
 
 ## Benefits of Visualizations
 
--   Visualizations help us understand what we're working with:
+Visualizations help us understand what we're working with:
+
 -   What are the scales of our variables?
--   Are there any outliers, i.e. unusual cases? - What are the patterns among our variables?
--   This understanding will inform our next steps: What method of analysis / model is appropriate?
--   Once our analysis is complete, visualizations are a powerful way to communicate our findings and tell a story.
+-   Are there any outliers, i.e. unusual cases?
+-   What are the patterns among our variables?
+
+This understanding will inform our next steps:
+
+- What method of analysis / model is appropriate?
+
+Once our analysis is complete, visualizations are a powerful way to communicate our findings and tell a story.
 
 ## Glyphs
 
@@ -42,7 +48,7 @@ In its original sense, in archaeology, a glyph is a carved symbol.
 
 ### Data Glyph {.unnumbered}
 
-A data glyph is also a mark, e.g.
+A data glyph is also a mark.
 
 The features of a data glyph encodes the value of variables.
 
@@ -230,4 +236,23 @@ There's no end to the number and type of visualizations you *could* make.
 
 -   **Ask the data questions.**
 -   **Start with the basics and work incrementally.**
--   **Focus.** Pick out a focused yet comprehensive set of visualizations. Now you continue on with the activity; work with each other and support one another.
+-   **Focus.** Pick out a focused yet comprehensive set of visualizations. 
+
+
+## Rest of Class
+
+Continue on with the activity working through in the [template Rmd](https://bcheggeseth.github.io/112_fall_2022/template_rmd/02-Intro_Data_Viz.Rmd). 
+
+Work with each other and support one another.
+
+Get immediate feedback with the Solutions online.
+
+## After Class
+
+Continue to work through the activity in the template Rmd file. 
+
+You'll submit a knitted html file of that template file for Assignment 2 (due next Tuesday).
+
+- We'll give feedback on Exercises 2.11-2.15.
+
+
