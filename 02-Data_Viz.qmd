@@ -46,24 +46,27 @@ This understanding will inform our next steps:
 
 . . .
 
-<br>
-Once our analysis is complete, visualizations are a powerful way to communicate our findings and tell a story.
+<br> Once our analysis is complete, visualizations are a powerful way to communicate our findings and tell a story.
 
 ## Glyphs
 
 In its original sense, in archaeology, a glyph is a carved symbol.
 
-. . . 
+. . .
 
 ### Data Glyph {.unnumbered}
 
-A data glyph is also a mark.
+A data glyph is also a mark, e.g.
+
+![](images/geom_rect.png) ![](images/geom_segment.png) ![](images/geom_text.png) ![](images/geom_crossbar.png) ![](images/geom_path.png) ![](images/geom_line.png) ![](images/geom_pointrange.png) ![](images/geom_ribbon.png) ![](images/geom_point.png) ![](images/geom_polygon.png) ![](images/geom_histogram.png) ![](images/geom_dotplot.png) ![](images/geom_freqpoly.png) ![](images/geom_density.png) ![](images/geom_violin.png)
+
 
 The features of a data glyph encodes the value of variables.
 
--   Some are very simple, e.g. a dot
--   Some combine different elements, e.g. a point range
--   Some are complicated, e.g. a dotplot
+-   Some are very simple, e.g. a dot: ![](images/geom_point.png)
+-   Some combine different elements, e.g. a pointrange: ![](images/geom_pointrange.png)
+-   Some are complicated, e.g. a dotplot: ![](images/geom_dotplot.png)
+
 
 ## Components of Graphics {.smaller}
 
@@ -93,8 +96,7 @@ Tmp <-
 ```
 
 ::: columns
-::: {.column width="40%"}
-
+::: {.column width="35%"}
 ::: incremental
 -   **frame**: The position scale describing how data are mapped to x and y
 
@@ -102,7 +104,7 @@ Tmp <-
 :::
 :::
 
-::: {.column width="60%"}
+::: {.column width="65%"}
 ```{r}
 #| echo: false
 #| fig-margin: true
@@ -115,8 +117,7 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 ## Components of Graphics {.smaller}
 
 ::: columns
-::: {.column width="40%"}
-
+::: {.column width="35%"}
 ::: incremental
 -   **aesthetic**: a visual property of a glyph such as position, size, shape, color, etc.
 
@@ -126,11 +127,10 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 -   **facet**: a subplot that shows one subset of the data
 
     -   rather than represent `sex` by shape, we could split into two subplots
-    
 :::
 :::
 
-::: {.column width="60%"}
+::: {.column width="65%"}
 ```{r}
 #| echo: false
 #| fig-margin: true
@@ -143,8 +143,7 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 ## Components of Graphics {.smaller}
 
 ::: columns
-::: {.column width="40%"}
-
+::: {.column width="35%"}
 ::: incremental
 -   **scale**: A mapping that translates data values into aesthetics.
 
@@ -154,7 +153,7 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 :::
 :::
 
-::: {.column width="60%"}
+::: {.column width="65%"}
 ```{r}
 #| echo: false
 #| fig-margin: true
@@ -168,8 +167,7 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 
 Each group will be assigned one NY Times graphics to look; list at the [course website](https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html).
 
-<br> 
-*If you haven't already, follow the [instructions](https://www.macalester.edu/library/nyt/) to gain access (paid by Macalester MCGS) to content at NYTimes.com.*
+<br> *If you haven't already, follow the [instructions](https://www.macalester.edu/library/nyt/) to gain access (paid by Macalester MCGS) to content at NYTimes.com.*
 
 ## Exercise: Basic questions to ask of a data graphic
 
