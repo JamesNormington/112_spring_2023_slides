@@ -22,6 +22,15 @@ library(tidyverse)
 library(ggplot2)
 ```
 
+## Announcements
+
+- Check out the [feedback template](https://docs.google.com/spreadsheets/d/1yU69K6TLXjuXnsjK3iQpMwUlds4BmTbVR95DSQbEIMM/edit?usp=sharing)
+  - You'll get an individual version (shared with you + me)
+  - Any immediate questions?
+  
+- Great job on Scavenger Hunt!
+
+
 ## Learning Goals
 
 -   Understand the Grammar of Graphics
