@@ -61,9 +61,13 @@ This understanding will inform our next steps:
 
 In its original sense, in archaeology, a glyph is a carved symbol.
 
-. . .
 
-### Data Glyph {.unnumbered}
+| Heiro**glyph**                 |                        Mayan **glyph** |
+|--------------------------------|---------------------------------------:|
+| ![Heiroglyph](images/hand.jpg) | ![Mayan glyph](images/mayan-glyph.png) |
+
+
+## Data Glyph {.unnumbered}
 
 A data glyph is also a mark, e.g.
 
