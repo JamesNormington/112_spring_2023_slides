@@ -1,0 +1,82 @@
+---
+title: "Introduction to Tidy Tuesday"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+    scrollable: true
+editor: visual
+---
+
+```{r}
+#| include: false
+#| label: 03_setup
+
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+library(tidyverse)
+library(ggplot2)
+```
+
+## Announcements
+
+- You should have been notified about a Comp/Stat 112 Feedback - NAME file shared with you. 
+  - Let me know if you didn't get any email.
+  
+
+
+## Check in & Questions
+
+- How is the course going for you?
+
+- What is confusing?
+
+## Plan for Today
+
+- Introduce Tidy Tuesday
+
+- Work time (Assignment 2 or Tidy Tuesday)
+
+## What is Tidy Tuesday?
+
+A weekly data visualization project put on by some folks from the R Data Science community.
+
+
+- [Tidy Tuesday Repository](https://github.com/rfordatascience/tidytuesday)
+
+- [#TidyTuesday on Twitter](https://twitter.com/search?q=%23TidyTuesday&src=typeahead_click)
+
+## Tidy Tuesday Assignment {.smaller}
+
+[![Tidy Tuesday Assignment on Moodle](images/MoodleTT.png)](https://moodle.macalester.edu/course/view.php?id=1523)
+
+
+[Instructions for Tidy Tuesday](https://docs.google.com/document/d/1za189WsYb5asgTIt9hzdDk7P8q3fm9yNcdHO_tuSBqI/edit#heading=h.x22n951mxnp4)
+
+You must complete 3 Tidy Tuesday assignments, at a minimum.
+
+- You must complete at least one by Sept 30 (TT4).
+- They are posted Tuesday evening and due Friday night.
+- Should only spend about 1-2 hours on it. 
+
+## TT1 {.smaller}
+
+[![TT1 Assignment on Moodle](images/MoodleTT1.png)](https://moodle.macalester.edu/mod/assign/view.php?id=40911)
+
+Let's open up 
+
+- [Tidy Tuesday Repository for this week](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-09-06)
+- TT1.Rmd starter file (on Moodle)
+
+## Rest of Class
+
+You may choose to continue working on Assignment 2 (Data Viz activity from Weds) or try TT1!
+
+- Assignment 2 is due next Tuesday on Moodle.
+- If you choose to do TT1, it is due tonight on Moodle. 
+
+

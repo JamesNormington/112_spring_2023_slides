@@ -24,12 +24,10 @@ library(ggplot2)
 
 ## Announcements
 
-- Check out the [feedback template](https://docs.google.com/spreadsheets/d/1yU69K6TLXjuXnsjK3iQpMwUlds4BmTbVR95DSQbEIMM/edit?usp=sharing)
-  - You'll get an individual version (shared with you + me)
-  - Any immediate questions?
-  
-- Great job on Scavenger Hunt!
-
+-   Check out the [feedback template](https://docs.google.com/spreadsheets/d/1yU69K6TLXjuXnsjK3iQpMwUlds4BmTbVR95DSQbEIMM/edit?usp=sharing)
+    -   You'll get an individual version (shared with you + me)
+    -   Any immediate questions?
+-   Great job on Scavenger Hunt!
 
 ## Learning Goals
 
@@ -61,11 +59,9 @@ This understanding will inform our next steps:
 
 In its original sense, in archaeology, a glyph is a carved symbol.
 
-
 | Heiro**glyph**                 |                        Mayan **glyph** |
 |--------------------------------|---------------------------------------:|
 | ![Heiroglyph](images/hand.jpg) | ![Mayan glyph](images/mayan-glyph.png) |
-
 
 ## Data Glyph {.unnumbered}
 
@@ -73,13 +69,11 @@ A data glyph is also a mark, e.g.
 
 ![](images/geom_rect.png) ![](images/geom_segment.png) ![](images/geom_text.png) ![](images/geom_crossbar.png) ![](images/geom_path.png) ![](images/geom_line.png) ![](images/geom_pointrange.png) ![](images/geom_ribbon.png) ![](images/geom_point.png) ![](images/geom_polygon.png) ![](images/geom_histogram.png) ![](images/geom_dotplot.png) ![](images/geom_freqpoly.png) ![](images/geom_density.png) ![](images/geom_violin.png)
 
-
 The features of a data glyph encodes the value of variables.
 
 -   Some are very simple, e.g. a dot: ![](images/geom_point.png)
 -   Some combine different elements, e.g. a pointrange: ![](images/geom_pointrange.png)
 -   Some are complicated, e.g. a dotplot: ![](images/geom_dotplot.png)
-
 
 ## Components of Graphics {.smaller}
 
