@@ -153,7 +153,16 @@ knitr::include_graphics("images/rose1.png")
 
 3.  Memory plays an important role in human cognition, but working memory is extremely limited.
 
-> **Implication**: [Visualizations](https://www.forbes.com/sites/forbescommunicationscouncil/2022/02/15/understanding-the-role-of-memory-in-effective-data-visualization/?sh=4905de4261e7) must serve as external aids to augment working memory. If a visualization is unfamiliar, then it won't be as aeffective.
+> **Implication**: [Visualizations](https://www.forbes.com/sites/forbescommunicationscouncil/2022/02/15/understanding-the-role-of-memory-in-effective-data-visualization/?sh=4905de4261e7) must serve as external aids to augment working memory. If a visualization is unfamiliar, then it won't be as effective.
+
+## Other Design Tips {.smaller}
+
+- Put yourself in a reader's shoes when you design data graphics. What parts of the data need explanation? We can minimize ambiguity by providing guides, label axes, etc.
+- Data graphics are meant to shine a light on your data. Try to remove any elements that don't help you do that. That is, eliminate "chart junk" (distracting and unnecessary adornments). 
+- Vary color and stroke styles to emphasize the parts in your graphic that are most important to the story you're telling 
+- It is easier to judge length than it is to judge area or angles
+- Be thoughtful about how your categories (levels) are ordered for categorical data. There may be a natural ordering
+- Pie charts, donut charts, and 3D are evil
 
 ## Basic Rules for Constructing Graphics {.unnumbered}
 
