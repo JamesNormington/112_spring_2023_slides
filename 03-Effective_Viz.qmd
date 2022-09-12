@@ -29,7 +29,8 @@ library(readr)
 
 ## Announcements {.unnumbered}
 
--   
+- Nominations for MSCS Student Advisory Board due this Friday!
+- If you turned in TT1, feedback is in spreadsheet. 
 
 ## Learning Goals {.unnumbered}
 
@@ -53,7 +54,7 @@ This understanding will inform our next steps:
 
 Download a template .Rmd of this activity. Put the file in a `Day_03` folder within your `COMP_STAT_112` folder.
 
--   This .Rmd only contains exercises that we'll work on in class (no assignment).
+-   This .Rmd only contains exercises that we'll work on in class (no assignment due).
 
 ## Analysis of Graphics {.unnumbered}
 
@@ -69,6 +70,8 @@ Identify the following:
 2.  effective features of the graphic
 3.  areas for improvement
 
+Think and then discuss with group. Be prepared to share. 
+
 ## Example 1 {.unnumbered}
 
 [![](images/badviz3.png){fig-alt="Source: http://viz.wtf/" fig-align="center" width="600"}](http://viz.wtf/)
@@ -76,6 +79,11 @@ Identify the following:
 ## Example 2 {.unnumbered}
 
 ![](images/trilogies.gif){fig-alt="Source: N. Yau, *Visualize This*, 2011, p. 223-225." fig-align="center" width="600"}
+
+
+## Example 3 {.unnumbered}
+
+![](images/legos.png){fig-alt="Source: B. Heggeseth, Tidy Tuesday (9/6)" fig-align="center" width="600"}
 
 ## Properties of Effective Visualizations {.unnumbered}
 
@@ -99,13 +107,13 @@ You should clearly identify what story you want the graphic to tell to the audie
 
 At a minimum, you should always:
 
--   Present data in a way that avoids misleading the audience.
+-   Present data in a way that avoids misleading the audience (*story should honestly represent data*).
 
 -   Always include your data source. Doing so attributes credit for labor, provides credibility to your work, and provides context for your graphic.
 
 ## Properties of Effective Visualizations {.smaller}
 
-3.  Use good design to facilitate comparison
+3.  Good design to facilitate comparison
 
 > Good graphics make it easy for people to perceive things that are similar and things that are different.
 
@@ -145,7 +153,7 @@ knitr::include_graphics("images/rose1.png")
 
 3.  Memory plays an important role in human cognition, but working memory is extremely limited.
 
-> **Implication**: Visualizations must serve as external aids to augment working memory.
+> **Implication**: [Visualizations](https://www.forbes.com/sites/forbescommunicationscouncil/2022/02/15/understanding-the-role-of-memory-in-effective-data-visualization/?sh=4905de4261e7) must serve as external aids to augment working memory. If a visualization is unfamiliar, then it won't be as aeffective.
 
 ## Basic Rules for Constructing Graphics {.unnumbered}
 
@@ -159,11 +167,18 @@ Exercise 2. Consider one of the more complicated data graphics from [Exercise 2.
 
 a.  What story does the data graphic tell? What is the main message that you take away from it?
 
-b.  Can the data graphic be described in terms of the Grammer of Graphics (frame, glyphs, aesthetics, facet, scale, guide)? If so, please describe.
+b.  Can the data graphic be described in terms of the Grammar of Graphics (frame, glyphs, aesthetics, facet, scale, guide)? If so, please describe.
 
-c.  Critique and/or praise the visualization choices made by the designer. 
-  - Do they work? 
-  - Are they misleading? 
-  - Thought-provoking? 
-  - Brilliant? 
-  - Are there things that you would have done differently? Justify your response.
+c.  Critique and/or praise the visualization choices made by the designer.
+
+-   Do they work?
+-   Are they misleading?
+-   Thought-provoking?
+-   Brilliant?
+-   Are there things that you would have done differently? Justify your response.
+
+## After Class {.smaller}
+
+- Work on finishing Assignment 2 (due Tuesday)
+- Check out optional readings!
+- FYC: Check out Library Sessions assignment due Friday!
