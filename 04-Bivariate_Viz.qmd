@@ -25,6 +25,18 @@ library(fivethirtyeight)
 library(readr)
 ```
 
+## Announcements {.unnumbered .smaller}
+
+- Almost all of you have feedback on Assignment 1
+- Assignment 2 was due last night
+
+<br>
+
+- I request that masks be worn in my class for 1 more week (*until my 2 year old is officially fully vaccinated*). 
+  - If you have concerns about masks going optional in the classroom after next Thursday, email me directly so I can have all the information I need to make a decision that best supports this community. 
+
+
+
 ## Learning Goals {.unnumbered}
 
 -   Identify appropriate types of bivariate visualizations, depending on the type of variables (categorical, quantitative)
