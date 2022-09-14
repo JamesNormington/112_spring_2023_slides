@@ -43,9 +43,6 @@ Download a template .Rmd of this activity. Put the file in a `Day_04` folder wit
 
 -   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 3.
 
-## Getting to know the dataset {.smaller}
-
-Begin by loading the data from https://www.macalester.edu/\~ajohns24/data/electionDemographics16.csv and getting to know the data.
 
 ## Getting to know the dataset {.unnumbered .smaller}
 
@@ -142,6 +139,6 @@ Notice patterns! Feel free to make visualizations more effective as you go along
 
 ## After Class
 
-You'll make sure to complete Exercise 8-17 for the Assignment 3 (due next Tues).
+You'll make sure to complete Exercise 8-17 (4 of them only require running preexisting code) for the Assignment 3 (due next Tues).
 
 For Friday's class, meet in the Library (Idea Lab for morning, Lib 206 for FYC)!
