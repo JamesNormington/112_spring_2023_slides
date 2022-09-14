@@ -29,6 +29,7 @@ library(readr)
 
 - Almost all of you have feedback on Assignment 1
 - Assignment 2 was due last night
+- Tidy Tuesday 2 (TT2) was posted yesterday (Bigfoot sightings!)
 
 <br>
 
