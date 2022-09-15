@@ -21,13 +21,25 @@ See below for an example of how to cite articles using information in the bib fi
 
 ## Example Article Summary
 
+
 A recent study was the first to quantify the diversity of artists at U.S. art museums [@heggeseth2019]. 
 
 @heggeseth2013 studied mixture models for clustering longitudinal data and offered an alternative solution when trying to cluster by growth pattern.
 
 Together these studies [@heggeseth2013; @heggeseth2019] were really interesting!
 
-## More Details
+## Your Turn!
+
+1. You write a one sentence summary about one of your articles you found.
+2. Go to Google Scholar, search for your article, and Click on Cite (see image below). Click on BibTeX and copy that to your bib file. 
+
+![](images/googlescholar.png) 
+
+3. Note the label: \@type{label,...  In your one sentence summary, use the syntax in the examples above where the labels were heggeseth2013 and heggeseth2019 to cite YOUR article using YOUR label. 
+
+> Summary Sentence: 
+
+## More Details about Citations
 
 At the top of the Rmd file, you'll see `bibliography: references.bib` and `csl: apa.csl`. 
 
