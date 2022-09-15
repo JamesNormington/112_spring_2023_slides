@@ -15,9 +15,9 @@ Download the following (click to download or right-click > Save File):
 - [apa.csl](apa.csl)
 - [nature.csl](nature.csl)
 
-Put all of the files in one folder. Open the qmd and the bib files in RStudio. 
+Put all of the files in one folder. Open the Rmd and the bib files in RStudio. 
 
-See below for an example of how to cite articles using information in the bib file. Compare the code in qmd file to the rendered example online.
+See below for an example of how to cite articles using information in the bib file. Compare the code in Rmd file to the rendered example online.
 
 ## Example Article Summary
 
@@ -29,7 +29,7 @@ Together these studies [@heggeseth2013; @heggeseth2019] were really interesting!
 
 ## More Details
 
-At the top of the qmd file, you'll see `bibliography: references.bib` and `csl: apa.csl`. 
+At the top of the Rmd file, you'll see `bibliography: references.bib` and `csl: apa.csl`. 
 
 ### Bibtex
 
@@ -50,7 +50,7 @@ The file name `apa.csl` refers to a citation style language file for the APA cit
 
 It is incredibly hard to keep track of all of the styles (e.g. where do I put commas vs. periods?!). If you store the data about references in a standard format using a tool such as a Bibtex file or [Zotero](https://libguides.macalester.edu/c.php?g=525380&p=6908726), then you can use CSL files to do the styling for you.
 
-Try changing `apa.csl` to `nature.csl` in the top of the qmd file and press Render. This will change the citation and bibliography style to the style used in the journal Nature. Notice similarities and differences.
+Try changing `apa.csl` to `nature.csl` in the top of the Rmd file and press Render. This will change the citation and bibliography style to the style used in the journal Nature. Notice similarities and differences.
 
 There is an open source repository of many CSL files available at [https://github.com/citation-style-language/documentation](https://github.com/citation-style-language/documentation)
 
