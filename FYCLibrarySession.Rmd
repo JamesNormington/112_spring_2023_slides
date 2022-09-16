@@ -15,7 +15,7 @@ Download the following (click to download or right-click > Save File):
 - [apa.csl](apa.csl)
 - [nature.csl](nature.csl)
 
-Put all of the files in one folder. Open the Rmd and the bib files in RStudio. 
+Put all of the files in one folder. Open the Rmd and the bib files in RStudio (you may need to File > Open File > references.bib within RStudio). 
 
 See below for an example of how to cite articles using information in the bib file. Compare the code in Rmd file to the rendered example online.
 
@@ -30,12 +30,14 @@ Together these studies [@heggeseth2013; @heggeseth2019] were really interesting!
 
 ## Your Turn!
 
-1. You write a one sentence summary about one of your articles you found.
+1. You write a one sentence summary about one of the articles you found.
 2. Go to Google Scholar, search for your article, and Click on Cite (see image below). Click on BibTeX and copy that to your bib file. 
 
 ![](images/googlescholar.png) 
 
-3. Note the label: \@type{label,...  In your one sentence summary, use the syntax in the examples above where the labels were heggeseth2013 and heggeseth2019 to cite YOUR article using YOUR label. 
+3. In your bib file, locate the label for the reference. Look for \@resourcetype{label,...  The labels for existing references were heggeseth2013 and heggeseth2019.
+
+4. Use the syntax in the examples above to cite YOUR article using YOUR label in YOUR one sentence summary. 
 
 > Summary Sentence: 
 
