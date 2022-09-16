@@ -12,22 +12,34 @@ format:
 editor: visual
 ---
 
+## Announcements {.unnumbered}
+
 ## Learning Goals {.unnumbered}
 
 -   Understand how we can use additional aesthetics such as color and size to incorporate a third (or more variables) to a bivariate plot
 -   Develop comfort with interpreting heat maps and star plots, which allow you to look for patterns in variation in many variables.
 
-## Adding More Aesthetic Attributes {.unnumbered}
+## Template File {.unnumbered}
+
+Download a template .Rmd of this activity. Put the file in a `Day_05` folder within your `COMP_STAT_112` folder.
+
+-   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 4.
+
+
+## More Aesthetic Attributes {.unnumbered}
+
+To go beyond 2 variables, we need to add aesthetics for each new variable!
 
 ## Data: Exploring SAT Scores {.smaller}
 
 Though far from a perfect assessment of academic preparedness, SAT scores have historically been used as one measurement of a state's education system.
 
-```{r}
+<br> 
+```{r echo=TRUE}
 library(tidyverse)
 education <- read.csv("https://www.macalester.edu/~ajohns24/data/sat.csv")
 ```
-
+<br>
 ```{r, echo=FALSE}
 knitr::kable(
   education[1:6, ],
@@ -35,20 +47,30 @@ knitr::kable(
 )
 ```
 
+## Data: Codebook {.smaller}
+
+```{r, echo=FALSE,out.width="750px",fig.cap="Codebook for SAT data. Source: https://www.macalester.edu/~kaplan/ISM/datasets/data-documentation.pdf"}
+knitr::include_graphics("images/SATcodebook.png")
+```
+
 ## Univariate Density {.smaller}
 
-To examine the variability in average SAT scores from state to state, let's start with a univariate density plot:
+Variability in average SAT scores from state to state:
 
-```{r, fig.width=6,fig.height=3}
+```{r echo=TRUE}
 ggplot(education, aes(x = sat)) +
-  geom_density(fill = "blue", alpha = .5)
+  geom_density(fill = "blue", alpha = .5) + theme_classic()
 ```
 
 ## Bivariate Scatterplot {.smaller}
 
 What degree do per pupil spending (`expend`) and teacher `salary` *explain* this variability?
 
-```{r}
+.  .  .
+ 
+<br>
+
+```{r echo=TRUE}
 #| layout-ncol: 2
   
 ggplot(education, aes(y = sat, x = salary)) +
@@ -62,7 +84,7 @@ ggplot(education, aes(y = sat, x = expend)) +
 
 Is there anything that surprises you in the above plots? What are the relationship trends?
 
-## Exercise: Three Variables {.smaller}
+## Exercise: Three Variables {.smaller .scrollable}
 
 Make a single scatterplot visualization that demonstrates the relationship between `sat`, `salary`, and `expend`.
 
@@ -87,10 +109,27 @@ ggplot(education, aes(y = sat, x = salary, color = expend)) +
 ```{r}
 #| echo: true
   
-ggplot(education, aes(y = sat, x = salary, size = expend)) +
+ggplot(education, aes(y = sat, x = salary)) +
+  geom_point(aes(size = expend)) +
+  geom_smooth(se = FALSE, method = "lm") + theme_classic()
+```
+
+## Exercise: Three Variables {.smaller .scrollable}
+
+Another option!
+
+Categorize your 3rd Quantitative Variable!
+
+
+```{r}
+#| echo: true
+education %>% 
+  mutate(expendCat = cut(expend,3)) %>%
+ggplot(aes(y = sat, x = salary, color = expendCat)) +
   geom_point() +
   geom_smooth(se = FALSE, method = "lm") + theme_classic()
 ```
+
 
 ## Exercise: Fraction who take SAT {.smaller .scrollable}
 
@@ -222,4 +261,3 @@ stars(ed_mat,
   key.loc = c(15, 1.5), cex = 1.5, draw.segments = TRUE
 )
 ```
-

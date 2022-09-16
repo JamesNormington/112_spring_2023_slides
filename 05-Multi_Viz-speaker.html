@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="04-Multi_Viz_files/libs/clipboard/clipboard.min.js"></script>
-<script src="04-Multi_Viz_files/libs/quarto-html/tabby.min.js"></script>
-<script src="04-Multi_Viz_files/libs/quarto-html/popper.min.js"></script>
-<script src="04-Multi_Viz_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="04-Multi_Viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="04-Multi_Viz_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="04-Multi_Viz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="05-Multi_Viz_files/libs/clipboard/clipboard.min.js"></script>
+<script src="05-Multi_Viz_files/libs/quarto-html/tabby.min.js"></script>
+<script src="05-Multi_Viz_files/libs/quarto-html/popper.min.js"></script>
+<script src="05-Multi_Viz_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="05-Multi_Viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="05-Multi_Viz_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="05-Multi_Viz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Brianna Heggeseth">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="04-Multi_Viz_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="04-Multi_Viz_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="05-Multi_Viz_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="05-Multi_Viz_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -88,13 +88,13 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="04-Multi_Viz_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="04-Multi_Viz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="04-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="04-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="04-Multi_Viz_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="04-Multi_Viz_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="04-Multi_Viz_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="05-Multi_Viz_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="05-Multi_Viz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="05-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="05-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="05-Multi_Viz_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="05-Multi_Viz_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="05-Multi_Viz_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -389,6 +389,9 @@
   <p class="author">Brianna Heggeseth</p>
 </section>
 
+<section id="announcements" class="slide level2 unnumbered">
+<h2>Announcements</h2>
+</section>
 <section id="learning-goals" class="slide level2 unnumbered">
 <h2>Learning Goals</h2>
 <ul>
@@ -396,15 +399,26 @@
 <li>Develop comfort with interpreting heat maps and star plots, which allow you to look for patterns in variation in many variables.</li>
 </ul>
 </section>
-<section id="adding-more-aesthetic-attributes" class="slide level2 unnumbered">
-<h2>Adding More Aesthetic Attributes</h2>
+<section id="template-file" class="slide level2 unnumbered">
+<h2>Template File</h2>
+<p>Download a template .Rmd of this activity. Put the file in a <code>Day_05</code> folder within your <code>COMP_STAT_112</code> folder.</p>
+<ul>
+<li>This .Rmd only contains exercises that we’ll work on in class and you’ll finish for Assignment 4.</li>
+</ul>
+</section>
+<section id="more-aesthetic-attributes" class="slide level2 unnumbered">
+<h2>More Aesthetic Attributes</h2>
+<p>To go beyond 2 variables, we need to add aesthetics for each new variable!</p>
 </section>
 <section id="data-exploring-sat-scores" class="slide level2 smaller">
 <h2>Data: Exploring SAT Scores</h2>
 <p>Though far from a perfect assessment of academic preparedness, SAT scores have historically been used as one measurement of a state’s education system.</p>
+<p><br></p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>education <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://www.macalester.edu/~ajohns24/data/sat.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><br></p>
 <div class="cell">
 <div class="cell-output-display">
 <table>
@@ -494,31 +508,57 @@
 </div>
 </div>
 </section>
-<section id="univariate-density" class="slide level2 smaller">
-<h2>Univariate Density</h2>
-<p>To examine the variability in average SAT scores from state to state, let’s start with a univariate density plot:</p>
+<section id="data-codebook" class="slide level2 smaller">
+<h2>Data: Codebook</h2>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-3-1.png" width="576"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/SATcodebook.png" width="750"></p>
+<p></p><figcaption>Codebook for SAT data. Source: https://www.macalester.edu/~kaplan/ISM/datasets/data-documentation.pdf</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="univariate-density" class="slide level2 smaller">
+<h2>Univariate Density</h2>
+<p>Variability in average SAT scores from state to state:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">x =</span> sat)) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">geom_density</span>(<span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </div>
 </div>
 </section>
 <section id="bivariate-scatterplot" class="slide level2 smaller">
 <h2>Bivariate Scatterplot</h2>
 <p>What degree do per pupil spending (<code>expend</code>) and teacher <code>salary</code> <em>explain</em> this variability?</p>
+<div class="fragment">
+<p><br></p>
+<div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> salary)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> expend)) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </div>
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-4-2.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-5-2.png" width="960"></p>
+</div>
 </div>
 </div>
 </div>
 <p>Is there anything that surprises you in the above plots? What are the relationship trends?</p>
+</div>
 </section>
-<section id="exercise-three-variables" class="slide level2 smaller">
+<section id="exercise-three-variables" class="slide level2 smaller scrollable">
 <h2>Exercise: Three Variables</h2>
 <p>Make a single scatterplot visualization that demonstrates the relationship between <code>sat</code>, <code>salary</code>, and <code>expend</code>.</p>
 <p><em>Hints:</em></p>
@@ -526,22 +566,37 @@
 <p><em>2. Include some model smooths with <code>geom_smooth()</code> to help highlight the trends.</em></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> salary, <span class="at">color =</span> expend)) <span class="sc">+</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> salary, <span class="at">color =</span> expend)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </div>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> salary, <span class="at">size =</span> expend)) <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> salary)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> expend)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
+</div>
+</div>
+</section>
+<section id="exercise-three-variables-1" class="slide level2 smaller scrollable">
+<h2>Exercise: Three Variables</h2>
+<p>Another option!</p>
+<p>Categorize your 3rd Quantitative Variable!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>education <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">expendCat =</span> <span class="fu">cut</span>(expend,<span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> sat, <span class="at">x =</span> salary, <span class="at">color =</span> expendCat)) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </div>
 </div>
 </section>
@@ -553,10 +608,10 @@
 </ol>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">x =</span> fracCat)) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">x =</span> fracCat)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -568,10 +623,10 @@
 </ol>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">x =</span> fracCat, <span class="at">y =</span> sat)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">x =</span> fracCat, <span class="at">y =</span> sat)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -583,10 +638,10 @@
 </ol>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">color =</span> fracCat, <span class="at">y =</span> sat, <span class="at">x =</span> expend)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">'lm'</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(education, <span class="fu">aes</span>(<span class="at">color =</span> fracCat, <span class="at">y =</span> sat, <span class="at">x =</span> expend)) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">'lm'</span>) <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -604,9 +659,9 @@
 <section id="heat-maps" class="slide level2 smaller scrollable">
 <h2>Heat maps</h2>
 <p>Note that each variable (column) is scaled to indicate states (rows) with high values (yellow) to low values (purple/blue).</p>
-<div class="cell" data-hash="04-Multi_Viz_cache/revealjs/unnamed-chunk-10_f15311f6fc4c2e58cb1b693e0ca992f6">
+<div class="cell" data-hash="05-Multi_Viz_cache/revealjs/unnamed-chunk-12_684f2aa89a633d8b578a518a40135134">
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
 </div>
 </div>
 <p>What do you notice? What insight do you gain about the variation across U.S. states?</p>
@@ -614,9 +669,9 @@
 <section id="heat-maps-with-row-cluster" class="slide level2 smaller scrollable">
 <h2>Heat maps with Row Cluster</h2>
 <p>Include <em>dendrograms</em> helps to identify interesting clusters.</p>
-<div class="cell" data-hash="04-Multi_Viz_cache/revealjs/unnamed-chunk-11_c2f2da44d78d4d048674783aa72fc124">
+<div class="cell" data-hash="05-Multi_Viz_cache/revealjs/unnamed-chunk-13_e60105e7258bfc6c089716ce1e07932f">
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </div>
 </div>
 <p>What do you notice? What new insight do you gain about the variation across U.S. states, now that states are grouped and ordered to represent similarity?</p>
@@ -624,9 +679,9 @@
 <section id="heat-maps-with-column-cluster" class="slide level2 smaller scrollable">
 <h2>Heat maps with Column Cluster</h2>
 <p>We can also construct a heat map which identifies interesting clusters of columns (variables).</p>
-<div class="cell" data-hash="04-Multi_Viz_cache/revealjs/unnamed-chunk-12_0918e97a8c7a710e659341e9d35c1350">
+<div class="cell" data-hash="05-Multi_Viz_cache/revealjs/unnamed-chunk-14_dc326791e0aca0129c73b9f2e8fcd892">
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </div>
 </div>
 <p>What do you notice? What new insight do you gain about the variation across U.S. states, now that variables are grouped and ordered to represent similarity?</p>
@@ -634,9 +689,9 @@
 <section id="star-plots" class="slide level2 unnumbered scrollable">
 <h2>Star plots</h2>
 <p>Star plot visualizations indicate the relative scale of each variable for each state.</p>
-<div class="cell" data-hash="04-Multi_Viz_cache/revealjs/unnamed-chunk-13_e198d332cc110682705bc1cea4145660">
+<div class="cell" data-hash="05-Multi_Viz_cache/revealjs/unnamed-chunk-15_205e37d2124499b3dcb709631e9a6f52">
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-13-1.png" width="1440"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-15-1.png" width="1440"></p>
 </div>
 </div>
 <p>What do you notice? What new insight do you gain about the variation across U.S. states with the star plots?</p>
@@ -644,9 +699,9 @@
 <section id="star-plots-1" class="slide level2 unnumbered scrollable">
 <h2>Star plots</h2>
 <p>Star plot visualizations indicate the relative scale of each variable for each state.</p>
-<div class="cell" data-hash="04-Multi_Viz_cache/revealjs/unnamed-chunk-14_07ec00355af2bcd0e91256cb1bd7009b">
+<div class="cell" data-hash="05-Multi_Viz_cache/revealjs/unnamed-chunk-16_e52ca1ab5778b457b5c2a0ab4db7a010">
 <div class="cell-output-display">
-<p><img data-src="04-Multi_Viz_files/figure-revealjs/unnamed-chunk-14-1.png" width="1440"></p>
+<p><img data-src="05-Multi_Viz_files/figure-revealjs/unnamed-chunk-16-1.png" width="1440"></p>
 </div>
 </div>
 <p><img src="images/mac.png" class="slide-logo"></p>
@@ -658,22 +713,22 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="04-Multi_Viz_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="04-Multi_Viz_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="05-Multi_Viz_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -690,7 +745,7 @@
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'multiplex': {"secret":null,"id":"1ecc1c7f79913a8b","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":"16633593517439208266","id":"b152af34ea1f3f97","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -864,7 +919,7 @@
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
-          
+          RevealNotes,
           RevealSearch,
           RevealZoom
         ]

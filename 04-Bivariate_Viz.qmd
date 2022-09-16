@@ -27,22 +27,19 @@ library(readr)
 
 ## Announcements {.unnumbered .smaller}
 
-- Almost all of you have feedback on Assignment 1
-- Assignment 2 was due last night
-- Tidy Tuesday 2 (TT2) was posted yesterday (Bigfoot sightings!)
+-   Almost all of you have feedback on Assignment 1
+-   Assignment 2 was due last night
+-   Tidy Tuesday 2 (TT2) was posted yesterday (Bigfoot sightings!)
 
 <br>
 
-- I request that masks be worn in my class for 1 more week (*until my 2 year old is officially fully vaccinated*). 
-  - If you have concerns about masks going optional in the classroom after next Thursday, email me directly so I can have all the information I need to make a decision that best supports this community. 
-
-
+-   I request that masks be worn in my class for 1 more week (*until my 2 year old is officially fully vaccinated*).
+    -   If you have concerns about masks going optional in the classroom after next Thursday, email me directly so I can have all the information I need to make a decision that best supports this community.
 
 ## Learning Goals {.unnumbered}
 
 -   Identify appropriate types of bivariate visualizations, depending on the type of variables (categorical, quantitative)
 -   Create basic bivariate visualizations based on real data
-
 
 ## Bivariate Visualizations {.unnumbered}
 
@@ -55,7 +52,6 @@ We'll explore county-level election outcomes and demographics.
 Download a template .Rmd of this activity. Put the file in a `Day_04` folder within your `COMP_STAT_112` folder.
 
 -   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 3.
-
 
 ## Getting to know the dataset {.unnumbered .smaller}
 
@@ -146,7 +142,7 @@ ggplot(elect, aes(x = StateColor, fill = winrep_2016)) +
 
 ## In Class
 
-Work on the activity, checking in with your mates at your table. 
+Work on the activity, checking in with your mates at your table.
 
 Notice patterns! Feel free to make visualizations more effective as you go along.
 
