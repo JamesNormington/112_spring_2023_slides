@@ -12,7 +12,25 @@ format:
 editor: visual
 ---
 
+
+## Switch it Up {.unnumbered}
+
+Sit with someone new today!
+
+- Introduce yourself
+- Share best or worst part of the weekend
+
+
 ## Announcements {.unnumbered}
+
+**This week in MSCS**
+
+- Thursday 11:15am Coffee Break
+
+Thanks for the creativity last Friday!
+
+Today we'll practice discussing "insights" we gain from our visualizations
+
 
 ## Learning Goals {.unnumbered}
 
@@ -25,7 +43,6 @@ Download a template .Rmd of this activity. Put the file in a `Day_05` folder wit
 
 -   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 4.
 
-
 ## More Aesthetic Attributes {.unnumbered}
 
 To go beyond 2 variables, we need to add aesthetics for each new variable!
@@ -34,12 +51,15 @@ To go beyond 2 variables, we need to add aesthetics for each new variable!
 
 Though far from a perfect assessment of academic preparedness, SAT scores have historically been used as one measurement of a state's education system.
 
-<br> 
+<br>
+
 ```{r echo=TRUE}
 library(tidyverse)
 education <- read.csv("https://www.macalester.edu/~ajohns24/data/sat.csv")
 ```
+
 <br>
+
 ```{r, echo=FALSE}
 knitr::kable(
   education[1:6, ],
@@ -66,8 +86,8 @@ ggplot(education, aes(x = sat)) +
 
 What degree do per pupil spending (`expend`) and teacher `salary` *explain* this variability?
 
-.  .  .
- 
+. . .
+
 <br>
 
 ```{r echo=TRUE}
@@ -82,7 +102,7 @@ ggplot(education, aes(y = sat, x = expend)) +
   geom_smooth(se = FALSE, method = "lm") + theme_classic()
 ```
 
-Is there anything that surprises you in the above plots? What are the relationship trends?
+Is there anything that surprises you in the above plots? What are the relationship trends? Discuss as a group and write down your thoughts in Rmd.
 
 ## Exercise: Three Variables {.smaller .scrollable}
 
@@ -120,7 +140,6 @@ Another option!
 
 Categorize your 3rd Quantitative Variable!
 
-
 ```{r}
 #| echo: true
 education %>% 
@@ -129,7 +148,6 @@ ggplot(aes(y = sat, x = salary, color = expendCat)) +
   geom_point() +
   geom_smooth(se = FALSE, method = "lm") + theme_classic()
 ```
-
 
 ## Exercise: Fraction who take SAT {.smaller .scrollable}
 
