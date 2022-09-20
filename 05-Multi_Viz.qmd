@@ -12,25 +12,22 @@ format:
 editor: visual
 ---
 
-
 ## Switch it Up {.unnumbered}
 
 Sit with someone new today!
 
-- Introduce yourself
-- Share best or worst part of the weekend
-
+-   Introduce yourself
+-   Share best or worst part of the weekend
 
 ## Announcements {.unnumbered}
 
 **This week in MSCS**
 
-- Thursday 11:15am Coffee Break
+-   Thursday 11:15am Coffee Break
 
 Thanks for the creativity last Friday!
 
 Today we'll practice discussing "insights" we gain from our visualizations
-
 
 ## Learning Goals {.unnumbered}
 
