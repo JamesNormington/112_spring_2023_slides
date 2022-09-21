@@ -22,15 +22,20 @@ editor: visual
 
 **Class Masking Policy (Starting Friday)**
 
-- Section 1: Masks required
-- Section 2: Masks optional
-- FYC: Masks optional
+-   Section 1: Masks required
+-   Section 2: Masks optional
+-   FYC: Masks optional
 
 **Taking Care of Each Other**
 
-- If you are not feeling well, stay home/in the dorm & rest.
-- If you are exposed or a bit unwell, wear a mask. 
-- Masks are always welcome!
+-   If you are not feeling well, stay home/in the dorm & rest.
+-   If you are exposed or a bit unwell, wear a mask.
+-   Masks are always welcome!
+
+## Data Visuals that You've Created {.unnumbered .smaller}
+
+
+[Be Inspired by your Classmates!](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit?usp=sharing)
 
 ## Learning Goals {.unnumbered}
 
