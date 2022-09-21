@@ -12,6 +12,7 @@ format:
 editor: visual
 ---
 
+
 ## Announcements {.unnumbered .smaller}
 
 **This week in MSCS**
@@ -52,6 +53,7 @@ Download a template .Rmd of this activity. Put the file in a `Day_06` folder wit
 -   Choropleths (color-filled polygons/regions)
 -   Dynamic Maps
 
+
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE, cache.extra = packageVersion("tufte"),warning=FALSE)
 library(tidyverse) # for data cleaning and plotting
@@ -68,9 +70,11 @@ library(socviz) # for the US county map
 library(usmap) 
 ```
 
+
 ## Points on a Map: Starbucks Example {.unnumbered .smaller .scrollable}
 
 The `Starbucks` data, compiled by Danny Kaplan, contains information about every Starbucks in the world at the time the data were collected. It includes the `Latitude` and `Longitude` of each location. Let's start by using familiar ggplot plotting tools.
+
 
 ```{r}
 # Starbucks locations
@@ -85,7 +89,9 @@ ggplot(data = Starbucks) +
   theme_classic()
 ```
 
+
 ## Map Background + Points {.unnumbered .smaller .scrollable}
+
 
 ```{r}
 # Get the map information
@@ -106,6 +112,7 @@ ggmap(world) + # creates the map "background"
   theme_map()
 ```
 
+
 ## Map Projections (3D to 2D) {.unnumbered .smaller .scrollable}
 
 Important Context:
@@ -113,6 +120,7 @@ Important Context:
 <https://www.youtube.com/watch?v=vVX-PrBRtTY>
 
 ## Contour/Heat Maps {.unnumbered .smaller .scrollable}
+
 
 ```{r}
 US_map2 <- get_stamenmap(
@@ -134,7 +142,9 @@ ggmap(US_map2) +
   )
 ```
 
+
 ## Choropleths {.unnumbered .smaller .scrollable}
+
 
 ```{r}
 starbucks_us_by_state <- Starbucks %>%
@@ -160,7 +170,9 @@ starbucks_us_by_state %>%
   theme_map()
 ```
 
+
 ## Dynamic Maps with Leaflet {.unnumbered .smaller .scrollable}
+
 
 ```{r}
 favorite_stp <- tibble(
@@ -190,6 +202,7 @@ leaflet(data = favorite_stp) %>%
   )
 ```
 
+
 ## Advanced Spatial Mapping {.unnumbered .smaller .scrollable}
 
 If you want to get into spatial mapping, you'll need to learn some GIS skills and consider coordinate reference systems (CRS).
@@ -205,3 +218,4 @@ If you'd like to learn more, see my notes for my capstone course, [Correlated Da
 -   If you haven't already, finish up the brief insights from Monday's class for Assignment 4 (due Sunday).
 
 -   Consider working on TT3 this week, you could apply your mapping skills!
+

@@ -398,12 +398,25 @@
   <p class="author">Brianna Heggeseth</p>
 </section>
 
-<section id="announcements" class="slide level2 unnumbered">
+<section id="announcements" class="slide level2 unnumbered smaller">
 <h2>Announcements</h2>
 <p><strong>This week in MSCS</strong></p>
 <ul>
 <li>Thursday 11:15am Coffee Break</li>
 <li>Thursday 12-1pm MSCS Seminar (Really cool geometry)!</li>
+<li>Next Wednesday (4:45-7pm): MSCS Block Party!</li>
+</ul>
+<p><strong>Class Masking Policy (Starting Friday)</strong></p>
+<ul>
+<li>Section 1: Masks required</li>
+<li>Section 2: Masks optional</li>
+<li>FYC: Masks optional</li>
+</ul>
+<p><strong>Taking Care of Each Other</strong></p>
+<ul>
+<li>If you are not feeling well, stay home/in the dorm.</li>
+<li>If you are exposed or a bit unwell, wear a mask.</li>
+<li>Masks are always welcome!</li>
 </ul>
 </section>
 <section id="learning-goals" class="slide level2 unnumbered">
@@ -495,7 +508,7 @@
 <span id="cb3-8"><a href="#cb3-8"></a>  <span class="fu">geom_density_2d</span>(<span class="at">data =</span> Starbucks, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude), <span class="at">size =</span> <span class="fl">0.3</span>, <span class="at">color=</span><span class="st">'darkblue'</span>) <span class="sc">+</span></span>
 <span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">stat_density_2d</span>(</span>
 <span id="cb3-10"><a href="#cb3-10"></a>    <span class="at">data =</span> Starbucks,</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">fill =</span> ..level..),</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">fill =</span> <span class="fu">stat</span>(level)),</span>
 <span id="cb3-12"><a href="#cb3-12"></a>    <span class="at">size =</span> <span class="fl">0.1</span>, <span class="at">bins =</span> <span class="dv">20</span>, <span class="at">geom =</span> <span class="st">"polygon"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span></span>
 <span id="cb3-13"><a href="#cb3-13"></a>  ) <span class="sc">+</span></span>
 <span id="cb3-14"><a href="#cb3-14"></a>  <span class="fu">scale_fill_gradient</span>(</span>
@@ -565,8 +578,8 @@
 <span id="cb5-24"><a href="#cb5-24"></a>    <span class="at">label =</span> <span class="sc">~</span>place</span>
 <span id="cb5-25"><a href="#cb5-25"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="htmlwidget-be891fb0ad8a184ddb3b" style="width:960px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-be891fb0ad8a184ddb3b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,44.9351034,44.9274973,44.9433359,44.9284142,44.9251236,44.9468848,44.9266768],[-93.1712321,-93.185131,-93.1775469,-93.1944518,-93.171057,-93.1582673,-93.1524256,-93.156652],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Macalester College","Groveland Recreation Center","Due Focacceria","Shadow Falls Park","Mattocks Park","Carondelet Fields","Pizza Luce","Cold Front Ice Cream"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9251236,44.9468848],"lng":[-93.1944518,-93.1524256]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-03a091b1d20be47f3be0" style="width:960px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-03a091b1d20be47f3be0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,44.9351034,44.9274973,44.9433359,44.9284142,44.9251236,44.9468848,44.9266768],[-93.1712321,-93.185131,-93.1775469,-93.1944518,-93.171057,-93.1582673,-93.1524256,-93.156652],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Macalester College","Groveland Recreation Center","Due Focacceria","Shadow Falls Park","Mattocks Park","Carondelet Fields","Pizza Luce","Cold Front Ice Cream"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9251236,44.9468848],"lng":[-93.1944518,-93.1524256]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
