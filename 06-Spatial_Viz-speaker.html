@@ -477,6 +477,11 @@
 </div>
 </div>
 </section>
+<section id="map-projections-3d-to-2d" class="slide level2 unnumbered smaller scrollable">
+<h2>Map Projections (3D to 2D)</h2>
+<p>Important Context:</p>
+<p><a href="https://www.youtube.com/watch?v=vVX-PrBRtTY" class="uri">https://www.youtube.com/watch?v=vVX-PrBRtTY</a></p>
+</section>
 <section id="contourheat-maps" class="slide level2 unnumbered smaller scrollable">
 <h2>Contour/Heat Maps</h2>
 <div class="cell">
@@ -560,10 +565,24 @@
 <span id="cb5-24"><a href="#cb5-24"></a>    <span class="at">label =</span> <span class="sc">~</span>place</span>
 <span id="cb5-25"><a href="#cb5-25"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="htmlwidget-a5f4dd4538cb89318191" style="width:960px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a5f4dd4538cb89318191">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,44.9351034,44.9274973,44.9433359,44.9284142,44.9251236,44.9468848,44.9266768],[-93.1712321,-93.185131,-93.1775469,-93.1944518,-93.171057,-93.1582673,-93.1524256,-93.156652],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Macalester College","Groveland Recreation Center","Due Focacceria","Shadow Falls Park","Mattocks Park","Carondelet Fields","Pizza Luce","Cold Front Ice Cream"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9251236,44.9468848],"lng":[-93.1944518,-93.1524256]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-be891fb0ad8a184ddb3b" style="width:960px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be891fb0ad8a184ddb3b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,44.9351034,44.9274973,44.9433359,44.9284142,44.9251236,44.9468848,44.9266768],[-93.1712321,-93.185131,-93.1775469,-93.1944518,-93.171057,-93.1582673,-93.1524256,-93.156652],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Macalester College","Groveland Recreation Center","Due Focacceria","Shadow Falls Park","Mattocks Park","Carondelet Fields","Pizza Luce","Cold Front Ice Cream"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9251236,44.9468848],"lng":[-93.1944518,-93.1524256]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
+</section>
+<section id="advanced-spatial-mapping" class="slide level2 unnumbered smaller scrollable">
+<h2>Advanced Spatial Mapping</h2>
+<p>If you want to get into spatial mapping, you’ll need to learn some GIS skills and consider coordinate reference systems (CRS).</p>
+<p>The best tool in R to do this work is the sf package, which does work well with ggplot tools.</p>
+<p>If you’d like to learn more, see my notes for my capstone course, <a href="https://bcheggeseth.github.io/CorrelatedData/spatial-data.html">Correlated Data</a>.</p>
+</section>
+<section id="after-class" class="slide level2 unnumbered smaller scrollable">
+<h2>After Class</h2>
+<ul>
+<li><p>Complete the exercises by next Tuesday and submit for Assignment 5.</p></li>
+<li><p>If you haven’t already, finish up the brief insights from Monday’s class for Assignment 4 (due Sunday).</p></li>
+<li><p>Consider working on TT3 this week, you could apply your mapping skills!</p></li>
+</ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
