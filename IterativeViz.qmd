@@ -1,0 +1,161 @@
+---
+title: "Catch up & Iterative Visualizations"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+**This week in MSCS**
+
+-   Next Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
+
+**Class Masking Policy (Starting Today)**
+
+-   Section 1: Masks required
+-   Section 2: Masks optional
+-   FYC: Masks optional
+
+**Taking Care of Each Other**
+
+-   If you are not feeling well, stay home/in the dorm & rest.
+-   If you are exposed or a bit unwell, wear a mask.
+-   Masks are always welcome!
+
+
+## Sticky Points {.unnumbered .smaller}
+
+This is the last *formal* day of visualizations before moving on to data wrangling.
+
+What aspects are you getting stuck on?
+
+- Discuss in groups
+- Offer tips/resources to each other
+- Share common sticky points with class
+
+## Monthly Learning Reflections {.unnumbered .smaller}
+
+To practice self-assessment and self-reflection, I would like you to complete a monthly self-reflection about your learning in this class:
+
+- by the end of Sept
+- by the end of Oct
+- by the end of Nov
+
+Open the [template file](https://docs.google.com/document/d/1ZpU8y9rOH_lRvZsVWeq-WEx_qwzSkKT484l9QxphJjU/edit?usp=sharing). 
+
+- What question do you have?
+
+*I'll create individual versions of this document and share them with you. You can add your reflections in your individual document. This will only be shared between you and me.*
+
+## ggplot review {.unnumbered .smaller}
+
+For each function, tell me what it does and what types of input arguments it takes.
+
+- `ggplot()`
+- `geom_point()`
+- `aes()`
+- `scale_color_manual()`
+- `ggmap()`
+- `geom_histogram()`
+- `geom_density()`
+- `labs()`
+
+
+
+## ggplot example {- .smaller .scrollable}
+
+```{r echo=FALSE}
+library(tidyverse)
+library(fivethirtyeight)
+data(bechdel)
+newbechdel <- bechdel %>%
+  mutate(clean_test = factor(bechdel$clean_test, c("nowomen", "notalk", "men", "dubious", "ok"))) %>%
+  mutate(yearCat = cut(year, breaks = seq(1969, 2014, by = 5)))
+
+
+```
+
+```{r echo=TRUE, fig.width=12, fig.height=6 }
+yvalues <- newbechdel %>%
+  group_by(yearCat) %>%
+  count(pass = clean_test %in% c('dubious','ok')) %>%
+  mutate(prop = n/sum(n)) %>% filter( pass == TRUE) %>% pull(prop)
+
+bars2 <- data.frame(bars = c(sapply(yvalues, function(x) c(NA,x,rep(NA,3)))) ,yearCat = rep(levels(newbechdel$yearCat),each=5), clean_test = rep(levels(newbechdel$clean_test), 9))
+
+ggplot(newbechdel, 
+       aes(
+         x = yearCat, 
+         fill = clean_test)) + 
+  geom_bar(
+    position = "fill",
+    width = .98) + 
+  scale_fill_manual(
+    values = c("red","salmon","pink","steelblue1","steelblue4"),
+    guide = 'none') +
+  labs(
+    caption = 'SOURCE: BECHDELTEST.COM', 
+    title='Bechdel Test Over Time', 
+    subtitle = 'How women are represented in movies') + 
+  scale_y_continuous(
+    name = '',
+    breaks = seq(0,1,by=.25),
+    labels = scales::percent) +
+  scale_x_discrete(
+    name = '',
+    labels = c("1970-\n'74","","1980-\n'84","","1990-\n'94","","2000-\n'05","","2010-\n'13")) +
+  geom_errorbar(
+    data = bars2, 
+    mapping = aes(y=bars,ymin=bars,ymax=bars),
+    color = "black",
+    size = 2) +
+  annotate(
+    'text',
+    x = 9.6,
+    y = rev(c(0.25,.5,.6,.8,.97)),
+    label = c('Fewer than\n two women',"Women don't\n talk to each\n other", 'Women only\n talk about men','Dubious','Passes\n Bechdel\n Test'),
+    hjust = 0) +
+  annotate(
+    'text',
+    x = c(5,5),
+    y = c(.25,.75),
+    label=c('PASS','FAIL'),
+    hjust = .5, 
+    size=20) + 
+  coord_cartesian(
+    xlim=c(1,10), 
+    clip="off") + 
+  theme_classic() 
+```
+
+
+
+
+## Iterative Viz {.unnumbered .smaller}
+
+[Iterative Viz Instructions](https://docs.google.com/document/d/1u_Ca39P75W77gxv1lq3KhYeyT_Mfy7Qg18E-lJBCFeU/edit?usp=sharing)
+
+Steps:
+
+1. Complete TidyTuesday 1, 2, 3, or 4!
+2. Submit one of those graphics (no need to make changes) to Viz 0 assignment by Sept 30
+3. Revise/update your graphic based on feedback and submit for Viz 1 by Oct 31
+4. Revise/update your graphic based on feedback and submit for Viz 2 by Nov 30
+
+Creativity is highly encouraged and increased complexity (that increases the effectiveness of the visual) is expected.
+
+
+## Rest of Class {.unnumbered .smaller}
+
+Choose your work:
+
+- Assignments 4 (due Sunday) or 5 (Tuesday)
+- Tidy Tuesday 3 (due today)

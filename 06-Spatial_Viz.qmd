@@ -34,7 +34,6 @@ editor: visual
 
 ## Data Visuals that You've Created {.unnumbered .smaller}
 
-
 [Be Inspired by your Classmates!](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit?usp=sharing)
 
 ## Learning Goals {.unnumbered}
