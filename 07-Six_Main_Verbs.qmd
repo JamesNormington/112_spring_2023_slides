@@ -1,0 +1,264 @@
+---
+title: "Data Wrangling"
+subtitle: "Six Main Verbs"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+**This week in MSCS**
+
+-   Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
+- Thursday 11:15am: Coffee Break!
+
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
+library(tidyverse)
+library(ggplot2)
+library(mosaicData)
+library(lubridate)
+```
+
+## Due this Week  {.unnumbered .smaller}
+
+- Assignment 5 (Spatial Viz) on Tuesday [via Moodle]
+- Self-Reflection on Friday [individual Google Doc]
+- At least 1 Tidy Tuesday (TT) by Friday [via Moodle, TT4]
+  - Choose 1 TT to iterate on by Friday [Via Moodle, IV0]
+
+## Data Wrangling {.unnumbered .smaller .scrollable}
+
+Getting the data in the format that we want...
+
+- to visualize
+- to summarize
+- to learn more about the data
+
+## Learning Goals {.unnumbered}
+
+- Understand and be able to use the following verbs appropriate: `select`, `mutate`, `filter`, `arrange`, `summarize`, `group_by`
+- Develop working knowledge of working with dates and `lubridate` functions
+
+## Six Main Verbs {.unnumbered .smaller}
+
+**Verbs that change the variables (columns) but not the cases (rows)**
+
+- select
+- mutate
+
+**Verbs that change the cases (rows) but not the variables (columns)**
+
+- filter
+- arrange
+
+**Grouped summaries**
+
+- summarize
+- group_by
+
+
+## Six Main Verbs {.unnumbered .smaller .scrollable}
+
+**Verbs that change the variables (columns) but not the cases (rows)**
+
+. . .
+
+- select
+  - Action: Provides a subset of variables
+  - Inputs: data, variable names
+  
+. . .
+
+- mutate
+  - Action: creates new variables
+  - Inputs: data, new_variable_name = how_you_define_new_var
+  - Examples: mutate(data, var2 = var^2)
+  
+. . .
+
+**Verbs that change the cases (rows) but not the variables (columns)**
+
+. . .
+
+- filter
+  - Action: shows subset of rows
+  - Inputs: data, Boolean conditions based on variables
+  - Examples: filter(data, year > 2000)
+  
+. . .
+
+- arrange
+  - Action: sorts rows
+  - Inputs: data, variable names, desc(variable name) if by descending order
+  - Examples: arrange(data, desc(n))
+
+. . .
+
+**Grouped summaries**
+
+. . .
+
+- summarize
+  - Action: collapses rows and calculates a summary
+  - Inputs: data, new_variable_name = expression_used_to_summarize
+  - Example: summarize(data, avgHeight = mean(height))
+
+. . .  
+  
+- group_by
+  - Action: creates a grouping structure within data
+  - Inputs: data, names of variables to define grouping structure
+  - Example: data %>% group_by(sport) %>% summarize(avgHeight = mean(height))
+
+## Template File {.unnumbered}
+
+Download a template .Rmd of this activity. Put the file in a `Day_07` folder within your `COMP_STAT_112` folder.
+
+-   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 6.
+
+## Data Example {.unnumbered .smaller .scrollable}
+
+The data table `Birthdays` in the `mosaicData` package gives the number of births recorded on each day of the year in each state from 1969 to 1988.
+
+```{r}
+library(mosaicData)
+Birthdays <- Birthdays %>% select(state, date, year, births)
+```
+
+
+## First Exercise {.unnumbered .smaller .scrollable}
+
+Consider the `Birthdays` data
+
+a. Add two new variables to the `Birthdays` data: one that has only the last two digits of the year, and one that states whether there were more than 100 births in the given state on the given date.   
+
+. . .
+
+```{r}
+BirthdaysExtra <- mutate(Birthdays, 
+      year_short = year - 1900,
+      busy_birthday = (births > 100)
+)
+```
+
+. . .
+
+b. Then form a new table that only has three columns: the state and your two new columns.   
+
+. . .
+
+
+```{r}
+BirthdaysExtraTable <- select(BirthdaysExtra, 
+                         state,
+                         year_short,
+                         busy_birthday
+                         )
+```
+
+. . .
+
+
+c. What does the following operation return: `select(Birthdays, ends_with("te"))`?
+
+. . .
+
+
+```{r}
+select(Birthdays, ends_with("te")) %>% head()
+```
+
+## Second Exercise {.unnumbered .smaller .scrollable}
+
+Create a table with only births in Massachusetts in 1979, and sort the days from those with the most births to those with the fewest.
+
+. . .
+
+```{r}
+MABirths1979 <- filter(Birthdays, state == "MA", year == 1979)
+MABirths1979Sorted <- arrange(MABirths1979, desc(births))
+
+head(MABirths1979Sorted)
+```
+
+## Third Exercise {.unnumbered .smaller .scrollable}
+
+Consider the `Birthdays` data again.
+
+  (a) Find the average number of daily births (per state) in each year.
+  (b) Find the average number of daily births in each year, by state.
+  
+. . .
+
+```{r}
+BirthdaysYear <- group_by(Birthdays, year)
+summarise(BirthdaysYear, average = mean(births))
+
+BirthdaysYearState <- group_by(Birthdays, year, state)
+summarise(BirthdaysYearState, average = mean(births))
+```
+
+
+## Piping  {.unnumbered .smaller .scrollable}
+
+```{r}
+QuickMABirths1979 <-
+  Birthdays %>%
+  filter(state == "MA", year == 1979) %>%
+  arrange(desc(births))
+```
+
+With the pipe notation, `x %>% f(y)` becomes `f(x,y)`, where in the first line here, `x` is `Birthdays`, the function `f` is `filter`, and `y` is `state == "MA", year == 1979`.
+
+
+## Dates  {.unnumbered .smaller .scrollable}
+
+```{r}
+Birthdays <-
+  Birthdays %>%
+  mutate(
+    month = month(date, label = TRUE),
+    weekday = wday(date, label = TRUE)
+  )
+```
+
+Make a table showing the five states with the most births between September 9, 1979 and September 11, 1979, inclusive. Arrange the table in descending order of births.
+
+
+. . .
+
+
+```{r}
+  Birthdays %>%
+  filter(date >= ymd("1979-09-09"), date <= ymd("1979-09-11")) %>%
+  group_by(state) %>%
+  summarise(total = sum(births)) %>%
+  arrange(desc(total)) %>%
+  head(n = 5)
+```
+
+
+## Rest of Class
+
+Continue working on the activity; check in with your classmates.
+
+Don't leave anyone left struggling alone!
+
+## After Class
+
+This activity is all code, no interpretations. 
+
+There are many exercises to give you plenty of practice with these important six tasks!
+
+You'll finish the activity for Assignment 6.
+

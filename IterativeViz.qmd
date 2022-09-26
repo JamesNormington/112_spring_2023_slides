@@ -30,28 +30,27 @@ editor: visual
 -   If you are exposed or a bit unwell, wear a mask.
 -   Masks are always welcome!
 
-
 ## Sticky Points {.unnumbered .smaller}
 
 This is the last *formal* day of visualizations before moving on to data wrangling.
 
 What aspects are you getting stuck on?
 
-- Discuss in groups
-- Offer tips/resources to each other
-- Share common sticky points with class
+-   Discuss in groups
+-   Offer tips/resources to each other
+-   Share common sticky points with class
 
 ## Monthly Learning Reflections {.unnumbered .smaller}
 
 To practice self-assessment and self-reflection, I would like you to complete a monthly self-reflection about your learning in this class:
 
-- by the end of Sept
-- by the end of Oct
-- by the end of Nov
+-   by the end of Sept
+-   by the end of Oct
+-   by the end of Nov
 
-Open the [template file](https://docs.google.com/document/d/1ZpU8y9rOH_lRvZsVWeq-WEx_qwzSkKT484l9QxphJjU/edit?usp=sharing). 
+Open the [template file](https://docs.google.com/document/d/1ZpU8y9rOH_lRvZsVWeq-WEx_qwzSkKT484l9QxphJjU/edit?usp=sharing).
 
-- What question do you have?
+-   What question do you have?
 
 *I'll create individual versions of this document and share them with you. You can add your reflections in your individual document. This will only be shared between you and me.*
 
@@ -59,18 +58,16 @@ Open the [template file](https://docs.google.com/document/d/1ZpU8y9rOH_lRvZsVWeq
 
 For each function, tell me what it does and what types of input arguments it takes.
 
-- `ggplot()`
-- `geom_point()`
-- `aes()`
-- `scale_color_manual()`
-- `ggmap()`
-- `geom_histogram()`
-- `geom_density()`
-- `labs()`
+-   `ggplot()`
+-   `geom_point()`
+-   `aes()`
+-   `scale_color_manual()`
+-   `ggmap()`
+-   `geom_histogram()`
+-   `geom_density()`
+-   `labs()`
 
-
-
-## ggplot example {- .smaller .scrollable}
+## ggplot example {.unnumbered .smaller .scrollable}
 
 ```{r echo=FALSE}
 library(tidyverse)
@@ -136,26 +133,22 @@ ggplot(newbechdel,
   theme_classic() 
 ```
 
-
-
-
 ## Iterative Viz {.unnumbered .smaller}
 
 [Iterative Viz Instructions](https://docs.google.com/document/d/1u_Ca39P75W77gxv1lq3KhYeyT_Mfy7Qg18E-lJBCFeU/edit?usp=sharing)
 
 Steps:
 
-1. Complete TidyTuesday 1, 2, 3, or 4!
-2. Submit one of those graphics (no need to make changes) to Viz 0 assignment by Sept 30
-3. Revise/update your graphic based on feedback and submit for Viz 1 by Oct 31
-4. Revise/update your graphic based on feedback and submit for Viz 2 by Nov 30
+1.  Complete TidyTuesday 1, 2, 3, or 4!
+2.  Submit one of those graphics (no need to make changes) to Viz 0 assignment by Sept 30
+3.  Revise/update your graphic based on feedback and submit for Viz 1 by Oct 31
+4.  Revise/update your graphic based on feedback and submit for Viz 2 by Nov 30
 
 Creativity is highly encouraged and increased complexity (that increases the effectiveness of the visual) is expected.
-
 
 ## Rest of Class {.unnumbered .smaller}
 
 Choose your work:
 
-- Assignments 4 (due Sunday) or 5 (Tuesday)
-- Tidy Tuesday 3 (due today)
+-   Assignments 4 (due Sunday) or 5 (Tuesday)
+-   Tidy Tuesday 3 (due today)
