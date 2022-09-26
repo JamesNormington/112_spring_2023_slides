@@ -44,9 +44,9 @@ library(lubridate)
 
 ## Data Wrangling {.unnumbered .smaller .scrollable}
 
-Getting the data in the format that we want...
+Getting the data in the tidy format that we want...
 
-- to visualize
+- to visualize (glyph-ready: one row per glyph)
 - to summarize
 - to learn more about the data
 
