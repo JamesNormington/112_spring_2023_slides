@@ -20,6 +20,12 @@ editor: visual
 -   Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
 - Thursday 11:15am: Coffee Break!
 
+**Looking Ahead**
+
+- Week 5: Data Wrangling
+- Week 6: Data Wrangling
+- Week 7: Mini Project/Midterm Review
+- Week 8: Midterm/Fall Break
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
