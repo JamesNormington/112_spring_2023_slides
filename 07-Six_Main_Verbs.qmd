@@ -120,6 +120,10 @@ Getting the data in the format that we want...
   - Inputs: data, names of variables to define grouping structure
   - Example: data %>% group_by(sport) %>% summarize(avgHeight = mean(height))
 
+## Visual Illustration {-}
+
+<https://tidydatatutor.com/vis.html#>
+
 ## Template File {.unnumbered}
 
 Download a template .Rmd of this activity. Put the file in a `Day_07` folder within your `COMP_STAT_112` folder.
