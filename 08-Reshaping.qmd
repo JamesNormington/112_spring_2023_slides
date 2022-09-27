@@ -1,0 +1,143 @@
+---
+title: "Reshaping Data"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+**This week in MSCS**
+
+-   Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
+-   Thursday 11:15am: Coffee Break!
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
+library(tidyverse)
+library(ggplot2)
+library(mosaicData)
+library(lubridate)
+library(babynames)
+BabyNames <- babynames
+colnames(BabyNames)[4] <- "count"
+```
+
+## Due this Week {.unnumbered .smaller}
+
+-   Assignment 5 (Spatial Viz) on Tuesday \[via Moodle\]
+-   Self-Reflection on Friday \[individual Google Doc\]
+-   At least 1 Tidy Tuesday (TT) by Friday \[via Moodle, TT4\]
+    -   Choose 1 TT to iterate on by Friday \[Via Moodle, IV0\]
+
+## Learning Goals {.unnumbered}
+
+-   Understand the difference between wide and long data format and distinguish the case (unit of observation) for a given data set
+-   Develop comfort in using `pivot_wider` and `pivot_longer` in the `tidyr` package
+
+## Template File {.unnumbered}
+
+Download a template .Rmd of this activity. Put the file in a `Day_08` folder within your `COMP_STAT_112` folder.
+
+-   This .Rmd only contains examples and 3 exercises that we'll work on in class and you'll finish for Assignment 7.
+
+## Describe to your Neighbor {.unnumbered .smaller}
+
+Everyone: Look at this small data set.
+
+Partner A: Describe the structure of the data set in words.
+
+```{r echo=FALSE}
+BabyTotal <-  BabyNames %>%
+  group_by(name, sex) %>%
+  summarise(total = sum(count))
+
+knitr::kable(
+  BabyTotal %>% filter(name %in% c('Courtney','Riley'))
+)
+```
+
+## Describe to your Neighbor {.unnumbered .smaller}
+
+Partner A: Close your eyes.
+
+Partner B: Describe the how the *structure* of the data set changed. Think of describing "steps" taken.
+
+Partner A: Sketch what you think the new data set looks like.
+
+. . .
+
+```{r echo=FALSE}
+smallWideBaby <- BabyTotal  %>% filter(name %in% c('Courtney','Riley')) %>% pivot_wider(names_from = sex, values_from = total, values_fill = 0, names_sort = TRUE)
+knitr::kable(
+  smallWideBaby
+)
+```
+
+## Describe to your Neighbor {.unnumbered .smaller}
+
+Partner B: Close your eyes.
+
+Partner A: Describe the how the *structure* of the data set changed. Think of describing "steps" taken.
+
+Partner B: Sketch what you think the new data set looks like.
+
+. . .
+
+```{r echo=FALSE}
+smallLongBaby <- smallWideBaby %>% mutate(ratio = pmin(F/M,M/F)) %>% pivot_longer(cols = c(`F`, `M`), names_to = "sex", values_to = "total")
+
+knitr::kable(
+  smallWideBaby %>% mutate(ratio = pmin(F/M,M/F))
+)
+
+knitr::kable(
+  smallLongBaby
+)
+```
+
+## Wider V. Longer Format {.unnumbered}
+
+If we want to maintain all of the values in the data set (*not collapsing rows with `summarize`*) but have a different unit of observation (or case), we can:
+
+. . .
+
+-   Make the data **wider** by spreading out the values across new variables (e.g. total counts for binary "Male" and "Female" names)
+
+. . .
+
+-   Make the data **longer** by combining values from different variables into 1 variable (take counts for binary "Male" and "Female" names and combine into one total column)
+
+## R Functions {.unnumbered}
+
+`pivot_wider()`
+
+-   Inputs: data, names_from = var_name, values_from = var_name
+
+`pivot_longer()`
+
+-   Inputs: data, cols = c(`var_name2`, `var_name2`), names_to = "string", values_to = "string"
+
+## R Functions {.unnumbered}
+
+![Taken from tidyr cheatsheet](images/reshaping.jpeg)
+
+## In Class {.unnumbered}
+
+Go through the example code in the Rmd file to make sure you understand how we reshape data to be wider and longer.
+
+-   Work together on the 3 exercises to turn in for Assignment 7.
+
+## After Class {.unnumbered}
+
+-   Work on the 3 exercises to turn in for Assignment 7.
+-   Tidy Tuesday 4 is posted in Moodle.
+-   Write a self-reflection in your individual Google Doc shared with you.
+-   Submit a Iterative Viz 0 in Moodle.

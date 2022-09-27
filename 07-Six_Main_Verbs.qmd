@@ -18,14 +18,14 @@ editor: visual
 **This week in MSCS**
 
 -   Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
-- Thursday 11:15am: Coffee Break!
+-   Thursday 11:15am: Coffee Break!
 
 **Looking Ahead**
 
-- Week 5: Data Wrangling
-- Week 6: Data Wrangling
-- Week 7: Mini Project/Midterm Review
-- Week 8: Midterm/Fall Break
+-   Week 5: Data Wrangling
+-   Week 6: Data Wrangling
+-   Week 7: Mini Project/Midterm Review
+-   Week 8: Midterm/Fall Break
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
@@ -35,43 +35,42 @@ library(mosaicData)
 library(lubridate)
 ```
 
-## Due this Week  {.unnumbered .smaller}
+## Due this Week {.unnumbered .smaller}
 
-- Assignment 5 (Spatial Viz) on Tuesday [via Moodle]
-- Self-Reflection on Friday [individual Google Doc]
-- At least 1 Tidy Tuesday (TT) by Friday [via Moodle, TT4]
-  - Choose 1 TT to iterate on by Friday [Via Moodle, IV0]
+-   Assignment 5 (Spatial Viz) on Tuesday \[via Moodle\]
+-   Self-Reflection on Friday \[individual Google Doc\]
+-   At least 1 Tidy Tuesday (TT) by Friday \[via Moodle, TT4\]
+    -   Choose 1 TT to iterate on by Friday \[Via Moodle, IV0\]
 
 ## Data Wrangling {.unnumbered .smaller .scrollable}
 
 Getting the data in the tidy format that we want...
 
-- to visualize (glyph-ready: one row per glyph)
-- to summarize
-- to learn more about the data
+-   to visualize (glyph-ready: one row per glyph)
+-   to summarize
+-   to learn more about the data
 
 ## Learning Goals {.unnumbered}
 
-- Understand and be able to use the following verbs appropriate: `select`, `mutate`, `filter`, `arrange`, `summarize`, `group_by`
-- Develop working knowledge of working with dates and `lubridate` functions
+-   Understand and be able to use the following verbs appropriate: `select`, `mutate`, `filter`, `arrange`, `summarize`, `group_by`
+-   Develop working knowledge of working with dates and `lubridate` functions
 
 ## Six Main Verbs {.unnumbered .smaller}
 
 **Verbs that change the variables (columns) but not the cases (rows)**
 
-- select
-- mutate
+-   select
+-   mutate
 
 **Verbs that change the cases (rows) but not the variables (columns)**
 
-- filter
-- arrange
+-   filter
+-   arrange
 
 **Grouped summaries**
 
-- summarize
-- group_by
-
+-   summarize
+-   group_by
 
 ## Six Main Verbs {.unnumbered .smaller .scrollable}
 
@@ -79,34 +78,34 @@ Getting the data in the tidy format that we want...
 
 . . .
 
-- select
-  - Action: Provides a subset of variables
-  - Inputs: data, variable names
-  
+-   select
+    -   Action: Provides a subset of variables
+    -   Inputs: data, variable names
+
 . . .
 
-- mutate
-  - Action: creates new variables
-  - Inputs: data, new_variable_name = how_you_define_new_var
-  - Examples: mutate(data, var2 = var^2)
-  
+-   mutate
+    -   Action: creates new variables
+    -   Inputs: data, new_variable_name = how_you_define_new_var
+    -   Examples: mutate(data, var2 = var\^2)
+
 . . .
 
 **Verbs that change the cases (rows) but not the variables (columns)**
 
 . . .
 
-- filter
-  - Action: shows subset of rows
-  - Inputs: data, Boolean conditions based on variables
-  - Examples: filter(data, year > 2000)
-  
+-   filter
+    -   Action: shows subset of rows
+    -   Inputs: data, Boolean conditions based on variables
+    -   Examples: filter(data, year \> 2000)
+
 . . .
 
-- arrange
-  - Action: sorts rows
-  - Inputs: data, variable names, desc(variable name) if by descending order
-  - Examples: arrange(data, desc(n))
+-   arrange
+    -   Action: sorts rows
+    -   Inputs: data, variable names, desc(variable name) if by descending order
+    -   Examples: arrange(data, desc(n))
 
 . . .
 
@@ -114,19 +113,19 @@ Getting the data in the tidy format that we want...
 
 . . .
 
-- summarize
-  - Action: collapses rows and calculates a summary
-  - Inputs: data, new_variable_name = expression_used_to_summarize
-  - Example: summarize(data, avgHeight = mean(height))
+-   summarize
+    -   Action: collapses rows and calculates a summary
+    -   Inputs: data, new_variable_name = expression_used_to_summarize
+    -   Example: summarize(data, avgHeight = mean(height))
 
-. . .  
-  
-- group_by
-  - Action: creates a grouping structure within data
-  - Inputs: data, names of variables to define grouping structure
-  - Example: data %>% group_by(sport) %>% summarize(avgHeight = mean(height))
+. . .
 
-## Visual Illustration {-}
+-   group_by
+    -   Action: creates a grouping structure within data
+    -   Inputs: data, names of variables to define grouping structure
+    -   Example: data %\>% group_by(sport) %\>% summarize(avgHeight = mean(height))
+
+## Visual Illustration {.unnumbered}
 
 <https://tidydatatutor.com/vis.html#>
 
@@ -145,12 +144,11 @@ library(mosaicData)
 Birthdays <- Birthdays %>% select(state, date, year, births)
 ```
 
-
 ## First Exercise {.unnumbered .smaller .scrollable}
 
 Consider the `Birthdays` data
 
-a. Add two new variables to the `Birthdays` data: one that has only the last two digits of the year, and one that states whether there were more than 100 births in the given state on the given date.   
+a.  Add two new variables to the `Birthdays` data: one that has only the last two digits of the year, and one that states whether there were more than 100 births in the given state on the given date.
 
 . . .
 
@@ -163,10 +161,9 @@ BirthdaysExtra <- mutate(Birthdays,
 
 . . .
 
-b. Then form a new table that only has three columns: the state and your two new columns.   
+b.  Then form a new table that only has three columns: the state and your two new columns.
 
 . . .
-
 
 ```{r}
 BirthdaysExtraTable <- select(BirthdaysExtra, 
@@ -178,11 +175,9 @@ BirthdaysExtraTable <- select(BirthdaysExtra,
 
 . . .
 
-
-c. What does the following operation return: `select(Birthdays, ends_with("te"))`?
+c.  What does the following operation return: `select(Birthdays, ends_with("te"))`?
 
 . . .
-
 
 ```{r}
 select(Birthdays, ends_with("te")) %>% head()
@@ -205,9 +200,9 @@ head(MABirths1979Sorted)
 
 Consider the `Birthdays` data again.
 
-  (a) Find the average number of daily births (per state) in each year.
-  (b) Find the average number of daily births in each year, by state.
-  
+(a) Find the average number of daily births (per state) in each year.
+(b) Find the average number of daily births in each year, by state.
+
 . . .
 
 ```{r}
@@ -218,8 +213,7 @@ BirthdaysYearState <- group_by(Birthdays, year, state)
 summarise(BirthdaysYearState, average = mean(births))
 ```
 
-
-## Piping  {.unnumbered .smaller .scrollable}
+## Piping {.unnumbered .smaller .scrollable}
 
 ```{r}
 QuickMABirths1979 <-
@@ -230,8 +224,7 @@ QuickMABirths1979 <-
 
 With the pipe notation, `x %>% f(y)` becomes `f(x,y)`, where in the first line here, `x` is `Birthdays`, the function `f` is `filter`, and `y` is `state == "MA", year == 1979`.
 
-
-## Dates  {.unnumbered .smaller .scrollable}
+## Dates {.unnumbered .smaller .scrollable}
 
 ```{r}
 Birthdays <-
@@ -244,9 +237,7 @@ Birthdays <-
 
 Make a table showing the five states with the most births between September 9, 1979 and September 11, 1979, inclusive. Arrange the table in descending order of births.
 
-
 . . .
-
 
 ```{r}
   Birthdays %>%
@@ -257,7 +248,6 @@ Make a table showing the five states with the most births between September 9, 1
   head(n = 5)
 ```
 
-
 ## Rest of Class
 
 Continue working on the activity; check in with your classmates.
@@ -266,9 +256,8 @@ Don't leave anyone left struggling alone!
 
 ## After Class
 
-This activity is all code, no interpretations. 
+This activity is all code, no interpretations.
 
 There are many exercises to give you plenty of practice with these important six tasks!
 
 You'll finish the activity for Assignment 6.
-
