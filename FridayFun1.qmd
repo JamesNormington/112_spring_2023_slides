@@ -12,7 +12,7 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered .smaller}
+## Announcements {.unnumbered}
 
 Summer Showcase today from 3:30-5:30pm in Kagin!
 
@@ -20,36 +20,46 @@ Summer Showcase today from 3:30-5:30pm in Kagin!
 -   At least 1 Tidy Tuesday (TT) by today \[Via Moodle, TT4\]
     -   Choose 1 TT to iterate on by today \[Via Moodle, IV0\]
 
-
-## Today {.unnumbered .smaller}
+## Today {.unnumbered}
 
 -   Q & A: Common **sticky points** for Data Wrangling
 -   Sharing: Cool R **tips** and moments of **excitement**
 -   Community work time: Tidy Tuesday 4, Six Main Verbs (17 exercises), Reshaping (3 exercises)
 
+## Q & A {.unnumbered}
 
-## Q & A {.unnumbered .smaller}
+<br> 
 
+#### What tools or activity exercises are you stuck on?
 
+Add responses anonymous (and upvote others) here:
 
-## Sharing Time {.unnumbered .smaller}
+<https://pollev.com/briannahegge814>
 
+## Sharing Time {.unnumbered}
+
+<br> 
+
+#### What tips or cool R moments do you want to share?
+
+Add responses anonymous here:
+
+<https://pollev.com/briannahegge814>
 
 ## Community work time {.unnumbered .smaller}
 
 
-## After class
+
+## After class 
 
 Today:
 
 -   Self-Reflection today \[individual Google Doc\]
 -   At least 1 Tidy Tuesday (TT) by today \[via Moodle, TT4\]
     -   Choose 1 TT to iterate on by today \[Via Moodle, IV0\]
-    
-    
+
 Next Week:
 
--   Sunday (~ 8-8:45am): Cheer on 10 milers (including Brianna) along Summit Ave!
+-   Sunday (\~ 8-8:45am): Cheer on 10 milers (including Brianna) along Summit Ave!
 -   Sunday - Six Main Verbs exercises (Assignment 6)
 -   Tuesday - Reshaping exercises (Assignment 7)
-
