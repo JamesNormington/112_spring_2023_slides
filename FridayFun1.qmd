@@ -50,7 +50,7 @@ Add responses anonymous here:
 
 
 
-## After class 
+## After class  {.smaller}
 
 Today:
 
@@ -61,5 +61,5 @@ Today:
 Next Week:
 
 -   Sunday (\~ 8-8:45am): Cheer on 10 milers (including Brianna) along Summit Ave!
--   Sunday - Six Main Verbs exercises (Assignment 6)
+-   Sunday - Six Main Verbs exercises (Assignment 6) *Do you need more time?*
 -   Tuesday - Reshaping exercises (Assignment 7)
