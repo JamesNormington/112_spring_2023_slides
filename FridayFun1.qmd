@@ -1,0 +1,55 @@
+---
+title: "Friday Fun: Q & A"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+Summer Showcase today from 3:30-5:30pm in Kagin!
+
+-   Self-Reflection due today \[individual Google Doc\]
+-   At least 1 Tidy Tuesday (TT) by today \[Via Moodle, TT4\]
+    -   Choose 1 TT to iterate on by today \[Via Moodle, IV0\]
+
+
+## Today {.unnumbered .smaller}
+
+-   Q & A: Common **sticky points** for Data Wrangling
+-   Sharing: Cool R **tips** and moments of **excitement**
+-   Community work time: Tidy Tuesday 4, Six Main Verbs (17 exercises), Reshaping (3 exercises)
+
+
+## Q & A {.unnumbered .smaller}
+
+
+
+## Sharing Time {.unnumbered .smaller}
+
+
+## Community work time {.unnumbered .smaller}
+
+
+## After class
+
+Today:
+
+-   Self-Reflection today \[individual Google Doc\]
+-   At least 1 Tidy Tuesday (TT) by today \[via Moodle, TT4\]
+    -   Choose 1 TT to iterate on by today \[Via Moodle, IV0\]
+    
+    
+Next Week:
+
+-   Sunday (~ 8-8:45am): Cheer on 10 milers (including Brianna) along Summit Ave!
+-   Sunday - Six Main Verbs exercises (Assignment 6)
+-   Tuesday - Reshaping exercises (Assignment 7)
+
