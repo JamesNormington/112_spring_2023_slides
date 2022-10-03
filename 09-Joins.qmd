@@ -1,0 +1,280 @@
+---
+title: "Joining Data"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+**This week in MSCS**
+
+-   Thursday 11:15am: Coffee Break!
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
+
+## Due this Week {.unnumbered .smaller}
+
+-   Assignment 6 (Six Main Verbs) + 7 (Reshaping) on Tuesday \[via Moodle\]
+
+## Learning Goals {.unnumbered}
+
+-   Understand the concept of keys and variables that uniquely identify rows or cases
+-   Understand the different types of joins, different ways of combining two data frames together
+-   Develop comfort in using mutating joins: `left_join`, `inner_join` and `full_join` in the `dplyr` package
+-   Develop comfort in using filtering joins: `semi_join`, `anti_join` in the `dplyr` package
+
+## Template File {.unnumbered}
+
+Download a template .Rmd of this activity. Put the file in a `Day_09` folder within your `COMP_STAT_112` folder.
+
+-   This .Rmd only contains examples and 6 exercises that we'll work on in class and you'll finish for Assignment 8.
+
+## Joins {.unnumbered .smaller}
+
+### Definition
+
+A *join* is a verb that means to combine two data tables.
+
+-   These tables are often called the *left* and the *right* tables.
+
+. . .
+
+[![Left and Right Tables with intersecting light grey lines indicating potential matches and colored points indicating a match.](images/innerjoin.png)](https://r4ds.had.co.nz/relational-data.html)
+
+## Kinds of Joins {.unnumbered .smaller}
+
+-   All joins involve establishing a correspondence --- **a match** --- between each case in the left table and zero or more cases in the right table.
+
+-   The various joins differ in how they handle multiple matches or missing matches.
+
+[![Left table has duplicate keys.](images/duplicatejoin2.png){width="599"}](https://r4ds.had.co.nz/relational-data.html)
+
+[![Both tables have duplicate keys.](images/duplicatejoin1.png){width="500"}](https://r4ds.had.co.nz/relational-data.html)
+
+## Matches {.unnumbered .smaller}
+
+### Definition of Match
+
+A match between a case in the *left* data table and a case in the *right* data table is made based on the values in **keys**, variables that uniquely define observations in a data table.
+
+### Two Types of Keys
+
+1.  A **primary key** uniquely identifies an observation in its own table.
+
+2.  A **foreign key** uniquely identifies an observation in another table.
+
+### Match in Practice
+
+In order to establish a match between two data tables,
+
+-   **You** specify which variables (or keys) to use.
+-   Each variable is specify as a pair, where one variable from the left table corresponds to one variable from the right table.
+-   Cases must have *exactly equal* values in the left variable and right variable for a match to be made.
+
+## Example - Student Grades and Courses
+
+```{r, echo=FALSE}
+Grades <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/grades.csv")
+Grades <- Grades %>%
+  select(sid, sessionID, grade) %>%
+  distinct(sid, sessionID, .keep_all = TRUE)
+
+
+set.seed(101)
+knitr::kable(
+  sample_n(Grades, size = 4),
+  align = "ccc", caption = "Student grades."
+)
+```
+
+
+```{r, cache=TRUE,echo=FALSE}
+Courses <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/courses.csv")
+
+set.seed(101)
+knitr::kable(
+  sample_n(Courses, size = 4),
+  align = "cccccc", caption = "Information about each course section."
+)
+
+```
+
+## Example - Student Grades and Courses {.smaller .scrollable}
+
+What variables are the primary keys (uniquely identifies a case) for `Grades`?
+
+. . .
+
+> `sid` (student ID) and `sessionID` (class ID) are the primary keys for `Grades` as they unique identify each case.
+
+. . .
+
+What variables are the primary keys (uniquely identifies a case) for `Courses`? 
+
+. . .
+
+> `sessionID` (class ID) and `dept` are the primary keys for `Courses` as they unique identify each case. You may have thought that `sessionID` alone was sufficient; however, if a course is cross-listed, then it may have multiple departments listed.
+
+## Example - Student Grades and Courses {.smaller .scrollable}
+
+What variables are the foreign keys in `Grades` for `Courses`?
+
+. . .
+
+> `sessionID` (class ID) is part of a foreign key in `Grades` for `Courses`. If we `group_by` and `summarize` first to deal with cross-listed courses, then `sessionID` is the foreign key in `Grades` for `Courses`.
+
+. . .
+
+
+What variables are the foreign keys in `Courses` for `Grades`?  
+
+. . .
+
+> `sessionID` in `Courses` is only part of a foreign key that uniquely identify rows in `Grades`.
+
+
+## Mutating Joins {.unnumbered .smaller .scrollable}
+
+A mutating join allows you to combine variables from two tables. It first matches observations by their keys, then copies across variables from one table to the other.
+
+. . .
+
+-   **`left_join()`**: the output has *all cases from the left*, regardless if there is a match in the right, but discards any cases in the right that do not have a match in the left.
+
+    ![](images/leftjoin.png){width="300" height="109"}
+
+. . .
+
+-   **`inner_join()`**: the output has *only the cases from the left with a match in the right*.
+
+    ![](images/innerjoin.png){width="300"}
+
+. . .
+
+-   **`full_join()`**: the output has *all cases from the left and the right*. This is less common than the first two join operators.
+
+    ![](images/fulljoin.png){width="300"}
+
+## Example - Student Grades and Courses {.smaller .scrollable}
+
+Determine the average class size from the **viewpoint of the Provost / Admissions Office**
+
+- How would you approach this?
+
+. . .
+
+```{r}
+CourseSizes <- Courses %>%
+  group_by(sessionID) %>% # needed for cross-listed courses
+  summarise(total_enroll = sum(enroll))
+
+head(CourseSizes)
+
+mean(CourseSizes$total_enroll)
+
+```
+
+## Example - Student Grades and Courses {.smaller .scrollable}
+
+Determine the average class size from the **viewpoint of a student** (average class size for each student experiences across their courses)
+
+- How would you approach this?
+
+. . .
+
+```{r}
+EnrollmentsWithClassSize <- Grades %>%
+  left_join(CourseSizes,
+    by = c("sessionID" = "sessionID")
+  ) %>%
+  select(sid, sessionID, total_enroll)
+
+head(EnrollmentsWithClassSize)
+
+AveClassEachStudent <- EnrollmentsWithClassSize %>%
+  group_by(sid) %>%
+  summarise(ave_enroll = mean(total_enroll, na.rm = TRUE))
+
+head(AveClassEachStudent)
+
+mean(AveClassEachStudent$ave_enroll)
+```
+
+
+
+## Filtering Joins {.unnumbered .smaller}
+
+Filtering joins affect the observations, not the variables. 
+
+. . .
+
+- **`semi_join()`**: discards any cases in the left table that *do not have a match* in the right table. If there are multiple matches of right cases to a left case, it keeps just one copy of the left case.
+
+    ![](images/semijoin.png){width="300"}
+
+. . .
+
+- **`anti_join()`**: discards any cases in the left table that *have a match* in the right table.
+  
+    ![](images/antijoin.png){width="300"}
+
+
+
+## Example - Student Grades and Courses {.smaller .scrollable}
+
+Find a subset of the `Grades` data that only contains data on the four largest sections in the `Courses` data set.
+
+. . .
+
+```{r}
+LargeSections <- Courses %>%
+  group_by(sessionID) %>%
+  summarise(total_enroll = sum(enroll)) %>%
+  arrange(desc(total_enroll)) %>% head(4)
+
+LargeSections
+
+GradesFromLargeSections <- Grades %>%
+  semi_join(LargeSections)
+
+head(GradesFromLargeSections)
+```
+
+## Example - Student Grades and Courses {.smaller .scrollable}
+
+Use `semi_join()` to create a table with a subset of the rows of `Grades` corresponding to all classes taken in department `J`.
+
+. . .
+
+```{r}
+JCourses <- Courses %>%
+  filter(dept == "J")
+
+JGrades <- Grades %>%
+  semi_join(JCourses)
+```
+
+
+
+
+## After Class {.unnumbered}
+
+Work on the 6 exercises to turn in for Assignment 8.
+
+These exercises help you deepen your understanding of 
+
+- Data Wrangling (6 Main Verbs)
+- Data Visualization (including Spatial Viz)
