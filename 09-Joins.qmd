@@ -16,7 +16,9 @@ editor: visual
 
 **This week in MSCS**
 
--   Thursday 11:15am: Coffee Break!
+-   Preceptor Training (if you are preceptor for another class!)
+-   Wednesday 3:30pm: Math Problem Solving! 
+-   Thursday 11:15am: Coffee Break! Student Advisor Board Introductions!
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
@@ -29,6 +31,19 @@ library(lubridate)
 
 -   Assignment 6 (Six Main Verbs) + 7 (Reshaping) on Tuesday \[via Moodle\]
 
+If you haven't turned in the following, do so soon:
+
+- Tidy Tuesday 4
+- Iterative Viz 0 (no extra work, submit 1 completed TT html file)
+- Reflection on Learning (in individual document shared with you)
+
+If your spreadsheet says "No submission for assignment",
+
+- submit your assignment to Moodle
+- email Brianna indicating that you've submitted
+- Brianna will be going through past assignments Tuesday
+
+
 ## Learning Goals {.unnumbered}
 
 -   Understand the concept of keys and variables that uniquely identify rows or cases
@@ -40,7 +55,7 @@ library(lubridate)
 
 Download a template .Rmd of this activity. Put the file in a `Day_09` folder within your `COMP_STAT_112` folder.
 
--   This .Rmd only contains examples and 6 exercises that we'll work on in class and you'll finish for Assignment 8.
+-   This .Rmd only contains examples that we'll work on in class and 6 exercises  you'll finish for Assignment 8.
 
 ## Joins {.unnumbered .smaller}
 
