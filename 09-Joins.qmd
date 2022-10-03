@@ -69,7 +69,7 @@ A *join* is a verb that means to combine two data tables.
 
 [![Left and Right Tables with intersecting light grey lines indicating potential matches and colored points indicating a match.](images/innerjoin.png)](https://r4ds.had.co.nz/relational-data.html)
 
-## Kinds of Joins {.unnumbered .smaller}
+## Kinds of Joins {.unnumbered .smaller .scrollable}
 
 -   All joins involve establishing a correspondence --- **a match** --- between each case in the left table and zero or more cases in the right table.
 
@@ -98,8 +98,8 @@ In order to establish a match between two data tables,
 -   **You** specify which variables (or keys) to use.
 -   Each variable is specify as a pair, where one variable from the left table corresponds to one variable from the right table.
 -   Cases must have *exactly equal* values in the left variable and right variable for a match to be made.
-
-## Example - Student Grades and Courses
+ 
+## Example - Student Grades and Courses {.scrollable}
 
 ```{r, echo=FALSE}
 Grades <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/grades.csv")
