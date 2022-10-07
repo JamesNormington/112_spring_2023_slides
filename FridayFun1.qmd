@@ -28,7 +28,7 @@ Summer Showcase today from 3:30-5:30pm in Kagin!
 
 ## Q & A {.unnumbered}
 
-<br> 
+<br>
 
 #### What tools or activity exercises are you stuck on?
 
@@ -38,7 +38,7 @@ Add responses anonymous (and upvote others) here:
 
 ## Sharing Time {.unnumbered}
 
-<br> 
+<br>
 
 #### What tips or cool R moments do you want to share?
 
@@ -48,9 +48,7 @@ Add responses anonymous here:
 
 ## Community work time {.unnumbered .smaller}
 
-
-
-## After class  {.smaller}
+## After class {.smaller}
 
 Today:
 

@@ -1,0 +1,60 @@
+---
+title: "Friday Fun"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Today {.unnumbered}
+
+-   Check In's
+-   Community work time: Joining (6 multi-part exercises) or TT5 or Work through Past Solutions
+
+## Reflections {.unnumbered}
+
+In reading through your reflections, these were some common themes:
+
+- making maps can be confusing
+- data wrangling is harder than visualizations
+- struggling with interpretations
+- the struggle is real but most of you see it is worth it!
+- with practice comes comfort and speed
+- group work is good; maybe more group work in class
+- sitting with new people is hard but good
+
+## Check Ins {.unnumbered}
+
+Check in with each other as humans
+
+- Struggles and triumphs of the week
+- What you are looking forward to
+
+
+## Look Ahead {.unnumbered}
+
+We've been exposed to the basic data science tools & functions. 
+
+- Now we'll make sure we fully understand them (prep for Midterm - Oct 17)
+- And we'll focus on applying them in different situations (Mini and Final Projects)
+
+We'll add in some advanced tools + focus on communication after Fall Break. 
+
+
+## Community work time {.unnumbered .smaller}
+
+Your Choice:
+
+- Joining Exercises 4 & 5 (move to front of class)
+- Work on TT5 or Work through Past Solutions (move to back of class/corners)
+
+## After class {.smaller}
+
+
+- Joining Exercises (Assignment 8) due Sunday
