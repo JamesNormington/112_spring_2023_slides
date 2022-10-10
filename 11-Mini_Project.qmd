@@ -1,0 +1,46 @@
+---
+title: "Mini Project"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered}
+
+-   Tuesday 4:45pm Susan Fox's DeWitt Wallace Talk!
+-   Thursday 11:15am Coffee Break
+-   Thursday 7-9pm Game night
+
+## Today {.unnumbered}
+
+-   Mini Project in groups of 2-3 people
+
+Consider group roles:
+
+- Facilitator
+- Communication Manager
+- Resource Manager
+
+Consider assigning each person a group of exercises to try.
+
+
+## Midterm Preview {.unnumbered}
+
+- Course Schedule --> Midterm Review on Friday
+
+
+## Group work time {.unnumbered }
+
+
+## After class 
+
+
+- On Weds, we'll work more on Mini Project
+- Mini Project will be due Sunday
