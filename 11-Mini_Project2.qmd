@@ -19,18 +19,16 @@ editor: visual
 -   Thursday 11:15am Coffee Break
 -   Thursday 7-9pm Game night OLRI 256
 
-
 ## Announcements {.unnumbered}
 
 **Feedback**
 
 Please check your individual spreadsheet for feedback.
 
-- Look for comments about missing assignments/wrong files [If you submit, send me an email]
-- Tidy Tuesday (TT1 - TT4 complete; working on TT5)
-- Iterative Viz (Qualitative feedback for FYC; Coming for Sections 1 & 2)
-- Assignment 8 feedback coming 
-
+-   Look for comments about missing assignments/wrong files \[If you submit, send me an email\]
+-   Tidy Tuesday (TT1 - TT4 complete; working on TT5)
+-   Iterative Viz (Qualitative feedback for FYC; Coming for Sections 1 & 2)
+-   Assignment 8 feedback coming
 
 ## Announcements {.unnumbered}
 
@@ -42,18 +40,14 @@ Topic: Ravelry Yarn
 
 Mini Project in same groups of 2-3 people
 
-- Consider assigning each person a group of exercises to try.
+-   Consider assigning each person a group of exercises to try.
 
-- 40 minutes in: Discuss research question (Exercise 9)
+-   40 minutes in: Discuss research question (Exercise 9)
 
+## Group work time {.unnumbered}
 
+## After class
 
-## Group work time {.unnumbered }
-
-
-## After class 
-
-
-- Work more on Mini Project
-- Make note of concepts that you are struggling with
-- Mini Project will be due Sunday
+-   Work more on Mini Project
+-   Make note of concepts that you are struggling with
+-   Mini Project will be due Sunday

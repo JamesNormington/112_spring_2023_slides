@@ -1,0 +1,76 @@
+---
+title: "Midterm Review Day"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered}
+
+**Upcoming Happenings**
+
+-   Family Fest 5K Saturday morning!
+-   Home sporting events this weekend!
+
+
+## Announcements {.unnumbered .smaller}
+
+**Midterm**
+
+- Part 1 (Concepts, no notes) ~ 20 minutes
+- Part 2 (Application, notes + computer resources) ~ 40 minutes
+
+**Midterm Feedback/Progress on Learning Goals**
+
+- This midterm will not fully determine your final grade
+- It will demonstrate where you are at right now with the learning goals
+- There will be an opportunity to do test corrections and reflect after I give feedback
+
+## Test Anxiety & Stress {.unnumbered .smaller}
+
+Benefits of this Assessment
+
+- Take this assessment as an opportunity to synthesize the material 
+- You'll benefit from having studied for this exam in the 2nd half of the semester
+
+Disadvantages of an Assessment
+
+- In real life, we are not often timed in our ability to solve a problem (however, it is often useful to solve it quickly)
+- In real life, we continue to learn from our mistakes and continue to grow in our understanding
+
+Our Assessment
+
+- Yes, it might be a bit stressful as many things in life are
+- But, I don't want anyone to lose sleep over this assessment
+- You'll have opportunities to learn from mistakes and continue your growth!
+
+
+## Today {.unnumbered}
+
+- Midterm Review Game
+- Q & A
+- Kiva Solutions!
+  - No need to turn in Mini Project!
+  - Use it as a study guide and practice
+
+## Midterm Review Game {.unnumbered}
+
+[How well do you know your Data Verbs?](https://docs.google.com/presentation/d/1DI69FgQbhZuU304dtQ9JgvlT6k_EKJgGRKkVU98YSdE/edit?usp=sharing)
+
+## Q & A {.unnumbered}
+
+<http://www.pollev.com/briannahegge814>
+
+## After class
+
+- Study and practice for Monday
+- Solutions on Moodle
+- Try past Tidy Tuesdays
+
