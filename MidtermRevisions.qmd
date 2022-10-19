@@ -54,17 +54,17 @@ Turn into me today when you are done.
 
 
 
-## Midterm Revisions {.unnumbered}
+## Midterm Revisions {.unnumbered .smaller}
 
 **Part 2**
 
-Keep the questions for Part 2.
+- Keep the questions for Part 2.
 
-Talk through some of the stumbling blocks with your group members. Take notes for yourself. 
+- Talk through some of the stumbling blocks with your group members. Take notes for yourself. 
 
-By the end of next week, submit an updated version of the Midterm Part 2 and write a reflection about the midterm in your spreadsheet. 
+- By the end of next week, submit an updated version of the Midterm Part 2 and write a reflection about the midterm in your spreadsheet. 
 
-**My Deal**: You may talk to others in the class (not preceptors, not people who have previously taken it) but you **may not directly share code** with each other. Instead, talk about the actions more conceptually and point each other to resources.
+**My Deal**: *You may talk to others in the class (not preceptors, not people who have previously taken it) but you* **may not directly share code** *with each other. Instead, talk about the actions more conceptually and point each other to resources.*
 
 ## Fall Break {.unnumbered}
 
