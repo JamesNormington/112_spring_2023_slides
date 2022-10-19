@@ -1,0 +1,82 @@
+---
+title: "Midterm Revisions + Project Brainstorming"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered}
+
+**Past Assignments**
+
+- Check your spreadsheet for IV0 feedback!
+  - If you didn't submit something, email me once you do so I can give you feedback.
+  
+- Check your spreadsheet for other missing assignments!
+  - Email me once you do so I can give you feedback.
+
+
+## Announcements {.unnumbered}
+
+**Midterm Grades**
+
+- What would you prefer?
+  - Everyone get J's
+  - A/B/C/D (no +/-) based on information I have at this time
+  
+## Brainstorming Activity {.unnumbered}
+
+In the back of your brain, start thinking about project ideas.
+
+Each of you will generate 2-3 ideas.
+
+Next Tuesday night, you'll submit those ideas to [Moodle](https://moodle.macalester.edu/mod/assign/view.php?id=48667).
+  
+  
+## Midterm Revisions {.unnumbered}
+
+**Part 1**
+
+For each problem I marked with an X, 
+
+- write a more correct answer and 1 sentence description of why that is a more correct answer (maybe why the original answer wasn't correct).
+
+Work in groups; help each other understand the WHY. 
+
+Turn into me today when you are done.
+
+
+
+## Midterm Revisions {.unnumbered}
+
+**Part 2**
+
+Keep the questions for Part 2.
+
+Talk through some of the stumbling blocks with your group members. Take notes for yourself. 
+
+By the end of next week, submit an updated version of the Midterm Part 2 and write a reflection about the midterm in your spreadsheet. 
+
+**My Deal**: You may talk to others in the class (not preceptors, not people who have previously taken it) but you **may not directly share code** with each other. Instead, talk about the actions more conceptually and point each other to resources.
+
+## Fall Break {.unnumbered}
+
+- No class on Friday
+- No course work is urgent enough to have to do over break
+  - If you want to use that time to work on Midterm Part 2, fine.
+  - If you'd like to write out your ideas for a project, fine.
+  - If you want to use that time to take a break, do that. 
+
+- I will be without Wi-Fi from Thursday - Sunday, so I'll respond to any questions/concerns on Monday. 
+
+
+
+
+
