@@ -22,6 +22,12 @@ library(ggmap)
 library(GGally)
 ```
   
+**MSCS Happenings**
+
+- 3:30pm Wednesday Problem solving
+- 11:15am Thursday Coffee Break
+- 12-1pm Thursday Iowa State Grad School Info Session
+  
 ## From Last Wednesday {.smaller .scrollable}
 
 ### Brainstorming Activity 
