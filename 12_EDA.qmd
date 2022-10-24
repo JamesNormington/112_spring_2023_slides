@@ -44,7 +44,8 @@ In the back of your brain, start thinking about project ideas.
 Each of you will generate 2-3 ideas.
 
 By Friday night (updated!), you'll submit those ideas to [Moodle](https://moodle.macalester.edu/mod/assign/view.php?id=48667).
-  
+
+. . .
   
 ### Midterm Revisions Part 1 {.unnumbered}
 
@@ -52,15 +53,17 @@ For each problem I marked with an X,
 
 - write a more correct answer and 1 sentence description of why that is a more correct answer (maybe why the original answer wasn't correct).
 
-Work in groups; help each other understand the WHY. 
+Talk with others in the class; help each other understand the WHY. 
 
 Turn into me by next class.
 
-
+. . . 
 
 ### Midterm Revisions Part 2 {.unnumbered .smaller}
 
-- Talk through some of the stumbling blocks with your group members. Take notes for yourself. 
+- UPDATE: You should have been notified of a shared pdf with feedback
+
+- Talk through some of the stumbling blocks with your classmates. Take notes for yourself. 
 
 - By the end of THIS week, submit an updated version of the Midterm Part 2 **to Moodle** and write a reflection about the midterm in your spreadsheet. 
 
@@ -89,6 +92,8 @@ Turn into me by next class.
 knitr::include_graphics("http://r4ds.had.co.nz/diagrams/data-science.png")
 ```
 
+. . .
+
 Another way to describe EDA:
 
 1) **Understand** the basic data that is available to you.
@@ -103,6 +108,7 @@ Another way to describe EDA:
 
 1. Start by understanding the data that is available to you. 
 
+::: {.incremental}
   * Where does my data come from? How was it collected?
     * WHO (whether it is a sample of a larger data set, and, if so, how the sampling was done? Randomly? All cases during a specific time frame? All data for a selected set of users?), 
     * WHEN (is this current data or historical? what events may have had an impact?), 
@@ -110,16 +116,21 @@ Another way to describe EDA:
     * WHY (who funded the data collection? for what purposes what the data collected? to whose benefit was the data collected?) 
   * Is there a codebook? If not, how can I learn about it?
     * Are there people I can reach out to who have experience with this data?
+:::
 
 ## Understand the Basic Data {.smaller .scrollable}
 
 2. Next, you need to load the data and clean it. Once the data is loaded, ask yourself about each table:
 
+::: {.incremental}
   * What is an observation? 
   * How many observations are there? 
   * What is the meaning of each variable? 
   * What is the type or class of each variable (date, location, string, factor, number, boolean, etc.)?
-  
+:::
+
+. . .
+
 Useful R functions:
 
 - `str()` to learn about the numbers of variables and observations as well as the classes of variables 
@@ -139,24 +150,28 @@ tail(crime)
 
 3. Finally, ask yourself about the relationships between tables:
 
+::: {.incremental}
   * What variables are keys and link the tables (i.e., which variables can you use in `join` commands)?
-  
+:::
 
 ## Visualize and Describe the Data {.smaller}
 
 1. Do some univariate visualizations; e.g., plotting histograms, densities, and box plots of different variables.
 
-
+::: {.incremental}
 * What do you see that is interesting? 
 * Which values are most common or unusual (outliers)?
 * Is there a lot of missing data?
 * What type of variation occurs within the individual variables?
 * What might be causing the interesting findings?
 * How could you figure out whether your ideas are correct?
+:::
 
 ## Visualize and Describe the Data {.smaller .scrollable}
 
 2. Then examine the **covariation** between different variables. 
+
+. . .
 
 One convenient way to do this is with a `pairs` plot. 
 
@@ -196,7 +211,11 @@ You will often end up with a lot of data, and it can be easy to be overwhelmed.
 
 How should you get started? 
 
+. . .
+
 1. One easy idea is to brainstorm ideas for research questions, and pick one that seems promising. This process is much easier with more than one brain! 
+
+. . .
 
 2. You will often be working off of a broad question posed by a business, organization, or supervisor, and be thinking about how to narrow it down. 
 
@@ -211,7 +230,7 @@ To do so, you can again revisit questions like "What patterns do you see?" or "W
 
 ## Practice: Flight Data {-}
 
-Let's practice these steps using data about [flight delays from Kaggle](https://www.kaggle.com/usdot/flight-delays).
+Let's practice these steps using data about [flight delays from Kaggle](https://www.kaggle.com/usdot/flight-delays). Download template Rmd file from course website.
 
 ```{r, cache=TRUE,eval=TRUE}
 airlines <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/airlines.csv")

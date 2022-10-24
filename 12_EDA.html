@@ -356,11 +356,12 @@
 <ul>
 <li>write a more correct answer and 1 sentence description of why that is a more correct answer (maybe why the original answer wasn’t correct).</li>
 </ul>
-<p>Work in groups; help each other understand the WHY.</p>
+<p>Talk with others in the class; help each other understand the WHY.</p>
 <p>Turn into me by next class.</p>
 <h3 class="unnumbered smaller" id="midterm-revisions-part-2">Midterm Revisions Part 2</h3>
 <ul>
-<li><p>Talk through some of the stumbling blocks with your group members. Take notes for yourself.</p></li>
+<li><p>UPDATE: You should have been notified of a shared pdf with feedback</p></li>
+<li><p>Talk through some of the stumbling blocks with your classmates. Take notes for yourself.</p></li>
 <li><p>By the end of THIS week, submit an updated version of the Midterm Part 2 <strong>to Moodle</strong> and write a reflection about the midterm in your spreadsheet.</p></li>
 </ul>
 <p><strong>My Deal</strong>: <em>You may talk to others in the class (not preceptors, not people who have previously taken it) but you</em> <strong>may not directly share code</strong> <em>with each other. Instead, talk about the actions more conceptually and point each other to resources.</em></p>
@@ -393,6 +394,7 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <p>Another way to describe EDA:</p>
 <ol type="1">
 <li><strong>Understand</strong> the basic data that is available to you.</li>
@@ -401,37 +403,43 @@
 <li><strong>Analyze</strong> the data related to the research question, starting from simple analyses to more complex ones.</li>
 <li><strong>Interpret</strong> your findings, <strong>refine</strong> your research question, and return to step 4.</li>
 </ol>
+</div>
 </section>
 <section id="understand-the-basic-data" class="slide level2 smaller">
 <h2>Understand the Basic Data</h2>
 <ol type="1">
 <li>Start by understanding the data that is available to you.</li>
 </ol>
+<div>
 <ul>
-<li>Where does my data come from? How was it collected?
+<li class="fragment">Where does my data come from? How was it collected?
 <ul>
-<li>WHO (whether it is a sample of a larger data set, and, if so, how the sampling was done? Randomly? All cases during a specific time frame? All data for a selected set of users?),</li>
-<li>WHEN (is this current data or historical? what events may have had an impact?),</li>
-<li>WHAT (what variables were measured? how was it measured, self-reported through a questionnaire or measured directly?),</li>
-<li>WHY (who funded the data collection? for what purposes what the data collected? to whose benefit was the data collected?)</li>
+<li class="fragment">WHO (whether it is a sample of a larger data set, and, if so, how the sampling was done? Randomly? All cases during a specific time frame? All data for a selected set of users?),</li>
+<li class="fragment">WHEN (is this current data or historical? what events may have had an impact?),</li>
+<li class="fragment">WHAT (what variables were measured? how was it measured, self-reported through a questionnaire or measured directly?),</li>
+<li class="fragment">WHY (who funded the data collection? for what purposes what the data collected? to whose benefit was the data collected?)</li>
 </ul></li>
-<li>Is there a codebook? If not, how can I learn about it?
+<li class="fragment">Is there a codebook? If not, how can I learn about it?
 <ul>
-<li>Are there people I can reach out to who have experience with this data?</li>
+<li class="fragment">Are there people I can reach out to who have experience with this data?</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="understand-the-basic-data-1" class="slide level2 smaller scrollable">
 <h2>Understand the Basic Data</h2>
 <ol start="2" type="1">
 <li>Next, you need to load the data and clean it. Once the data is loaded, ask yourself about each table:</li>
 </ol>
+<div>
 <ul>
-<li>What is an observation?</li>
-<li>How many observations are there?</li>
-<li>What is the meaning of each variable?</li>
-<li>What is the type or class of each variable (date, location, string, factor, number, boolean, etc.)?</li>
+<li class="fragment">What is an observation?</li>
+<li class="fragment">How many observations are there?</li>
+<li class="fragment">What is the meaning of each variable?</li>
+<li class="fragment">What is the type or class of each variable (date, location, string, factor, number, boolean, etc.)?</li>
 </ul>
+</div>
+<div class="fragment">
 <p>Useful R functions:</p>
 <ul>
 <li><code>str()</code> to learn about the numbers of variables and observations as well as the classes of variables</li>
@@ -492,35 +500,41 @@
 #   ³​burglary, ⁴​larceny_theft, ⁵​motor_vehicle_theft, ⁶​population</code></pre>
 </div>
 </div>
+</div>
 </section>
 <section id="understand-the-basic-data-2" class="slide level2 smaller">
 <h2>Understand the Basic Data</h2>
 <ol start="3" type="1">
 <li>Finally, ask yourself about the relationships between tables:</li>
 </ol>
+<div>
 <ul>
-<li>What variables are keys and link the tables (i.e., which variables can you use in <code>join</code> commands)?</li>
+<li class="fragment">What variables are keys and link the tables (i.e., which variables can you use in <code>join</code> commands)?</li>
 </ul>
+</div>
 </section>
 <section id="visualize-and-describe-the-data" class="slide level2 smaller">
 <h2>Visualize and Describe the Data</h2>
 <ol type="1">
 <li>Do some univariate visualizations; e.g., plotting histograms, densities, and box plots of different variables.</li>
 </ol>
+<div>
 <ul>
-<li>What do you see that is interesting?</li>
-<li>Which values are most common or unusual (outliers)?</li>
-<li>Is there a lot of missing data?</li>
-<li>What type of variation occurs within the individual variables?</li>
-<li>What might be causing the interesting findings?</li>
-<li>How could you figure out whether your ideas are correct?</li>
+<li class="fragment">What do you see that is interesting?</li>
+<li class="fragment">Which values are most common or unusual (outliers)?</li>
+<li class="fragment">Is there a lot of missing data?</li>
+<li class="fragment">What type of variation occurs within the individual variables?</li>
+<li class="fragment">What might be causing the interesting findings?</li>
+<li class="fragment">How could you figure out whether your ideas are correct?</li>
 </ul>
+</div>
 </section>
 <section id="visualize-and-describe-the-data-1" class="slide level2 smaller scrollable">
 <h2>Visualize and Describe the Data</h2>
 <ol start="2" type="1">
 <li>Then examine the <strong>covariation</strong> between different variables.</li>
 </ol>
+<div class="fragment">
 <p>One convenient way to do this is with a <code>pairs</code> plot.</p>
 <h3 id="examples">Examples</h3>
 <p>The main point of such plots is not necessarily to draw any conclusions, but help generate more specific research questions and hypotheses.</p>
@@ -539,16 +553,23 @@
 <p><img data-src="12_EDA_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </div>
 </div>
+</div>
 </section>
 <section id="formulate-a-research-question" class="slide level2 smaller scrollable">
 <h2>Formulate a Research Question</h2>
 <p>You will often end up with a lot of data, and it can be easy to be overwhelmed.</p>
 <p>How should you get started?</p>
+<div class="fragment">
 <ol type="1">
-<li><p>One easy idea is to brainstorm ideas for research questions, and pick one that seems promising. This process is much easier with more than one brain!</p></li>
-<li><p>You will often be working off of a broad question posed by a business, organization, or supervisor, and be thinking about how to narrow it down.</p></li>
+<li>One easy idea is to brainstorm ideas for research questions, and pick one that seems promising. This process is much easier with more than one brain!</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>You will often be working off of a broad question posed by a business, organization, or supervisor, and be thinking about how to narrow it down.</li>
 </ol>
 <p>To do so, you can again revisit questions like “What patterns do you see?” or “Why might they be occurring?”</p>
+</div>
 </section>
 <section id="eda-examples" class="slide level2 unnumbered">
 <h2>EDA Examples</h2>
@@ -559,7 +580,7 @@
 </section>
 <section id="practice-flight-data" class="slide level2 unnumbered">
 <h2>Practice: Flight Data</h2>
-<p>Let’s practice these steps using data about <a href="https://www.kaggle.com/usdot/flight-delays">flight delays from Kaggle</a>.</p>
+<p>Let’s practice these steps using data about <a href="https://www.kaggle.com/usdot/flight-delays">flight delays from Kaggle</a>. Download template Rmd file from course website.</p>
 <div class="cell" data-hash="12_EDA_cache/revealjs/unnamed-chunk-6_b522e306ec105e8ffb8318004f926dfa">
 
 </div>
