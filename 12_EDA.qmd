@@ -12,6 +12,13 @@ format:
 editor: visual
 ---
 
+## Switch it Up {.unnumbered}
+
+- Sit with someone you don't know well
+- Introduce yourself
+- Ask them about their Fall Break!
+
+
 ## Announcements {.unnumbered}
 
 ```{r setup}
