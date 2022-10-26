@@ -460,6 +460,7 @@
 <li><p>Always look at the data after importing with <code>View()</code></p></li>
 <li><p>Do a quick summary of all variables:</p></li>
 </ul>
+<!-- -->
 <pre><code>dataset_name %&gt;% 
   mutate(across(where(is.character), as.factor)) %&gt;% 
   summary()</code></pre>
@@ -552,24 +553,17 @@
 <div class="fragment">
 <p>Consider the actor_1_facebook_likes column. Take a look at a few of the records that have NA values. Why do you think there are NAs?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>imdbMessy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>imdbMessy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)) <span class="sc">%&gt;%</span> <span class="fu">select</span>(movie_title,actor_1_name,actor_1_facebook_likes) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 29
-   ...1 color director_…¹ num_c…² durat…³ direc…⁴ actor…⁵ actor…⁶ actor…⁷  gross
-  &lt;dbl&gt; &lt;fct&gt; &lt;chr&gt;         &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;
-1  4503 Color Léa Pool         23      97       4      NA &lt;NA&gt;         NA  24784
-2  4520 Color Harry Gantz      12     105       0      NA &lt;NA&gt;         NA 247740
-3  4721 Color U. Roberto…       3      80       6      NA &lt;NA&gt;         NA   2245
-4  4838 Color Pan Nalin        15     102      95      NA &lt;NA&gt;         NA  16892
-5  4946 Color Amal Al-Ag…      NA      62      58      NA &lt;NA&gt;         NA     NA
-6  4947 Color Andrew Ber…      12      90       0      NA &lt;NA&gt;         NA     NA
-# … with 19 more variables: genres &lt;chr&gt;, actor_1_name &lt;chr&gt;,
-#   movie_title &lt;chr&gt;, num_voted_users &lt;dbl&gt;, cast_total_facebook_likes &lt;dbl&gt;,
-#   actor_3_name &lt;chr&gt;, facenumber_in_poster &lt;dbl&gt;, plot_keywords &lt;chr&gt;,
-#   movie_imdb_link &lt;chr&gt;, num_user_for_reviews &lt;dbl&gt;, language &lt;chr&gt;,
-#   country &lt;chr&gt;, content_rating &lt;chr&gt;, budget &lt;dbl&gt;, title_year &lt;dbl&gt;,
-#   actor_2_facebook_likes &lt;dbl&gt;, imdb_score &lt;dbl&gt;, aspect_ratio &lt;dbl&gt;,
-#   movie_facebook_likes &lt;dbl&gt;, and abbreviated variable names …</code></pre>
+<pre><code># A tibble: 6 × 3
+  movie_title              actor_1_name actor_1_facebook_likes
+  &lt;chr&gt;                    &lt;chr&gt;                         &lt;dbl&gt;
+1 Pink Ribbons, Inc.&nbsp;      &lt;NA&gt;                             NA
+2 Sex with Strangers&nbsp;      &lt;NA&gt;                             NA
+3 The Harvest/La Cosecha&nbsp;  &lt;NA&gt;                             NA
+4 Ayurveda: Art of Being&nbsp;  &lt;NA&gt;                             NA
+5 The Brain That Sings&nbsp;    &lt;NA&gt;                             NA
+6 The Blood of My Brother&nbsp; &lt;NA&gt;                             NA</code></pre>
 </div>
 </div>
 </div>

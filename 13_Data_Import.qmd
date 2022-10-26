@@ -12,7 +12,6 @@ format:
 editor: visual
 ---
 
-
 ## Announcements {.unnumbered}
 
 ```{r setup}
@@ -33,69 +32,65 @@ library(GGally)
 
 **Outside Mac**
 
--  [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
--  [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
-
+-   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
+-   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
 
 ## Learning Goals {.unnumbered}
 
-- Develop comfort in finding an existing data set to import into R
-- Develop comfort in importing data of a variety of file types into R
-- Understand and implement the data cleaning process to make values consistent
-- Understand the implications of different ways of dealing with missing values with `replace_na` and `drop_na`
+-   Develop comfort in finding an existing data set to import into R
+-   Develop comfort in importing data of a variety of file types into R
+-   Understand and implement the data cleaning process to make values consistent
+-   Understand the implications of different ways of dealing with missing values with `replace_na` and `drop_na`
 
 ## Key Ideas {.unnumbered}
 
-- Finding Existing Data Sets
-- Loading Data Sets
-- Checking Imported Data
-- Cleaning Data
+-   Finding Existing Data Sets
+-   Loading Data Sets
+-   Checking Imported Data
+-   Cleaning Data
 
 More thorough notes available at <https://bcheggeseth.github.io/112_fall_2022/data-import.html>
 
 ## Finding Existing Data Sets
 
-- Google: "movie reviews filetype:csv"
-- [awesome-public-datasets](https://github.com/caesar0301/awesome-public-datasets) GitHub repo
-- [Kaggle data](https://www.kaggle.com/datasets)
-- [data.world website](https://data.world/)
-- [Brianna's website](https://bcheggeseth.github.io/datasets/)
-
+-   Google: "movie reviews filetype:csv"
+-   [awesome-public-datasets](https://github.com/caesar0301/awesome-public-datasets) GitHub repo
+-   [Kaggle data](https://www.kaggle.com/datasets)
+-   [data.world website](https://data.world/)
+-   [Brianna's website](https://bcheggeseth.github.io/datasets/)
 
 ## Loading Data Sets
 
 Depending on the file type (csv, tsv, excel, Google sheet, stata file, shapefile, etc.), you'll need to adjust the function you use. Here are some of the most common:
 
-- `read_csv()`
-- `read_delim()`
-- `read_sheet()`
-- `st_read()`
+-   `read_csv()`
+-   `read_delim()`
+-   `read_sheet()`
+-   `st_read()`
 
 ## Loading Data Sets
 
-The Import Wizard can help you write the code! 
+The Import Wizard can help you write the code!
 
 Try importing data from:
 
-```
-https://bcheggeseth.github.io/112_fall_2022/data/imdb_5000_messy.csv
-```
+    https://bcheggeseth.github.io/112_fall_2022/data/imdb_5000_messy.csv
 
 *Note: When using the Import Wizard, make sure to copy and paste the code into a Rmd file.*
 
 ## Checking Imported Data
 
-- Always look at the data after importing with `View()`
+-   Always look at the data after importing with `View()`
 
-- Do a quick summary of all variables:
+-   Do a quick summary of all variables:
 
-```
-dataset_name %>% 
-  mutate(across(where(is.character), as.factor)) %>% 
-  summary()
-```
+<!-- -->
 
-## Cleaning Data  {.smaller .scrollable}
+    dataset_name %>% 
+      mutate(across(where(is.character), as.factor)) %>% 
+      summary()
+
+## Cleaning Data {.smaller .scrollable}
 
 **Cleaning Categorical Variables**
 
@@ -110,7 +105,6 @@ imdbMessy %>% count(color)
 
 . . .
 
-
 ```{r echo=TRUE}
 imdbMessy <- imdbMessy %>% 
   mutate(color = factor(color)) %>%  #convert to a factor
@@ -119,27 +113,24 @@ imdbMessy <- imdbMessy %>%
 imdbMessy %>% count(color)
 ```
 
-
 ## Cleaning Data {.smaller .scrollable}
 
 Study the individual observations with NAs carefully.
 
-- Why do you think they are missing? 
-- Are certain types of observations more likely to have NAs?
+-   Why do you think they are missing?
+-   Are certain types of observations more likely to have NAs?
 
 . . .
-
 
 **Addressing Missing Data**
 
 You have several options for dealing with NAs (and they have different consequences):
 
-::: {.incremental}
-- You can remove observations with one or more NAs (see `drop_na`).
-- You can remove columns with many NA values with `select`.
-- You can replace NAs with a reasonable value (called imputing values). This could be a default value (like zero), or the average for a column. (see `replace_na`)
+::: incremental
+-   You can remove observations with one or more NAs (see `drop_na`).
+-   You can remove columns with many NA values with `select`.
+-   You can replace NAs with a reasonable value (called imputing values). This could be a default value (like zero), or the average for a column. (see `replace_na`)
 :::
-
 
 ## Cleaning Data {.smaller .scrollable}
 
@@ -151,10 +142,10 @@ colSums(is.na(imdbMessy)) # Number of values that are missing per variable
 
 . . .
 
-Consider the actor_1_facebook_likes column. Take a look at a few of the records that have NA values. Why do you think there are NAs?
+Consider the actor_1\_facebook_likes column. Take a look at a few of the records that have NA values. Why do you think there are NAs?
 
 ```{r echo=TRUE}
-imdbMessy %>% filter(is.na(actor_1_facebook_likes)) %>% head()
+imdbMessy %>% filter(is.na(actor_1_facebook_likes)) %>% select(movie_title,actor_1_name,actor_1_facebook_likes) %>% head()
 ```
 
 . . .
@@ -173,16 +164,15 @@ imdbMessysub2 <- imdbMessy %>% mutate(actor_1_facebook_likes = replace_na(actor_
 
 ## Practice/Assignment
 
-Find a dataset that is not built into R and is related to one of the following topics: 
+Find a dataset that is not built into R and is related to one of the following topics:
 
-- Macalester (FYC: there is a dataset on Moodle for Assignment 12 from Institutional Research)
-- a hobby or passion
-- hometown or place you have lived
+-   Macalester (FYC: there is a dataset on Moodle for Assignment 12 from Institutional Research)
+-   a hobby or passion
+-   hometown or place you have lived
 
-Load the data into R, make sure it is clean, and construct one interesting visualization of the data. 
+Load the data into R, make sure it is clean, and construct one interesting visualization of the data.
 
 **Note: this might help you brainstorm ideas for projects**
-
 
 ## After Class {.unnumbered}
 
