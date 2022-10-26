@@ -12,7 +12,7 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered}
+## Announcements {.unnumbered .smaller}
 
 ```{r setup}
 library(tidyverse)
