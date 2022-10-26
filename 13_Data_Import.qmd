@@ -25,6 +25,8 @@ library(GGally)
 
 **MSCS Happenings**
 
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+-   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
 -   3:30pm Wednesday Problem solving
 -   11:15am Thursday Coffee Break
 -   12-1pm Thursday (OLRI 241) Iowa State Grad School Info Session
