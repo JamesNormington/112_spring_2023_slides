@@ -26,6 +26,7 @@ library(GGally)
 
 -   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
 -   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
+-   Nov 7 @ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
 
 **Outside Mac**
 
