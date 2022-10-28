@@ -1,0 +1,65 @@
+---
+title: "Project Deep Dive"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(ggmap)
+library(GGally)
+```
+
+**MSCS Happenings**
+
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+-   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
+
+**Outside Mac**
+
+-   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
+-   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
+
+
+
+## Brainstorming Rounds {.unnumbered}
+
+We'll do the following 4 times (5 minutes each time)
+
+1. Switch to a new table
+2. Introduce yourself
+3. Share project ideas and interests with a partner
+4. Share advanced data science tools you want to learn through a project (Shiny, interactive viz, API, SQL, etc.)
+
+
+*Consider this as an opportunity to get to know others in the class who might be great project teammates!*
+
+## Project Brainstorm Activity
+
+On Moodle, submit 2-3 ideas for a data science project by this evening.
+
+- Work on this now.
+
+
+
+## Work Time
+
+- TT 8 (British Baking) due tonight (on Moodle)
+- Midterm Part 2 Revisions due tonight (on Moodle)
+- Midterm Reflection due tonight (in Midterm Assessment tab of Spreadsheet)
+- Flights EDA Activity (Assignment 11) due Sunday (on Moodle)
+- Data Import Activity (Assignment 12) due Tuesday (on Moodle)
+- Iterative Viz 1 due next week
+
