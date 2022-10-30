@@ -1,0 +1,158 @@
+---
+title: "Regular Expressions/Cleaning Text Data"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(ggmap)
+library(GGally)
+```
+
+**MSCS Happenings**
+
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+-   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
+-   Nov 7 \@ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
+
+**Outside Mac**
+
+-   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
+-   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
+
+## Regular Expressions
+
+Regular expressions allow us to describe character patterns. 
+
+After class, try: [Interactive Regex Tutorial](https://regexone.com/)
+
+## Text Examples
+
+```{r}
+(example <- "The quick brown fox jumps over the lazy dog.")
+```
+
+We'll practice:
+
+- Replacing text patterns
+- Detecting text patterns
+- Locating text patterns
+- Changing case
+- Separate/split text
+
+## Search and replace patterns {-}
+
+To search for a pattern and replace it, we can use the function `str_replace` and `str_replace_all`.
+
+```{r}
+str_replace(example, "quick", "really quick")
+```
+
+. . .
+
+```{r}
+str_replace_all(example, "(fox|dog)", "****") 
+```
+
+. . .
+
+```{r}
+str_replace_all(example, "(fox|dog).", "****") # "." for any character
+```
+
+. . .
+
+```{r}
+str_replace_all(example, "(fox|dog)\\.$", "****") # at end of sentence only, "\\." only for a period
+```
+
+. . .
+
+
+```{r}
+str_replace(example, "[Tt]he", "a") # only first match
+str_replace_all(example, "[Tt]he", "a") # all matches
+```
+
+
+
+
+## Detect patterns {-}
+
+```{r}
+example2 <- "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"
+example3 <- "This is a test"
+(examples <- c(example, example2, example3))
+```
+```{r}
+pat <- "[^aeiouAEIOU ]{3}" # Regular expression for three straight consonants. Note that I've excluded spaces as well
+
+str_detect(examples, pat) 
+```
+
+## Locate patterns  {-}
+
+```{r}
+example
+str_locate(example, pat) # starting position and ending position of first match
+```
+
+Let's check the answer:
+
+```{r}
+str_sub(example, 23, 25)
+```
+
+## Extract patterns {-}
+
+```{r}
+example2
+pat2 <- "[^aeiouAEIOU ][aeiouAEIOU]{2}[^aeiouAEIOU ]{1}" # consonant followed by two vowels followed by a consonant
+
+str_extract(example2, pat2) # extract first match
+str_extract_all(example2, pat2, simplify = TRUE) # extract all matches
+```
+
+## Count the number of characters {-}
+
+```{r}
+example2
+str_length(example2)
+```
+
+## Change case {-}
+
+```{r}
+example2
+str_to_lower(example2)
+```
+
+## Split strings  {-}
+
+```{r}
+df <- tibble(ex = example2)
+df <- df %>% separate(ex, c("line1", "line2", "line3", "line4"), sep = " / ")
+df
+```
+
+
+## Practice  {-}
+
+Go to our [course website](https://bcheggeseth.github.io/112_fall_2022/) and download the Rmd template file. 
+
+
+
