@@ -406,6 +406,43 @@
 <li><a href="https://www.causeweb.org/usproc/eusr/2022">Electronic Undergraduate Statistics Conference</a> (Nov 4th, free!)</li>
 </ul>
 </section>
+<section id="announcements-1" class="slide level2 unnumbered smaller">
+<h2>Announcements</h2>
+<ul>
+<li>Sections 1 &amp; 2: Fill out <a href="https://forms.gle/K7WUVHNUoAVmW6ad8">Project Preferences</a></li>
+<li>Sections F1: Fill out <a href="https://forms.gle/ki2ncr9YdstWjBL59">Project Preferences</a></li>
+</ul>
+</section>
+<section id="announcements-2" class="slide level2 unnumbered smaller">
+<h2>Announcements</h2>
+<p><strong>Assignments</strong></p>
+<ul>
+<li>11 (EDA) was due Sunday; turn in asap
+<ul>
+<li>EDA on flights, practice process of EDA -&gt; tell a story about flight delays</li>
+</ul></li>
+<li>12 (Data Import) due Tuesday
+<ul>
+<li>1 graphic based on a dataset you’ve imported</li>
+</ul></li>
+<li>13 (Regex) due next week (last coding assignment)</li>
+<li>14 (1 Number Story)</li>
+</ul>
+<p><strong>Tidy Tuesday</strong></p>
+<ul>
+<li>Complete 3 (minimum) before the end of the semester
+<ul>
+<li>6 more weeks left!</li>
+</ul></li>
+</ul>
+<p><strong>Iterative Viz</strong></p>
+<ul>
+<li>IV1: Updated graphic by Friday
+<ul>
+<li>If you want feedback on IV0, turn it in and email Brianna.</li>
+</ul></li>
+</ul>
+</section>
 <section id="regular-expressions" class="slide level2">
 <h2>Regular Expressions</h2>
 <p>Regular expressions allow us to describe character patterns.</p>
@@ -419,6 +456,7 @@
 <pre><code>[1] "The quick brown fox jumps over the lazy dog."</code></pre>
 </div>
 </div>
+<p><br> <br></p>
 <p>We’ll practice:</p>
 <ul>
 <li>Replacing text patterns</li>
@@ -430,16 +468,23 @@
 </section>
 <section id="search-and-replace-patterns" class="slide level2 unnumbered">
 <h2>Search and replace patterns</h2>
-<p>To search for a pattern and replace it, we can use the function <code>str_replace</code> and <code>str_replace_all</code>.</p>
+<p>To search for a pattern and replace it, we can use the functions <code>str_replace</code> and <code>str_replace_all</code>.</p>
+<p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">str_replace</span>(example, <span class="st">"quick"</span>, <span class="st">"really quick"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The quick brown fox jumps over the lazy dog."</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">str_replace</span>(example, <span class="at">pattern =</span> <span class="st">"quick"</span>, <span class="at">replacement =</span> <span class="st">"really quick"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The really quick brown fox jumps over the lazy dog."</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"(fox|dog)"</span>, <span class="st">"****"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">str_replace_all</span>(example, <span class="at">pattern =</span> <span class="st">"(fox|dog)"</span>,  <span class="at">replacement =</span> <span class="st">"****"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The quick brown **** jumps over the lazy ****."</code></pre>
 </div>
@@ -447,7 +492,7 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"(fox|dog)."</span>, <span class="st">"****"</span>) <span class="co"># "." for any character</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"(fox|dog)."</span>, <span class="st">"****"</span>) <span class="co"># "." for any character</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The quick brown ****jumps over the lazy ****"</code></pre>
 </div>
@@ -455,7 +500,7 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"(fox|dog)</span><span class="sc">\\</span><span class="st">.$"</span>, <span class="st">"****"</span>) <span class="co"># at end of sentence only, "\\." only for a period</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"(fox|dog)</span><span class="sc">\\</span><span class="st">.$"</span>, <span class="st">"****"</span>) <span class="co"># at end of sentence only, "\\." only for a period</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The quick brown fox jumps over the lazy ****"</code></pre>
 </div>
@@ -463,11 +508,11 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">str_replace</span>(example, <span class="st">"[Tt]he"</span>, <span class="st">"a"</span>) <span class="co"># only first match</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">str_replace</span>(example, <span class="st">"[Tt]he"</span>, <span class="st">"a"</span>) <span class="co"># only first match</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a quick brown fox jumps over the lazy dog."</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"[Tt]he"</span>, <span class="st">"a"</span>) <span class="co"># all matches</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">str_replace_all</span>(example, <span class="st">"[Tt]he"</span>, <span class="st">"a"</span>) <span class="co"># all matches</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a quick brown fox jumps over a lazy dog."</code></pre>
 </div>
@@ -477,32 +522,42 @@
 <section id="detect-patterns" class="slide level2 unnumbered">
 <h2>Detect patterns</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>example2 <span class="ot">&lt;-</span> <span class="st">"Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>example3 <span class="ot">&lt;-</span> <span class="st">"This is a test"</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a>(examples <span class="ot">&lt;-</span> <span class="fu">c</span>(example, example2, example3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>example2 <span class="ot">&lt;-</span> <span class="st">"Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>example3 <span class="ot">&lt;-</span> <span class="st">"This is a test"</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>(examples <span class="ot">&lt;-</span> <span class="fu">c</span>(example, example2, example3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The quick brown fox jumps over the lazy dog."                                                                                                        
 [2] "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"
 [3] "This is a test"                                                                                                                                      </code></pre>
 </div>
 </div>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>pat <span class="ot">&lt;-</span> <span class="st">"[^aeiouAEIOU ]{3}"</span> <span class="co"># Regular expression for three straight consonants. Note that I've excluded spaces as well</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">str_detect</span>(examples, pat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>pat <span class="ot">&lt;-</span> <span class="st">"[^aeiouAEIOU ]{3}"</span> <span class="co"># Regular expression for three straight consonants. Note that I've excluded spaces as well</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">str_detect</span>(examples, pat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE  TRUE FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">str_subset</span>(examples, pat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The quick brown fox jumps over the lazy dog."                                                                                                        
+[2] "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"</code></pre>
+</div>
 </div>
 </div>
 </section>
 <section id="locate-patterns" class="slide level2 unnumbered">
 <h2>Locate patterns</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The quick brown fox jumps over the lazy dog."</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">str_locate</span>(example, pat) <span class="co"># starting position and ending position of first match</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">str_locate</span>(example, pat) <span class="co"># starting position and ending position of first match</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     start end
 [1,]    23  25</code></pre>
@@ -510,7 +565,7 @@
 </div>
 <p>Let’s check the answer:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">str_sub</span>(example, <span class="dv">23</span>, <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">str_sub</span>(example, <span class="dv">23</span>, <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "mps"</code></pre>
 </div>
@@ -519,17 +574,17 @@
 <section id="extract-patterns" class="slide level2 unnumbered">
 <h2>Extract patterns</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>example2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>example2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>pat2 <span class="ot">&lt;-</span> <span class="st">"[^aeiouAEIOU ][aeiouAEIOU]{2}[^aeiouAEIOU ]{1}"</span> <span class="co"># consonant followed by two vowels followed by a consonant</span></span>
-<span id="cb27-2"><a href="#cb27-2"></a></span>
-<span id="cb27-3"><a href="#cb27-3"></a><span class="fu">str_extract</span>(example2, pat2) <span class="co"># extract first match</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>pat2 <span class="ot">&lt;-</span> <span class="st">"[^aeiouAEIOU ][aeiouAEIOU]{2}[^aeiouAEIOU ]{1}"</span> <span class="co"># consonant followed by two vowels followed by a consonant</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a></span>
+<span id="cb32-3"><a href="#cb32-3"></a><span class="fu">str_extract</span>(example2, pat2) <span class="co"># extract first match</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "road"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">str_extract_all</span>(example2, pat2, <span class="at">simplify =</span> <span class="cn">TRUE</span>) <span class="co"># extract all matches</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">str_extract_all</span>(example2, pat2, <span class="at">simplify =</span> <span class="cn">TRUE</span>) <span class="co"># extract all matches</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1]   [,2]   [,3]   [,4]   [,5]   [,6]  
 [1,] "road" "wood" "coul" "tood" "look" "coul"</code></pre>
@@ -539,11 +594,11 @@
 <section id="count-the-number-of-characters" class="slide level2 unnumbered">
 <h2>Count the number of characters</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>example2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>example2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">str_length</span>(example2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">str_length</span>(example2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 148</code></pre>
 </div>
@@ -552,11 +607,11 @@
 <section id="change-case" class="slide level2 unnumbered">
 <h2>Change case</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>example2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>example2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">str_to_lower</span>(example2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">str_to_lower</span>(example2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "two roads diverged in a yellow wood, / and sorry i could not travel both / and be one traveler, long i stood / and looked down one as far as i could"</code></pre>
 </div>
@@ -565,9 +620,9 @@
 <section id="split-strings" class="slide level2 unnumbered">
 <h2>Split strings</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">ex =</span> example2)</span>
-<span id="cb39-2"><a href="#cb39-2"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">separate</span>(ex, <span class="fu">c</span>(<span class="st">"line1"</span>, <span class="st">"line2"</span>, <span class="st">"line3"</span>, <span class="st">"line4"</span>), <span class="at">sep =</span> <span class="st">" / "</span>)</span>
-<span id="cb39-3"><a href="#cb39-3"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">ex =</span> example2)</span>
+<span id="cb44-2"><a href="#cb44-2"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">separate</span>(ex, <span class="fu">c</span>(<span class="st">"line1"</span>, <span class="st">"line2"</span>, <span class="st">"line3"</span>, <span class="st">"line4"</span>), <span class="at">sep =</span> <span class="st">" / "</span>)</span>
+<span id="cb44-3"><a href="#cb44-3"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   line1                                line2                         line3 line4
@@ -579,6 +634,20 @@
 <section id="practice" class="slide level2 unnumbered">
 <h2>Practice</h2>
 <p>Go to our <a href="https://bcheggeseth.github.io/112_fall_2022/">course website</a> and download the Rmd template file.</p>
+</section>
+<section id="after-class" class="slide level2 unnumbered">
+<h2>After Class</h2>
+<p><strong>Regular Expressions</strong></p>
+<ul>
+<li>Try <a href="https://regexone.com/">Interactive Regex Tutorial</a></li>
+<li>Continue working on Regex activity (due next week)</li>
+</ul>
+<p><strong>Other Assignments</strong></p>
+<ul>
+<li>EDA (flights)</li>
+<li>Data Import (your own data)</li>
+<li>Iterative Viz</li>
+</ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
