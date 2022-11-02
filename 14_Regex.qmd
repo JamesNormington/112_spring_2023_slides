@@ -35,36 +35,35 @@ library(GGally)
 -   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
 -   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
 
-
 ## Announcements {.unnumbered .smaller}
 
-- Sections 1 & 2: Fill out [Project Preferences](https://forms.gle/K7WUVHNUoAVmW6ad8)
-- Sections F1: Fill out [Project Preferences](https://forms.gle/ki2ncr9YdstWjBL59)
+-   Sections 1 & 2: Fill out [Project Preferences](https://forms.gle/K7WUVHNUoAVmW6ad8)
+-   Sections F1: Fill out [Project Preferences](https://forms.gle/ki2ncr9YdstWjBL59)
 
 ## Announcements {.unnumbered .smaller}
 
 **Assignments**
 
-- 11 (EDA) was due Sunday; turn in asap 
-  - EDA on flights, practice process of EDA -> tell a story about flight delays
-- 12 (Data Import) due Tuesday 
-  - 1 graphic based on a dataset you've imported
-- 13 (Regex) due next week (last coding assignment)
-- 14 (1 Number Story) 
+-   11 (EDA) was due Sunday; turn in asap
+    -   EDA on flights, practice process of EDA -\> tell a story about flight delays
+-   12 (Data Import) due Tuesday
+    -   1 graphic based on a dataset you've imported
+-   13 (Regex) due next week (last coding assignment)
+-   14 (1 Number Story)
 
 **Tidy Tuesday**
 
-- Complete 3 (minimum) before the end of the semester
-  - 6 more weeks left!
+-   Complete 3 (minimum) before the end of the semester
+    -   6 more weeks left!
 
 **Iterative Viz**
 
-- IV1: Updated graphic by Friday
-  - If you want feedback on IV0, turn it in and email Brianna.
+-   IV1: Updated graphic by Friday
+    -   If you want feedback on IV0, turn it in and email Brianna.
 
 ## Regular Expressions
 
-Regular expressions allow us to describe character patterns. 
+Regular expressions allow us to describe character patterns.
 
 After class, try: [Interactive Regex Tutorial](https://regexone.com/)
 
@@ -74,18 +73,17 @@ After class, try: [Interactive Regex Tutorial](https://regexone.com/)
 (example <- "The quick brown fox jumps over the lazy dog.")
 ```
 
-<br>
-<br>
+<br> <br>
 
 We'll practice:
 
-- Replacing text patterns
-- Detecting text patterns
-- Locating text patterns
-- Changing case
-- Separate/split text
+-   Replacing text patterns
+-   Detecting text patterns
+-   Locating text patterns
+-   Changing case
+-   Separate/split text
 
-## Search and replace patterns {-}
+## Search and replace patterns {.unnumbered}
 
 To search for a pattern and replace it, we can use the functions `str_replace` and `str_replace_all`.
 
@@ -119,22 +117,19 @@ str_replace_all(example, "(fox|dog)\\.$", "****") # at end of sentence only, "\\
 
 . . .
 
-
 ```{r}
 str_replace(example, "[Tt]he", "a") # only first match
 str_replace_all(example, "[Tt]he", "a") # all matches
 ```
 
-
-
-
-## Detect patterns {-}
+## Detect patterns {.unnumbered}
 
 ```{r}
 example2 <- "Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood / And looked down one as far as I could"
 example3 <- "This is a test"
 (examples <- c(example, example2, example3))
 ```
+
 . . .
 
 ```{r}
@@ -149,7 +144,7 @@ str_detect(examples, pat)
 str_subset(examples, pat)
 ```
 
-## Locate patterns  {-}
+## Locate patterns {.unnumbered}
 
 ```{r}
 example
@@ -162,7 +157,7 @@ Let's check the answer:
 str_sub(example, 23, 25)
 ```
 
-## Extract patterns {-}
+## Extract patterns {.unnumbered}
 
 ```{r}
 example2
@@ -172,21 +167,21 @@ str_extract(example2, pat2) # extract first match
 str_extract_all(example2, pat2, simplify = TRUE) # extract all matches
 ```
 
-## Count the number of characters {-}
+## Count the number of characters {.unnumbered}
 
 ```{r}
 example2
 str_length(example2)
 ```
 
-## Change case {-}
+## Change case {.unnumbered}
 
 ```{r}
 example2
 str_to_lower(example2)
 ```
 
-## Split strings  {-}
+## Split strings {.unnumbered}
 
 ```{r}
 df <- tibble(ex = example2)
@@ -194,21 +189,19 @@ df <- df %>% separate(ex, c("line1", "line2", "line3", "line4"), sep = " / ")
 df
 ```
 
+## Practice {.unnumbered}
 
-## Practice  {-}
+Go to our [course website](https://bcheggeseth.github.io/112_fall_2022/) and download the Rmd template file.
 
-Go to our [course website](https://bcheggeseth.github.io/112_fall_2022/) and download the Rmd template file. 
-
-
-## After Class  {-}
+## After Class {.unnumbered}
 
 **Regular Expressions**
 
-- Try [Interactive Regex Tutorial](https://regexone.com/)
-- Continue working on Regex activity (due next week)
+-   Try [Interactive Regex Tutorial](https://regexone.com/)
+-   Continue working on Regex activity (due next week)
 
 **Other Assignments**
 
-- EDA (flights)
-- Data Import (your own data)
-- Iterative Viz
+-   EDA (flights)
+-   Data Import (your own data)
+-   Iterative Viz
