@@ -1,5 +1,5 @@
 ---
-title: "Project Narrowing"
+title: "Project Work"
 author: "Brianna Heggeseth"
 logo: "images/mac.png"
 format: 
@@ -29,6 +29,7 @@ library(GGally)
 -   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
 -   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
 -   Nov 7 \@ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
+-   See Board for Upcoming Visitor Talks!
 
 **Outside MSCS**
 
@@ -54,43 +55,16 @@ library(GGally)
 -   IV1: Updated graphic by Friday
     -   If you want feedback on IV0, turn it in and email Brianna.
 
-## Q&A on Regex
+## Project Work
 
-## Git/Github as a Collaborative Tool
+[Project Guidelines](https://docs.google.com/document/d/1MhfsjvYO2K1kuZlNflXuGoX3az85-7QVnK9Yzscuc78/edit?usp=sharing)
 
-If you would like to use Github for collaboration on the project, here are some resources:
+By the end of class, fill out this [check in form](https://forms.gle/m61XgqpUeHy4JgQr6)
 
--   [Github setup](https://bcheggeseth.github.io/452_spring_2022/github-setup.html), Brianna Heggeseth
--   [github video tutorial](https://www.youtube.com/embed/QLFc9gw_Hfs), Lisa Lendway
--   [Instructions](https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md#adding-collaborators) that accompany the video tutorial above
--   [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan
-
-## Project Discussions
-
-1.  Sit with potential project groups
-
--   I've tried to honor who you want to work with
--   I've tried to group by interests
-
-## Project Discussions {.smaller .scrollable}
-
-2.  Discuss as a group
-
--   Project ideas and interest
-    -   Come to consensus on a direction (everyone is on board, even if not their first choice)
--   Project facilitating roles
-    -   Facilitator (set up times to meet outside of class)
-    -   Communication manager (set up systems below; reach out to members/faculty as needed)
-    -   Reflector/Delegator (thinking about equity and making sure tasks get divided, make sure people get a chance to work on building skills)
--   Communication system
-    -   How are you going to share ideas and progress? (Slack DM group? Google Doc?)
-    -   How are you going to share code? (Google Drive Folder? Github?)
-
-3.  If you'd like to adjust groups, send me an email after class
 
 ## After Class {.unnumbered}
 
--   On Friday, we'll dedicate the entire time to creating a foundation for project work.
+- We'll continue working on projects as we consider data communication next week.
 
 **Assignments**
 
