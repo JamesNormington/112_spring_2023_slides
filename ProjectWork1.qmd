@@ -59,6 +59,12 @@ library(GGally)
 
 [Project Guidelines](https://docs.google.com/document/d/1MhfsjvYO2K1kuZlNflXuGoX3az85-7QVnK9Yzscuc78/edit?usp=sharing)
 
+What should you be doing now?
+
+- Agreeing to a broad research question
+- Getting data into RStudio
+- Starting Exploratory Data Analysis (EDA)
+
 By the end of class, fill out this [check in form](https://forms.gle/m61XgqpUeHy4JgQr6)
 
 
