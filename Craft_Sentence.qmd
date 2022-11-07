@@ -32,6 +32,7 @@ library(GGally)
 
 **Outside MSCS**
 
+-   Vote tomorrow, if eligible!
 -   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
 
 ## Announcements {.unnumbered .smaller}
