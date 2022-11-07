@@ -61,16 +61,15 @@ library(GGally)
 
 What should you be doing now?
 
-- Agreeing to a broad research question
-- Getting data into RStudio
-- Starting Exploratory Data Analysis (EDA)
+-   Agreeing to a broad research question
+-   Getting data into RStudio
+-   Starting Exploratory Data Analysis (EDA)
 
 By the end of class, fill out this [check in form](https://forms.gle/m61XgqpUeHy4JgQr6)
 
-
 ## After Class {.unnumbered}
 
-- We'll continue working on projects as we consider data communication next week.
+-   We'll continue working on projects as we consider data communication next week.
 
 **Assignments**
 
