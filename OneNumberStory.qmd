@@ -1,0 +1,150 @@
+---
+title: "Written Communication: One Number Story"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(ggmap)
+library(GGally)
+```
+
+**MSCS Happenings**
+
+-   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+
+**Outside MSCS**
+
+-   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
+
+## Announcements {.unnumbered .smaller}
+
+**Assignments**
+
+-   13 (Regex) past due.
+
+**Tidy Tuesday**
+
+-   Complete 3 (minimum) before the end of the semester
+    -   5 more weeks left!
+-   [Tidy Tuesday Collection](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p)
+
+**Iterative Viz**
+
+-   IV1: Updated graphic past due.
+
+## Brainstorm
+
+In your project groups:
+
+-   come up with as many ideas of one number summaries (e.g. mean, median, max, min, count, percent, ratio, etc.) that might address your broad research question
+
+. . .
+
+-   Mac Data Example:
+    -   Percentage of students who have more than 1 major
+    -   Percentage of students who only take the bare minimum of courses in divisions outside their major division
+    -   Mean number of concentrations per student
+    -   Max number of concentrations per student
+    -   Max number of courses per division
+
+## Writing with Numbers
+
+1.  Keep the number of digits in a paragraph below 8.
+
+-   Before: The Office of Redundancy's budget rose 48 percent in 2013, from \$700.3 million to \$1.03 billion.
+-   Revision: Over the past year, the Office of Redundancy's budget grew by nearly half, to \$1 billion.
+
+<br><br><br> *adapted from Numbers in the Newsroom by Sarah Cohen*
+
+## Writing with Numbers
+
+2.  Round a lot
+
+-   Only use precision when it matters. For example, never round when it comes to death counts; every body matters.
+
+<br><br><br>
+
+*adapted from Numbers in the Newsroom by Sarah Cohen*
+
+## Writing with Numbers
+
+3.  Think in ratios
+
+-   We can't think clearly about very big or very small numbers. Make the numbers you deal with understandable by contextualizing them.
+
+    -   Example: A widely quoted estimate of fixing the Year 2000 computer bug was \$50 billion for U.S. companies. How big is \$50 billion? At the time, it was smaller than Bill Gates' net worth. It was the cost of two hurricanes. It was the income of people living in the Portland, Ore., area.
+
+<br><br>
+
+*adapted from Numbers in the Newsroom by Sarah Cohen*
+
+## Writing with Numbers {.smaller}
+
+4.  Use devices from everyday life
+
+-   Most people have some arithmetic that they perform instinctively (e.g. discounts in retail, tipping at a restaurant, 2 to 1 odds). Convert your writing into the commonly used scales. Keep in mind that a percent change (implies multiplicative change) is very different from a percentage point difference (implies additive change). Both are correct:
+
+    -   Population growth has slowed by about 1.3 percentage points since its peak in 1950, to 0.7 percent. (Simple difference between 2 percent and 0.7 percent, expressed in percentage points.)
+    -   Population growth in the U.S. slowed by almost two-thirds from its peak in 1950, to 0.7 percent in 2013. (Percent difference between 2 percent and 0.7 percent)
+
+*adapted from Numbers in the Newsroom by Sarah Cohen*
+
+## One Number Story Assignment
+
+Go to [Google Drive Folder](https://drive.google.com/drive/folders/1lIP4_Yjit19H7x2nX8j81IFQgTQQWCvL).
+
+- Notice other resources.
+
+- Open One Number Story Assignment.
+
+## One Number Story - Concept
+
+Each person calculates 1 number from their project data.
+
+-   Within the project group, each student should choose a different numerical summary.
+
+. . .
+
+Each person write a *TRUE* story about the data that focuses on that 1 number.
+
+## One Number Story - Structure
+
+::: incremental
+-   250-500 words
+-   include a title/headline
+-   focus on 1 number but you can include other numbers to contextualize your numerical summary ("as compared to what")
+-   apply the principles of crafting sentences (from Monday)
+-   apply the principles of data journalism (writing with numbers)
+:::
+
+## One Number Story - Timeline
+
+-   **Rough** draft due Friday
+-   You'll give/get peer feedback in class on Friday
+
+## After Class {.unnumbered}
+
+-   After calculating one number, sit down and type. Don't aim for perfection.
+-   We'll do peer review of your writing in class on Friday.
+
+**Assignments**
+
+-   One number story rough draft - due Friday
+-   Any missing assignments
+-   EDA on project data
