@@ -94,6 +94,6 @@ Take this feedback and revise.
 
 We'll focus on visuals to help us communicate our story
 
-  - Monday: we'll work on creating a visualization from the project
+  - Monday: we'll work on creating a visualization from the project data
   - Weds/Friday: we'll present the visual to a small group and give/get peer feedback
 
