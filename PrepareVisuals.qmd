@@ -78,7 +78,9 @@ When preparing to present a visualization, consider:
 - What context does the audience need to understand the visual? (W's?)
 - Does the visual have enough text annotation and guides to be understood with minimal explanation?
 - What aspects of the visual should you explain to provide necessary orientation?
+  - Walk through guides (axes, color legend, etc.)
 - What aspects of the visual do you want to draw attention to?
+  - What comparison are you wanting to highlight?
 
 
 ## Preparing for this Week
@@ -102,7 +104,7 @@ You'll present Weds and Friday to different groups of people.
 
 ## Today
 
-Consult with your project group and work on creating a visualization
+Consult with your project group and work on creating a visualization.
 
 ## After Class {.unnumbered}
 
