@@ -89,7 +89,7 @@ When preparing to present a visualization, consider:
 - Prepare a 2 minute oral presentation (orientation and explanation) of your visualization.
   - Consider the questions on the last slide.
   
-## Weds/Friday
+## Weds & Friday
 
 In small groups of 4 people,
 
@@ -99,6 +99,10 @@ In small groups of 4 people,
 Each of the 4 individuals will take a turn to present.
 
 You'll present Weds and Friday to different groups of people.
+
+## Today
+
+Consult with your project group and work on creating a visualization
 
 ## After Class {.unnumbered}
 
