@@ -9,6 +9,7 @@ format:
     transition: fade
     chalkboard: true
     auto-stretch: false
+    footer: <https://bcheggeseth.github.io/112_fall_2022>
 editor: visual
 ---
 
