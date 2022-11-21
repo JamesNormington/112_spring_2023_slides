@@ -1,0 +1,87 @@
+---
+title: "Project Planning"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
+
+**MSCS Happenings**
+
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+
+**Outside MSCS**
+
+-   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
+
+## Announcements {.unnumbered .smaller}
+
+**Assignments**
+
+- Preceptor feedback for 11 and 13
+- Brianna feedback coming for 12 and 14
+
+**Tidy Tuesday**
+
+-   Complete 3 (minimum) before the end of the semester
+    -   3 more weeks left!
+-   [Tidy Tuesday Collection](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p)
+
+**Iterative Viz**
+
+-   IV2: Cancelled (focus on project work)
+
+## Today
+
+- Write a November Reflection in shared Google Doc [Comp/Stat 112 Reflections]
+
+   
+- Project Planning in groups
+
+## Reflections {.smaller}
+
+Open up your individual Google Doc (search for Comp/Stat 112 Reflections in Drive)
+
+Take 15 minutes to write a reflection under November 2022 
+
+  - Don't worry about Oct 2022; you did your Midterm reflection instead
+  
+When writing, 
+
+   - Consider learning goals
+   - Consider whether you've been able to show your individual understanding
+   - Consider how you might use the project to demonstrate YOUR skills, understanding, and **creativity**
+
+
+
+## Project Planning {.smaller}
+
+Open planning [template](https://docs.google.com/document/d/1LlGDwriefkZLWvSKINzv5LuPJw237FvoH9jzRmhGDNg/edit?usp=sharing).
+
+
+Each project member should take leadership on one part of the larger story (code and writing).
+
+Feel free to copy this template to keep track of tasks for your group or incorporate these ideas into another system that you've already created.
+
+
+
+
+## After Class {.unnumbered}
+
+-   Make progress on your individual tasks
+-   Enjoy your break this week! NO CLASS Weds or Friday
