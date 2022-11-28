@@ -1,0 +1,89 @@
+---
+title: "Storyboarding"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+    footer: <https://bcheggeseth.github.io/112_fall_2022>
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
+
+**MSCS Happenings**
+
+- CS talk on Tuesday at 11am in OLRI 250
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+
+**Outside MSCS**
+
+-   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
+
+## Announcements {.unnumbered .smaller}
+
+**Assignments**
+
+- Preceptor feedback for 11 and 13
+- Brianna feedback coming for 14
+
+**Tidy Tuesday**
+
+-   Complete 3 (minimum) before the end of the semester
+    -   **2 more weeks left!**
+-   [Tidy Tuesday Collection](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p)
+
+**Iterative Viz**
+
+-   IV2: Cancelled (focus on project work)
+
+**Reflections**
+
+- Write a November Reflection in shared Google Doc [Comp/Stat 112 Reflections] if you missed class last Monday
+
+## Today
+
+- Storyboarding in project groups
+
+
+
+## Storyboarding 
+
+[What is a Storyboard?](https://en.wikipedia.org/wiki/Storyboard)
+
+Open the [template file](https://docs.google.com/presentation/d/10Yh0UOF0hkZPpfIXPa8FCxbc4H5ooCBPk1UFOPwtL88/edit?usp=sharing).
+
+## Today {.smaller}
+
+1. Make one copy of this document for your project group (all members + Brianna should get editing access)
+
+2. Each persons should 
+  - copy the template slide [3rd slide] and insert a screenshot of a visual/table for the project
+  - for each visual/table, add important message (top) and why it matters (bottom)
+  
+**Important Message**: a 1 sentence summary of what is the most insightful finding of the visual
+
+**Why it matters**: few sentence description of why the audience should care and what they might do with that insight
+
+3. Discuss the order of the slides to tell the broader narrative
+
+*Use this activity to work through ideas for how to tell the data story (in written and oral formats)*
+
+
+
+## After Class {.unnumbered}
+
+-   Make progress on your individual tasks
+-   We'll have project work time on Weds and Friday in class
+   - Show up (if not sick) and use this time wisely
