@@ -1,0 +1,66 @@
+---
+title: "Project Work Day"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+    footer: <https://bcheggeseth.github.io/112_fall_2022>
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
+
+**MSCS Happenings**
+
+-   **5 minute Honors Talks** - Thursday Dec 1st 11:45-12:45pm (OLRI 254 and 256)
+-   **Honors Defenses** 
+    - Ronan Wallace: Friday Dec 2nd 2:30pm OLRI 250 
+    - Charles Zhang: Monday Dec 5th 12pm OLRI 100
+-   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
+
+**Outside MSCS**
+
+-   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
+
+## Announcements {.unnumbered .smaller}
+
+**Assignments/Spreadsheet**
+
+- Please check your spreadsheet. If there is "No submission" listed for an assignment or 0 for TidyTuesday but you've turned it in, please email the list of assignments that need feedback.
+
+**Reflections**
+
+-   Write a November Reflection in shared Google Doc \[Comp/Stat 112 Reflections\] if you haven't already
+
+## Quick Poll
+
+<http://www.PollEv.com/briannahegge814>
+
+## Presentation Tools
+
+As you consider how you want to present your work, check out <https://bcheggeseth.github.io/112_fall_2022/presentation-tools.html>
+
+- Optional: If you'd like all of your group's ggplots to look similar, you can create a [custom theme](https://rpubs.com/mclaire19/ggplot2-custom-themes). 
+
+
+## Today
+
+-   Work in project groups
+
+## After Class {.unnumbered}
+
+-   Make progress on your individual tasks
+-   We'll have project work time on Friday in class
+-   Show up (if not sick) and use this time wisely
