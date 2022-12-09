@@ -27,6 +27,9 @@ library(lubridate)
 -   Please check your spreadsheet for **all of your feedback**.
 -   If there is "No submission" listed for an assignment or 0 for TidyTuesday but you've turned it in, please email the list of assignments that need feedback.
 
+
+*Reminder: Today is the last day to change grade to Pass/Fail and to submit a request for Incomplete.*
+
 ## Presentations - next Wednesday Dec 14
 
 Arrive 5 minutes early!
