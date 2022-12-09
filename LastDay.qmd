@@ -31,7 +31,11 @@ library(lubridate)
 
 Arrive 5 minutes early!
 
-8-10 AM for Section 1 10:30 AM - 12:30 PM for Section 2 1:30 PM - 3:30 PM for Section F1 (FYC)
+- 8-10 AM for Section 1 
+
+- 10:30 AM - 12:30 PM for Section 2 
+
+- 1:30 PM - 3:30 PM for Section F1 (FYC)
 
 On Monday, I'll share a presentation order and give you detailed instructions on how to share your slides/visuals that you'd like to project.
 
@@ -84,6 +88,9 @@ Open your individual feedback spreadsheet.
 -   Open the Final Self-Assessment tab.
 
 We'll take 20 minutes now to complete this.
+
+  - Look through the feedback throughout the semester
+  - Go back to your reflections document and see your growth
 
 ## End of Course Survey {.unnumbered}
 
