@@ -1,0 +1,92 @@
+---
+title: "Last Day of Class"
+author: "Brianna Heggeseth"
+logo: "images/mac.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+    footer: <https://bcheggeseth.github.io/112_fall_2022>
+editor: visual
+---
+
+## Announcements {.unnumbered .smaller}
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+```
+
+**Feedback Spreadsheet**
+
+-   Please check your spreadsheet for **all of your feedback**.
+-   If there is "No submission" listed for an assignment or 0 for TidyTuesday but you've turned it in, please email the list of assignments that need feedback.
+
+## Presentations - next Wednesday Dec 14
+
+Arrive 5 minutes early!
+
+8-10 AM for Section 1 10:30 AM - 12:30 PM for Section 2 1:30 PM - 3:30 PM for Section F1 (FYC)
+
+On Monday, I'll share a presentation order and give you detailed instructions on how to share your slides/visuals that you'd like to project.
+
+## Presentations - Timing
+
+Groups with 1-2 people
+
+-   Presentation should be 6-7 minutes
+
+Groups with 3-4 people
+
+-   Presentation should be 11-12 minutes
+
+**I will cut presentations off at 7/12 minutes as we only have 1 minute to switch groups.**
+
+## Presentations - Expectations
+
+-   Introduce the data context and question
+-   Give sufficient background about the data to understand the insight
+-   Tell a story about the data with visuals
+    -   Highlight the important message and why it matters...
+
+## Presentations - Questions
+
+What questions do you have?
+
+## Written Report
+
+Due Thursday December 15th at 5pm to Moodle
+
+## Written Report - Expectations
+
+-   Introduce the data context and question
+-   Give sufficient background about the data to understand the insight
+-   Tell a story about the data with visuals
+    -   Highlight the important message and why it matters
+
+In terms of length, you'll probably end up with at least 3 pages of text in order to sufficiently address the above.
+
+## Written Report - Questions
+
+What questions do you have?
+
+## Self-Assessments {.unnumbered}
+
+Open the [Learning Goals](https://bcheggeseth.github.io/112_fall_2022/learning-goals.html) from our course website.
+
+Open your individual feedback spreadsheet.
+
+-   Open the Final Self-Assessment tab.
+
+We'll take 20 minutes now to complete this.
+
+## End of Course Survey {.unnumbered}
+
+Open Moodle course site \> Surveys \> End of Course Survey
+
+We'll take 20 minutes now to complete this.
