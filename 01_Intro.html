@@ -7,9 +7,9 @@
 <link href="01_Intro_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="01_Intro_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="01_Intro_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Introduction to Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="01_Intro_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="01_Intro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -331,21 +336,30 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Introduction to Data Science</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
+</section>
 <section id="introductions" class="slide level2 smaller">
 <h2>Introductions</h2>
-<p>As we gather, sit with people you don’t know well and introduce yourself (<em>you choose what you share</em>) to others at your table.</p>
+<p>Introduce yourself to your neighbors!</p>
 <p><br></p>
-<p>Here are some suggestions:</p>
+<p>Here are some things you can share, if you choose:</p>
 <ul>
 <li>Your preferred name (+ pronunciation tips)</li>
+<li>Your pronouns</li>
 <li>Aspects of who you are and have been (<em>e.g.&nbsp;pronouns, geographical identity, cultural identity, hobbies/passions</em>)</li>
 <li>Aspects of who you’d like to be (<em>e.g.&nbsp;personal/professional/academic goals</em>)</li>
-<li>How you are feeling about new semester (!?!)</li>
+<li>How you are feeling about COMP/STAT 112? Is this a requirement for your degree, an academic interest, or both?</li>
+<li>Anything else?</li>
 </ul>
 <p><em>Be prepared to introduce one other person to the larger class</em></p>
 </section>
@@ -435,8 +449,8 @@
 <h3 id="where-ive-been">Where I’ve Been</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-c2fa2419241bcc81dc12" style="width:960px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c2fa2419241bcc81dc12">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Stamen.Watercolor",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircles","args":[[48.2345132810074,44.462265902865,37.8722972303647,42.7128212140036,44.9381729501416],[-101.29473756887,-93.1830303182909,-122.257842528451,-73.2030965872703,-93.1690703736946],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":10,"opacity":1,"fill":true,"fillColor":"#006400","fillOpacity":0.2},null,null,["Minot","St. Olaf College","UC Berkeley","Williams College","Macalester College"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addPolylines","args":[[[[{"lng":[-101.29473756887,-93.1830303182909,-122.257842528451,-73.2030965872703,-93.1690703736946],"lat":[48.2345132810074,44.462265902865,37.8722972303647,42.7128212140036,44.9381729501416]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":5,"opacity":0.5,"fill":false,"fillColor":"#006400","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.8722972303647,48.2345132810074],"lng":[-122.257842528451,-73.2030965872703]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a5e85306421ba39cfcff" style="width:960px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a5e85306421ba39cfcff">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Stamen.Watercolor",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircles","args":[[48.2345132810074,44.462265902865,37.8722972303647,42.7128212140036,44.9381729501416],[-101.29473756887,-93.1830303182909,-122.257842528451,-73.2030965872703,-93.1690703736946],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":10,"opacity":1,"fill":true,"fillColor":"#006400","fillOpacity":0.2},null,null,["Minot","St. Olaf College","UC Berkeley","Williams College","Macalester College"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addPolylines","args":[[[[{"lng":[-101.29473756887,-93.1830303182909,-122.257842528451,-73.2030965872703,-93.1690703736946],"lat":[48.2345132810074,44.462265902865,37.8722972303647,42.7128212140036,44.9381729501416]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":5,"opacity":0.5,"fill":false,"fillColor":"#006400","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.8722972303647,48.2345132810074],"lng":[-122.257842528451,-73.2030965872703]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -836,12 +850,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -852,13 +869,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -910,7 +920,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -940,31 +967,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

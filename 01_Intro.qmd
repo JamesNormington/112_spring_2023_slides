@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Data Science"
-author: "Brianna Heggeseth"
+title: "COMP/STAT 112: Introduction to Data Science"
+author: "James Normington, PhD"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -14,28 +14,41 @@ editor: visual
 
 ## Introductions {.smaller}
 
-As we gather, sit with people you don't know well and introduce yourself (*you choose what you share*) to others at your table.
+Introduce yourself to your neighbors!
 
 <br>
 
-Here are some suggestions:
+Here are some things you can share, if you choose:
 
 -   Your preferred name (+ pronunciation tips)
 -   Aspects of who you are and have been (*e.g. pronouns, geographical identity, cultural identity, hobbies/passions*)
 -   Aspects of who you'd like to be (*e.g. personal/professional/academic goals*)
--   How you are feeling about new semester (!?!)
+-   How you are feeling about COMP/STAT 112? Is this a requirement for your degree, an academic interest, or both?
+-   Anything else?
 
-*Be prepared to introduce one other person to the larger class*
+## What is data science?
+
+Data science is the process to gain insights from data. The practitioners of data science (data scientists) combine statistics, programming, and domain knowledge to collect, clean, and analyze data, and present results to stakeholders.
+
+## What is the difference between data science and statistics?
+
+Data science and statistics are two fields which are more similar than they are different.
+
+Data scientists are concerned with the entire life-cycle of a data analytic question -- from data collection/acquisition, data storage, data cleaning, data analysis, and presentation of results.
+
+Statisticians also focus on these life-stages, but are mostly concerned with data analysis. Statisticians use linear algebra, probability theory, and statistical modeling to best mimic a data generation process and explain relationships between variables.
+
+Data scientists often rely on models and algorithms created by statisticians (and, more recently, computer scientists!). Statisticians often rely on data scientists to provide clean, analytic-ready data.
+
+"Data scientist" and "statistician" are not mutually exclusive titles, either. One title may suit you better, depending on who you are talking to.
 
 ## Big Data
 
-![Four Components of Big Data](images/ibm.png){fig-alt="Main components of data as volume, velocity, variety, and veracity" fig-align="center"}
+![](images/image-1794215244.png)The Four V's of Big Data (Image credit: Shalina Patidar, DZone.com)
 
 ## Data Science in Liberal Arts
 
 The liberal arts setting provides an opportunity to synthesize ***lenses for data*** developed in the social and hard sciences, humanities, and fine arts
-
-. . .
 
 -   Data Science applies these lenses to **extract knowledge from data** within a particular domain of inquiry and contexts such as
     -   educational policy making,
@@ -45,15 +58,15 @@ The liberal arts setting provides an opportunity to synthesize ***lenses for dat
 
 ## Data Science Skills
 
-[![Data Science skills mapped to Job Titles](https://www.udacity.com/blog/wp-content/uploads/2014/11/Data-Science-Skills-Udacity-Matrix.png.webp){fig-align="center"}](https://www.udacity.com/blog/2014/11/data-science-job-skills.html)
+[![Data Science skills mapped to Job Titles (image credit: Dave Holtz)](https://www.udacity.com/blog/wp-content/uploads/2014/11/Data-Science-Skills-Udacity-Matrix.png.webp){fig-align="center"}](https://www.udacity.com/blog/2014/11/data-science-job-skills.html)
 
 ## Data Science Jobs
 
-::: {.incremental}
+::: incremental
 -   Government agencies (e.g., NSA, CIA)
 -   Science institutions (e.g., NASA, NIH)
 -   Companies/divisions specializing in data analysis (e.g., IBM)
--   Retail companies that have huge amounts of data and analyze it to drive business decisions (e.g., Amazon, Netflix, Target, Etsy)
+-   Retail companies that have huge amounts of data and analyze it to drive business decisions (e.g., Amazon, Netflix, Target, Etsy, General Mills)
 -   Other sectors: journalism, healthcare, biotech/genomics, NGOs, finance, insurance, gaming and hospitality, energy/utilities, manufacturing, pharmaceuticals
 :::
 
@@ -75,15 +88,35 @@ The liberal arts setting provides an opportunity to synthesize ***lenses for dat
 
 ## Who am I
 
-### Prof. Brianna Heggeseth
+### Prof. James Normington
 
-\[bree-AH-na\] \[HEG-eh-seth\]
+https://jamesnormington.github.io/
 
-![](images/kids.jpeg){width="300"}
+Pronouns: he/him/his
 
-[bcheggeseth.github.io/](https://bcheggeseth.github.io/)
+-   Visiting Assistant Professor of Statistics
 
-## Who am I
+    -   Started in Fall 2022
+
+-   Both a statistician and data scientist
+
+-   Wife: Angela, married since 2018
+
+-   Daughter: Phoebe, born Feb 2022
+
+-   B.A., Mathematics, University of Wisconsin-Madison
+
+-   Ph.D., Biostatistics, University of Minnesota
+
+-   Research: Methods in Bayesian hierarchical modeling
+
+-   Non-work stuff:
+
+    -   Music: I collect vinyl records and am trying (slowly) to learn guitar.
+
+    -   Sports: I love soccer, basketball, and football.
+
+    -   Food: I enjoy cooking and trying new foods, and am addicted to peppers and hot sauce
 
 ### Where I've Been
 
@@ -91,20 +124,23 @@ The liberal arts setting provides an opportunity to synthesize ***lenses for dat
 #| echo: false
 library(dplyr)
 places <- tibble(
-  place = c('Minot', 
-            'St. Olaf College',
-            'UC Berkeley',
-            'Williams College',
+  place = c('North St. Paul', 
+            'UW-Madison',
+            'University of MN',
+            'University of St. Thomas',
+            'General Mills',
             "Macalester College"),
-  lat = c(48.23451328100744,
-        44.46226590286501,
-        37.87229723036468,
-        42.71282121400364,
+  lat = c(45.0125,
+        43.0722,
+        44.9740,
+        44.9431,
+        44.9987,
         44.93817295014158),
-  long = c(-101.2947375688704,
-        -93.18303031829093,
-        -122.25784252845078,
-        -73.20309658727034,
+  long = c(-92.9919,
+        -89.4008,
+        -93.2277,
+        -93.1897,
+        -93.3931
         -93.16907037369458)
 )
 library(leaflet)
@@ -128,7 +164,6 @@ leaflet(data = places) %>% # base plot
 ## Introductions
 
 Now, take a turn introducing another person in the class.
-
 
 ## Course Details
 
@@ -274,11 +309,11 @@ Macalester College values diversity and inclusion.
 
 ## Let's Get Started
 
-Go to [bcheggeseth.github.io/112_fall_2022/course-schedule.html](https://bcheggeseth.github.io/112_fall_2022/course-schedule.html)
+Go to https://jamesnormington.github.io/112_spring_2023/course-schedule.html
 
 ## After Class
 
-- Fill out [Information Gathering Survey](https://docs.google.com/forms/d/e/1FAIpQLSfCr7FNzTPLEwYIAI0gPLvXAH5zoAq2gfrph3JqhJjo3ryTIg/viewform) on Moodle under Surveys by Friday
+-   Fill out [Information Gathering Survey](https://docs.google.com/forms/d/e/1FAIpQLSfCr7FNzTPLEwYIAI0gPLvXAH5zoAq2gfrph3JqhJjo3ryTIg/viewform) on Moodle under Surveys by Friday
 
 Continue working through the activity:
 
