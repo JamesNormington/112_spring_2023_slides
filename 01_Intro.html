@@ -9,8 +9,8 @@
 <link href="01_Intro_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="James Normington">
-  <title>Introduction to Data Science</title>
+  <meta name="author" content="James Normington, PhD">
+  <title>COMP/STAT 112: Introduction to Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -337,12 +337,12 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to Data Science</h1>
+  <h1 class="title">COMP/STAT 112: Introduction to Data Science</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-James Normington 
+James Normington, PhD 
 </div>
 </div>
 </div>
@@ -355,27 +355,46 @@ James Normington
 <p>Here are some things you can share, if you choose:</p>
 <ul>
 <li>Your preferred name (+ pronunciation tips)</li>
-<li>Your pronouns</li>
 <li>Aspects of who you are and have been (<em>e.g.&nbsp;pronouns, geographical identity, cultural identity, hobbies/passions</em>)</li>
 <li>Aspects of who you’d like to be (<em>e.g.&nbsp;personal/professional/academic goals</em>)</li>
 <li>How you are feeling about COMP/STAT 112? Is this a requirement for your degree, an academic interest, or both?</li>
 <li>Anything else?</li>
 </ul>
-<p><em>Be prepared to introduce one other person to the larger class</em></p>
+</section>
+<section id="what-is-data-science" class="slide level2">
+<h2>What is data science?</h2>
+<ul>
+<li>Data science is the process to gain insights from data. The practitioners of data science (data scientists) combine statistics, programming, and domain knowledge to collect, clean, and analyze data, and present results to stakeholders.</li>
+</ul>
+</section>
+<section id="what-is-the-difference-between-data-science-and-statistics" class="slide level2">
+<h2>What is the difference between data science and statistics?</h2>
+<ul>
+<li><p>Data science and statistics are two fields which are more similar than they are different.</p></li>
+<li><p>Data scientists are concerned with the entire life-cycle of a data analytic question – from data collection/acquisition, data storage, data cleaning, data analysis, and presentation of results.</p></li>
+<li><p>Statisticians also focus on these life-stages, but are mostly concerned with data analysis. Statisticians use linear algebra, probability theory, and statistical modeling to best mimic a data generation process and explain relationships between variables.</p></li>
+</ul>
+</section>
+<section id="what-is-the-difference-between-data-science-and-statistics-1" class="slide level2">
+<h2>What is the difference between data science and statistics?</h2>
+<ul>
+<li><p>Data scientists often rely on models and algorithms created by statisticians (and, more recently, computer scientists!). Statisticians often rely on data scientists to provide clean, analytic-ready data.</p></li>
+<li><p>“Data scientist” and “statistician” are not mutually exclusive titles, either. One title may suit you better, depending on who you are talking to.</p></li>
+</ul>
+</section>
+<section id="data-science-as-an-intersection" class="slide level2">
+<h2>Data science as an intersection</h2>
+<p><img data-src="images/image-1885782716.png" width="512"></p>
+<p>Image credit: user BowTied_Raptor on substack.com</p>
 </section>
 <section id="big-data" class="slide level2">
 <h2>Big Data</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/ibm.png" alt="Main components of data as volume, velocity, variety, and veracity"></p>
-<p></p><figcaption>Four Components of Big Data</figcaption><p></p>
-</figure>
-</div>
+<p><img data-src="images/image-1794215244.png" width="476"><br>
+The Four V’s of Big Data (Image credit: Shalina Patidar, DZone.com)</p>
 </section>
 <section id="data-science-in-liberal-arts" class="slide level2">
 <h2>Data Science in Liberal Arts</h2>
 <p>The liberal arts setting provides an opportunity to synthesize <strong><em>lenses for data</em></strong> developed in the social and hard sciences, humanities, and fine arts</p>
-<div class="fragment">
 <ul>
 <li>Data Science applies these lenses to <strong>extract knowledge from data</strong> within a particular domain of inquiry and contexts such as
 <ul>
@@ -385,14 +404,13 @@ James Normington
 <li>computational linguistics, etc.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="data-science-skills" class="slide level2">
 <h2>Data Science Skills</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><a href="https://www.udacity.com/blog/2014/11/data-science-job-skills.html"><img data-src="https://www.udacity.com/blog/wp-content/uploads/2014/11/Data-Science-Skills-Udacity-Matrix.png.webp"></a></p>
-<p></p><figcaption>Data Science skills mapped to Job Titles</figcaption><p></p>
+<p></p><figcaption>Data Science skills mapped to Job Titles (image credit: Dave Holtz)</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -403,7 +421,7 @@ James Normington
 <li class="fragment">Government agencies (e.g., NSA, CIA)</li>
 <li class="fragment">Science institutions (e.g., NASA, NIH)</li>
 <li class="fragment">Companies/divisions specializing in data analysis (e.g., IBM)</li>
-<li class="fragment">Retail companies that have huge amounts of data and analyze it to drive business decisions (e.g., Amazon, Netflix, Target, Etsy)</li>
+<li class="fragment">Retail companies that have huge amounts of data and analyze it to drive business decisions (e.g., Amazon, Netflix, Target, Etsy, General Mills)</li>
 <li class="fragment">Other sectors: journalism, healthcare, biotech/genomics, NGOs, finance, insurance, gaming and hospitality, energy/utilities, manufacturing, pharmaceuticals</li>
 </ul>
 </div>
@@ -439,18 +457,32 @@ James Normington
 </section>
 <section id="who-am-i" class="slide level2">
 <h2>Who am I</h2>
-<h3 id="prof.-brianna-heggeseth">Prof.&nbsp;Brianna Heggeseth</h3>
-<p>[bree-AH-na] [HEG-eh-seth]</p>
-<p><img data-src="images/kids.jpeg" width="300"></p>
-<p><a href="https://bcheggeseth.github.io/">bcheggeseth.github.io/</a></p>
-</section>
-<section id="who-am-i-1" class="slide level2">
-<h2>Who am I</h2>
+<h3 id="prof.-james-normington">Prof.&nbsp;James Normington</h3>
+<p>https://jamesnormington.github.io/</p>
+<p>Pronouns: he/him/his</p>
+<ul>
+<li><p>Visiting Assistant Professor of Statistics</p>
+<ul>
+<li>Started in Fall 2022</li>
+</ul></li>
+<li><p>Both a statistician and data scientist</p></li>
+<li><p>Wife: Angela, married since 2018</p></li>
+<li><p>Daughter: Phoebe, born Feb 2022</p></li>
+<li><p>B.A., Mathematics, University of Wisconsin-Madison</p></li>
+<li><p>Ph.D., Biostatistics, University of Minnesota</p></li>
+<li><p>Research: Methods in Bayesian hierarchical modeling</p></li>
+<li><p>Non-work stuff:</p>
+<ul>
+<li><p>Music: I collect vinyl records and am trying (slowly) to learn guitar.</p></li>
+<li><p>Sports: I love soccer, basketball, and football.</p></li>
+<li><p>Food: I enjoy cooking and trying new foods, and am addicted to peppers and hot sauce</p></li>
+</ul></li>
+</ul>
 <h3 id="where-ive-been">Where I’ve Been</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-a5e85306421ba39cfcff" style="width:960px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a5e85306421ba39cfcff">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Stamen.Watercolor",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircles","args":[[48.2345132810074,44.462265902865,37.8722972303647,42.7128212140036,44.9381729501416],[-101.29473756887,-93.1830303182909,-122.257842528451,-73.2030965872703,-93.1690703736946],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":10,"opacity":1,"fill":true,"fillColor":"#006400","fillOpacity":0.2},null,null,["Minot","St. Olaf College","UC Berkeley","Williams College","Macalester College"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addPolylines","args":[[[[{"lng":[-101.29473756887,-93.1830303182909,-122.257842528451,-73.2030965872703,-93.1690703736946],"lat":[48.2345132810074,44.462265902865,37.8722972303647,42.7128212140036,44.9381729501416]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":5,"opacity":0.5,"fill":false,"fillColor":"#006400","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.8722972303647,48.2345132810074],"lng":[-122.257842528451,-73.2030965872703]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e961bef99a3d8df85fc4" style="width:960px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e961bef99a3d8df85fc4">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Stamen.Watercolor",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircles","args":[[45.0125,43.0722,44.974,44.9431,44.9987,44.9381729501416],[-92.9919,-89.4008,-93.2277,-93.1897,-93.3931,-93.1690703736946],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":10,"opacity":1,"fill":true,"fillColor":"#006400","fillOpacity":0.2},null,null,["North St. Paul","UW-Madison","University of MN","University of St. Thomas","General Mills","Macalester College"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addPolylines","args":[[[[{"lng":[-92.9919,-89.4008,-93.2277,-93.1897,-93.3931,-93.1690703736946],"lat":[45.0125,43.0722,44.974,44.9431,44.9987,44.9381729501416]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#006400","weight":5,"opacity":0.5,"fill":false,"fillColor":"#006400","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[43.0722,45.0125],"lng":[-93.3931,-89.4008]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -611,7 +643,7 @@ James Normington
 </section>
 <section id="lets-get-started" class="slide level2">
 <h2>Let’s Get Started</h2>
-<p>Go to <a href="https://bcheggeseth.github.io/112_fall_2022/course-schedule.html">bcheggeseth.github.io/112_fall_2022/course-schedule.html</a></p>
+<p>Go to https://jamesnormington.github.io/112_spring_2023/course-schedule.html</p>
 </section>
 <section id="after-class" class="slide level2">
 <h2>After Class</h2>

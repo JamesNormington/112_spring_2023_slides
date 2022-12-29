@@ -28,23 +28,32 @@ Here are some things you can share, if you choose:
 
 ## What is data science?
 
-Data science is the process to gain insights from data. The practitioners of data science (data scientists) combine statistics, programming, and domain knowledge to collect, clean, and analyze data, and present results to stakeholders.
+-   Data science is the process to gain insights from data. The practitioners of data science (data scientists) combine statistics, programming, and domain knowledge to collect, clean, and analyze data, and present results to stakeholders.
 
 ## What is the difference between data science and statistics?
 
-Data science and statistics are two fields which are more similar than they are different.
+-   Data science and statistics are two fields which are more similar than they are different.
 
-Data scientists are concerned with the entire life-cycle of a data analytic question -- from data collection/acquisition, data storage, data cleaning, data analysis, and presentation of results.
+-   Data scientists are concerned with the entire life-cycle of a data analytic question -- from data collection/acquisition, data storage, data cleaning, data analysis, and presentation of results.
 
-Statisticians also focus on these life-stages, but are mostly concerned with data analysis. Statisticians use linear algebra, probability theory, and statistical modeling to best mimic a data generation process and explain relationships between variables.
+-   Statisticians also focus on these life-stages, but are mostly concerned with data analysis. Statisticians use linear algebra, probability theory, and statistical modeling to best mimic a data generation process and explain relationships between variables.
 
-Data scientists often rely on models and algorithms created by statisticians (and, more recently, computer scientists!). Statisticians often rely on data scientists to provide clean, analytic-ready data.
+## What is the difference between data science and statistics?
 
-"Data scientist" and "statistician" are not mutually exclusive titles, either. One title may suit you better, depending on who you are talking to.
+-   Data scientists often rely on models and algorithms created by statisticians (and, more recently, computer scientists!). Statisticians often rely on data scientists to provide clean, analytic-ready data.
+
+-   "Data scientist" and "statistician" are not mutually exclusive titles, either. One title may suit you better, depending on who you are talking to.
+
+## Data science as an intersection
+
+![](images/image-1885782716.png){width="512"}
+
+Image credit: user BowTied_Raptor on substack.com
 
 ## Big Data
 
-![](images/image-1794215244.png)The Four V's of Big Data (Image credit: Shalina Patidar, DZone.com)
+![](images/image-1794215244.png){width="476"}\
+The Four V's of Big Data (Image credit: Shalina Patidar, DZone.com)
 
 ## Data Science in Liberal Arts
 
@@ -140,7 +149,7 @@ places <- tibble(
         -89.4008,
         -93.2277,
         -93.1897,
-        -93.3931
+        -93.3931,
         -93.16907037369458)
 )
 library(leaflet)
