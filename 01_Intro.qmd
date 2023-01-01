@@ -12,6 +12,11 @@ format:
 editor: visual
 ---
 
+## 
+While we wait....
+
+-   Sit next to people you don't know!
+
 ## Introductions {.smaller}
 
 Introduce yourself to your neighbors!
@@ -103,72 +108,9 @@ https://jamesnormington.github.io/
 
 Pronouns: he/him/his
 
--   Visiting Assistant Professor of Statistics
-
-    -   Started in Fall 2022
-
--   Both a statistician and data scientist
-
 -   Wife: Angela, married since 2018
 
 -   Daughter: Phoebe, born Feb 2022
-
--   B.A., Mathematics, University of Wisconsin-Madison
-
--   Ph.D., Biostatistics, University of Minnesota
-
--   Research: Methods in Bayesian hierarchical modeling
-
--   Non-work stuff:
-
-    -   Music: I collect vinyl records and am trying (slowly) to learn guitar.
-
-    -   Sports: I love soccer, basketball, and football.
-
-    -   Food: I enjoy cooking and trying new foods, and am addicted to peppers and hot sauce
-
-### Where I've Been
-
-```{r}
-#| echo: false
-library(dplyr)
-places <- tibble(
-  place = c('North St. Paul', 
-            'UW-Madison',
-            'University of MN',
-            'University of St. Thomas',
-            'General Mills',
-            "Macalester College"),
-  lat = c(45.0125,
-        43.0722,
-        44.9740,
-        44.9431,
-        44.9987,
-        44.93817295014158),
-  long = c(-92.9919,
-        -89.4008,
-        -93.2277,
-        -93.1897,
-        -93.3931,
-        -93.16907037369458)
-)
-library(leaflet)
-leaflet(data = places) %>% # base plot
-  addProviderTiles(providers$Stamen.Watercolor) %>%
-  addCircles(
-    lng = ~long,
-    lat = ~lat,
-    label = ~place,
-    weight = 10,
-    opacity = 1,
-    color = gplots::col2hex("darkgreen")
-  ) %>%
-    addPolylines(
-    lng = ~long,
-    lat = ~lat,
-    color = gplots::col2hex("darkgreen")
-  )
-```
 
 ## Introductions
 
@@ -176,7 +118,7 @@ Now, take a turn introducing another person in the class.
 
 ## Course Details
 
-[Syllabus](https://docs.google.com/presentation/d/1B_ontyO8GhUwwaKb4WRG8g-xM1B2avlgvm3d92_fBfw/edit)
+[Syllabus](https://jamesnormington.github.io/files/COMP_STAT%20112%20Spring%202023%20Syllabus.pdf)
 
 -   Learning Goals
 -   Community of Learners
@@ -268,10 +210,11 @@ By the end of the course, you'll be able to:
 ## Course Components
 
 ::: incremental
-**Midterm Assessment**
+**Midterm Assessment (currently scheduled for Tues. March 14th)**
 
 -   In-class assessment of basic visualization and wrangling skills
--   Important checkpoint before advanced tools + projects
+-   Part 1: Conceptual, 20 minutes. No notes.
+-   Part 2: Application, 40 minutes. Open notes and computer.
 
 **Final Project & Presentation**
 
@@ -286,7 +229,7 @@ By the end of the course, you'll be able to:
 
 -   General channel: class-wide announcements
 -   Content-specific class-wide channels: data-viz, troubleshooting, etc.
--   Section-specific channels: section-1, section-2, fyc-community
+-   Section-specific channels: section-1
 -   Study-group channel (*optional*): class-wide channel to seek classmates to work together outside of class
 
 **Email or DM in Slack:** for anything *personal in nature* (e.g. illness, feeling overwhelmed, feedback, etc.)
@@ -297,9 +240,9 @@ By the end of the course, you'll be able to:
 Macalester College values diversity and inclusion.
 
 ::: incremental
--   I am committed to a climate of mutual respect, free of discrimination based on race, ethnicity, gender identity, religion, sexual orientation, disability, and other identities, in and out of the classroom. This class strives to be a learning environment that is usable, equitable, inclusive, and welcoming.
+-   I'm committed to creating a diverse, inclusive, and equitable learning environment. There will never be space in my classroom for racism, sexism, transphobia, homophobia, ableism, or any other fear or belief which attacks the humanity of my students.
 
--   To help support these goals, I expect you to follow the [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub).
+-   [MSCS Community Guidelines](https://docs.google.com/document/u/3/d/e/2PACX-1vSlLLWmyOf8WKGDKJ_qypgA_kQI1dNFGEKH0mtFoqfAUARZN7ypVCgivnmPjccks9jJzW1rgEzt7QMI/pub).
 
 -   These guidelines were created by the MSCS faculty and staff in our ongoing efforts to create a community that is more welcoming, supportive, and inclusive.
 :::
@@ -327,4 +270,4 @@ Go to https://jamesnormington.github.io/112_spring_2023/course-schedule.html
 Continue working through the activity:
 
 -   Try each line of code (copy and paste) in the console and then check solutions on activity online
--   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=20496)) by next Tuesday evening
+-   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=20496) \[broken link!\]) by next Tuesday evening
