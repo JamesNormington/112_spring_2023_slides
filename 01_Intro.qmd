@@ -37,11 +37,9 @@ Here are some things you can share, if you choose:
 
 ## What is the difference between data science and statistics?
 
--   Data science and statistics are two fields which are more similar than they are different.
-
 -   Data scientists are concerned with the entire life-cycle of a data analytic question -- from data collection/acquisition, data storage, data cleaning, data analysis, and presentation of results.
 
--   Statisticians also focus on these life-stages, but are mostly concerned with data analysis. Statisticians use linear algebra, probability theory, and statistical modeling to best mimic a data generation process and explain relationships between variables.
+-   Statisticians are mostly concerned with data analysis. Statisticians use linear algebra, probability theory, and statistical modeling to best mimic a data generation process and explain relationships between variables.
 
 ## What is the difference between data science and statistics?
 
@@ -265,7 +263,7 @@ Go to https://jamesnormington.github.io/112_spring_2023/course-schedule.html
 
 ## After Class
 
--   Fill out [Information Gathering Survey](https://docs.google.com/forms/d/e/1FAIpQLSfCr7FNzTPLEwYIAI0gPLvXAH5zoAq2gfrph3JqhJjo3ryTIg/viewform) on Moodle under Surveys by Friday
+-   Fill out [Information Gathering Survey](https://docs.google.com/forms/d/e/1FAIpQLScZgTaC1FsmbSYrqMxszQ7WYguSuoiMbJPO7PgpE-HDr9lOIA/viewform) on Moodle under Surveys by Friday
 
 Continue working through the activity:
 
