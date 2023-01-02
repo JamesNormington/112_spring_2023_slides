@@ -210,7 +210,6 @@ By the end of the course, you'll be able to:
 ::: incremental
 **Midterm Assessment (currently scheduled for Tues. March 14th)**
 
--   In-class assessment of basic visualization and wrangling skills
 -   Part 1: Conceptual, 20 minutes. No notes.
 -   Part 2: Application, 40 minutes. Open notes and computer.
 
