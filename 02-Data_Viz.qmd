@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Data Visualization"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -24,10 +24,9 @@ library(ggplot2)
 
 ## Announcements
 
--   Check out the [feedback template](https://docs.google.com/spreadsheets/d/1yU69K6TLXjuXnsjK3iQpMwUlds4BmTbVR95DSQbEIMM/edit?usp=sharing)
+-   Updated [feedback template](https://docs.google.com/spreadsheets/d/1g462sR6fCMG61lWvytmDMSWbjnjTKbERVaqADM2dSlc/edit?usp=sharing)
     -   You'll get an individual version (shared with you + me)
     -   Any immediate questions?
--   Great job on Scavenger Hunt!
 
 ## Learning Goals
 
@@ -42,7 +41,7 @@ Visualizations help us understand what we're working with:
 ::: incremental
 -   What are the scales of our variables?
 -   Are there any outliers, i.e. unusual cases?
--   What are the patterns among our variables?
+-   What are the patterns among our variables? Center? Spread? Distribution?
 :::
 
 . . .
@@ -172,7 +171,7 @@ ggplot(data = Tmp) + geom_point(mapping = aes(x = sbp, y = dbp, shape = sex, col
 
 ## Eye Training for the Layered Grammar of Graphics
 
-Each group will be assigned one NY Times graphics to look; list at the [course website](https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html).
+Each group will be assigned one NY Times graphics to look; list at the [course website](https://jamesnormington.github.io/112_spring_2023/intro-to-data-visualization.html).
 
 <br> *If you haven't already, follow the [instructions](https://www.macalester.edu/library/nyt/) to gain access (paid by Macalester MCGS) to content at NYTimes.com.*
 
@@ -265,9 +264,7 @@ There's no end to the number and type of visualizations you *could* make.
 
 ## Rest of Class
 
-Continue on with the activity working through in the [template Rmd](https://bcheggeseth.github.io/112_fall_2022/template_rmd/02-Intro_Data_Viz_Assign.Rmd).
-
-Work with each other and support one another.
+Continue on with the activity working through in the [template Rmd](https://jamesnormington.github.io/112_spring_2023/template_rmd/02-Intro_Data_Viz_Assign.Rmd).
 
 Get immediate feedback with the Solutions online.
 
@@ -277,6 +274,6 @@ Continue to work through the activity in the Rmd file.
 
 <br>
 
-You'll submit a knitted html file of that template Rmd file for Assignment 2 (due next Tuesday).
+You'll submit a knitted html file of that template Rmd file for Assignment 2 (due Monday, Jan 30th at 11:59pm).
 
 -   We'll give feedback on Exercises 2.11-2.15.

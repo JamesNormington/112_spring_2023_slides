@@ -7,9 +7,9 @@
 <link href="02-Data_Viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="02-Data_Viz_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="02-Data_Viz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Introduction to Data Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -385,20 +390,26 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Introduction to Data Visualization</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
+</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Check out the <a href="https://docs.google.com/spreadsheets/d/1yU69K6TLXjuXnsjK3iQpMwUlds4BmTbVR95DSQbEIMM/edit?usp=sharing">feedback template</a>
+<li>Updated <a href="https://docs.google.com/spreadsheets/d/1g462sR6fCMG61lWvytmDMSWbjnjTKbERVaqADM2dSlc/edit?usp=sharing">feedback template</a>
 <ul>
 <li>You’ll get an individual version (shared with you + me)</li>
 <li>Any immediate questions?</li>
 </ul></li>
-<li>Great job on Scavenger Hunt!</li>
 </ul>
 </section>
 <section id="learning-goals" class="slide level2">
@@ -416,7 +427,7 @@
 <ul>
 <li class="fragment">What are the scales of our variables?</li>
 <li class="fragment">Are there any outliers, i.e.&nbsp;unusual cases?</li>
-<li class="fragment">What are the patterns among our variables?</li>
+<li class="fragment">What are the patterns among our variables? Center? Spread? Distribution?</li>
 </ul>
 </div>
 <div class="fragment">
@@ -549,7 +560,7 @@
 </section>
 <section id="eye-training-for-the-layered-grammar-of-graphics" class="slide level2">
 <h2>Eye Training for the Layered Grammar of Graphics</h2>
-<p>Each group will be assigned one NY Times graphics to look; list at the <a href="https://bcheggeseth.github.io/112_fall_2022/intro-to-data-visualization.html">course website</a>.</p>
+<p>Each group will be assigned one NY Times graphics to look; list at the <a href="https://jamesnormington.github.io/112_spring_2023/intro-to-data-visualization.html">course website</a>.</p>
 <p><br> <em>If you haven’t already, follow the <a href="https://www.macalester.edu/library/nyt/">instructions</a> to gain access (paid by Macalester MCGS) to content at NYTimes.com.</em></p>
 </section>
 <section id="exercise-basic-questions-to-ask-of-a-data-graphic" class="slide level2">
@@ -649,15 +660,14 @@
 </section>
 <section id="rest-of-class" class="slide level2">
 <h2>Rest of Class</h2>
-<p>Continue on with the activity working through in the <a href="https://bcheggeseth.github.io/112_fall_2022/template_rmd/02-Intro_Data_Viz_Assign.Rmd">template Rmd</a>.</p>
-<p>Work with each other and support one another.</p>
+<p>Continue on with the activity working through in the <a href="https://jamesnormington.github.io/112_spring_2023/template_rmd/02-Intro_Data_Viz_Assign.Rmd">template Rmd</a>.</p>
 <p>Get immediate feedback with the Solutions online.</p>
 </section>
 <section id="after-class" class="slide level2">
 <h2>After Class</h2>
 <p>Continue to work through the activity in the Rmd file.</p>
 <p><br></p>
-<p>You’ll submit a knitted html file of that template Rmd file for Assignment 2 (due next Tuesday).</p>
+<p>You’ll submit a knitted html file of that template Rmd file for Assignment 2 (due Monday, Jan 30th at 11:59pm).</p>
 <ul>
 <li>We’ll give feedback on Exercises 2.11-2.15.</li>
 </ul>
@@ -888,12 +898,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -904,13 +917,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -962,7 +968,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -992,31 +1015,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
