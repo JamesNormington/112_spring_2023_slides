@@ -13,6 +13,7 @@ editor: visual
 ---
 
 ## 
+
 While we wait....
 
 -   Sit next to people you don't know!
@@ -267,4 +268,4 @@ Go to https://jamesnormington.github.io/112_spring_2023/course-schedule.html
 Continue working through the activity:
 
 -   Try each line of code (copy and paste) in the console and then check solutions on activity online
--   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=20496) \[broken link!\]) by next Tuesday evening
+-   Complete Practice Section at the end and turn that in on Moodle ([Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=28775)) by next Wednesday \@ 11:59pm
