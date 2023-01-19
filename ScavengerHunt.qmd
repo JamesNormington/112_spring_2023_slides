@@ -1,0 +1,44 @@
+---
+title: "COMP/STAT 112: Introduction to Data Science"
+author: "James Normington, PhD"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    chalkboard: true
+    auto-stretch: false
+editor: visual
+---
+
+## Welcome back!
+
+Any questions?
+
+## Community-Building Scavenger Hunt
+
+-   For the first \~50ish minutes of class, we'll be out and about on campus doing a Scavenger Hunt!
+
+-   Before starting, before you join the 112 Slack channel! Link is on the Moodle site.
+
+## Debrief
+
+-   What new things did you learn about campus?
+
+-   What did you learn about Slack?
+
+-   What is confusing about Slack?
+
+## Quick Discussion
+
+In groups, discuss the following:
+
+-   What is challenging about R/RStudio?
+
+-   What is cool about R/RStudio? Have you learned anything fun?
+
+We will discuss in the broader group.
+
+## After Class
+
+Submit [Assignment 1](https://moodle.macalester.edu/mod/assign/view.php?id=28775) on Moodle by Wednesday, Jan 25th at 11:59pm
