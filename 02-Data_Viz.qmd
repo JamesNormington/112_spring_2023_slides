@@ -274,6 +274,6 @@ Continue to work through the activity in the Rmd file.
 
 <br>
 
-You'll submit a knitted html file of that template Rmd file for Assignment 2 (due Monday, Jan 30th at 11:59pm).
+You'll submit a knitted html file of that template Rmd file for Assignment 2 (due Wednesday, Feb 1 at 11:59pm).
 
--   We'll give feedback on Exercises 2.11-2.15.
+-   We'll give feedback on Exercises 2.12-2.15.
