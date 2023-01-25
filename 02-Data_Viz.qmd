@@ -25,8 +25,23 @@ library(ggplot2)
 ## Announcements
 
 -   Updated [feedback template](https://docs.google.com/spreadsheets/d/1g462sR6fCMG61lWvytmDMSWbjnjTKbERVaqADM2dSlc/edit?usp=sharing)
+
     -   You'll get an individual version (shared with you + me)
     -   Any immediate questions?
+
+-   Intro to Tidy Tuesday
+
+-   Tidy Tuesday 1 due Monday at 11:59pm
+
+    -   Scored 0, 1, 2, or 3
+
+    -   Can submit as many as you'd like out of 14
+
+    -   Your top 3 grades will go into your Final Grade calculation
+
+    -   At least one submission in first five Tidy Tuesdays (i.e. at least one by Feb 24)
+
+        -   One will turn into your Iterative Viz
 
 ## Learning Goals
 
@@ -277,3 +292,15 @@ Continue to work through the activity in the Rmd file.
 You'll submit a knitted html file of that template Rmd file for Assignment 2 (due Wednesday, Feb 1 at 11:59pm).
 
 -   We'll give feedback on Exercises 2.12-2.15.
+
+Tidy Tuesday 1 due Monday at 11:59pm
+
+-   Scored 0, 1, 2, or 3
+
+-   Can submit as many as you'd like out of 14
+
+-   Your top 3 grades will go into your Final Grade calculation
+
+-   At least one submission in first five Tidy Tuesdays (i.e. at least one by Feb 24)
+
+    -   One will turn into your Iterative Viz

@@ -1,6 +1,6 @@
 ---
 title: "Effective Visualizations"
-author: "Brianna Heggeseth"
+author: "James Normington, PhD"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -29,8 +29,7 @@ library(readr)
 
 ## Announcements {.unnumbered}
 
-- Nominations for MSCS Student Advisory Board due this Friday!
-- If you turned in TT1, feedback is in spreadsheet. 
+-   Assignment 2 due tomorrow at 11:59pm!
 
 ## Learning Goals {.unnumbered}
 
@@ -70,7 +69,7 @@ Identify the following:
 2.  effective features of the graphic
 3.  areas for improvement
 
-Think and then discuss with group. Be prepared to share. 
+Think and then discuss with group. Be prepared to share.
 
 ## Example 1 {.unnumbered}
 
@@ -79,7 +78,6 @@ Think and then discuss with group. Be prepared to share.
 ## Example 2 {.unnumbered}
 
 ![](images/trilogies.gif){fig-alt="Source: N. Yau, *Visualize This*, 2011, p. 223-225." fig-align="center" width="600"}
-
 
 ## Example 3 {.unnumbered}
 
@@ -157,12 +155,12 @@ knitr::include_graphics("images/rose1.png")
 
 ## Other Design Tips {.smaller}
 
-- Put yourself in a reader's shoes when you design data graphics. What parts of the data need explanation? We can minimize ambiguity by providing guides, label axes, etc.
-- Data graphics are meant to shine a light on your data. Try to remove any elements that don't help you do that. That is, eliminate "chart junk" (distracting and unnecessary adornments). 
-- Vary color and stroke styles to emphasize the parts in your graphic that are most important to the story you're telling 
-- It is easier to judge length than it is to judge area or angles
-- Be thoughtful about how your categories (levels) are ordered for categorical data. There may be a natural ordering
-- Pie charts, donut charts, and 3D are evil
+-   Put yourself in a reader's shoes when you design data graphics. What parts of the data need explanation? We can minimize ambiguity by providing guides, label axes, etc.
+-   Data graphics are meant to shine a light on your data. Try to remove any elements that don't help you do that. That is, eliminate "chart junk" (distracting and unnecessary adornments).
+-   Vary color and stroke styles to emphasize the parts in your graphic that are most important to the story you're telling
+-   It is easier to judge length than it is to judge area or angles
+-   Be thoughtful about how your categories (levels) are ordered for categorical data. There may be a natural ordering
+-   Pie charts, donut charts, and 3D are evil
 
 ## Basic Rules for Constructing Graphics {.unnumbered}
 
@@ -188,6 +186,6 @@ c.  Critique and/or praise the visualization choices made by the designer.
 
 ## After Class {.smaller}
 
-- Work on finishing Assignment 2 (due Tuesday)
-- Check out optional readings!
-- FYC: Check out Library Sessions assignment due Friday!
+-   Work on finishing Assignment 2 (due Tuesday)
+-   Check out optional readings!
+-   FYC: Check out Library Sessions assignment due Friday!
