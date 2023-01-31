@@ -436,9 +436,6 @@ James Normington
 <p>Loading in the Data</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>elect <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://jamesnormington.github.io/112_spring_2023/data/electionDemographics16.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in open.connection(structure(4L, class = c("curl", "connection"), conn_id = &lt;pointer: 0x0000000000000259&gt;), : HTTP error 404.</code></pre>
-</div>
 </div>
 </section>
 <section id="getting-to-know-the-dataset-1" class="slide level2 smaller">
@@ -446,9 +443,24 @@ James Normington
 <p>Check out the first rows of elect. What are the units of observation?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">head</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in head(elect): object 'elect' not found</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">head</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 34
+  county total…¹ dem_2…² gop_2…³ oth_2…⁴ total…⁵ dem_2…⁶ gop_2…⁷ oth_2…⁸ total…⁹
+  &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 Walke…   28652    7420   20722     510   28497    6551   21633     313   29243
+2 Bullo…    5415    4011    1391      13    5318    4058    1250      10    4701
+3 Calho…   49242   16334   32348     560   46240   15500   30272     468   47376
+4 Barbo…   11630    5697    5866      67   11459    5873    5539      47   10390
+5 Fayet…    7957    1994    5883      80    7912    1803    6034      75    8196
+6 Baldw…   81413   19386   61271     756   84988   18329   65772     887   94090
+# … with 24 more variables: dem_2016 &lt;dbl&gt;, gop_2016 &lt;dbl&gt;, oth_2016 &lt;dbl&gt;,
+#   perdem_2016 &lt;dbl&gt;, perrep_2016 &lt;dbl&gt;, winrep_2016 &lt;lgl&gt;, perdem_2012 &lt;dbl&gt;,
+#   perrep_2012 &lt;dbl&gt;, winrep_2012 &lt;lgl&gt;, perdem_2008 &lt;dbl&gt;, perrep_2008 &lt;dbl&gt;,
+#   winrep_2008 &lt;lgl&gt;, region &lt;dbl&gt;, total_population &lt;dbl&gt;,
+#   percent_white &lt;dbl&gt;, percent_black &lt;dbl&gt;, percent_asian &lt;dbl&gt;,
+#   percent_hispanic &lt;dbl&gt;, per_capita_income &lt;dbl&gt;, median_rent &lt;dbl&gt;,
+#   median_age &lt;dbl&gt;, polyname &lt;chr&gt;, abb &lt;chr&gt;, StateColor &lt;chr&gt;, and …</code></pre>
 </div>
 </div>
 </div>
@@ -458,9 +470,9 @@ James Normington
 <p>How much data do we have?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">dim</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in eval(expr, envir, enclos): object 'elect' not found</code></pre>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">dim</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3112   34</code></pre>
 </div>
 </div>
 </div>
@@ -470,9 +482,20 @@ James Normington
 <p>What are the names of the variables?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">names</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in eval(expr, envir, enclos): object 'elect' not found</code></pre>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">names</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "county"            "total_2008"        "dem_2008"         
+ [4] "gop_2008"          "oth_2008"          "total_2012"       
+ [7] "dem_2012"          "gop_2012"          "oth_2012"         
+[10] "total_2016"        "dem_2016"          "gop_2016"         
+[13] "oth_2016"          "perdem_2016"       "perrep_2016"      
+[16] "winrep_2016"       "perdem_2012"       "perrep_2012"      
+[19] "winrep_2012"       "perdem_2008"       "perrep_2008"      
+[22] "winrep_2008"       "region"            "total_population" 
+[25] "percent_white"     "percent_black"     "percent_asian"    
+[28] "percent_hispanic"  "per_capita_income" "median_rent"      
+[31] "median_age"        "polyname"          "abb"              
+[34] "StateColor"       </code></pre>
 </div>
 </div>
 </div>
@@ -481,10 +504,10 @@ James Normington
 <h2>Review: Univariate Viz</h2>
 <p>Categorical Variable: Bar Plot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> winrep_2016)) <span class="sc">+</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplot(data = elect, aes(x = winrep_2016)): object 'elect' not found</code></pre>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> winrep_2016)) <span class="sc">+</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </div>
 </div>
 </section>
@@ -492,15 +515,15 @@ James Normington
 <h2>Review: Univariate Viz</h2>
 <p>Quantitative Variable: Histogram or Density plot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplot(data = elect, aes(x = perrep_2016)): object 'elect' not found</code></pre>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
-<span id="cb13-2"><a href="#cb13-2"></a>    <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplot(data = elect, aes(x = perrep_2016)): object 'elect' not found</code></pre>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-7-2.png" width="960"></p>
 </div>
 </div>
 </section>
@@ -508,8 +531,8 @@ James Normington
 <h2>Preview: Bivariate Viz</h2>
 <p>Quantitative + Quantitative Variable: Scatterplot</p>
 <div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplot(data = elect, aes(x = perrep_2012, y = perrep_2016)): object 'elect' not found</code></pre>
+<div class="cell-output-display">
+<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </div>
 </div>
 </section>
@@ -517,8 +540,8 @@ James Normington
 <h2>Preview: Bivariate Viz</h2>
 <p>Quantitative + Categorical Variable: Density Plots, Boxplots, etc.</p>
 <div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplot(data = elect, aes(fill = StateColor, x = perrep_2016)): object 'elect' not found</code></pre>
+<div class="cell-output-display">
+<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </div>
 </div>
 </section>
@@ -526,8 +549,8 @@ James Normington
 <h2>Preview: Bivariate Viz</h2>
 <p>Categorical + Categorical Variable: side-by-side, proportion Bar plots, etc.</p>
 <div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplot(elect, aes(x = StateColor, fill = winrep_2016)): object 'elect' not found</code></pre>
+<div class="cell-output-display">
+<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </div>
 </div>
 </section>
