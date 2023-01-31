@@ -1,6 +1,6 @@
 ---
 title: "Bivariate Visualizations"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -27,14 +27,9 @@ library(readr)
 
 ## Announcements {.unnumbered .smaller}
 
--   Almost all of you have feedback on Assignment 1
 -   Assignment 2 was due last night
--   Tidy Tuesday 2 (TT2) was posted yesterday (Bigfoot sightings!)
-
-<br>
-
--   I request that masks be worn in my class for 1 more week (*until my 2 year old is officially fully vaccinated*).
-    -   If you have concerns about masks going optional in the classroom after next Thursday, email me directly so I can have all the information I need to make a decision that best supports this community.
+-   Tidy Tuesday 2 (TT2) is due tomorrow
+    -   Remember: you must submit one before TT5!
 
 ## Learning Goals {.unnumbered}
 
@@ -58,7 +53,7 @@ Download a template .Rmd of this activity. Put the file in a `Day_04` folder wit
 Loading in the Data
 
 ```{r echo=TRUE}
-elect <- read_csv("https://www.macalester.edu/~ajohns24/data/electionDemographics16.csv")
+elect <- read_csv("https://jamesnormington.github.io/112_spring_2023/data/electionDemographics16.csv")
 ```
 
 ## Getting to know the dataset {.smaller}
@@ -148,6 +143,6 @@ Notice patterns! Feel free to make visualizations more effective as you go along
 
 ## After Class
 
-You'll make sure to complete Exercise 8-17 (4 of them only require running preexisting code) for the Assignment 3 (due next Tues).
+-   TT2 due tomorrow night!
 
-For Friday's class, meet in the Library (Idea Lab for morning, Lib 206 for FYC)!
+-   Assignment 3 due Wednesday 2/8 @ 11:59pm

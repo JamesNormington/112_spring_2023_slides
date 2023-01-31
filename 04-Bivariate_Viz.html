@@ -7,9 +7,9 @@
 <link href="04-Bivariate_Viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="04-Bivariate_Viz_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="04-Bivariate_Viz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Bivariate Visualizations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -385,23 +390,25 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Bivariate Visualizations</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
+</section>
 <section id="announcements" class="slide level2 unnumbered smaller">
 <h2>Announcements</h2>
 <ul>
-<li>Almost all of you have feedback on Assignment 1</li>
 <li>Assignment 2 was due last night</li>
-<li>Tidy Tuesday 2 (TT2) was posted yesterday (Bigfoot sightings!)</li>
-</ul>
-<p><br></p>
+<li>Tidy Tuesday 2 (TT2) is due tomorrow
 <ul>
-<li>I request that masks be worn in my class for 1 more week (<em>until my 2 year old is officially fully vaccinated</em>).
-<ul>
-<li>If you have concerns about masks going optional in the classroom after next Thursday, email me directly so I can have all the information I need to make a decision that best supports this community.</li>
+<li>Remember: you must submit one before TT5!</li>
 </ul></li>
 </ul>
 </section>
@@ -428,7 +435,10 @@
 <h2>Getting to know the dataset</h2>
 <p>Loading in the Data</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>elect <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://www.macalester.edu/~ajohns24/data/electionDemographics16.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>elect <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://jamesnormington.github.io/112_spring_2023/data/electionDemographics16.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in open.connection(structure(4L, class = c("curl", "connection"), conn_id = &lt;pointer: 0x0000000000000259&gt;), : HTTP error 404.</code></pre>
+</div>
 </div>
 </section>
 <section id="getting-to-know-the-dataset-1" class="slide level2 smaller">
@@ -436,25 +446,9 @@
 <p>Check out the first rows of elect. What are the units of observation?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">head</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 34
-  county total…¹ dem_2…² gop_2…³ oth_2…⁴ total…⁵ dem_2…⁶ gop_2…⁷ oth_2…⁸ total…⁹
-  &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-1 Walke…   28652    7420   20722     510   28497    6551   21633     313   29243
-2 Bullo…    5415    4011    1391      13    5318    4058    1250      10    4701
-3 Calho…   49242   16334   32348     560   46240   15500   30272     468   47376
-4 Barbo…   11630    5697    5866      67   11459    5873    5539      47   10390
-5 Fayet…    7957    1994    5883      80    7912    1803    6034      75    8196
-6 Baldw…   81413   19386   61271     756   84988   18329   65772     887   94090
-# … with 24 more variables: dem_2016 &lt;dbl&gt;, gop_2016 &lt;dbl&gt;, oth_2016 &lt;dbl&gt;,
-#   perdem_2016 &lt;dbl&gt;, perrep_2016 &lt;dbl&gt;, winrep_2016 &lt;lgl&gt;, perdem_2012 &lt;dbl&gt;,
-#   perrep_2012 &lt;dbl&gt;, winrep_2012 &lt;lgl&gt;, perdem_2008 &lt;dbl&gt;, perrep_2008 &lt;dbl&gt;,
-#   winrep_2008 &lt;lgl&gt;, region &lt;dbl&gt;, total_population &lt;dbl&gt;,
-#   percent_white &lt;dbl&gt;, percent_black &lt;dbl&gt;, percent_asian &lt;dbl&gt;,
-#   percent_hispanic &lt;dbl&gt;, per_capita_income &lt;dbl&gt;, median_rent &lt;dbl&gt;,
-#   median_age &lt;dbl&gt;, polyname &lt;chr&gt;, abb &lt;chr&gt;, StateColor &lt;chr&gt;, and …
-# ℹ Use `colnames()` to see all variable names</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">head</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in head(elect): object 'elect' not found</code></pre>
 </div>
 </div>
 </div>
@@ -464,9 +458,9 @@
 <p>How much data do we have?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">dim</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3112   34</code></pre>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">dim</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(expr, envir, enclos): object 'elect' not found</code></pre>
 </div>
 </div>
 </div>
@@ -476,20 +470,9 @@
 <p>What are the names of the variables?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">names</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "county"            "total_2008"        "dem_2008"         
- [4] "gop_2008"          "oth_2008"          "total_2012"       
- [7] "dem_2012"          "gop_2012"          "oth_2012"         
-[10] "total_2016"        "dem_2016"          "gop_2016"         
-[13] "oth_2016"          "perdem_2016"       "perrep_2016"      
-[16] "winrep_2016"       "perdem_2012"       "perrep_2012"      
-[19] "winrep_2012"       "perdem_2008"       "perrep_2008"      
-[22] "winrep_2008"       "region"            "total_population" 
-[25] "percent_white"     "percent_black"     "percent_asian"    
-[28] "percent_hispanic"  "per_capita_income" "median_rent"      
-[31] "median_age"        "polyname"          "abb"              
-[34] "StateColor"       </code></pre>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">names</span>(elect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(expr, envir, enclos): object 'elect' not found</code></pre>
 </div>
 </div>
 </div>
@@ -498,10 +481,10 @@
 <h2>Review: Univariate Viz</h2>
 <p>Categorical Variable: Bar Plot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> winrep_2016)) <span class="sc">+</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> winrep_2016)) <span class="sc">+</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in ggplot(data = elect, aes(x = winrep_2016)): object 'elect' not found</code></pre>
 </div>
 </div>
 </section>
@@ -509,15 +492,15 @@
 <h2>Review: Univariate Viz</h2>
 <p>Quantitative Variable: Histogram or Density plot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in ggplot(data = elect, aes(x = perrep_2016)): object 'elect' not found</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
-<span id="cb10-2"><a href="#cb10-2"></a>    <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-7-2.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> elect, <span class="fu">aes</span>(<span class="at">x =</span> perrep_2016)) <span class="sc">+</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in ggplot(data = elect, aes(x = perrep_2016)): object 'elect' not found</code></pre>
 </div>
 </div>
 </section>
@@ -525,8 +508,8 @@
 <h2>Preview: Bivariate Viz</h2>
 <p>Quantitative + Quantitative Variable: Scatterplot</p>
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<div class="cell-output cell-output-error">
+<pre><code>Error in ggplot(data = elect, aes(x = perrep_2012, y = perrep_2016)): object 'elect' not found</code></pre>
 </div>
 </div>
 </section>
@@ -534,8 +517,8 @@
 <h2>Preview: Bivariate Viz</h2>
 <p>Quantitative + Categorical Variable: Density Plots, Boxplots, etc.</p>
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<div class="cell-output cell-output-error">
+<pre><code>Error in ggplot(data = elect, aes(fill = StateColor, x = perrep_2016)): object 'elect' not found</code></pre>
 </div>
 </div>
 </section>
@@ -543,8 +526,8 @@
 <h2>Preview: Bivariate Viz</h2>
 <p>Categorical + Categorical Variable: side-by-side, proportion Bar plots, etc.</p>
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="04-Bivariate_Viz_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<div class="cell-output cell-output-error">
+<pre><code>Error in ggplot(elect, aes(x = StateColor, fill = winrep_2016)): object 'elect' not found</code></pre>
 </div>
 </div>
 </section>
@@ -555,8 +538,10 @@
 </section>
 <section id="after-class" class="slide level2">
 <h2>After Class</h2>
-<p>You’ll make sure to complete Exercise 8-17 (4 of them only require running preexisting code) for the Assignment 3 (due next Tues).</p>
-<p>For Friday’s class, meet in the Library (Idea Lab for morning, Lib 206 for FYC)!</p>
+<ul>
+<li><p>TT2 due tomorrow night!</p></li>
+<li><p>Assignment 3 due Wednesday 2/8 @ 11:59pm</p></li>
+</ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
@@ -784,12 +769,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -800,13 +788,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -858,7 +839,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -888,31 +886,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
