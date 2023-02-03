@@ -1,6 +1,6 @@
 ---
 title: "Library Session: Example"
-author: "Brianna Heggeseth"
+author: "James Normington"
 format: html
 bibliography: references.bib
 csl: apa.csl

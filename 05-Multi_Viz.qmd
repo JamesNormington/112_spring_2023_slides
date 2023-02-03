@@ -1,6 +1,6 @@
 ---
 title: "Multivariate Visualizations"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -12,22 +12,11 @@ format:
 editor: visual
 ---
 
-## Switch it Up {.unnumbered}
-
-Sit with someone new today!
-
--   Introduce yourself
--   Share best or worst part of the weekend
-
 ## Announcements {.unnumbered}
 
-**This week in MSCS**
+-   Assignment 3 due tomorrow @ 11:59pm!
 
--   Thursday 11:15am Coffee Break
-
-Thanks for the creativity last Friday!
-
-Today we'll practice discussing "insights" we gain from our visualizations
+-   Tidy Tuesday 3 due Friday @ 11:59pm
 
 ## Learning Goals {.unnumbered}
 
@@ -52,6 +41,7 @@ Though far from a perfect assessment of academic preparedness, SAT scores have h
 
 ```{r echo=TRUE}
 library(tidyverse)
+## Fix link!!
 education <- read.csv("https://www.macalester.edu/~ajohns24/data/sat.csv")
 ```
 
