@@ -41,8 +41,7 @@ Though far from a perfect assessment of academic preparedness, SAT scores have h
 
 ```{r echo=TRUE}
 library(tidyverse)
-## Fix link!!
-education <- read.csv("https://www.macalester.edu/~ajohns24/data/sat.csv")
+education <- read.csv("https://ajohns24.github.io/portfolio/data/sat.csv")
 ```
 
 <br>
