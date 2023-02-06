@@ -1,6 +1,6 @@
 ---
 title: "Spatial Visualizations"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -11,30 +11,6 @@ format:
     auto-stretch: false
 editor: visual
 ---
-
-## Announcements {.unnumbered .smaller}
-
-**This week in MSCS**
-
--   Thursday 11:15am Coffee Break
--   Thursday 12-1pm MSCS Seminar (Really cool geometry)!
--   Next Wednesday (4:45-7pm): MSCS Block Party!
-
-**Class Masking Policy (Starting Friday)**
-
--   Section 1: Masks required
--   Section 2: Masks optional
--   FYC: Masks optional
-
-**Taking Care of Each Other**
-
--   If you are not feeling well, stay home/in the dorm & rest.
--   If you are exposed or a bit unwell, wear a mask.
--   Masks are always welcome!
-
-## Data Visuals that You've Created {.unnumbered .smaller}
-
-[Be Inspired by your Classmates!](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit?usp=sharing)
 
 ## Learning Goals {.unnumbered}
 
@@ -47,7 +23,7 @@ editor: visual
 
 Download a template .Rmd of this activity. Put the file in a `Day_06` folder within your `COMP_STAT_112` folder.
 
--   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 5.
+-   This .Rmd only contains exercises that we'll work on in class and you'll finish for Assignment 4.
 
 ## Spatial Viz {.unnumbered}
 
@@ -70,6 +46,7 @@ library(leaflet) # for highly customizable mapping
 library(ggthemes) # for more themes (including theme_map())
 library(socviz) # for the US county map
 library(usmap) 
+library(tibble)
 ```
 
 ## Points on a Map: Starbucks Example {.unnumbered .smaller .scrollable}
@@ -78,7 +55,7 @@ The `Starbucks` data, compiled by Danny Kaplan, contains information about every
 
 ```{r}
 # Starbucks locations
-Starbucks <- read_csv("https://www.macalester.edu/~ajohns24/data/starbucks.csv")
+Starbucks <- read_csv("https://jamesnormington.github.io/112_spring_2023/data/starbucks.csv")
 
 
 ggplot(data = Starbucks) +
@@ -166,32 +143,36 @@ starbucks_us_by_state %>%
 
 ## Dynamic Maps with Leaflet {.unnumbered .smaller .scrollable}
 
-```{r}
-favorite_stp <- tibble(
+```{r data, cache=TRUE}
+favorite_msp <- tibble::tibble(
   place = c(
-    "Macalester College", "Groveland Recreation Center",
-    "Due Focacceria", "Shadow Falls Park", "Mattocks Park",
-    "Carondelet Fields", "Pizza Luce", "Cold Front Ice Cream"
+    "Macalester College", "Stone Arch Bridge",
+    "Lake Harriet", "Surly Brewing", "Boom Island Park",
+    "Midtown Global Market", "Washington Ave Bridge"
   ),
   long = c(
-    -93.1712321, -93.1851310,
-    -93.1775469, -93.1944518, -93.171057,
-    -93.1582673, -93.1524256, -93.156652
+    -93.1712321, 
+    -93.2534,
+    -93.3062, 
+    -93.208633, 
+    -93.2687, 
+    -93.26054, 
+    -93.2393 
   ),
   lat = c(
-    44.9378965, 44.9351034, 44.9274973,
-    44.9433359, 44.9284142, 44.9251236,
-    44.9468848, 44.9266768
+    44.9378965, 
+    44.9807, 
+    44.9222,
+    44.973301, 
+    44.992, 
+    44.948780, 
+    44.9731
   )
 )
 
-leaflet(data = favorite_stp) %>%
-  addTiles() %>%
-  addMarkers(
-    lng = ~long,
-    lat = ~lat,
-    label = ~place
-  )
+leaflet(data = favorite_msp) %>% # base plot
+  addTiles(urlTemplate = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png") %>% # base map - default is openstreet map
+  addMarkers() # Adds markers - knows lat and long from names in data
 ```
 
 ## Advanced Spatial Mapping {.unnumbered .smaller .scrollable}
@@ -200,12 +181,8 @@ If you want to get into spatial mapping, you'll need to learn some GIS skills an
 
 The best tool in R to do this work is the sf package, which does work well with ggplot tools.
 
-If you'd like to learn more, see my notes for my capstone course, [Correlated Data](https://bcheggeseth.github.io/CorrelatedData/spatial-data.html).
-
 ## After Class {.unnumbered .smaller .scrollable}
 
--   Complete the exercises by next Tuesday and submit for Assignment 5.
+-   Assignment 4: due Wed. 2/15 \@ 11:59pm
 
--   If you haven't already, finish up the brief insights from Monday's class for Assignment 4 (due Sunday).
-
--   Consider working on TT3 this week, you could apply your mapping skills!
+-   TT4 due Friday \@ 11:5pm

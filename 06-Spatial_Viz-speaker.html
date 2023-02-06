@@ -7,9 +7,9 @@
 <link href="06-Spatial_Viz_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="06-Spatial_Viz_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="06-Spatial_Viz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Spatial Visualizations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -379,7 +384,7 @@
       margin-right: 0; 
     }
   </style>
-  <script src="06-Spatial_Viz_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="06-Spatial_Viz_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
   <script src="06-Spatial_Viz_files/libs/jquery-1.12.4/jquery.min.js"></script>
   <link href="06-Spatial_Viz_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
   <script src="06-Spatial_Viz_files/libs/leaflet-1.3.1/leaflet.js"></script>
@@ -393,35 +398,17 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Spatial Visualizations</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
-<section id="announcements" class="slide level2 unnumbered smaller">
-<h2>Announcements</h2>
-<p><strong>This week in MSCS</strong></p>
-<ul>
-<li>Thursday 11:15am Coffee Break</li>
-<li>Thursday 12-1pm MSCS Seminar (Really cool geometry)!</li>
-<li>Next Wednesday (4:45-7pm): MSCS Block Party!</li>
-</ul>
-<p><strong>Class Masking Policy (Starting Friday)</strong></p>
-<ul>
-<li>Section 1: Masks required</li>
-<li>Section 2: Masks optional</li>
-<li>FYC: Masks optional</li>
-</ul>
-<p><strong>Taking Care of Each Other</strong></p>
-<ul>
-<li>If you are not feeling well, stay home/in the dorm &amp; rest.</li>
-<li>If you are exposed or a bit unwell, wear a mask.</li>
-<li>Masks are always welcome!</li>
-</ul>
-</section>
-<section id="data-visuals-that-youve-created" class="slide level2 unnumbered smaller">
-<h2>Data Visuals that You’ve Created</h2>
-<p><a href="https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit?usp=sharing">Be Inspired by your Classmates!</a></p>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
 </section>
 <section id="learning-goals" class="slide level2 unnumbered">
 <h2>Learning Goals</h2>
@@ -439,7 +426,7 @@
 <h2>Template File</h2>
 <p>Download a template .Rmd of this activity. Put the file in a <code>Day_06</code> folder within your <code>COMP_STAT_112</code> folder.</p>
 <ul>
-<li>This .Rmd only contains exercises that we’ll work on in class and you’ll finish for Assignment 5.</li>
+<li>This .Rmd only contains exercises that we’ll work on in class and you’ll finish for Assignment 4.</li>
 </ul>
 </section>
 <section id="spatial-viz" class="slide level2 unnumbered">
@@ -456,7 +443,7 @@
 <p>The <code>Starbucks</code> data, compiled by Danny Kaplan, contains information about every Starbucks in the world at the time the data were collected. It includes the <code>Latitude</code> and <code>Longitude</code> of each location. Let’s start by using familiar ggplot plotting tools.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Starbucks locations</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>Starbucks <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://www.macalester.edu/~ajohns24/data/starbucks.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>Starbucks <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://jamesnormington.github.io/112_spring_2023/data/starbucks.csv"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="fu">ggplot</span>(<span class="at">data =</span> Starbucks) <span class="sc">+</span></span>
@@ -555,35 +542,39 @@
 </section>
 <section id="dynamic-maps-with-leaflet" class="slide level2 unnumbered smaller scrollable">
 <h2>Dynamic Maps with Leaflet</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>favorite_stp <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<div class="cell" data-hash="06-Spatial_Viz_cache/revealjs/data_151d019c90a9ca126415e59969558eb0">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>favorite_msp <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="at">place =</span> <span class="fu">c</span>(</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="st">"Macalester College"</span>, <span class="st">"Groveland Recreation Center"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="st">"Due Focacceria"</span>, <span class="st">"Shadow Falls Park"</span>, <span class="st">"Mattocks Park"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="st">"Carondelet Fields"</span>, <span class="st">"Pizza Luce"</span>, <span class="st">"Cold Front Ice Cream"</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="st">"Macalester College"</span>, <span class="st">"Stone Arch Bridge"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="st">"Lake Harriet"</span>, <span class="st">"Surly Brewing"</span>, <span class="st">"Boom Island Park"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="st">"Midtown Global Market"</span>, <span class="st">"Washington Ave Bridge"</span></span>
 <span id="cb5-6"><a href="#cb5-6"></a>  ),</span>
 <span id="cb5-7"><a href="#cb5-7"></a>  <span class="at">long =</span> <span class="fu">c</span>(</span>
-<span id="cb5-8"><a href="#cb5-8"></a>    <span class="sc">-</span><span class="fl">93.1712321</span>, <span class="sc">-</span><span class="fl">93.1851310</span>,</span>
-<span id="cb5-9"><a href="#cb5-9"></a>    <span class="sc">-</span><span class="fl">93.1775469</span>, <span class="sc">-</span><span class="fl">93.1944518</span>, <span class="sc">-</span><span class="fl">93.171057</span>,</span>
-<span id="cb5-10"><a href="#cb5-10"></a>    <span class="sc">-</span><span class="fl">93.1582673</span>, <span class="sc">-</span><span class="fl">93.1524256</span>, <span class="sc">-</span><span class="fl">93.156652</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  ),</span>
-<span id="cb5-12"><a href="#cb5-12"></a>  <span class="at">lat =</span> <span class="fu">c</span>(</span>
-<span id="cb5-13"><a href="#cb5-13"></a>    <span class="fl">44.9378965</span>, <span class="fl">44.9351034</span>, <span class="fl">44.9274973</span>,</span>
-<span id="cb5-14"><a href="#cb5-14"></a>    <span class="fl">44.9433359</span>, <span class="fl">44.9284142</span>, <span class="fl">44.9251236</span>,</span>
-<span id="cb5-15"><a href="#cb5-15"></a>    <span class="fl">44.9468848</span>, <span class="fl">44.9266768</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a>  )</span>
-<span id="cb5-17"><a href="#cb5-17"></a>)</span>
-<span id="cb5-18"><a href="#cb5-18"></a></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">%&gt;%</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a>  <span class="fu">addMarkers</span>(</span>
-<span id="cb5-22"><a href="#cb5-22"></a>    <span class="at">lng =</span> <span class="sc">~</span>long,</span>
-<span id="cb5-23"><a href="#cb5-23"></a>    <span class="at">lat =</span> <span class="sc">~</span>lat,</span>
-<span id="cb5-24"><a href="#cb5-24"></a>    <span class="at">label =</span> <span class="sc">~</span>place</span>
-<span id="cb5-25"><a href="#cb5-25"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-8"><a href="#cb5-8"></a>    <span class="sc">-</span><span class="fl">93.1712321</span>, </span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="sc">-</span><span class="fl">93.2534</span>,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    <span class="sc">-</span><span class="fl">93.3062</span>, </span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="sc">-</span><span class="fl">93.208633</span>, </span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="sc">-</span><span class="fl">93.2687</span>, </span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="sc">-</span><span class="fl">93.26054</span>, </span>
+<span id="cb5-14"><a href="#cb5-14"></a>    <span class="sc">-</span><span class="fl">93.2393</span> </span>
+<span id="cb5-15"><a href="#cb5-15"></a>  ),</span>
+<span id="cb5-16"><a href="#cb5-16"></a>  <span class="at">lat =</span> <span class="fu">c</span>(</span>
+<span id="cb5-17"><a href="#cb5-17"></a>    <span class="fl">44.9378965</span>, </span>
+<span id="cb5-18"><a href="#cb5-18"></a>    <span class="fl">44.9807</span>, </span>
+<span id="cb5-19"><a href="#cb5-19"></a>    <span class="fl">44.9222</span>,</span>
+<span id="cb5-20"><a href="#cb5-20"></a>    <span class="fl">44.973301</span>, </span>
+<span id="cb5-21"><a href="#cb5-21"></a>    <span class="fl">44.992</span>, </span>
+<span id="cb5-22"><a href="#cb5-22"></a>    <span class="fl">44.948780</span>, </span>
+<span id="cb5-23"><a href="#cb5-23"></a>    <span class="fl">44.9731</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a>  )</span>
+<span id="cb5-25"><a href="#cb5-25"></a>)</span>
+<span id="cb5-26"><a href="#cb5-26"></a></span>
+<span id="cb5-27"><a href="#cb5-27"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_msp) <span class="sc">%&gt;%</span> <span class="co"># base plot</span></span>
+<span id="cb5-28"><a href="#cb5-28"></a>  <span class="fu">addTiles</span>(<span class="at">urlTemplate =</span> <span class="st">"http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"</span>) <span class="sc">%&gt;%</span> <span class="co"># base map - default is openstreet map</span></span>
+<span id="cb5-29"><a href="#cb5-29"></a>  <span class="fu">addMarkers</span>() <span class="co"># Adds markers - knows lat and long from names in data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="htmlwidget-c5c04486923373ad2d1e" style="width:960px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c5c04486923373ad2d1e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,44.9351034,44.9274973,44.9433359,44.9284142,44.9251236,44.9468848,44.9266768],[-93.1712321,-93.185131,-93.1775469,-93.1944518,-93.171057,-93.1582673,-93.1524256,-93.156652],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Macalester College","Groveland Recreation Center","Due Focacceria","Shadow Falls Park","Mattocks Park","Carondelet Fields","Pizza Luce","Cold Front Ice Cream"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9251236,44.9468848],"lng":[-93.1944518,-93.1524256]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7a8fc47433e5ff508a75" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-7a8fc47433e5ff508a75">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[[44.9378965,44.9807,44.9222,44.973301,44.992,44.94878,44.9731],[-93.1712321,-93.2534,-93.3062,-93.208633,-93.2687,-93.26054,-93.2393],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9222,44.992],"lng":[-93.3062,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -591,14 +582,12 @@
 <h2>Advanced Spatial Mapping</h2>
 <p>If you want to get into spatial mapping, you’ll need to learn some GIS skills and consider coordinate reference systems (CRS).</p>
 <p>The best tool in R to do this work is the sf package, which does work well with ggplot tools.</p>
-<p>If you’d like to learn more, see my notes for my capstone course, <a href="https://bcheggeseth.github.io/CorrelatedData/spatial-data.html">Correlated Data</a>.</p>
 </section>
 <section id="after-class" class="slide level2 unnumbered smaller scrollable">
 <h2>After Class</h2>
 <ul>
-<li><p>Complete the exercises by next Tuesday and submit for Assignment 5.</p></li>
-<li><p>If you haven’t already, finish up the brief insights from Monday’s class for Assignment 4 (due Sunday).</p></li>
-<li><p>Consider working on TT3 this week, you could apply your mapping skills!</p></li>
+<li><p>Assignment 4: due Wed. 2/15 @ 11:59pm</p></li>
+<li><p>TT4 due Friday @ 11:5pm</p></li>
 </ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -827,12 +816,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -843,13 +835,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -901,7 +886,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -931,31 +933,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
