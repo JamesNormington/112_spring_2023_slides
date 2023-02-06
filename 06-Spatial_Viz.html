@@ -384,7 +384,7 @@
       margin-right: 0; 
     }
   </style>
-  <script src="06-Spatial_Viz_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="06-Spatial_Viz_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
   <script src="06-Spatial_Viz_files/libs/jquery-1.12.4/jquery.min.js"></script>
   <link href="06-Spatial_Viz_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
   <script src="06-Spatial_Viz_files/libs/leaflet-1.3.1/leaflet.js"></script>
@@ -426,7 +426,7 @@ James Normington
 <h2>Template File</h2>
 <p>Download a template .Rmd of this activity. Put the file in a <code>Day_06</code> folder within your <code>COMP_STAT_112</code> folder.</p>
 <ul>
-<li>This .Rmd only contains exercises that we’ll work on in class and you’ll finish for Assignment 5.</li>
+<li>This .Rmd only contains exercises that we’ll work on in class and you’ll finish for Assignment 4.</li>
 </ul>
 </section>
 <section id="spatial-viz" class="slide level2 unnumbered">
@@ -542,12 +542,12 @@ James Normington
 </section>
 <section id="dynamic-maps-with-leaflet" class="slide level2 unnumbered smaller scrollable">
 <h2>Dynamic Maps with Leaflet</h2>
-<div class="cell">
+<div class="cell" data-hash="06-Spatial_Viz_cache/revealjs/data_151d019c90a9ca126415e59969558eb0">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>favorite_msp <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="at">place =</span> <span class="fu">c</span>(</span>
 <span id="cb5-3"><a href="#cb5-3"></a>    <span class="st">"Macalester College"</span>, <span class="st">"Stone Arch Bridge"</span>,</span>
 <span id="cb5-4"><a href="#cb5-4"></a>    <span class="st">"Lake Harriet"</span>, <span class="st">"Surly Brewing"</span>, <span class="st">"Boom Island Park"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="st">"Midtown Global Market"</span>, <span class="st">"Hard Times Cafe"</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="st">"Midtown Global Market"</span>, <span class="st">"Washington Ave Bridge"</span></span>
 <span id="cb5-6"><a href="#cb5-6"></a>  ),</span>
 <span id="cb5-7"><a href="#cb5-7"></a>  <span class="at">long =</span> <span class="fu">c</span>(</span>
 <span id="cb5-8"><a href="#cb5-8"></a>    <span class="sc">-</span><span class="fl">93.1712321</span>, </span>
@@ -568,16 +568,13 @@ James Normington
 <span id="cb5-23"><a href="#cb5-23"></a>    <span class="fl">44.9731</span></span>
 <span id="cb5-24"><a href="#cb5-24"></a>  )</span>
 <span id="cb5-25"><a href="#cb5-25"></a>)</span>
-<span id="cb5-26"><a href="#cb5-26"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_msp) <span class="sc">%&gt;%</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a>  <span class="fu">addMarkers</span>(</span>
-<span id="cb5-29"><a href="#cb5-29"></a>    <span class="at">lng =</span> <span class="sc">~</span>long,</span>
-<span id="cb5-30"><a href="#cb5-30"></a>    <span class="at">lat =</span> <span class="sc">~</span>lat,</span>
-<span id="cb5-31"><a href="#cb5-31"></a>    <span class="at">label =</span> <span class="sc">~</span>place</span>
-<span id="cb5-32"><a href="#cb5-32"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-26"><a href="#cb5-26"></a></span>
+<span id="cb5-27"><a href="#cb5-27"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_msp) <span class="sc">%&gt;%</span> <span class="co"># base plot</span></span>
+<span id="cb5-28"><a href="#cb5-28"></a>  <span class="fu">addTiles</span>(<span class="at">urlTemplate =</span> <span class="st">"http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"</span>) <span class="sc">%&gt;%</span> <span class="co"># base map - default is openstreet map</span></span>
+<span id="cb5-29"><a href="#cb5-29"></a>  <span class="fu">addMarkers</span>() <span class="co"># Adds markers - knows lat and long from names in data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="htmlwidget-5ae48bedc26d56c50109" style="width:960px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5ae48bedc26d56c50109">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,44.9807,44.9222,44.973301,44.992,44.94878,44.9731],[-93.1712321,-93.2534,-93.3062,-93.208633,-93.2687,-93.26054,-93.2393],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Macalester College","Stone Arch Bridge","Lake Harriet","Surly Brewing","Boom Island Park","Midtown Global Market","Hard Times Cafe"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9222,44.992],"lng":[-93.3062,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7a8fc47433e5ff508a75" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-7a8fc47433e5ff508a75">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[[44.9378965,44.9807,44.9222,44.973301,44.992,44.94878,44.9731],[-93.1712321,-93.2534,-93.3062,-93.208633,-93.2687,-93.26054,-93.2393],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9222,44.992],"lng":[-93.3062,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
