@@ -1,7 +1,7 @@
 ---
 title: "Data Wrangling"
 subtitle: "Six Main Verbs"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -13,19 +13,7 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered .smaller}
-
-**This week in MSCS**
-
--   Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
--   Thursday 11:15am: Coffee Break!
-
-**Looking Ahead**
-
--   Week 5: Data Wrangling
--   Week 6: Data Wrangling
--   Week 7: Mini Project/Midterm Review
--   Week 8: Midterm/Fall Break
+##  {.unnumbered .smaller}
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
@@ -37,10 +25,9 @@ library(lubridate)
 
 ## Due this Week {.unnumbered .smaller}
 
--   Assignment 5 (Spatial Viz) on Tuesday \[via Moodle\]
--   Self-Reflection on Friday \[individual Google Doc\]
--   At least 1 Tidy Tuesday (TT) by Friday \[via Moodle, TT4\]
-    -   Choose 1 TT to iterate on by Friday \[Via Moodle, IV0\]
+-   Assignment 4 due tomorrow night
+-   At least 1 Tidy Tuesday (TT) by next Friday (2/24!)
+    -   If you haven't turned one in, that's either TT4 or TT5!
 
 ## Data Wrangling {.unnumbered .smaller .scrollable}
 
@@ -260,4 +247,4 @@ This activity is all code, no interpretations.
 
 There are many exercises to give you plenty of practice with these important six tasks!
 
-You'll finish the activity for Assignment 6.
+You'll finish the activity as part of Assignment 5.
