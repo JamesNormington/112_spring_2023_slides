@@ -1,6 +1,6 @@
 ---
 title: "Reshaping Data"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -12,12 +12,7 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered .smaller}
-
-**This week in MSCS**
-
--   Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts
--   Thursday 11:15am: Coffee Break!
+##  {.unnumbered .smaller}
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
@@ -32,10 +27,7 @@ colnames(BabyNames)[4] <- "count"
 
 ## Due this Week {.unnumbered .smaller}
 
--   Assignment 5 (Spatial Viz) on Tuesday \[via Moodle\]
--   Self-Reflection on Friday \[individual Google Doc\]
--   At least 1 Tidy Tuesday (TT) by Friday \[via Moodle, TT4\]
-    -   Choose 1 TT to iterate on by Friday \[Via Moodle, IV0\]
+-   At least 1 Tidy Tuesday by next Friday!
 
 ## Learning Goals {.unnumbered}
 
@@ -133,11 +125,9 @@ If we want to maintain all of the values in the data set (*not collapsing rows w
 
 Go through the example code in the Rmd file to make sure you understand how we reshape data to be wider and longer.
 
--   Work together on the 3 exercises to turn in for Assignment 7.
+-   Work together on the 3 exercises to turn in for Assignment xx.
 
 ## After Class {.unnumbered}
 
--   Work on the 3 exercises to turn in for Assignment 7.
--   Tidy Tuesday 4 is posted in Moodle.
--   Write a self-reflection in your individual Google Doc shared with you.
--   Submit a Iterative Viz 0 in Moodle.
+-   TT4
+-   
