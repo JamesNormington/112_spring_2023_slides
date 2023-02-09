@@ -57,60 +57,94 @@ Getting the data in the tidy format that we want...
 **Grouped summaries**
 
 -   summarize
+
 -   group_by
 
-## Six Main Verbs {.unnumbered .smaller .scrollable}
+## Six Main Verbs {.unnumbered .smaller}
 
-**Verbs that change the variables (columns) but not the cases (rows)**
+```{r}
+## 
+library(fivethirtyeight)
+library(dplyr)
+head(bechdel)
 
-. . .
+```
+
+##  {.unnumbered .smaller}
+
+## Verbs that change the variables (columns) {.unnumbered .smaller .scrollable}
 
 -   select
-    -   Action: Provides a subset of variables
-    -   Inputs: data, variable names
+    -   Subsets by *column*
+
+```{r}
+bechdel_sub = bechdel %>% 
+  select(title, clean_test, budget)
+
+bechdel_sub
+```
 
 . . .
 
--   mutate
-    -   Action: creates new variables
-    -   Inputs: data, new_variable_name = how_you_define_new_var
-    -   Examples: mutate(data, var2 = var\^2)
+mutate
 
-. . .
+-   Creates new variables
 
-**Verbs that change the cases (rows) but not the variables (columns)**
+```{r}
+bechdel_sub %>%
+  mutate(new_var_hi = "Hello!", 
+         new_var_pass = (clean_test == "ok"), 
+         budget_morethan30mil = (budget > 30000000)
+  )
+```
 
-. . .
+## Verbs that change the variables (rows) {.unnumbered .smaller .scrollable}
 
 -   filter
-    -   Action: shows subset of rows
-    -   Inputs: data, Boolean conditions based on variables
-    -   Examples: filter(data, year \> 2000)
+
+```{r}
+bechdel_sub %>%
+  filter(clean_test == "ok")
+```
 
 . . .
 
 -   arrange
-    -   Action: sorts rows
-    -   Inputs: data, variable names, desc(variable name) if by descending order
-    -   Examples: arrange(data, desc(n))
+
+```{r}
+bechdel_sub %>%
+  arrange(title)
+
+bechdel_sub %>%
+  arrange(desc(title))
+```
 
 . . .
 
-**Grouped summaries**
+## Verbs that change the variables (rows) {.unnumbered .smaller .scrollable}
 
 . . .
 
 -   summarize
-    -   Action: collapses rows and calculates a summary
-    -   Inputs: data, new_variable_name = expression_used_to_summarize
-    -   Example: summarize(data, avgHeight = mean(height))
+    -   collapses rows and calculates a summary
+
+```{r}
+bechdel_sub %>%
+  summarize(mean(budget),
+            median(budget))
+```
 
 . . .
 
 -   group_by
-    -   Action: creates a grouping structure within data
-    -   Inputs: data, names of variables to define grouping structure
-    -   Example: data %\>% group_by(sport) %\>% summarize(avgHeight = mean(height))
+    -   Defines groups within data
+
+```{r}
+bechdel_sub %>%
+  group_by(clean_test) %>%
+  summarize(mean(budget),
+            median(budget))
+```
 
 ## Visual Illustration {.unnumbered}
 
@@ -209,7 +243,7 @@ QuickMABirths1979 <-
   arrange(desc(births))
 ```
 
-With the pipe notation, `x %>% f(y)` becomes `f(x,y)`, where in the first line here, `x` is `Birthdays`, the function `f` is `filter`, and `y` is `state == "MA", year == 1979`.
+With the pipe notation, `x %>% f(y)` reads as apply function `f` to the data frame `x`, and `y` are additional arguments. Above, `x` is `Birthdays`, `f` is `filter()`, and `y` is `state == "MA"` and `year == 1979` .
 
 ## Dates {.unnumbered .smaller .scrollable}
 

@@ -445,77 +445,209 @@ James Normington
 </ul>
 <p><strong>Grouped summaries</strong></p>
 <ul>
-<li>summarize</li>
-<li>group_by</li>
+<li><p>summarize</p></li>
+<li><p>group_by</p></li>
 </ul>
 </section>
-<section id="six-main-verbs-1" class="slide level2 unnumbered smaller scrollable">
+<section id="six-main-verbs-1" class="slide level2 unnumbered smaller">
 <h2>Six Main Verbs</h2>
-<p><strong>Verbs that change the variables (columns) but not the cases (rows)</strong></p>
-<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(fivethirtyeight)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">head</span>(bechdel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 15
+   year imdb     title test  clean…¹ binary budget domgr…² intgr…³ code  budge…⁴
+  &lt;int&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;ord&gt;   &lt;chr&gt;   &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;int&gt;
+1  2013 tt17114… 21 &amp;… nota… notalk  FAIL   1.3 e7  2.57e7  4.22e7 2013…  1.3 e7
+2  2012 tt13437… Dred… ok-d… ok      PASS   4.5 e7  1.34e7  4.09e7 2012…  4.57e7
+3  2013 tt20245… 12 Y… nota… notalk  FAIL   2   e7  5.31e7  1.59e8 2013…  2   e7
+4  2013 tt12728… 2 Gu… nota… notalk  FAIL   6.1 e7  7.56e7  1.32e8 2013…  6.1 e7
+5  2013 tt04535… 42    men   men     FAIL   4   e7  9.50e7  9.50e7 2013…  4   e7
+6  2013 tt13359… 47 R… men   men     FAIL   2.25e8  3.84e7  1.46e8 2013…  2.25e8
+# … with 4 more variables: domgross_2013 &lt;dbl&gt;, intgross_2013 &lt;dbl&gt;,
+#   period_code &lt;int&gt;, decade_code &lt;int&gt;, and abbreviated variable names
+#   ¹​clean_test, ²​domgross, ³​intgross, ⁴​budget_2013</code></pre>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2 unnumbered smaller">
+<h2></h2>
+</section>
+<section id="verbs-that-change-the-variables-columns" class="slide level2 unnumbered smaller scrollable">
+<h2>Verbs that change the variables (columns)</h2>
 <ul>
 <li>select
 <ul>
-<li>Action: Provides a subset of variables</li>
-<li>Inputs: data, variable names</li>
+<li>Subsets by <em>column</em></li>
 </ul></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>bechdel_sub <span class="ot">=</span> bechdel <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">select</span>(title, clean_test, budget)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>bechdel_sub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,794 × 3
+   title                  clean_test    budget
+   &lt;chr&gt;                  &lt;ord&gt;          &lt;int&gt;
+ 1 21 &amp; Over              notalk      13000000
+ 2 Dredd 3D               ok          45000000
+ 3 12 Years a Slave       notalk      20000000
+ 4 2 Guns                 notalk      61000000
+ 5 42                     men         40000000
+ 6 47 Ronin               men        225000000
+ 7 A Good Day to Die Hard notalk      92000000
+ 8 About Time             ok          12000000
+ 9 Admission              ok          13000000
+10 After Earth            notalk     130000000
+# … with 1,784 more rows</code></pre>
+</div>
 </div>
 <div class="fragment">
+<p>mutate</p>
 <ul>
-<li>mutate
-<ul>
-<li>Action: creates new variables</li>
-<li>Inputs: data, new_variable_name = how_you_define_new_var</li>
-<li>Examples: mutate(data, var2 = var^2)</li>
-</ul></li>
+<li>Creates new variables</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>bechdel_sub <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">mutate</span>(<span class="at">new_var_hi =</span> <span class="st">"Hello!"</span>, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>         <span class="at">new_var_pass =</span> (clean_test <span class="sc">==</span> <span class="st">"ok"</span>), </span>
+<span id="cb5-4"><a href="#cb5-4"></a>         <span class="at">budget_morethan30mil =</span> (budget <span class="sc">&gt;</span> <span class="dv">30000000</span>)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,794 × 6
+   title                  clean_test    budget new_var_hi new_var_pass budget_…¹
+   &lt;chr&gt;                  &lt;ord&gt;          &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;        &lt;lgl&gt;    
+ 1 21 &amp; Over              notalk      13000000 Hello!     FALSE        FALSE    
+ 2 Dredd 3D               ok          45000000 Hello!     TRUE         TRUE     
+ 3 12 Years a Slave       notalk      20000000 Hello!     FALSE        FALSE    
+ 4 2 Guns                 notalk      61000000 Hello!     FALSE        TRUE     
+ 5 42                     men         40000000 Hello!     FALSE        TRUE     
+ 6 47 Ronin               men        225000000 Hello!     FALSE        TRUE     
+ 7 A Good Day to Die Hard notalk      92000000 Hello!     FALSE        TRUE     
+ 8 About Time             ok          12000000 Hello!     TRUE         FALSE    
+ 9 Admission              ok          13000000 Hello!     TRUE         FALSE    
+10 After Earth            notalk     130000000 Hello!     FALSE        TRUE     
+# … with 1,784 more rows, and abbreviated variable name ¹​budget_morethan30mil</code></pre>
 </div>
-<div class="fragment">
-<p><strong>Verbs that change the cases (rows) but not the variables (columns)</strong></p>
 </div>
-<div class="fragment">
+</div>
+</section>
+<section id="verbs-that-change-the-variables-rows" class="slide level2 unnumbered smaller scrollable">
+<h2>Verbs that change the variables (rows)</h2>
 <ul>
-<li>filter
-<ul>
-<li>Action: shows subset of rows</li>
-<li>Inputs: data, Boolean conditions based on variables</li>
-<li>Examples: filter(data, year &gt; 2000)</li>
-</ul></li>
+<li>filter</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>bechdel_sub <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">filter</span>(clean_test <span class="sc">==</span> <span class="st">"ok"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 803 × 3
+   title                clean_test    budget
+   &lt;chr&gt;                &lt;ord&gt;          &lt;int&gt;
+ 1 Dredd 3D             ok          45000000
+ 2 About Time           ok          12000000
+ 3 Admission            ok          13000000
+ 4 American Hustle      ok          40000000
+ 5 August: Osage County ok          25000000
+ 6 Beautiful Creatures  ok          50000000
+ 7 Blue Jasmine         ok          18000000
+ 8 Carrie               ok          30000000
+ 9 Despicable Me 2      ok          76000000
+10 Elysium              ok         120000000
+# … with 793 more rows</code></pre>
+</div>
 </div>
 <div class="fragment">
 <ul>
-<li>arrange
-<ul>
-<li>Action: sorts rows</li>
-<li>Inputs: data, variable names, desc(variable name) if by descending order</li>
-<li>Examples: arrange(data, desc(n))</li>
-</ul></li>
+<li>arrange</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>bechdel_sub <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">arrange</span>(title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,794 × 3
+   title                      clean_test   budget
+   &lt;chr&gt;                      &lt;ord&gt;         &lt;int&gt;
+ 1 (500) Days of Summer       notalk      7500000
+ 2 [Rec]                      ok          2100000
+ 3 10 Things I Hate About You ok         13000000
+ 4 12 Years a Slave           notalk     20000000
+ 5 127 Hours                  dubious    18000000
+ 6 13 Going on 30             ok         30000000
+ 7 1408                       ok         22500000
+ 8 17 Again                   ok         40000000
+ 9 1776                       notalk      4000000
+10 2 Fast 2 Furious           notalk     76000000
+# … with 1,784 more rows</code></pre>
 </div>
-<div class="fragment">
-<p><strong>Grouped summaries</strong></p>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>bechdel_sub <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(title))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,794 × 3
+   title                      clean_test   budget
+   &lt;chr&gt;                      &lt;ord&gt;         &lt;int&gt;
+ 1 Zwartboek                  ok         22000000
+ 2 Zoom                       ok         35000000
+ 3 Zoolander                  ok         28000000
+ 4 Zombieland                 ok         23600000
+ 5 Zero Dark Thirty           ok         52500000
+ 6 Zathura: A Space Adventure nowomen    65000000
+ 7 Youth in Revolt            notalk     18000000
+ 8 Yours, Mine and Ours       ok         45000000
+ 9 Your Sister's Sister       ok           120000
+10 Young Guns                 notalk     13000000
+# … with 1,784 more rows</code></pre>
 </div>
+</div>
+</div>
+</section>
+<section id="verbs-that-change-the-variables-rows-1" class="slide level2 unnumbered smaller scrollable">
+<h2>Verbs that change the variables (rows)</h2>
 <div class="fragment">
 <ul>
 <li>summarize
 <ul>
-<li>Action: collapses rows and calculates a summary</li>
-<li>Inputs: data, new_variable_name = expression_used_to_summarize</li>
-<li>Example: summarize(data, avgHeight = mean(height))</li>
+<li>collapses rows and calculates a summary</li>
 </ul></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>bechdel_sub <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(budget),</span>
+<span id="cb13-3"><a href="#cb13-3"></a>            <span class="fu">median</span>(budget))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  `mean(budget)` `median(budget)`
+           &lt;dbl&gt;            &lt;dbl&gt;
+1      44826463.         28000000</code></pre>
+</div>
+</div>
 </div>
 <div class="fragment">
 <ul>
 <li>group_by
 <ul>
-<li>Action: creates a grouping structure within data</li>
-<li>Inputs: data, names of variables to define grouping structure</li>
-<li>Example: data %&gt;% group_by(sport) %&gt;% summarize(avgHeight = mean(height))</li>
+<li>Defines groups within data</li>
 </ul></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>bechdel_sub <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">group_by</span>(clean_test) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(budget),</span>
+<span id="cb15-4"><a href="#cb15-4"></a>            <span class="fu">median</span>(budget))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  clean_test `mean(budget)` `median(budget)`
+  &lt;ord&gt;               &lt;dbl&gt;            &lt;dbl&gt;
+1 nowomen         48606738.         28000000
+2 notalk          53225573.         39000000
+3 men             45127098.         27750000
+4 dubious         49263380.         28750000
+5 ok              37929168.         25000000</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="visual-illustration" class="slide level2 unnumbered">
@@ -533,8 +665,8 @@ James Normington
 <h2>Data Example</h2>
 <p>The data table <code>Birthdays</code> in the <code>mosaicData</code> package gives the number of births recorded on each day of the year in each state from 1969 to 1988.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(mosaicData)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>Birthdays <span class="ot">&lt;-</span> Birthdays <span class="sc">%&gt;%</span> <span class="fu">select</span>(state, date, year, births)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">library</span>(mosaicData)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>Birthdays <span class="ot">&lt;-</span> Birthdays <span class="sc">%&gt;%</span> <span class="fu">select</span>(state, date, year, births)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="first-exercise" class="slide level2 unnumbered smaller scrollable">
@@ -545,10 +677,10 @@ James Normington
 </ol>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>BirthdaysExtra <span class="ot">&lt;-</span> <span class="fu">mutate</span>(Birthdays, </span>
-<span id="cb2-2"><a href="#cb2-2"></a>      <span class="at">year_short =</span> year <span class="sc">-</span> <span class="dv">1900</span>,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>      <span class="at">busy_birthday =</span> (births <span class="sc">&gt;</span> <span class="dv">100</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>BirthdaysExtra <span class="ot">&lt;-</span> <span class="fu">mutate</span>(Birthdays, </span>
+<span id="cb18-2"><a href="#cb18-2"></a>      <span class="at">year_short =</span> year <span class="sc">-</span> <span class="dv">1900</span>,</span>
+<span id="cb18-3"><a href="#cb18-3"></a>      <span class="at">busy_birthday =</span> (births <span class="sc">&gt;</span> <span class="dv">100</span>)</span>
+<span id="cb18-4"><a href="#cb18-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -558,11 +690,11 @@ James Normington
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>BirthdaysExtraTable <span class="ot">&lt;-</span> <span class="fu">select</span>(BirthdaysExtra, </span>
-<span id="cb3-2"><a href="#cb3-2"></a>                         state,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>                         year_short,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>                         busy_birthday</span>
-<span id="cb3-5"><a href="#cb3-5"></a>                         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>BirthdaysExtraTable <span class="ot">&lt;-</span> <span class="fu">select</span>(BirthdaysExtra, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>                         state,</span>
+<span id="cb19-3"><a href="#cb19-3"></a>                         year_short,</span>
+<span id="cb19-4"><a href="#cb19-4"></a>                         busy_birthday</span>
+<span id="cb19-5"><a href="#cb19-5"></a>                         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -572,7 +704,7 @@ James Normington
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">select</span>(Birthdays, <span class="fu">ends_with</span>(<span class="st">"te"</span>)) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">select</span>(Birthdays, <span class="fu">ends_with</span>(<span class="st">"te"</span>)) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  state       date
 1    AK 1969-01-01
@@ -590,10 +722,10 @@ James Normington
 <p>Create a table with only births in Massachusetts in 1979, and sort the days from those with the most births to those with the fewest.</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>MABirths1979 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Birthdays, state <span class="sc">==</span> <span class="st">"MA"</span>, year <span class="sc">==</span> <span class="dv">1979</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>MABirths1979Sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(MABirths1979, <span class="fu">desc</span>(births))</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">head</span>(MABirths1979Sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>MABirths1979 <span class="ot">&lt;-</span> <span class="fu">filter</span>(Birthdays, state <span class="sc">==</span> <span class="st">"MA"</span>, year <span class="sc">==</span> <span class="dv">1979</span>)</span>
+<span id="cb22-2"><a href="#cb22-2"></a>MABirths1979Sorted <span class="ot">&lt;-</span> <span class="fu">arrange</span>(MABirths1979, <span class="fu">desc</span>(births))</span>
+<span id="cb22-3"><a href="#cb22-3"></a></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="fu">head</span>(MABirths1979Sorted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  state       date year births
 1    MA 1979-09-28 1979    262
@@ -615,8 +747,8 @@ James Normington
 </ol>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>BirthdaysYear <span class="ot">&lt;-</span> <span class="fu">group_by</span>(Birthdays, year)</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">summarise</span>(BirthdaysYear, <span class="at">average =</span> <span class="fu">mean</span>(births))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>BirthdaysYear <span class="ot">&lt;-</span> <span class="fu">group_by</span>(Birthdays, year)</span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">summarise</span>(BirthdaysYear, <span class="at">average =</span> <span class="fu">mean</span>(births))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 20 × 2
     year average
@@ -642,8 +774,8 @@ James Normington
 19  1987    205.
 20  1988    210.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>BirthdaysYearState <span class="ot">&lt;-</span> <span class="fu">group_by</span>(Birthdays, year, state)</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">summarise</span>(BirthdaysYearState, <span class="at">average =</span> <span class="fu">mean</span>(births))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>BirthdaysYearState <span class="ot">&lt;-</span> <span class="fu">group_by</span>(Birthdays, year, state)</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">summarise</span>(BirthdaysYearState, <span class="at">average =</span> <span class="fu">mean</span>(births))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,020 × 3
 # Groups:   year [20]
@@ -667,32 +799,32 @@ James Normington
 <section id="piping" class="slide level2 unnumbered smaller scrollable">
 <h2>Piping</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>QuickMABirths1979 <span class="ot">&lt;-</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  Birthdays <span class="sc">%&gt;%</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="st">"MA"</span>, year <span class="sc">==</span> <span class="dv">1979</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(births))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>QuickMABirths1979 <span class="ot">&lt;-</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a>  Birthdays <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">filter</span>(state <span class="sc">==</span> <span class="st">"MA"</span>, year <span class="sc">==</span> <span class="dv">1979</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(births))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>With the pipe notation, <code>x %&gt;% f(y)</code> becomes <code>f(x,y)</code>, where in the first line here, <code>x</code> is <code>Birthdays</code>, the function <code>f</code> is <code>filter</code>, and <code>y</code> is <code>state == "MA", year == 1979</code>.</p>
+<p>With the pipe notation, <code>x %&gt;% f(y)</code> reads as apply function <code>f</code> to the data frame <code>x</code>, and <code>y</code> are additional arguments. Above, <code>x</code> is <code>Birthdays</code>, <code>f</code> is <code>filter()</code>, and <code>y</code> is <code>state == "MA"</code> and <code>year == 1979</code> .</p>
 </section>
 <section id="dates" class="slide level2 unnumbered smaller scrollable">
 <h2>Dates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>Birthdays <span class="ot">&lt;-</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>  Birthdays <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="at">month =</span> <span class="fu">month</span>(date, <span class="at">label =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    <span class="at">weekday =</span> <span class="fu">wday</span>(date, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-6"><a href="#cb13-6"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>Birthdays <span class="ot">&lt;-</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a>  Birthdays <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-4"><a href="#cb29-4"></a>    <span class="at">month =</span> <span class="fu">month</span>(date, <span class="at">label =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb29-5"><a href="#cb29-5"></a>    <span class="at">weekday =</span> <span class="fu">wday</span>(date, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-6"><a href="#cb29-6"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Make a table showing the five states with the most births between September 9, 1979 and September 11, 1979, inclusive. Arrange the table in descending order of births.</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>  Birthdays <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">ymd</span>(<span class="st">"1979-09-09"</span>), date <span class="sc">&lt;=</span> <span class="fu">ymd</span>(<span class="st">"1979-09-11"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">summarise</span>(<span class="at">total =</span> <span class="fu">sum</span>(births)) <span class="sc">%&gt;%</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">%&gt;%</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>  Birthdays <span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="fu">ymd</span>(<span class="st">"1979-09-09"</span>), date <span class="sc">&lt;=</span> <span class="fu">ymd</span>(<span class="st">"1979-09-11"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>  <span class="fu">summarise</span>(<span class="at">total =</span> <span class="fu">sum</span>(births)) <span class="sc">%&gt;%</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">%&gt;%</span></span>
+<span id="cb30-6"><a href="#cb30-6"></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 2
   state total
