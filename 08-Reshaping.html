@@ -7,9 +7,9 @@
 <link href="08-Reshaping_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="08-Reshaping_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="08-Reshaping_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Reshaping Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="08-Reshaping_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="08-Reshaping_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,28 +325,25 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Reshaping Data</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
-<section id="announcements" class="slide level2 unnumbered smaller">
-<h2>Announcements</h2>
-<p><strong>This week in MSCS</strong></p>
-<ul>
-<li>Wednesday (4:45-7pm): MSCS Block Party! Outside OLRI near Tennis Courts</li>
-<li>Thursday 11:15am: Coffee Break!</li>
-</ul>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
+</section>
+<section id="section" class="slide level2 unnumbered smaller">
+<h2></h2>
 </section>
 <section id="due-this-week" class="slide level2 unnumbered smaller">
 <h2>Due this Week</h2>
 <ul>
-<li>Assignment 5 (Spatial Viz) on Tuesday [via Moodle]</li>
-<li>Self-Reflection on Friday [individual Google Doc]</li>
-<li>At least 1 Tidy Tuesday (TT) by Friday [via Moodle, TT4]
-<ul>
-<li>Choose 1 TT to iterate on by Friday [Via Moodle, IV0]</li>
-</ul></li>
+<li>At least 1 Tidy Tuesday by next Friday!</li>
 </ul>
 </section>
 <section id="learning-goals" class="slide level2 unnumbered">
@@ -355,7 +357,7 @@
 <h2>Template File</h2>
 <p>Download a template .Rmd of this activity. Put the file in a <code>Day_08</code> folder within your <code>COMP_STAT_112</code> folder.</p>
 <ul>
-<li>This .Rmd only contains examples and 3 exercises that we’ll work on in class and you’ll finish for Assignment 7.</li>
+<li>This .Rmd only contains examples and 3 exercises that we’ll work on in class.</li>
 </ul>
 </section>
 <section id="describe-to-your-neighbor" class="slide level2 unnumbered smaller">
@@ -542,17 +544,16 @@
 <section id="in-class" class="slide level2 unnumbered">
 <h2>In Class</h2>
 <p>Go through the example code in the Rmd file to make sure you understand how we reshape data to be wider and longer.</p>
-<ul>
-<li>Work together on the 3 exercises to turn in for Assignment 7.</li>
-</ul>
 </section>
 <section id="after-class" class="slide level2 unnumbered">
 <h2>After Class</h2>
 <ul>
-<li>Work on the 3 exercises to turn in for Assignment 7.</li>
-<li>Tidy Tuesday 4 is posted in Moodle.</li>
-<li>Write a self-reflection in your individual Google Doc shared with you.</li>
-<li>Submit a Iterative Viz 0 in Moodle.</li>
+<li>TT4</li>
+<li>Assignment 5 due Wed. 2/22 @ 11:59pm
+<ul>
+<li><p>Part 1 in Chap 7 (Six Main Verbs)</p></li>
+<li><p>Part 2 in Chap 8 (Reshaping Data)</p></li>
+</ul></li>
 </ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -781,12 +782,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -797,13 +801,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -855,7 +852,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -885,31 +899,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

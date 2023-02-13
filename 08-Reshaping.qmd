@@ -38,7 +38,7 @@ colnames(BabyNames)[4] <- "count"
 
 Download a template .Rmd of this activity. Put the file in a `Day_08` folder within your `COMP_STAT_112` folder.
 
--   This .Rmd only contains examples and 3 exercises that we'll work on in class and you'll finish for Assignment 7.
+-   This .Rmd only contains examples and 3 exercises that we'll work on in class.
 
 ## Describe to your Neighbor {.unnumbered .smaller}
 
@@ -125,9 +125,10 @@ If we want to maintain all of the values in the data set (*not collapsing rows w
 
 Go through the example code in the Rmd file to make sure you understand how we reshape data to be wider and longer.
 
--   Work together on the 3 exercises to turn in for Assignment xx.
-
 ## After Class {.unnumbered}
 
 -   TT4
--   
+-   Assignment 5 due Wed. 2/22 @ 11:59pm
+    -   Part 1 in Chap 7 (Six Main Verbs)
+
+    -   Part 2 in Chap 8 (Reshaping Data)
