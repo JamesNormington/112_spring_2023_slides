@@ -1,6 +1,6 @@
 ---
 title: "Joining Data"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -12,13 +12,7 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered .smaller}
-
-**This week in MSCS**
-
--   Preceptor Training (if you are preceptor for another class!)
--   Wednesday 3:30pm: Math Problem Solving! 
--   Thursday 11:15am: Coffee Break! Student Advisor Board Introductions!
+##  {.unnumbered .smaller}
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
@@ -29,20 +23,11 @@ library(lubridate)
 
 ## Due this Week {.unnumbered .smaller}
 
--   Assignment 6 (Six Main Verbs) + 7 (Reshaping) on Tuesday \[via Moodle\]
-
-If you haven't turned in the following, do so soon:
-
-- Tidy Tuesday 4
-- Iterative Viz 0 (no extra work, submit 1 completed TT html file)
-- Reflection on Learning (in individual document shared with you)
-
-If your spreadsheet says "No submission for assignment",
-
-- submit your assignment to Moodle
-- email Brianna indicating that you've submitted
-- Brianna will be going through past assignments Tuesday
-
+-   Assignment 5 on Friday 2/24 @ 11:59pm
+-   At least one Tidy Tuesday by Friday 2/24 @ 11:59pm
+    -   3 highest grades
+-   Iterative Viz 0 by Friday 2/24 @ 11:59pm
+    -   No extra work, just turn in one of TT1-TT5 as is (even if you got \< 3)
 
 ## Learning Goals {.unnumbered}
 
@@ -55,7 +40,7 @@ If your spreadsheet says "No submission for assignment",
 
 Download a template .Rmd of this activity. Put the file in a `Day_09` folder within your `COMP_STAT_112` folder.
 
--   This .Rmd only contains examples that we'll work on in class and 6 exercises  you'll finish for Assignment 8.
+-   This .Rmd only contains examples that we'll work on in class and 6 exercises you'll finish for Assignment 8.
 
 ## Joins {.unnumbered .smaller}
 
@@ -98,11 +83,11 @@ In order to establish a match between two data tables,
 -   **You** specify which variables (or keys) to use.
 -   Each variable is specify as a pair, where one variable from the left table corresponds to one variable from the right table.
 -   Cases must have *exactly equal* values in the left variable and right variable for a match to be made.
- 
+
 ## Example - Student Grades and Courses {.scrollable}
 
 ```{r, echo=FALSE}
-Grades <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/grades.csv")
+Grades <- read_csv("https://jamesnormington.github.io/112_spring_2023/data/grades.csv")
 Grades <- Grades %>%
   select(sid, sessionID, grade) %>%
   distinct(sid, sessionID, .keep_all = TRUE)
@@ -115,9 +100,8 @@ knitr::kable(
 )
 ```
 
-
 ```{r, cache=TRUE,echo=FALSE}
-Courses <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/courses.csv")
+Courses <- read_csv("https://jamesnormington.github.io/112_spring_2023/data/courses.csv")
 
 set.seed(101)
 knitr::kable(
@@ -137,7 +121,7 @@ What variables are the primary keys (uniquely identifies a case) for `Grades`?
 
 . . .
 
-What variables are the primary keys (uniquely identifies a case) for `Courses`? 
+What variables are the primary keys (uniquely identifies a case) for `Courses`?
 
 . . .
 
@@ -153,13 +137,11 @@ What variables are the foreign keys in `Grades` for `Courses`?
 
 . . .
 
-
-What variables are the foreign keys in `Courses` for `Grades`?  
+What variables are the foreign keys in `Courses` for `Grades`?
 
 . . .
 
 > `sessionID` in `Courses` is only part of a foreign key that uniquely identify rows in `Grades`.
-
 
 ## Mutating Joins {.unnumbered .smaller .scrollable}
 
@@ -187,7 +169,7 @@ A mutating join allows you to combine variables from two tables. It first matche
 
 Determine the average class size from the **viewpoint of the Provost / Admissions Office**
 
-- How would you approach this?
+-   How would you approach this?
 
 . . .
 
@@ -206,7 +188,7 @@ mean(CourseSizes$total_enroll)
 
 Determine the average class size from the **viewpoint of a student** (average class size for each student experiences across their courses)
 
-- How would you approach this?
+-   How would you approach this?
 
 . . .
 
@@ -228,25 +210,21 @@ head(AveClassEachStudent)
 mean(AveClassEachStudent$ave_enroll)
 ```
 
-
-
 ## Filtering Joins {.unnumbered .smaller}
 
-Filtering joins affect the observations, not the variables. 
+Filtering joins affect the observations, not the variables.
 
 . . .
 
-- **`semi_join()`**: discards any cases in the left table that *do not have a match* in the right table. If there are multiple matches of right cases to a left case, it keeps just one copy of the left case.
+-   **`semi_join()`**: discards any cases in the left table that *do not have a match* in the right table. If there are multiple matches of right cases to a left case, it keeps just one copy of the left case.
 
     ![](images/semijoin.png){width="300"}
 
 . . .
 
-- **`anti_join()`**: discards any cases in the left table that *have a match* in the right table.
-  
+-   **`anti_join()`**: discards any cases in the left table that *have a match* in the right table.
+
     ![](images/antijoin.png){width="300"}
-
-
 
 ## Example - Student Grades and Courses {.smaller .scrollable}
 
@@ -282,14 +260,10 @@ JGrades <- Grades %>%
   semi_join(JCourses)
 ```
 
-
-
-
 ## After Class {.unnumbered}
 
-Work on the 6 exercises to turn in for Assignment 8.
+-   Work on Examples 9.1-9.3, then Exercises 9.1-9.6. to turn in for Assignment 6 (Part 1).
 
-These exercises help you deepen your understanding of 
+-   (optional) Tidy Tuesday 5
 
-- Data Wrangling (6 Main Verbs)
-- Data Visualization (including Spatial Viz)
+-   Submit Iterative Viz 0
