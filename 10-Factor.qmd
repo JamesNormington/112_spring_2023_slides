@@ -1,6 +1,6 @@
 ---
 title: "Factors + Group Activity!"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -23,62 +23,26 @@ editor: visual
 -   Resource Manager: Make sure the group seeks out the resources it needs to complete the task
 -   Communicator Manager: Take responsibility to facilitate communication with each other and to the larger class/instructor
 
-## Announcements {.unnumbered .smaller}
+## Things Due this Week {.unnumbered .smaller}
 
-**This week in MSCS**
+-   Assignment 5 was due last night!
+-   Tidy Tuesday 5
+    -   If you haven't submitted one Tidy Tuesday, you *have* to do TT5!!!
+-   Iterative Viz 0
+    -   Choose your favorite Tidy Tuesday submission to re-submit here
 
--   Preceptor Training (if you are preceptor for another class!)
--   Wednesday 3:30pm: Math Problem Solving!
--   Thursday 11:15am: Coffee Break! Student Advisory Board Introductions!
+    -   Even if you got less than 3, choose your favorite one! You'll only be graded on the final product.
 
-```{r include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, error = TRUE, tidy = FALSE, message = FALSE)
-library(tidyverse)
-library(ggplot2)
-library(lubridate)
-```
-
-## Due this Week {.unnumbered .smaller}
-
--   7 (Reshaping) Today \[via Moodle\]
--   TT5 Friday night \[via Moodle\]
--   8 (Joins) Sunday night \[via Moodle\]
-
-
-## Past Due {.unnumbered .smaller}
-
-If you haven't turned in the following, do so soon:
-
--   Tidy Tuesday 4
--   Iterative Viz 0 (no extra work, submit 1 completed TT html file)
--   Reflection on Learning (in individual document shared with you)
-
-If your spreadsheet says "No submission for assignment",
-
--   submit your assignment to Moodle
--   email Brianna indicating that you've submitted
-
+    -   I will suggest improvements, and you'll incorporate for Iterative Viz 1
 
 ## Template File {.unnumbered}
 
 Download a template .Rmd of this activity. Put the file in a `Day_10` folder within your `COMP_STAT_112` folder.
 
--   This .Rmd only contains 1 exercise that you'll complete in a group.
--   Make sure all names are listed at the top of the file after `author:`
--   One member from the table will turn in the assignment to Moodle for Assignment 9 
+-   This .Rmd only contains 1 exercise
+-   Submit today's activity as Assignment 6 Part 2
 
 ## Recommendations {.unnumbered}
 
-1. Each of you brainstorm some ideas
-2. Play in your individual Rmd files.
-3. After 10 minutes, come together to decide on a research question and a visualization plan. 
-4. Create a Slack DM group to share code with each other.
-5. One person needs to submit the final file, but all can by typing/working on their own machines. 
-
-## After Class {.unnumbered}
-
-Complete 
-
-- Assignment 7 (Reshaping) for tonight and 
-- Assignment 8 (Joins) for Sunday.
-
+1.  Work in groups!
+2.  Each have your own .Rmd file, but can use the same output
