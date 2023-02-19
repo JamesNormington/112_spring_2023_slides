@@ -1,5 +1,5 @@
 ---
-title: "Factors + Group Activity!"
+title: "Factors"
 author: "James Normington"
 logo: "images/mac.png"
 format: 
@@ -12,20 +12,11 @@ format:
 editor: visual
 ---
 
-## Preparation {.unnumbered .smaller}
-
-1.  Watch a [12 minute video](https://drive.google.com/file/d/1XPZxl_eM7FsXKj-5U7x8OAaIAS6Q4wM6/view?usp=sharing) before class starts (or at the beginning of class).
-
-2.  Sit with people you don't know well. Introduce yourself and discuss/assign group roles:
-
--   Facilitator: Make sure the group makes progress on the task
--   Reflector: Make sure that everyone in the group contributes positive; encourage participation from everyone (e.g. What do you think? Any ideas?)
--   Resource Manager: Make sure the group seeks out the resources it needs to complete the task
--   Communicator Manager: Take responsibility to facilitate communication with each other and to the larger class/instructor
+##  {.unnumbered .smaller}
 
 ## Things Due this Week {.unnumbered .smaller}
 
--   Assignment 5 was due last night!
+-   Assignment 5 is due tomorrow by 11:59pm.
 -   Tidy Tuesday 5
     -   If you haven't submitted one Tidy Tuesday, you *have* to do TT5!!!
 -   Iterative Viz 0
@@ -42,7 +33,67 @@ Download a template .Rmd of this activity. Put the file in a `Day_10` folder wit
 -   This .Rmd only contains 1 exercise
 -   Submit today's activity as Assignment 6 Part 2
 
-## Recommendations {.unnumbered}
+## Factors vs. Characters {.unnumbered}
+
+Both: can represent categorical variables
+
+character: ***does not*** have predefined levels
+
+-   Names
+
+-   Addresses
+
+-   Free responses (e.g., How does this class make you feel?)
+
+## Factors vs. Characters {.unnumbered}
+
+R class factor: ***does*** have predefined levels, better for categorical analysis:
+
+-   Final grade: A, A-, B+, B....
+
+-   Favorite season: winter, spring, summer, autumn
+
+-   Multiple choice response (e.g., How do you feel about this class? `love`, `like`, `neutral`, `dislike`, `hate`)
+
+## Factors vs. Characters in R {.unnumbered}
+
+Variables with class `character` do not have `level`s
+
+```{r, include = TRUE, echo = TRUE}
+library(readr); library(dplyr)
+Grades <- read_csv("https://jamesnormington.github.io/112_spring_2023/data/grades.csv")
+
+head(Grades)
+class(Grades$grade)
+levels(Grades$grade)
+
+```
+
+## Converting a character to factor {.unnumbered}
+
+```{r, include = TRUE, echo = TRUE}
+Grades = Grades %>%
+  mutate(grade = factor(grade))
+
+levels(Grades$grade)
+```
+
+## Changing the order of levels {.unnumbered}
+
+1.  `fct_relevel()`: manually reorder levels
+2.  `fct_infreq()`: order levels from higher to lowest frequency
+3.  `fct_reorder()`: reorder levels by values of another variable
+4.  `fct_rev()`: reverse current order
+
+## Changing the value of levels {.unnumbered}
+
+1.  `fct_recode():` manually change levels
+
+2.  `fct_lump():` group together least common levels
+
+## Work time {.unnumbered}
+
+Work on the short Factor examples, then go on to Assignment 5 or 6.
 
 1.  Work in groups!
-2.  Each have your own .Rmd file, but can use the same output
+2.  Ask me questions!

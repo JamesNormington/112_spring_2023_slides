@@ -7,10 +7,10 @@
 <link href="10-Factor_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="10-Factor_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="10-Factor_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Brianna Heggeseth">
-  <title>Factors + Group Activity!</title>
+  <meta name="author" content="James Normington">
+  <title>Factors</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -19,10 +19,79 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="10-Factor_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="10-Factor_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,81 +389,128 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
-  <h1 class="title">Factors + Group Activity!</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Factors</h1>
 
-<section id="preparation" class="slide level2 unnumbered smaller">
-<h2>Preparation</h2>
-<ol type="1">
-<li><p>Watch a <a href="https://drive.google.com/file/d/1XPZxl_eM7FsXKj-5U7x8OAaIAS6Q4wM6/view?usp=sharing">12 minute video</a> before class starts (or at the beginning of class).</p></li>
-<li><p>Sit with people you don’t know well. Introduce yourself and discuss/assign group roles:</p></li>
-</ol>
-<ul>
-<li>Facilitator: Make sure the group makes progress on the task</li>
-<li>Reflector: Make sure that everyone in the group contributes positive; encourage participation from everyone (e.g.&nbsp;What do you think? Any ideas?)</li>
-<li>Resource Manager: Make sure the group seeks out the resources it needs to complete the task</li>
-<li>Communicator Manager: Take responsibility to facilitate communication with each other and to the larger class/instructor</li>
-</ul>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
 </section>
-<section id="announcements" class="slide level2 unnumbered smaller">
-<h2>Announcements</h2>
-<p><strong>This week in MSCS</strong></p>
-<ul>
-<li>Preceptor Training (if you are preceptor for another class!)</li>
-<li>Wednesday 3:30pm: Math Problem Solving!</li>
-<li>Thursday 11:15am: Coffee Break! Student Advisory Board Introductions!</li>
-</ul>
+<section id="section" class="slide level2 unnumbered smaller">
+<h2></h2>
 </section>
-<section id="due-this-week" class="slide level2 unnumbered smaller">
-<h2>Due this Week</h2>
+<section id="things-due-this-week" class="slide level2 unnumbered smaller">
+<h2>Things Due this Week</h2>
 <ul>
-<li>7 (Reshaping) Today [via Moodle]</li>
-<li>TT5 Friday night [via Moodle]</li>
-<li>8 (Joins) Sunday night [via Moodle]</li>
-</ul>
-</section>
-<section id="past-due" class="slide level2 unnumbered smaller">
-<h2>Past Due</h2>
-<p>If you haven’t turned in the following, do so soon:</p>
+<li>Assignment 5 is due tomorrow by 11:59pm.</li>
+<li>Tidy Tuesday 5
 <ul>
-<li>Tidy Tuesday 4</li>
-<li>Iterative Viz 0 (no extra work, submit 1 completed TT html file)</li>
-<li>Reflection on Learning (in individual document shared with you)</li>
-</ul>
-<p>If your spreadsheet says “No submission for assignment”,</p>
+<li>If you haven’t submitted one Tidy Tuesday, you <em>have</em> to do TT5!!!</li>
+</ul></li>
+<li>Iterative Viz 0
 <ul>
-<li>submit your assignment to Moodle</li>
-<li>email Brianna indicating that you’ve submitted</li>
+<li><p>Choose your favorite Tidy Tuesday submission to re-submit here</p></li>
+<li><p>Even if you got less than 3, choose your favorite one! You’ll only be graded on the final product.</p></li>
+<li><p>I will suggest improvements, and you’ll incorporate for Iterative Viz 1</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="template-file" class="slide level2 unnumbered">
 <h2>Template File</h2>
 <p>Download a template .Rmd of this activity. Put the file in a <code>Day_10</code> folder within your <code>COMP_STAT_112</code> folder.</p>
 <ul>
-<li>This .Rmd only contains 1 exercise that you’ll complete in a group.</li>
-<li>Make sure all names are listed at the top of the file after <code>author:</code></li>
-<li>One member from the table will turn in the assignment to Moodle for Assignment 9</li>
+<li>This .Rmd only contains 1 exercise</li>
+<li>Submit today’s activity as Assignment 6 Part 2</li>
 </ul>
 </section>
-<section id="recommendations" class="slide level2 unnumbered">
-<h2>Recommendations</h2>
+<section id="factors-vs.-characters" class="slide level2 unnumbered">
+<h2>Factors vs.&nbsp;Characters</h2>
+<p>Both: can represent categorical variables</p>
+<p>character: <strong><em>does not</em></strong> have predefined levels</p>
+<ul>
+<li><p>Names</p></li>
+<li><p>Addresses</p></li>
+<li><p>Free responses (e.g., How does this class make you feel?)</p></li>
+</ul>
+</section>
+<section id="factors-vs.-characters-1" class="slide level2 unnumbered">
+<h2>Factors vs.&nbsp;Characters</h2>
+<p>R class factor: <strong><em>does</em></strong> have predefined levels, better for categorical analysis:</p>
+<ul>
+<li><p>Final grade: A, A-, B+, B….</p></li>
+<li><p>Favorite season: winter, spring, summer, autumn</p></li>
+<li><p>Multiple choice response (e.g., How do you feel about this class? <code>love</code>, <code>like</code>, <code>neutral</code>, <code>dislike</code>, <code>hate</code>)</p></li>
+</ul>
+</section>
+<section id="factors-vs.-characters-in-r" class="slide level2 unnumbered">
+<h2>Factors vs.&nbsp;Characters in R</h2>
+<p>Variables with class <code>character</code> do not have <code>level</code>s</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readr); <span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>Grades <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://jamesnormington.github.io/112_spring_2023/data/grades.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">head</span>(Grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  sid    grade sessionID  
+  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;      
+1 S31185 D+    session1784
+2 S31185 B+    session1785
+3 S31185 A-    session1791
+4 S31185 B+    session1792
+5 S31185 B-    session1794
+6 S31185 C+    session1795</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">class</span>(Grades<span class="sc">$</span>grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">levels</span>(Grades<span class="sc">$</span>grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>NULL</code></pre>
+</div>
+</div>
+</section>
+<section id="converting-a-character-to-factor" class="slide level2 unnumbered">
+<h2>Converting a character to factor</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>Grades <span class="ot">=</span> Grades <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">factor</span>(grade))</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">levels</span>(Grades<span class="sc">$</span>grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "A"  "A-" "AU" "B"  "B-" "B+" "C"  "C-" "C+" "D"  "D-" "D+" "NC" "S" </code></pre>
+</div>
+</div>
+</section>
+<section id="changing-the-order-of-levels" class="slide level2 unnumbered">
+<h2>Changing the order of levels</h2>
 <ol type="1">
-<li>Each of you brainstorm some ideas</li>
-<li>Play in your individual Rmd files.</li>
-<li>After 10 minutes, come together to decide on a research question and a visualization plan.</li>
-<li>Create a Slack DM group to share code with each other.</li>
-<li>One person needs to submit the final file, but all can by typing/working on their own machines.</li>
+<li><code>fct_relevel()</code>: manually reorder levels</li>
+<li><code>fct_infreq()</code>: order levels from higher to lowest frequency</li>
+<li><code>fct_reorder()</code>: reorder levels by values of another variable</li>
+<li><code>fct_rev()</code>: reverse current order</li>
 </ol>
 </section>
-<section id="after-class" class="slide level2 unnumbered">
-<h2>After Class</h2>
-<p>Complete</p>
-<ul>
-<li>Assignment 7 (Reshaping) for tonight and</li>
-<li>Assignment 8 (Joins) for Sunday.</li>
-</ul>
+<section id="changing-the-value-of-levels" class="slide level2 unnumbered">
+<h2>Changing the value of levels</h2>
+<ol type="1">
+<li><p><code>fct_recode():</code> manually change levels</p></li>
+<li><p><code>fct_lump():</code> group together least common levels</p></li>
+</ol>
+</section>
+<section id="work-time" class="slide level2 unnumbered">
+<h2>Work time</h2>
+<p>Work on the short Factor examples, then go on to Assignment 5 or 6.</p>
+<ol type="1">
+<li>Work in groups!</li>
+<li>Ask me questions!</li>
+</ol>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
@@ -622,12 +738,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -638,13 +757,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -696,7 +808,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -726,31 +855,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
