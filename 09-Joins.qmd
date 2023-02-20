@@ -23,10 +23,10 @@ library(lubridate)
 
 ## Due this Week {.unnumbered .smaller}
 
--   Assignment 5 on Friday 2/24 @ 11:59pm
--   At least one Tidy Tuesday by Friday 2/24 @ 11:59pm
+-   Assignment 5 on Friday 2/24 \@ 11:59pm
+-   At least one Tidy Tuesday by Friday 2/24 \@ 11:59pm
     -   3 highest grades
--   Iterative Viz 0 by Friday 2/24 @ 11:59pm
+-   Iterative Viz 0 by Friday 2/24 \@ 11:59pm
     -   No extra work, just turn in one of TT1-TT5 as is (even if you got \< 3)
 
 ## Learning Goals {.unnumbered}
