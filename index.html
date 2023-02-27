@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="09-Joins_files/libs/clipboard/clipboard.min.js"></script>
-<script src="09-Joins_files/libs/quarto-html/tabby.min.js"></script>
-<script src="09-Joins_files/libs/quarto-html/popper.min.js"></script>
-<script src="09-Joins_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="09-Joins_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="09-Joins_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="09-Joins_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="10-Factor_files/libs/clipboard/clipboard.min.js"></script>
+<script src="10-Factor_files/libs/quarto-html/tabby.min.js"></script>
+<script src="10-Factor_files/libs/quarto-html/popper.min.js"></script>
+<script src="10-Factor_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="10-Factor_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="10-Factor_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="10-Factor_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="James Normington">
-  <title>Joining Data</title>
+  <title>Factors</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="09-Joins_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="09-Joins_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="10-Factor_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="10-Factor_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -93,13 +93,13 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="09-Joins_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="09-Joins_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="09-Joins_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="09-Joins_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="09-Joins_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="09-Joins_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="09-Joins_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="10-Factor_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="10-Factor_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="10-Factor_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="10-Factor_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="10-Factor_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="10-Factor_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="10-Factor_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Joining Data</h1>
+  <h1 class="title">Factors</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -404,388 +404,111 @@ James Normington
 <section id="section" class="slide level2 unnumbered smaller">
 <h2></h2>
 </section>
-<section id="due-this-week" class="slide level2 unnumbered smaller">
-<h2>Due this Week</h2>
+<section id="announcements" class="slide level2 unnumbered smaller">
+<h2>Announcements</h2>
 <ul>
-<li>Assignment 5 on Friday 2/24 @ 11:59pm</li>
-<li>At least one Tidy Tuesday by Friday 2/24 @ 11:59pm
+<li>No class Thursday – MSCS Capstone Days
 <ul>
-<li>3 highest grades</li>
+<li>Assignment 7 – attend two talks and write a reflection. Description on course schedule.</li>
 </ul></li>
-<li>Iterative Viz 0 by Friday 2/24 @ 11:59pm
+<li>Midterm next Thursday!
 <ul>
-<li>No extra work, just turn in one of TT1-TT5 as is (even if you got &lt; 3)</li>
+<li><p>Link to description/study guide on course schedule</p></li>
+<li><p>Next Tuesday we will review</p></li>
 </ul></li>
-</ul>
-</section>
-<section id="learning-goals" class="slide level2 unnumbered">
-<h2>Learning Goals</h2>
-<ul>
-<li>Understand the concept of keys and variables that uniquely identify rows or cases</li>
-<li>Understand the different types of joins, different ways of combining two data frames together</li>
-<li>Develop comfort in using mutating joins: <code>left_join</code>, <code>inner_join</code> and <code>full_join</code> in the <code>dplyr</code> package</li>
-<li>Develop comfort in using filtering joins: <code>semi_join</code>, <code>anti_join</code> in the <code>dplyr</code> package</li>
 </ul>
 </section>
 <section id="template-file" class="slide level2 unnumbered">
 <h2>Template File</h2>
-<p>Download a template .Rmd of this activity. Put the file in a <code>Day_09</code> folder within your <code>COMP_STAT_112</code> folder.</p>
+<p>Download a template .Rmd of this activity. Put the file in a <code>Day_10</code> folder within your <code>COMP_STAT_112</code> folder.</p>
 <ul>
-<li>This .Rmd only contains examples that we’ll work on in class and 6 exercises you’ll finish for Assignment 8.</li>
+<li>This .Rmd only contains 1 exercise</li>
+<li>Submit today’s activity as Assignment 6 Part 2</li>
 </ul>
 </section>
-<section id="joins" class="slide level2 unnumbered smaller">
-<h2>Joins</h2>
-<h3 id="definition">Definition</h3>
-<p>A <em>join</em> is a verb that means to combine two data tables.</p>
+<section id="factors-vs.-characters" class="slide level2 unnumbered">
+<h2>Factors vs.&nbsp;Characters</h2>
+<p>Both: can represent categorical variables</p>
+<p>character: <strong><em>does not</em></strong> have predefined levels</p>
 <ul>
-<li>These tables are often called the <em>left</em> and the <em>right</em> tables.</li>
+<li><p>Names</p></li>
+<li><p>Addresses</p></li>
+<li><p>Free responses (e.g., How does this class make you feel?)</p></li>
 </ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://r4ds.had.co.nz/relational-data.html"><img data-src="images/innerjoin.png"></a></p>
-<p></p><figcaption>Left and Right Tables with intersecting light grey lines indicating potential matches and colored points indicating a match.</figcaption><p></p>
-</figure>
+</section>
+<section id="factors-vs.-characters-1" class="slide level2 unnumbered">
+<h2>Factors vs.&nbsp;Characters</h2>
+<p>R class factor: <strong><em>does</em></strong> have predefined levels, better for categorical analysis:</p>
+<ul>
+<li><p>Final grade: A, A-, B+, B….</p></li>
+<li><p>Favorite season: winter, spring, summer, autumn</p></li>
+<li><p>Multiple choice response (e.g., How do you feel about this class? <code>love</code>, <code>like</code>, <code>neutral</code>, <code>dislike</code>, <code>hate</code>)</p></li>
+</ul>
+</section>
+<section id="factors-vs.-characters-in-r" class="slide level2 unnumbered">
+<h2>Factors vs.&nbsp;Characters in R</h2>
+<p>Variables with class <code>character</code> do not have <code>level</code>s</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readr); <span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>Grades <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://jamesnormington.github.io/112_spring_2023/data/grades.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">head</span>(Grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  sid    grade sessionID  
+  &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;      
+1 S31185 D+    session1784
+2 S31185 B+    session1785
+3 S31185 A-    session1791
+4 S31185 B+    session1792
+5 S31185 B-    session1794
+6 S31185 C+    session1795</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">class</span>(Grades<span class="sc">$</span>grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">levels</span>(Grades<span class="sc">$</span>grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>NULL</code></pre>
 </div>
 </div>
 </section>
-<section id="kinds-of-joins" class="slide level2 unnumbered smaller scrollable">
-<h2>Kinds of Joins</h2>
-<ul>
-<li><p>All joins involve establishing a correspondence — <strong>a match</strong> — between each case in the left table and zero or more cases in the right table.</p></li>
-<li><p>The various joins differ in how they handle multiple matches or missing matches.</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://r4ds.had.co.nz/relational-data.html"><img data-src="images/duplicatejoin2.png" width="599"></a></p>
-<p></p><figcaption>Left table has duplicate keys.</figcaption><p></p>
-</figure>
+<section id="converting-a-character-to-factor" class="slide level2 unnumbered">
+<h2>Converting a character to factor</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>Grades <span class="ot">=</span> Grades <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">factor</span>(grade))</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">levels</span>(Grades<span class="sc">$</span>grade)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "A"  "A-" "AU" "B"  "B-" "B+" "C"  "C-" "C+" "D"  "D-" "D+" "NC" "S" </code></pre>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://r4ds.had.co.nz/relational-data.html"><img data-src="images/duplicatejoin1.png" width="500"></a></p>
-<p></p><figcaption>Both tables have duplicate keys.</figcaption><p></p>
-</figure>
 </div>
 </section>
-<section id="matches" class="slide level2 unnumbered smaller">
-<h2>Matches</h2>
-<h3 id="definition-of-match">Definition of Match</h3>
-<p>A match between a case in the <em>left</em> data table and a case in the <em>right</em> data table is made based on the values in <strong>keys</strong>, variables that uniquely define observations in a data table.</p>
-<h3 id="two-types-of-keys">Two Types of Keys</h3>
+<section id="changing-the-order-of-levels" class="slide level2 unnumbered">
+<h2>Changing the order of levels</h2>
 <ol type="1">
-<li><p>A <strong>primary key</strong> uniquely identifies an observation in its own table.</p></li>
-<li><p>A <strong>foreign key</strong> uniquely identifies an observation in another table.</p></li>
+<li><code>fct_relevel()</code>: manually reorder levels</li>
+<li><code>fct_infreq()</code>: order levels from higher to lowest frequency</li>
+<li><code>fct_reorder()</code>: reorder levels by values of another variable</li>
+<li><code>fct_rev()</code>: reverse current order</li>
 </ol>
-<h3 id="match-in-practice">Match in Practice</h3>
-<p>In order to establish a match between two data tables,</p>
-<ul>
-<li><strong>You</strong> specify which variables (or keys) to use.</li>
-<li>Each variable is specify as a pair, where one variable from the left table corresponds to one variable from the right table.</li>
-<li>Cases must have <em>exactly equal</em> values in the left variable and right variable for a match to be made.</li>
-</ul>
 </section>
-<section id="example---student-grades-and-courses" class="slide level2 scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<caption>Student grades.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">sid</th>
-<th style="text-align: center;">sessionID</th>
-<th style="text-align: center;">grade</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">S31842</td>
-<td style="text-align: center;">session2207</td>
-<td style="text-align: center;">B+</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">S32436</td>
-<td style="text-align: center;">session3172</td>
-<td style="text-align: center;">S</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">S31671</td>
-<td style="text-align: center;">session3435</td>
-<td style="text-align: center;">A-</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">S31929</td>
-<td style="text-align: center;">session3512</td>
-<td style="text-align: center;">NC</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell" data-hash="09-Joins_cache/revealjs/unnamed-chunk-3_849d7425481aaaad832d209ccf0ca057">
-<div class="cell-output-display">
-<table>
-<caption>Information about each course section.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">sessionID</th>
-<th style="text-align: center;">dept</th>
-<th style="text-align: center;">level</th>
-<th style="text-align: center;">sem</th>
-<th style="text-align: center;">enroll</th>
-<th style="text-align: center;">iid</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">session2780</td>
-<td style="text-align: center;">O</td>
-<td style="text-align: center;">300</td>
-<td style="text-align: center;">SP2003</td>
-<td style="text-align: center;">21</td>
-<td style="text-align: center;">inst298</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">session3520</td>
-<td style="text-align: center;">k</td>
-<td style="text-align: center;">300</td>
-<td style="text-align: center;">FA2004</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">inst463</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">session1965</td>
-<td style="text-align: center;">d</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">FA2001</td>
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">inst414</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">session3257</td>
-<td style="text-align: center;">o</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">SP2004</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">inst312</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="changing-the-value-of-levels" class="slide level2 unnumbered">
+<h2>Changing the value of levels</h2>
+<ol type="1">
+<li><p><code>fct_recode():</code> manually change levels</p></li>
+<li><p><code>fct_lump():</code> group together least common levels</p></li>
+</ol>
 </section>
-<section id="example---student-grades-and-courses-1" class="slide level2 smaller scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<p>What variables are the primary keys (uniquely identifies a case) for <code>Grades</code>?</p>
-<div class="fragment">
-<blockquote>
-<p><code>sid</code> (student ID) and <code>sessionID</code> (class ID) are the primary keys for <code>Grades</code> as they unique identify each case.</p>
-</blockquote>
-</div>
-<div class="fragment">
-<p>What variables are the primary keys (uniquely identifies a case) for <code>Courses</code>?</p>
-</div>
-<div class="fragment">
-<blockquote>
-<p><code>sessionID</code> (class ID) and <code>dept</code> are the primary keys for <code>Courses</code> as they unique identify each case. You may have thought that <code>sessionID</code> alone was sufficient; however, if a course is cross-listed, then it may have multiple departments listed.</p>
-</blockquote>
-</div>
-</section>
-<section id="example---student-grades-and-courses-2" class="slide level2 smaller scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<p>What variables are the foreign keys in <code>Grades</code> for <code>Courses</code>?</p>
-<div class="fragment">
-<blockquote>
-<p><code>sessionID</code> (class ID) is part of a foreign key in <code>Grades</code> for <code>Courses</code>. If we <code>group_by</code> and <code>summarize</code> first to deal with cross-listed courses, then <code>sessionID</code> is the foreign key in <code>Grades</code> for <code>Courses</code>.</p>
-</blockquote>
-</div>
-<div class="fragment">
-<p>What variables are the foreign keys in <code>Courses</code> for <code>Grades</code>?</p>
-</div>
-<div class="fragment">
-<blockquote>
-<p><code>sessionID</code> in <code>Courses</code> is only part of a foreign key that uniquely identify rows in <code>Grades</code>.</p>
-</blockquote>
-</div>
-</section>
-<section id="mutating-joins" class="slide level2 unnumbered smaller scrollable">
-<h2>Mutating Joins</h2>
-<p>A mutating join allows you to combine variables from two tables. It first matches observations by their keys, then copies across variables from one table to the other.</p>
-<div class="fragment">
-<ul>
-<li><p><strong><code>left_join()</code></strong>: the output has <em>all cases from the left</em>, regardless if there is a match in the right, but discards any cases in the right that do not have a match in the left.</p>
-<p><img data-src="images/leftjoin.png" width="300" height="109"></p></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p><strong><code>inner_join()</code></strong>: the output has <em>only the cases from the left with a match in the right</em>.</p>
-<p><img data-src="images/innerjoin.png" width="300"></p></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p><strong><code>full_join()</code></strong>: the output has <em>all cases from the left and the right</em>. This is less common than the first two join operators.</p>
-<p><img data-src="images/fulljoin.png" width="300"></p></li>
-</ul>
-</div>
-</section>
-<section id="example---student-grades-and-courses-3" class="slide level2 smaller scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<p>Determine the average class size from the <strong>viewpoint of the Provost / Admissions Office</strong></p>
-<ul>
-<li>How would you approach this?</li>
-</ul>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>CourseSizes <span class="ot">&lt;-</span> Courses <span class="sc">%&gt;%</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">group_by</span>(sessionID) <span class="sc">%&gt;%</span> <span class="co"># needed for cross-listed courses</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">summarise</span>(<span class="at">total_enroll =</span> <span class="fu">sum</span>(enroll))</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">head</span>(CourseSizes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  sessionID   total_enroll
-  &lt;chr&gt;              &lt;dbl&gt;
-1 session1784           22
-2 session1785           52
-3 session1791           22
-4 session1792           20
-5 session1794           22
-6 session1795           26</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mean</span>(CourseSizes<span class="sc">$</span>total_enroll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 21.45251</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="example---student-grades-and-courses-4" class="slide level2 smaller scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<p>Determine the average class size from the <strong>viewpoint of a student</strong> (average class size for each student experiences across their courses)</p>
-<ul>
-<li>How would you approach this?</li>
-</ul>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>EnrollmentsWithClassSize <span class="ot">&lt;-</span> Grades <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">left_join</span>(CourseSizes,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"sessionID"</span> <span class="ot">=</span> <span class="st">"sessionID"</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">select</span>(sid, sessionID, total_enroll)</span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="fu">head</span>(EnrollmentsWithClassSize)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  sid    sessionID   total_enroll
-  &lt;chr&gt;  &lt;chr&gt;              &lt;dbl&gt;
-1 S31185 session1784           22
-2 S31185 session1785           52
-3 S31185 session1791           22
-4 S31185 session1792           20
-5 S31185 session1794           22
-6 S31185 session1795           26</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>AveClassEachStudent <span class="ot">&lt;-</span> EnrollmentsWithClassSize <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">group_by</span>(sid) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">summarise</span>(<span class="at">ave_enroll =</span> <span class="fu">mean</span>(total_enroll, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb7-4"><a href="#cb7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">head</span>(AveClassEachStudent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  sid    ave_enroll
-  &lt;chr&gt;       &lt;dbl&gt;
-1 S31185       29  
-2 S31188       27.6
-3 S31191       29.1
-4 S31194       19.5
-5 S31197       26.3
-6 S31200       26.5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">mean</span>(AveClassEachStudent<span class="sc">$</span>ave_enroll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 24.41885</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="filtering-joins" class="slide level2 unnumbered smaller">
-<h2>Filtering Joins</h2>
-<p>Filtering joins affect the observations, not the variables.</p>
-<div class="fragment">
-<ul>
-<li><p><strong><code>semi_join()</code></strong>: discards any cases in the left table that <em>do not have a match</em> in the right table. If there are multiple matches of right cases to a left case, it keeps just one copy of the left case.</p>
-<p><img data-src="images/semijoin.png" width="300"></p></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p><strong><code>anti_join()</code></strong>: discards any cases in the left table that <em>have a match</em> in the right table.</p>
-<p><img data-src="images/antijoin.png" width="300"></p></li>
-</ul>
-</div>
-</section>
-<section id="example---student-grades-and-courses-5" class="slide level2 smaller scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<p>Find a subset of the <code>Grades</code> data that only contains data on the four largest sections in the <code>Courses</code> data set.</p>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>LargeSections <span class="ot">&lt;-</span> Courses <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">group_by</span>(sessionID) <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">summarise</span>(<span class="at">total_enroll =</span> <span class="fu">sum</span>(enroll)) <span class="sc">%&gt;%</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_enroll)) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">4</span>)</span>
-<span id="cb11-5"><a href="#cb11-5"></a></span>
-<span id="cb11-6"><a href="#cb11-6"></a>LargeSections</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 2
-  sessionID   total_enroll
-  &lt;chr&gt;              &lt;dbl&gt;
-1 session2956          120
-2 session2171          105
-3 session2465           93
-4 session2170           85</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>GradesFromLargeSections <span class="ot">&lt;-</span> Grades <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">semi_join</span>(LargeSections)</span>
-<span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="fu">head</span>(GradesFromLargeSections)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  sid    sessionID   grade
-  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;
-1 S31188 session2956 S    
-2 S31344 session2465 S    
-3 S31365 session2956 S    
-4 S31389 session2170 A-   
-5 S31389 session2465 S    
-6 S31482 session2170 B+   </code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="example---student-grades-and-courses-6" class="slide level2 smaller scrollable">
-<h2>Example - Student Grades and Courses</h2>
-<p>Use <code>semi_join()</code> to create a table with a subset of the rows of <code>Grades</code> corresponding to all classes taken in department <code>J</code>.</p>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>JCourses <span class="ot">&lt;-</span> Courses <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="st">"J"</span>)</span>
-<span id="cb15-3"><a href="#cb15-3"></a></span>
-<span id="cb15-4"><a href="#cb15-4"></a>JGrades <span class="ot">&lt;-</span> Grades <span class="sc">%&gt;%</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a>  <span class="fu">semi_join</span>(JCourses)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="after-class" class="slide level2 unnumbered">
-<h2>After Class</h2>
-<ul>
-<li><p>Work on Examples 9.1-9.3, then Exercises 9.1-9.6. to turn in for Assignment 6 (Part 1).</p></li>
-<li><p>(optional) Tidy Tuesday 5</p></li>
-<li><p>Submit Iterative Viz 0</p></li>
-</ul>
+<section id="work-time" class="slide level2 unnumbered">
+<h2>Work time</h2>
+<p>Work on the short Factor examples, then go on to Assignment 6 or study for Midterm.</p>
+<ol type="1">
+<li>Work in groups!</li>
+<li>Ask me questions!</li>
+</ol>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
@@ -795,22 +518,22 @@ James Normington
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="09-Joins_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="10-Factor_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="09-Joins_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="09-Joins_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="09-Joins_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="10-Factor_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -827,7 +550,7 @@ James Normington
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'multiplex': {"secret":null,"id":"b2952498f6e646cd","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":null,"id":"34e3000abbf5f152","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
