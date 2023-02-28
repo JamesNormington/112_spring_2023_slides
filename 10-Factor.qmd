@@ -14,17 +14,14 @@ editor: visual
 
 ##  {.unnumbered .smaller}
 
-## Things Due this Week {.unnumbered .smaller}
+## Announcements {.unnumbered .smaller}
 
--   Assignment 5 is due tomorrow by 11:59pm.
--   Tidy Tuesday 5
-    -   If you haven't submitted one Tidy Tuesday, you *have* to do TT5!!!
--   Iterative Viz 0
-    -   Choose your favorite Tidy Tuesday submission to re-submit here
+-   No class Thursday -- MSCS Capstone Days
+    -   Assignment 7 -- attend two talks and write a reflection. Description on course schedule.
+-   Midterm next Thursday!
+    -   Link to description/study guide on course schedule
 
-    -   Even if you got less than 3, choose your favorite one! You'll only be graded on the final product.
-
-    -   I will suggest improvements, and you'll incorporate for Iterative Viz 1
+    -   Next Tuesday we will review
 
 ## Template File {.unnumbered}
 
@@ -93,7 +90,7 @@ levels(Grades$grade)
 
 ## Work time {.unnumbered}
 
-Work on the short Factor examples, then go on to Assignment 5 or 6.
+Work on the short Factor examples, then go on to Assignment 6 or study for Midterm.
 
 1.  Work in groups!
 2.  Ask me questions!
