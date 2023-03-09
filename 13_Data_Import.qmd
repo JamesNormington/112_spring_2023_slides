@@ -1,6 +1,6 @@
 ---
 title: "Data Import"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -12,8 +12,6 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered .smaller}
-
 ```{r setup}
 library(tidyverse)
 library(ggplot2)
@@ -21,19 +19,6 @@ library(lubridate)
 library(ggmap)
 library(GGally)
 ```
-
-**MSCS Happenings**
-
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
--   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
--   3:30pm Wednesday Problem solving
--   11:15am Thursday Coffee Break
--   12-1pm Thursday (OLRI 241) Iowa State Grad School Info Session
-
-**Outside Mac**
-
--   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
--   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
 
 ## Learning Goals {.unnumbered}
 
@@ -49,7 +34,7 @@ library(GGally)
 -   Checking Imported Data
 -   Cleaning Data
 
-More thorough notes available at <https://bcheggeseth.github.io/112_fall_2022/data-import.html>
+More thorough notes available at [https://jamesnormington.github.io/112_spring_2023/data-import.html](https://bcheggeseth.github.io/112_fall_2022/data-import.html){.uri}
 
 ## Finding Existing Data Sets
 
@@ -57,7 +42,7 @@ More thorough notes available at <https://bcheggeseth.github.io/112_fall_2022/da
 -   [awesome-public-datasets](https://github.com/caesar0301/awesome-public-datasets) GitHub repo
 -   [Kaggle data](https://www.kaggle.com/datasets)
 -   [data.world website](https://data.world/)
--   [Brianna's website](https://bcheggeseth.github.io/datasets/)
+-   [Prof Heggeseth's website](https://bcheggeseth.github.io/datasets/)
 
 ## Loading Data Sets
 
@@ -74,7 +59,7 @@ The Import Wizard can help you write the code!
 
 Try importing data from:
 
-    https://bcheggeseth.github.io/112_fall_2022/data/imdb_5000_messy.csv
+    https://jamesnormington.github.io/112_spring_2023/data/imdb_5000_messy.csv
 
 *Note: When using the Import Wizard, make sure to copy and paste the code into a Rmd file.*
 
@@ -99,7 +84,7 @@ Try importing data from:
 How could we clean this up?
 
 ```{r echo=TRUE}
-imdbMessy <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/imdb_5000_messy.csv")
+imdbMessy <- read_csv("https://jamesnormington.github.io/112_spring_2023/data/imdb_5000_messy.csv")
 imdbMessy %>% count(color)
 ```
 
@@ -162,13 +147,13 @@ To replace missing values of `actor_1_facebook_likes` with 0,
 imdbMessysub2 <- imdbMessy %>% mutate(actor_1_facebook_likes = replace_na(actor_1_facebook_likes, 0))  
 ```
 
-## Practice/Assignment
+## Assignment Part 1 (due Wed. 3/29 @ 11:59pm)
 
 Find a dataset that is not built into R and is related to one of the following topics:
 
--   Macalester (FYC: there is a dataset on Moodle for Assignment 12 from Institutional Research)
 -   a hobby or passion
 -   hometown or place you have lived
+-   Something you know nothing about, but want to learn about
 
 Load the data into R, make sure it is clean, and construct one interesting visualization of the data.
 
@@ -176,14 +161,12 @@ Load the data into R, make sure it is clean, and construct one interesting visua
 
 ## After Class {.unnumbered}
 
--   Assignment 11 (EDA on Flights) due Sunday
+-   Assignment 8 (Part 1 and Part 2) due next Wednesday
 
--   Assignment 12 (1 exercise) due Tuesday
+-   Midterm Revisions -- start Thursday, due before Tuesday class 3/28
 
--   Brainstorm Activity due Friday
+    -   No extensions unless extreme circumstances.
 
--   Midterm Revisions Part 2 due Friday
+-   IV1 due Friday @ 11:59pm
 
--   IV1 due next week
-
-    -   If you haven't turned in IV0, you don't have feedback to work from.
+    -   Incorporate my feedback from IV0
