@@ -1,6 +1,6 @@
 ---
 title: "Exploratory Data Analysis (EDA)"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -12,15 +12,6 @@ format:
 editor: visual
 ---
 
-## Switch it Up {.unnumbered}
-
-- Sit with someone you don't know well
-- Introduce yourself
-- Ask them about their Fall Break!
-
-
-## Announcements {.unnumbered}
-
 ```{r setup}
 library(tidyverse)
 library(ggplot2)
@@ -28,63 +19,22 @@ library(lubridate)
 library(ggmap)
 library(GGally)
 ```
-  
-**MSCS Happenings**
 
-- 3:30pm Wednesday Problem solving
-- 11:15am Thursday Coffee Break
-- 12-1pm Thursday Iowa State Grad School Info Session
-  
-## From Last Wednesday {.smaller .scrollable}
+## Learning Goals {.unnumbered}
 
-### Brainstorming Activity 
-
-In the back of your brain, start thinking about project ideas.
-
-Each of you will generate 2-3 ideas.
-
-By Friday night (updated!), you'll submit those ideas to [Moodle](https://moodle.macalester.edu/mod/assign/view.php?id=48667).
-
-. . .
-  
-### Midterm Revisions Part 1 {.unnumbered}
-
-For each problem I marked with an X, 
-
-- write a more correct answer and 1 sentence description of why that is a more correct answer (maybe why the original answer wasn't correct).
-
-Talk with others in the class; help each other understand the WHY. 
-
-Turn into me by next class.
-
-. . . 
-
-### Midterm Revisions Part 2 {.unnumbered .smaller}
-
-- UPDATE: You should have been notified of a shared pdf with feedback
-
-- Talk through some of the stumbling blocks with your classmates. Take notes for yourself. 
-
-- By the end of THIS week, submit an updated version of the Midterm Part 2 **to Moodle** and write a reflection about the midterm in your spreadsheet. 
-
-**My Deal**: *You may talk to others in the class (not preceptors, not people who have previously taken it) but you* **may not directly share code** *with each other. Instead, talk about the actions more conceptually and point each other to resources.*
-
-## Learning Goals {-}
-
-- Understand the first steps that should be taken when you encounter a new data set
-- Develop comfort in knowing how to explore data to understand it
-- Develop comfort in formulating research questions
-
+-   Understand the first steps that should be taken when you encounter a new data set
+-   Develop comfort in knowing how to explore data to understand it
+-   Develop comfort in formulating research questions
 
 ## First Steps of a Data Analysis
- 
- **Exploratory Data Analysis** (EDA), a name given to the process of 
 
-1. "getting to know" a dataset, and 
-2. trying to identify any meaningful insights within it. 
- 
-## Exploratory Data Analysis {.smaller} 
- 
+**Exploratory Data Analysis** (EDA), a name given to the process of
+
+1.  "getting to know" a dataset, and
+2.  trying to identify any meaningful insights within it.
+
+## Exploratory Data Analysis {.smaller}
+
 ```{r}
 #| echo: false
 #| fig.cap: "The process of EDA, as described by Grolemund and Wickham." 
@@ -96,46 +46,44 @@ knitr::include_graphics("http://r4ds.had.co.nz/diagrams/data-science.png")
 
 Another way to describe EDA:
 
-1) **Understand** the basic data that is available to you.
-2) **Visualize and describe** the variables that seem most interesting or relevant.
-3) **Formulate** a research question.
-4) **Analyze** the data related to the research question, starting from simple analyses to more complex ones.
-5) **Interpret** your findings, **refine** your research question, and return to step 4.
-
-
+1)  **Understand** the basic data that is available to you.
+2)  **Visualize and describe** the variables that seem most interesting or relevant.
+3)  **Formulate** a research question.
+4)  **Analyze** the data related to the research question, starting from simple analyses to more complex ones.
+5)  **Interpret** your findings, **refine** your research question, and return to step 4.
 
 ## Understand the Basic Data {.smaller}
 
-1. Start by understanding the data that is available to you. 
+1.  Start by understanding the data that is available to you.
 
-::: {.incremental}
-  * Where does my data come from? How was it collected?
-    * WHO (whether it is a sample of a larger data set, and, if so, how the sampling was done? Randomly? All cases during a specific time frame? All data for a selected set of users?), 
-    * WHEN (is this current data or historical? what events may have had an impact?), 
-    * WHAT (what variables were measured? how was it measured, self-reported through a questionnaire or measured directly?), 
-    * WHY (who funded the data collection? for what purposes what the data collected? to whose benefit was the data collected?) 
-  * Is there a codebook? If not, how can I learn about it?
-    * Are there people I can reach out to who have experience with this data?
+::: incremental
+-   Where does my data come from? How was it collected?
+    -   WHO (whether it is a sample of a larger data set, and, if so, how the sampling was done? Randomly? All cases during a specific time frame? All data for a selected set of users?),
+    -   WHEN (is this current data or historical? what events may have had an impact?),
+    -   WHAT (what variables were measured? how was it measured, self-reported through a questionnaire or measured directly?),
+    -   WHY (who funded the data collection? for what purposes what the data collected? to whose benefit was the data collected?)
+-   Is there a codebook? If not, how can I learn about it?
+    -   Are there people I can reach out to who have experience with this data?
 :::
 
 ## Understand the Basic Data {.smaller .scrollable}
 
-2. Next, you need to load the data and clean it. Once the data is loaded, ask yourself about each table:
+2.  Next, you need to load the data and clean it. Once the data is loaded, ask yourself about each table:
 
-::: {.incremental}
-  * What is an observation? 
-  * How many observations are there? 
-  * What is the meaning of each variable? 
-  * What is the type or class of each variable (date, location, string, factor, number, boolean, etc.)?
+::: incremental
+-   What is an observation?
+-   How many observations are there?
+-   What is the meaning of each variable?
+-   What is the type or class of each variable (date, location, string, factor, number, boolean, etc.)?
 :::
 
 . . .
 
 Useful R functions:
 
-- `str()` to learn about the numbers of variables and observations as well as the classes of variables 
-- `head()` to view the top of the data table (can specify the number of rows with `n=` )
-- `tail()` to view the bottom of the data table
+-   `str()` to learn about the numbers of variables and observations as well as the classes of variables
+-   `head()` to view the top of the data table (can specify the number of rows with `n=` )
+-   `tail()` to view the bottom of the data table
 
 ### Example
 
@@ -148,32 +96,32 @@ tail(crime)
 
 ## Understand the Basic Data {.smaller}
 
-3. Finally, ask yourself about the relationships between tables:
+3.  Finally, ask yourself about the relationships between tables:
 
-::: {.incremental}
-  * What variables are keys and link the tables (i.e., which variables can you use in `join` commands)?
+::: incremental
+-   What variables are keys and link the tables (i.e., which variables can you use in `join` commands)?
 :::
 
 ## Visualize and Describe the Data {.smaller}
 
-1. Do some univariate visualizations; e.g., plotting histograms, densities, and box plots of different variables.
+1.  Do some univariate visualizations; e.g., plotting histograms, densities, and box plots of different variables.
 
-::: {.incremental}
-* What do you see that is interesting? 
-* Which values are most common or unusual (outliers)?
-* Is there a lot of missing data?
-* What type of variation occurs within the individual variables?
-* What might be causing the interesting findings?
-* How could you figure out whether your ideas are correct?
+::: incremental
+-   What do you see that is interesting?
+-   Which values are most common or unusual (outliers)?
+-   Is there a lot of missing data?
+-   What type of variation occurs within the individual variables?
+-   What might be causing the interesting findings?
+-   How could you figure out whether your ideas are correct?
 :::
 
 ## Visualize and Describe the Data {.smaller .scrollable}
 
-2. Then examine the **covariation** between different variables. 
+2.  Then examine the **covariation** between different variables.
 
 . . .
 
-One convenient way to do this is with a `pairs` plot. 
+One convenient way to do this is with a `pairs` plot.
 
 ### Examples
 
@@ -184,6 +132,7 @@ crime2 <- crime %>%
   filter(state != "District of Columbia", state != "United States")
 pairs(crime2[, 2:9], bg = "lightblue", panel = panel.smooth)
 ```
+
 ```{r fig.width=10,fig.height=8}
 ggpairs(crime2[, 2:9], aes(alpha = 0.4))
 ```
@@ -204,31 +153,29 @@ ggpairs(
 )
 ```
 
-
 ## Formulate a Research Question {.smaller .scrollable}
 
-You will often end up with a lot of data, and it can be easy to be overwhelmed. 
+You will often end up with a lot of data, and it can be easy to be overwhelmed.
 
-How should you get started? 
-
-. . .
-
-1. One easy idea is to brainstorm ideas for research questions, and pick one that seems promising. This process is much easier with more than one brain! 
+How should you get started?
 
 . . .
 
-2. You will often be working off of a broad question posed by a business, organization, or supervisor, and be thinking about how to narrow it down. 
+1.  One easy idea is to brainstorm ideas for research questions, and pick one that seems promising. This process is much easier with more than one brain!
+
+. . .
+
+2.  You will often be working off of a broad question posed by a business, organization, or supervisor, and be thinking about how to narrow it down.
 
 To do so, you can again revisit questions like "What patterns do you see?" or "Why might they be occurring?"
 
-## EDA Examples  {-}
+## EDA Examples {.unnumbered}
 
-- [Crime mapping](https://www.kaggle.com/mircat/violent-crime-mapping)
+-   [Crime mapping](https://www.kaggle.com/mircat/violent-crime-mapping)
 
-- [Changes in fine particle air pollution in the US](https://bookdown.org/rdpeng/exdata/data-analysis-case-study-changes-in-fine-particle-air-pollution-in-the-u-s-.html)
+-   [Changes in fine particle air pollution in the US](https://bookdown.org/rdpeng/exdata/data-analysis-case-study-changes-in-fine-particle-air-pollution-in-the-u-s-.html)
 
-
-## Practice: Flight Data {-}
+## Practice: Flight Data {.unnumbered}
 
 Let's practice these steps using data about [flight delays from Kaggle](https://www.kaggle.com/usdot/flight-delays). Download template Rmd file from course website.
 
@@ -238,13 +185,14 @@ airports <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/airports.
 flights <- read_csv("https://bcheggeseth.github.io/112_fall_2022/data/flights_jan_jul_sample2.csv")
 ```
 
-## After Class {-}
+## After Class {.unnumbered}
 
-- Finish this activity for Assignment 11 (EDA)
+-   Midterm Revisions Part 1 due Thursday 3/23 @ 8am
 
-- Brainstorm Activity due Wednesday
+-   Midterm Revisions Part 2 due Friday 3/24 @ 11:59pm
 
-- Midterm Revisions Part 2 due Friday
+-   IV1 due Friday 3/24 @ 11:59pm
 
-- IV1 due next week
-  - If you turned in IV0 last week, feedback will come in next 24 hours.
+-   Assignment 8 (Parts 1 and 2) due Wed., 3/29 @ 11:59pm
+
+-   Start thinking about your Final Project!

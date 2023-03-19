@@ -20,6 +20,56 @@ library(ggmap)
 library(GGally)
 ```
 
+## Midterm Grades {.unnumbered}
+
+-   Function of two assessments:
+
+    -   Engagement
+
+    -   Midterm score
+
+-   Final grade will be comprised of these two, plus:
+
+    -   Final Project
+
+    -   Iterative Viz
+
+## Final Project {.smaller .scrollable}
+
+### Brainstorming
+
+Start thinking about Final Projects! I'll finalize the template/rubric next week at the latest.
+
+What interests you? What do you want to learn about? What are you an expert in?
+
+Choose something you can stick with! Trust me!
+
+. . .
+
+### Midterm Revisions -- Part 1 {.unnumbered}
+
+For each problem marked wrong:
+
+-   write a more correct answer and 1 sentence description of *why* that is a more correct answer (maybe why the original answer wasn't correct).
+
+Talk with others in the class; help each other understand the WHY.
+
+Turn paper copy into me by *next class* (Thursday, March 23rd \@ 8am).
+
+. . .
+
+### Midterm Revisions Part 2 {.unnumbered .smaller}
+
+-   You should have been notified of a shared pdf with feedback on Moodle.
+
+-   Talk through some of the stumbling blocks with your classmates. Take notes for yourself.
+
+-   By Friday night at 11:59pm, submit an updated version of the Midterm Part 2 **to Moodle**
+
+**My Deal**: *You may talk to others in the class (not preceptors, not people who have previously taken it) but you* **may not directly share code** *with each other. Instead, talk about the actions more conceptually and point each other to resources.*
+
+Note: If you got an "A" on the midterm, your Final Grade won't be improved with revisions.
+
 ## Learning Goals {.unnumbered}
 
 -   Develop comfort in finding an existing data set to import into R
@@ -147,7 +197,7 @@ To replace missing values of `actor_1_facebook_likes` with 0,
 imdbMessysub2 <- imdbMessy %>% mutate(actor_1_facebook_likes = replace_na(actor_1_facebook_likes, 0))  
 ```
 
-## Assignment Part 1 (due Wed. 3/29 @ 11:59pm)
+## Assignment Part 1 (due Wed. 3/29 \@ 11:59pm)
 
 Find a dataset that is not built into R and is related to one of the following topics:
 
@@ -161,12 +211,12 @@ Load the data into R, make sure it is clean, and construct one interesting visua
 
 ## After Class {.unnumbered}
 
--   Assignment 8 (Part 1 and Part 2) due next Wednesday
+-   Midterm Revisions Part 1 due Thursday 3/23 \@ 8am
 
--   Midterm Revisions -- start Thursday, due before Tuesday class 3/28
+-   Midterm Revisions Part 2 due Friday 3/24 \@ 11:59pm
 
-    -   No extensions unless extreme circumstances.
+-   IV1 due Friday 3/24 \@ 11:59pm
 
--   IV1 due Friday @ 11:59pm
+-   Assignment 8 (Parts 1 and 2) due Wed., 3/29 \@ 11:59pm
 
-    -   Incorporate my feedback from IV0
+-   Start thinking about your Final Project! (more next week)
