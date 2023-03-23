@@ -1,6 +1,6 @@
 ---
 title: "Regular Expressions/Cleaning Text Data"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -21,45 +21,8 @@ library(ggplot2)
 library(lubridate)
 library(ggmap)
 library(GGally)
+
 ```
-
-**MSCS Happenings**
-
--   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
--   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
--   Nov 7 \@ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
-
-**Outside Mac**
-
--   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
--   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
-
-## Announcements {.unnumbered .smaller}
-
--   Sections 1 & 2: Fill out [Project Preferences](https://forms.gle/K7WUVHNUoAVmW6ad8)
--   Sections F1: Fill out [Project Preferences](https://forms.gle/ki2ncr9YdstWjBL59)
-
-## Announcements {.unnumbered .smaller}
-
-**Assignments**
-
--   11 (EDA) was due Sunday; turn in asap
-    -   EDA on flights, practice process of EDA -\> tell a story about flight delays
--   12 (Data Import) due Tuesday
-    -   1 graphic based on a dataset you've imported
--   13 (Regex) due next week (last coding assignment)
--   14 (1 Number Story)
-
-**Tidy Tuesday**
-
--   Complete 3 (minimum) before the end of the semester
-    -   6 more weeks left!
-
-**Iterative Viz**
-
--   IV1: Updated graphic by Friday
-    -   If you want feedback on IV0, turn it in and email Brianna.
 
 ## Regular Expressions
 
@@ -191,17 +154,16 @@ df
 
 ## Practice {.unnumbered}
 
-Go to our [course website](https://bcheggeseth.github.io/112_fall_2022/) and download the Rmd template file.
+Go to our [course website](https://jamesnormington.github.io/112_fall_2022/) and download the Rmd template file.
 
 ## After Class {.unnumbered}
 
 **Regular Expressions**
 
 -   Try [Interactive Regex Tutorial](https://regexone.com/)
--   Continue working on Regex activity (due next week)
+-   Continue working on Regex (HW 9, due Wednesday)
 
 **Other Assignments**
 
--   EDA (flights)
--   Data Import (your own data)
 -   Iterative Viz
+-   Continue thinking about Final Project

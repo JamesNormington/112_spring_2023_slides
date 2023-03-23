@@ -1,6 +1,6 @@
 ---
 title: "Project Deep Dive"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -22,17 +22,6 @@ library(ggmap)
 library(GGally)
 ```
 
-**MSCS Happenings**
-
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
--   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
--   Nov 7 \@ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
-
-**Outside Mac**
-
--   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
--   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
-
 ## Brainstorming Rounds {.unnumbered}
 
 We'll do the following 4 times (5 minutes each time)
@@ -40,7 +29,7 @@ We'll do the following 4 times (5 minutes each time)
 1.  Switch to a new table
 2.  Introduce yourself
 3.  Share project ideas and interests with a partner
-4.  Share advanced data science tools you want to learn through a project ([Shiny](https://shiny.rstudio.com/), [interactive viz](https://plotly.com/r/), [API](https://en.wikipedia.org/wiki/API), [SQL](https://www.techtarget.com/searchdatamanagement/definition/SQL#:~:text=Structured%20Query%20Language%20(SQL)%20is,on%20the%20data%20in%20them.), etc.)
+4.  Take notes -- you'll submit this tonight.
 
 *Consider this as an opportunity to get to know others in the class who might be great project teammates!*
 
@@ -52,9 +41,5 @@ On Moodle, submit 2-3 ideas for a data science project by this evening.
 
 ## Work Time
 
--   TT 8 (British Baking) due tonight (on Moodle)
--   Midterm Part 2 Revisions due tonight (on Moodle)
--   Midterm Reflection due tonight (in Midterm Assessment tab of Spreadsheet)
--   Flights EDA Activity (Assignment 11) due Sunday (on Moodle)
--   Data Import Activity (Assignment 12) due Tuesday (on Moodle)
--   Iterative Viz 1 due next week
+-   Project Brainstorm ideas due tonight @ 11:59pm
+-   Assignment 8 due tomorrow night @ 11:59pm
