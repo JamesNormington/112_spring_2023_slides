@@ -1,6 +1,6 @@
 ---
 title: "Written Communication: One Number Story"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -31,22 +31,6 @@ library(GGally)
 **Outside MSCS**
 
 -   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
-
-## Announcements {.unnumbered .smaller}
-
-**Assignments**
-
--   13 (Regex) past due.
-
-**Tidy Tuesday**
-
--   Complete 3 (minimum) before the end of the semester
-    -   5 more weeks left!
--   [Tidy Tuesday Collection](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p)
-
-**Iterative Viz**
-
--   IV1: Updated graphic past due.
 
 ## Brainstorm
 
@@ -107,7 +91,7 @@ In your project groups:
 
 ## One Number Story Assignment
 
-Go to [Google Drive Folder](https://drive.google.com/drive/folders/1lIP4_Yjit19H7x2nX8j81IFQgTQQWCvL).
+Go to [One Number Story Assignment](https://docs.google.com/document/d/19qm7mtshzRF0DCbVsnoAxa3iz29LRufr2mZjK-dMEwI/edit?usp=sharing).
 
 -   Notice other resources.
 
@@ -135,16 +119,14 @@ Each person write a *TRUE* story about the data that focuses on that 1 number.
 
 ## One Number Story - Timeline
 
--   **Rough** draft due Friday
--   You'll give/get peer feedback in class on Friday
+-   **Rough** draft due before class Thursday, April 13th
+-   You'll present this to a random group of classmates
+-   Incorporate their feedback, and submit a final version by Wednesday, April 19th @ 11:59pm
 
-## After Class {.unnumbered}
+## Rest of time and after class {.unnumbered}
+
+-   Work on One Number Story rough draft (Assignment 10)
 
 -   After calculating one number, sit down and type. Don't aim for perfection.
--   We'll do peer review of your writing in class on Friday.
 
-**Assignments**
-
--   One number story rough draft - due Friday
--   Any missing assignments
--   EDA on project data
+-   We'll do peer review of your writing

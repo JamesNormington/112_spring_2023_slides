@@ -7,9 +7,9 @@
 <link href="OneNumberStory_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="OneNumberStory_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="OneNumberStory_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.335">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Written Communication: One Number Story</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="OneNumberStory_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="OneNumberStory_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,11 +325,18 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Written Communication: One Number Story</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
+</section>
 <section id="announcements" class="slide level2 unnumbered smaller">
 <h2>Announcements</h2>
 <div class="cell">
@@ -338,25 +350,6 @@
 <p><strong>Outside MSCS</strong></p>
 <ul>
 <li><a href="https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit">Mac Hub Events</a></li>
-</ul>
-</section>
-<section id="announcements-1" class="slide level2 unnumbered smaller">
-<h2>Announcements</h2>
-<p><strong>Assignments</strong></p>
-<ul>
-<li>13 (Regex) past due.</li>
-</ul>
-<p><strong>Tidy Tuesday</strong></p>
-<ul>
-<li>Complete 3 (minimum) before the end of the semester
-<ul>
-<li>5 more weeks left!</li>
-</ul></li>
-<li><a href="https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p">Tidy Tuesday Collection</a></li>
-</ul>
-<p><strong>Iterative Viz</strong></p>
-<ul>
-<li>IV1: Updated graphic past due.</li>
 </ul>
 </section>
 <section id="brainstorm" class="slide level2">
@@ -430,7 +423,7 @@
 </section>
 <section id="one-number-story-assignment" class="slide level2">
 <h2>One Number Story Assignment</h2>
-<p>Go to <a href="https://drive.google.com/drive/folders/1lIP4_Yjit19H7x2nX8j81IFQgTQQWCvL">Google Drive Folder</a>.</p>
+<p>Go to <a href="https://docs.google.com/document/d/19qm7mtshzRF0DCbVsnoAxa3iz29LRufr2mZjK-dMEwI/edit?usp=sharing">One Number Story Assignment</a>.</p>
 <ul>
 <li><p>Notice other resources.</p></li>
 <li><p>Open One Number Story Assignment.</p></li>
@@ -461,21 +454,17 @@
 <section id="one-number-story---timeline" class="slide level2">
 <h2>One Number Story - Timeline</h2>
 <ul>
-<li><strong>Rough</strong> draft due Friday</li>
-<li>You’ll give/get peer feedback in class on Friday</li>
+<li><strong>Rough</strong> draft due before class Thursday, April 13th</li>
+<li>You’ll present this to a random group of classmates</li>
+<li>Incorporate their feedback, and submit a final version by Wednesday, April 19th @ 11:59pm</li>
 </ul>
 </section>
-<section id="after-class" class="slide level2 unnumbered">
-<h2>After Class</h2>
+<section id="rest-of-time-and-after-class" class="slide level2 unnumbered">
+<h2>Rest of time and after class</h2>
 <ul>
-<li>After calculating one number, sit down and type. Don’t aim for perfection.</li>
-<li>We’ll do peer review of your writing in class on Friday.</li>
-</ul>
-<p><strong>Assignments</strong></p>
-<ul>
-<li>One number story rough draft - due Friday</li>
-<li>Any missing assignments</li>
-<li>EDA on project data</li>
+<li><p>Work on One Number Story rough draft (Assignment 10)</p></li>
+<li><p>After calculating one number, sit down and type. Don’t aim for perfection.</p></li>
+<li><p>We’ll do peer review of your writing</p></li>
 </ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -704,12 +693,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -720,13 +712,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -778,7 +763,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -808,31 +810,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

@@ -1,6 +1,6 @@
 ---
 title: "Project Narrowing"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -23,57 +23,20 @@ library(ggmap)
 library(GGally)
 ```
 
-**MSCS Happenings**
-
--   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
--   [MSCS Mentoring Program](https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&c=0&w=1&flr=0)
--   Nov 7 \@ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
-
-**Outside MSCS**
-
--   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
--   [Fall Data Challenge](https://thisisstatistics.org/falldatachallenge/) sponsored by the American Statistical Association (Deadline: Nov 6)
--   [Electronic Undergraduate Statistics Conference](https://www.causeweb.org/usproc/eusr/2022) (Nov 4th, free!)
-
 ## Announcements {.unnumbered .smaller}
 
 **Assignments**
 
--   11 (EDA) past due
--   12 (Data Import) past due
--   13 (Regex) due next week
+-   Assignment 9 due tomorrow night @ 11:59pm
 
 **Tidy Tuesday**
 
 -   Complete 3 (minimum) before the end of the semester
-    -   6 more weeks left!
-
-**Iterative Viz**
-
--   IV1: Updated graphic by Friday
-    -   If you want feedback on IV0, turn it in and email Brianna.
-
-## Q&A on Regex
-
-## Git/Github as a Collaborative Tool
-
-If you would like to use Github for collaboration on the project, here are some resources:
-
--   [Github setup](https://bcheggeseth.github.io/452_spring_2022/github-setup.html), Brianna Heggeseth
--   [github video tutorial](https://www.youtube.com/embed/QLFc9gw_Hfs), Lisa Lendway
--   [Instructions](https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md#adding-collaborators) that accompany the video tutorial above
--   [Happy Git with R](https://happygitwithr.com/) by Jenny Bryan
+    -   Maximum grade = 3
 
 ## Project Discussions
 
-1.  Sit with potential project groups
-
--   I've tried to honor who you want to work with
--   I've tried to group by interests
-
-## Project Discussions {.smaller .scrollable}
-
+1.  Sit with project groups
 2.  Discuss as a group
 
 -   Project ideas and interest
@@ -87,14 +50,4 @@ If you would like to use Github for collaboration on the project, here are some 
     -   How are you going to share code? (Google Drive Folder? Github?)
 
 3.  If you'd like to adjust groups, send me an email after class
-
-## After Class {.unnumbered}
-
--   On Friday, we'll dedicate the entire time to creating a foundation for project work.
-
-**Assignments**
-
--   EDA (flights)
--   Data Import (your own data)
--   Regex
--   Iterative Viz
+4.  If you'd like to share feedback about a group member, but wish to remain anonymous, please use the Anonymous Feedback Form.

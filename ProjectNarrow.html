@@ -7,9 +7,9 @@
 <link href="ProjectNarrow_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="ProjectNarrow_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="ProjectNarrow_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.335">
 
-  <meta name="author" content="Brianna Heggeseth">
+  <meta name="author" content="James Normington">
   <title>Project Narrowing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="ProjectNarrow_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="ProjectNarrow_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -320,79 +325,42 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Project Narrowing</h1>
-  <p class="author">Brianna Heggeseth</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+James Normington 
+</div>
+</div>
+</div>
+
+</section>
 <section id="announcements" class="slide level2 unnumbered smaller">
 <h2>Announcements</h2>
 <div class="cell">
 
 </div>
-<p><strong>MSCS Happenings</strong></p>
-<ul>
-<li><a href="https://www.macalester.edu/mscs/mscs-course-waitlists/">MSCS Waitlist Info</a></li>
-<li><a href="https://www.instagram.com/macalestermscs/">MSCS Student Instagram</a></li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSczyKV1hOrfi0dQscSFSPhfgc_LJUl4TOGdb6B4Q5lQF-TmuQ/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0">MSCS Mentoring Program</a></li>
-<li>Nov 7 @ 4:40pm, MSCS &amp; Society Lecture, Geometry, Robots, and Society by Dr.&nbsp;Federico Ardila-Mantilla</li>
-</ul>
-<p><strong>Outside MSCS</strong></p>
-<ul>
-<li><a href="https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit">Mac Hub Events</a></li>
-<li><a href="https://thisisstatistics.org/falldatachallenge/">Fall Data Challenge</a> sponsored by the American Statistical Association (Deadline: Nov 6)</li>
-<li><a href="https://www.causeweb.org/usproc/eusr/2022">Electronic Undergraduate Statistics Conference</a> (Nov 4th, free!)</li>
-</ul>
 </section>
 <section id="announcements-1" class="slide level2 unnumbered smaller">
 <h2>Announcements</h2>
 <p><strong>Assignments</strong></p>
 <ul>
-<li>11 (EDA) past due</li>
-<li>12 (Data Import) past due</li>
-<li>13 (Regex) due next week</li>
+<li>Assignment 9 due tomorrow night @ 11:59pm</li>
 </ul>
 <p><strong>Tidy Tuesday</strong></p>
 <ul>
 <li>Complete 3 (minimum) before the end of the semester
 <ul>
-<li>6 more weeks left!</li>
+<li>Maximum grade = 3</li>
 </ul></li>
-</ul>
-<p><strong>Iterative Viz</strong></p>
-<ul>
-<li>IV1: Updated graphic by Friday
-<ul>
-<li>If you want feedback on IV0, turn it in and email Brianna.</li>
-</ul></li>
-</ul>
-</section>
-<section id="qa-on-regex" class="slide level2">
-<h2>Q&amp;A on Regex</h2>
-</section>
-<section id="gitgithub-as-a-collaborative-tool" class="slide level2">
-<h2>Git/Github as a Collaborative Tool</h2>
-<p>If you would like to use Github for collaboration on the project, here are some resources:</p>
-<ul>
-<li><a href="https://bcheggeseth.github.io/452_spring_2022/github-setup.html">Github setup</a>, Brianna Heggeseth</li>
-<li><a href="https://www.youtube.com/embed/QLFc9gw_Hfs">github video tutorial</a>, Lisa Lendway</li>
-<li><a href="https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md#adding-collaborators">Instructions</a> that accompany the video tutorial above</li>
-<li><a href="https://happygitwithr.com/">Happy Git with R</a> by Jenny Bryan</li>
 </ul>
 </section>
 <section id="project-discussions" class="slide level2">
 <h2>Project Discussions</h2>
 <ol type="1">
-<li>Sit with potential project groups</li>
-</ol>
-<ul>
-<li>I’ve tried to honor who you want to work with</li>
-<li>I’ve tried to group by interests</li>
-</ul>
-</section>
-<section id="project-discussions-1" class="slide level2 smaller scrollable">
-<h2>Project Discussions</h2>
-<ol start="2" type="1">
+<li>Sit with project groups</li>
 <li>Discuss as a group</li>
 </ol>
 <ul>
@@ -414,20 +382,8 @@
 </ul>
 <ol start="3" type="1">
 <li>If you’d like to adjust groups, send me an email after class</li>
+<li>If you’d like to share feedback about a group member, but wish to remain anonymous, please use the Anonymous Feedback Form.</li>
 </ol>
-</section>
-<section id="after-class" class="slide level2 unnumbered">
-<h2>After Class</h2>
-<ul>
-<li>On Friday, we’ll dedicate the entire time to creating a foundation for project work.</li>
-</ul>
-<p><strong>Assignments</strong></p>
-<ul>
-<li>EDA (flights)</li>
-<li>Data Import (your own data)</li>
-<li>Regex</li>
-<li>Iterative Viz</li>
-</ul>
 <p><img src="images/mac.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
@@ -655,12 +611,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -671,13 +630,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -729,7 +681,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -759,31 +728,50 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

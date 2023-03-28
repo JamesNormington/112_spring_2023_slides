@@ -1,6 +1,6 @@
 ---
 title: "Written Communication: Crafting Sentences"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -23,60 +23,32 @@ library(ggmap)
 library(GGally)
 ```
 
-**MSCS Happenings**
-
--   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
--   Nov 7 [TODAY] \@ 4:40pm, MSCS & Society Lecture, Geometry, Robots, and Society by Dr. Federico Ardila-Mantilla
--   See Board for Upcoming Visitor Talks!
-
-**Outside MSCS**
-
--   Vote tomorrow, if eligible!
--   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
-
-## Announcements {.unnumbered .smaller}
-
-**Assignments**
-
--   13 (Regex) due Tuesday [tomorrow]
-
-**Tidy Tuesday**
-
--   Complete 3 (minimum) before the end of the semester
-    -   5 more weeks left!
-
-**Iterative Viz**
-
--   IV1: Updated graphic past due.
-
 ## Crafting Sentences
 
-Go to [Google Drive Folder](https://drive.google.com/drive/folders/1lIP4_Yjit19H7x2nX8j81IFQgTQQWCvL)
+Go to [Google Drive Folder](https://drive.google.com/drive/folders/1LT9poJh6TY6SA1BVKNqZ9B3XfLoLoDnJ?usp=sharing)
 
 Open Communicating with Data (Chp 9) pdf.
 
-
 ## Read
 
-Choose 1 section in Chapter 9 to read (9.1, 9.2, 9.3, or 9.4). 
+Choose 1 section in Chapter 9 to read (9.1, 9.2, 9.3, or 9.4).
 
-- Each student in the group should read a different section.
+-   Each student in the group should read a different section.
 
-- Once you've read the section, share with your group the main points of that section. 
+-   Once you've read the section, share with your group the main points of that section.
 
 ## Revise
 
-Go to [Google Drive Folder](https://drive.google.com/drive/folders/1lIP4_Yjit19H7x2nX8j81IFQgTQQWCvL)
+Go to [Google Drive Folder](https://drive.google.com/drive/folders/1LT9poJh6TY6SA1BVKNqZ9B3XfLoLoDnJ?usp=sharing)
 
-Open Writing Sentences about Data for your section.
+Open [Writing Sentences about Data](https://docs.google.com/document/d/1Esvk1Bk3I99j2ozX6GgUnWI-kNWl_R9kK4bd8CrsSgU/edit?usp=sharing).
 
-- Each group is assigned a sentence to revise together.
+-   Each group is assigned a sentence to revise together.
 
-- Write your revision 
-  - if your table is in the front of the room, write on Revision 1; 
-  - if in back, writing on Revision 2
+-   Write your revision
 
+    -   if your table is in the front of the room, write on Revision 1;
+    -   if in back, writing on Revision 2
 
 ## Read
 
@@ -86,16 +58,8 @@ Now each of you read section 9.5.
 
 Go to back to Writing Sentences about Data for your section.
 
-- Read the original text. 
-  - Identify the "blogger style" in the text below.
+-   Read the original text.
 
-- In the Front or Back of Room sections, add comments and highlight text or phrases in red that you would remove if you wanted a more formal writing style.
+    -   Identify the "blogger style" in the text below.
 
-## After Class {.unnumbered}
-
--   We'll continue working on written communication on Wednesday.
-
-**Assignments**
-
--   Regex
--   EDA on project data
+-   In the Front or Back of Room sections, add comments and highlight text or phrases in red that you would remove if you wanted a more formal writing style.
