@@ -1,6 +1,6 @@
 ---
 title: "Oral Communication: Presenting Visuals"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -23,91 +23,68 @@ library(ggmap)
 library(GGally)
 ```
 
-**MSCS Happenings**
-
--   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
-
-**Outside MSCS**
-
--   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
-
 ## Announcements {.unnumbered .smaller}
 
 **Assignments**
 
--   13 (Regex) past due.
--   14 (One Number Story) due Tuesday.
+-   One Number Story first draft due Thursday!
+-   One Number Story final draft due Wed 4/19 (Assignment 10)
 
 **Tidy Tuesday**
 
 -   Complete 3 (minimum) before the end of the semester
-    -   4 more weeks left!
--   [Tidy Tuesday Collection](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p)
 
 **Iterative Viz**
 
--   IV1: Updated graphic past due.
-
-## Check Ins
-
-At your table,
-
-- check in with each other (e.g. how was the weekend, what you looking forward to, what you are struggling with)
+-   IV2 due Friday, April 28th @ 11:59pm
 
 ## Effective Visuals {.smaller}
 
-Let's review from the [beginning of semester](https://bcheggeseth.github.io/112_fall_2022/effective-visualizations.html).
+-   Be ethical and honest
 
-- Be ethical and honest
-- Consider glyph choice 
-  - easy or hard to perceive?
-- Consider color choices 
-  - color blind friendly? cultural associations?
-- Facilitate comparison 
-  - e.g. position through order on axis or faceting, calculate and present the difference or ratio
-- Use contrasts to draw attention 
-  - e.g. yellow, red, orange draw attention in nature of green, brown, blue
+-   Consider glyph choice
 
-Let's consider Fig 3.8, 3.9, 3.11. What is effective? What could be improved?
+    -   easy or hard to perceive?
+
+-   Consider color choices
+
+    -   color blind friendly? cultural associations?
+
+-   Facilitate comparison
+
+    -   e.g. position through order on axis or faceting, calculate and present the difference or ratio
+
+-   Use contrasts to draw attention
+
+    -   e.g. yellow, red, orange draw attention in nature of green, brown, blue
 
 ## Presenting a Visual {.smaller}
 
 When preparing to present a visualization, consider:
 
-- What context does the audience need to understand the visual? (W's?)
-- Does the visual have enough text annotation and guides to be understood with minimal explanation?
-- What aspects of the visual should you explain to provide necessary orientation?
-  - Walk through guides (axes, color legend, etc.)
-- What aspects of the visual do you want to draw attention to?
-  - What comparison are you wanting to highlight?
-
+-   What context does the audience need to understand the visual? (W's?)
+-   Does the visual have enough text annotation and guides to be understood with minimal explanation?
+-   What aspects of the visual should you explain to provide necessary orientation?
+    -   Walk through guides (axes, color legend, etc.)
+-   What aspects of the visual do you want to draw attention to?
+    -   What comparison are you wanting to highlight?
 
 ## Preparing for this Week
 
-- Create 1 effective visualization from your project data that tells a story
-  - Each person in a project group should make their own unique visualization
-  
-- Prepare a 2 minute oral presentation (orientation and explanation) of your visualization.
-  - Consider the questions on the last slide.
-  
-## Weds & Friday
+-   Create 1 effective visualization from your project data that tells a story
+    -   Each person in a project group should make their own unique visualization
+-   Prepare a 2 minute oral presentation (orientation and explanation) of your visualization.
+    -   Consider the questions on the last slide.
+
+## Tuesday, April 18th in class
 
 In small groups of 4 people,
 
-- you'll present your visualization (2 minutes)
-- discuss as a group ways of improving the visualization to make it more effective (8 minutes)
+-   you'll present your visualization (2 minutes)
+-   discuss as a group ways of improving the visualization to make it more effective (8 minutes)
 
 Each of the 4 individuals will take a turn to present.
 
-You'll present Weds and Friday to different groups of people.
-
 ## Today
 
-Consult with your project group and work on creating a visualization.
-
-## After Class {.unnumbered}
-
--   Work on One Number Story (due Tuesday)
--   Create one visualization and 2 minute presentation (due Wednesday)
-
+Consult with your project group and work on creating a visualization, or work on One Number Story
