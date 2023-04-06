@@ -337,21 +337,6 @@ James Normington
 </div>
 
 </section>
-<section id="announcements" class="slide level2 unnumbered smaller">
-<h2>Announcements</h2>
-<div class="cell">
-
-</div>
-<p><strong>MSCS Happenings</strong></p>
-<ul>
-<li><a href="https://www.macalester.edu/mscs/mscs-course-waitlists/">MSCS Waitlist Info</a></li>
-<li><a href="https://www.instagram.com/macalestermscs/">MSCS Student Instagram</a></li>
-</ul>
-<p><strong>Outside MSCS</strong></p>
-<ul>
-<li><a href="https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit">Mac Hub Events</a></li>
-</ul>
-</section>
 <section id="brainstorm" class="slide level2">
 <h2>Brainstorm</h2>
 <p>In your project groups:</p>
@@ -687,44 +672,6 @@ James Normington
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

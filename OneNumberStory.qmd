@@ -12,26 +12,6 @@ format:
 editor: visual
 ---
 
-## Announcements {.unnumbered .smaller}
-
-```{r setup}
-knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
-library(ggplot2)
-library(lubridate)
-library(ggmap)
-library(GGally)
-```
-
-**MSCS Happenings**
-
--   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
-
-**Outside MSCS**
-
--   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
-
 ## Brainstorm
 
 In your project groups:
@@ -121,7 +101,7 @@ Each person write a *TRUE* story about the data that focuses on that 1 number.
 
 -   **Rough** draft due before class Thursday, April 13th
 -   You'll present this to a random group of classmates
--   Incorporate their feedback, and submit a final version by Wednesday, April 19th @ 11:59pm
+-   Incorporate their feedback, and submit a final version by Wednesday, April 19th \@ 11:59pm
 
 ## Rest of time and after class {.unnumbered}
 
