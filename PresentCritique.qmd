@@ -1,6 +1,6 @@
 ---
 title: "Present & Critique"
-author: "Brianna Heggeseth"
+author: "James Normington"
 logo: "images/mac.png"
 format: 
   revealjs:
@@ -21,35 +21,19 @@ library(ggplot2)
 library(lubridate)
 ```
 
-**MSCS Happenings**
-
--   [MSCS Waitlist Info](https://www.macalester.edu/mscs/mscs-course-waitlists/)
--   [MSCS Student Instagram](https://www.instagram.com/macalestermscs/)
-
-**Outside MSCS**
-
--   [Mac Hub Events](https://docs.google.com/document/d/1kL-gNrtLwAcdaF5Vot4IW25Js2UvEIzRzFsHuRGrdqc/edit)
-
 ## Announcements {.unnumbered .smaller}
 
 **Assignments**
 
--   13 (Regex) past due.
--   14 (One Number Story) past due
-
-**Tidy Tuesday**
-
--   Complete 3 (minimum) before the end of the semester
-    -   4 more weeks left!
--   [Tidy Tuesday Collection](https://docs.google.com/presentation/d/1fFcL0JRvGYz6AxGJ9Y53m6VBDX4J4i605jcC3qqVMNk/edit#slide=id.p)
+-   One Number Story due tomorrow night @ 11:59pm
 
 **Iterative Viz**
 
--   IV1: Updated graphic past due.
+-   IV2: due Friday, April 28th @ 11:59pm
 
 ## Effective Visuals {.smaller}
 
-Let's review from the [beginning of semester](https://bcheggeseth.github.io/112_fall_2022/effective-visualizations.html).
+Let's review from the first half of the semester:
 
 -   Be ethical and honest
 -   Consider glyph choice
@@ -74,7 +58,7 @@ When preparing to present a visualization, consider:
 
 ## Today
 
-In small groups of 3-4 people,
+In groups of 3-4 people,
 
 -   you'll present your visualization (2 minutes)
 -   discuss as a group ways of improving the visualization to make it more effective (8 minutes)
@@ -84,18 +68,20 @@ In small groups of 3-4 people,
 
 *Once your group is done, use this time to update your graphic based on that feedback.*
 
-## Group Creation
+## Groups
 
-Count off in your project groups (1,2,3,4).
+-   Windows, west: Nathan, Yvan, Ruben
 
--   If you are a group of 2, count off (3,4)
--   If you are solo, go to #4.
+-   Windows, middle: Max, Felix, Evan K
 
-I may make a few adjustments.
+-   Windows, east: Regan, Bridget, Liz, Matte
 
--   If you are on the West side of the room (go to the table W#)
--   If you are on the East side of the room (go to the table E#)
+-   Board, west: Hadley, Juan, Paige
+
+-   Board, middle: Jane, Jude, Shirley, Stephen
+
+-   Board, east: Evan B, Gregory, Tianqi
 
 ## After Class {.unnumbered}
 
--   Incorporate that feedback and update your visual for Friday!
+-   Incorporate that feedback and update your visual!

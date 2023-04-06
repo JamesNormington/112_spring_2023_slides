@@ -36,7 +36,7 @@ library(GGally)
 
 **Iterative Viz**
 
--   IV2 due Friday, April 28th @ 11:59pm
+-   IV2 due Friday, April 28th \@ 11:59pm
 
 ## Effective Visuals {.smaller}
 
@@ -78,7 +78,7 @@ When preparing to present a visualization, consider:
 
 ## Tuesday, April 18th in class
 
-In small groups of 4 people,
+In small groups of 3-4 people,
 
 -   you'll present your visualization (2 minutes)
 -   discuss as a group ways of improving the visualization to make it more effective (8 minutes)

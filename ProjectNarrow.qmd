@@ -27,7 +27,7 @@ library(GGally)
 
 **Assignments**
 
--   Assignment 9 due tomorrow night @ 11:59pm
+-   Assignment 9 due tomorrow night \@ 11:59pm
 
 **Tidy Tuesday**
 
