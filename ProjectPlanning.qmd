@@ -29,3 +29,5 @@ Open planning [template](https://docs.google.com/document/d/1bB05QFbjhOE-8JgKOel
 Each project member should take leadership on one part of the larger story (code and writing).
 
 Feel free to copy this template to keep track of tasks for your group or incorporate these ideas into another system that you've already created.
+
+This isn't required, but could be helpful.
