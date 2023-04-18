@@ -25,11 +25,11 @@ library(lubridate)
 
 **Assignments**
 
--   One Number Story due tomorrow night @ 11:59pm
+-   One Number Story due tomorrow night \@ 11:59pm
 
 **Iterative Viz**
 
--   IV2: due Friday, April 28th @ 11:59pm
+-   IV2: due Friday, April 28th \@ 11:59pm
 
 ## Effective Visuals {.smaller}
 
