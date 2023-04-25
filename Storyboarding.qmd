@@ -27,7 +27,7 @@ Open the [template file](https://docs.google.com/presentation/d/1bFOJaTIm_kNDiJ_
 
 ## Today {.smaller}
 
-1.  Make one copy of this document for your project group (all members + Brianna should get editing access)
+1.  Make one copy of this document for your project group (all members should get editing access)
 
 2.  Each persons should
 
@@ -44,4 +44,6 @@ Open the [template file](https://docs.google.com/presentation/d/1bFOJaTIm_kNDiJ_
 
 ## After Class {.unnumbered}
 
+-   Iterative Viz 2 due Friday @ 11:59pm
 -   Work on Final Project!
+    -   Written Report and Final Presentation due Saturday, March 6th @ 5pm
